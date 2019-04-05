@@ -8,52 +8,86 @@
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 <body>
-  <!-- header -->
-  <header class="app-header">
-    <div class="app-header__container container">
-      <!-- logo -->
-      <div class="logo">MAG</div>
-      
-      <!-- btn -->
-      <button class="btn_clear btn_block">
-        <span class="ico ico_envelope"></span>
-      </button>
-    </div>
-  </header>
-
-  <!-- main -->
-  <main>
-    <!-- main -->
-    <section class="section-main item-bg__container">
-      <!-- background -->
-      <div class="item-bg">
-        <div class="img-bg visible-4k" style="background-image:url('/assets/css/imgs/main/background--4k.jpg')"></div>
-        <div class="img-bg visible-3k" style="background-image:url('/assets/css/imgs/main/background--3k.jpg')"></div>
-        <div class="img-bg visible-1k" style="background-image:url('/assets/css/imgs/main/background--1k.jpg')"></div>
-        <div class="img-bg visible-xl" style="background-image:url('/assets/css/imgs/main/background--xl.jpg')"></div>
-        <div class="img-bg visible-lg" style="background-image:url('/assets/css/imgs/main/background--lg.jpg')"></div>
-        <div class="img-bg visible-md" style="background-image:url('/assets/css/imgs/main/background--md.jpg')"></div>
-        <div class="img-bg visible-sm" style="background-image:url('/assets/css/imgs/main/background--sm.jpg')"></div>
-      </div>
-      
-      <!-- info -->
-      <div class="section-main__container container" align="center">
-        <div class="section-main__info">
-          <h1>Magzhan @hicugi</h1>
-          <p>web developer</p>
-        </div>
-      </div>
-
-      <!-- arrow -->
-      <div class="section-main__arrow">
-        <button class="btn_clear">
-          <span class="ico ico_arrow ico_arrow_down"></span>
+  <div id="app">
+    <!-- header -->
+    <header class="app-header">
+      <div class="app-header__container container">
+        <!-- logo -->
+        <div class="logo">MAG</div>
+        
+        <!-- btn -->
+        <button class="btn_clear btn_block">
+          <span class="ico ico_envelope"></span>
         </button>
       </div>
-    </section>
-  </main>
-  <!-- main end -->
+    </header>
 
-  <footer class="app-footer"></footer>
+    <!-- main -->
+    <main>
+      <!-- main -->
+      <section class="section-main item-bg__container">
+        <!-- background -->
+        <div class="item-bg">
+          <div class="img-bg visible-4k" style="background-image:url('/assets/css/imgs/main/background--4k.jpg')"></div>
+          <div class="img-bg visible-3k" style="background-image:url('/assets/css/imgs/main/background--3k.jpg')"></div>
+          <div class="img-bg visible-1k" style="background-image:url('/assets/css/imgs/main/background--1k.jpg')"></div>
+          <div class="img-bg visible-xl" style="background-image:url('/assets/css/imgs/main/background--xl.jpg')"></div>
+          <div class="img-bg visible-lg" style="background-image:url('/assets/css/imgs/main/background--lg.jpg')"></div>
+          <div class="img-bg visible-md" style="background-image:url('/assets/css/imgs/main/background--md.jpg')"></div>
+          <div class="img-bg visible-sm" style="background-image:url('/assets/css/imgs/main/background--sm.jpg')"></div>
+        </div>
+        
+        <!-- info -->
+        <div class="section-main__container container" align="center">
+          <div class="section-main__info">
+            <h1>Magzhan @hicugi</h1>
+            <p>web developer</p>
+          </div>
+        </div>
+
+        <!-- arrow -->
+        <div class="section-main__arrow">
+          <button class="btn_clear">
+            <span class="ico ico_arrow ico_arrow_down"></span>
+          </button>
+        </div>
+      </section>
+
+      <!-- catalog -->
+      <section class="section-catalog">
+        <div class="container">
+          <h2 class="section__title" align="center">Portfolio</h2>
+          
+          <div class="loading" v-if="isCatalogLoading"></div>
+
+          <ul class="catalog__items" v-else>
+            <li v-for="(item, index) in catalogItems" :key="index">
+              <div class="catalog__item">
+                  <div class="catalog__item__image" :style="{ backgroundImage: item.image && `url('${ item.image }')` }">
+                    <img :src="item.image" :alt="item.title">
+                  </div>
+
+                  <div class="catalog__item__info">
+                    <h3>{{ item.title }}</h3>
+                    <a :href="item.link" target="_blank">
+                      <span class="ico ico_arrow ico_arrow_right"></span>
+                    </a>
+                  </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <!-- main end -->
+
+    <!-- footer -->
+    <footer class="app-footer"></footer>
+  </div>
+
+  <script src="assets/js/vue.min.js"></script>
+  <script src="assets/js/vue-scrollto.js"></script>
+  <script src="assets/js/axios.min.js"></script>
+  <script src="assets/js/scripts.js"></script>
 </body>
 </html>

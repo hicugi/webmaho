@@ -1,4 +1,7 @@
 :root {
+  --color-default: #444;
+  --color-loading: #67d7ee;
+  
   --font-regular: 'RobotoCondensed-Regular';
   --font-light: 'RobotoCondensed-Light';
   --font-bold: 'RobotoCondensed-Bold';
