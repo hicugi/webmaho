@@ -1,0 +1,15 @@
+@font-face {
+  font-family: 'RobotoCondensed-Regular';
+  font-weight: 400;
+  src: url('/assets/fonts/RobotoCondensed-Regular.woff') format('woff');
+}
+@font-face {
+  font-family: 'RobotoCondensed-Light';
+  font-weight: 200;
+  src: url('/assets/fonts/RobotoCondensed-Light.woff') format('woff');
+}
+@font-face {
+  font-family: 'RobotoCondensed-Bold';
+  font-weight: 700;
+  src: url('/assets/fonts/RobotoCondensed-Bold.woff') format('woff');
+}
