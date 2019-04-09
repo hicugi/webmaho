@@ -15,7 +15,9 @@ const app = new Vue({
     isNavActive: false,
 
     isCatalogLoading: true,
-    catalogItems: []
+    catalogItems: [],
+
+    contacts: {}
   },
 
   methods: {
@@ -38,10 +40,19 @@ const app = new Vue({
       }
 
       this.isCatalogLoading = false;
+    },
+    async getContacts() {
+      try {
+        let { data } = await api.get('contacts');
+        this.contacts = data;
+      } catch (error) {
+        console.error(error);
+      }
     }
   },
   
   mounted() {
     this.getCatalogItems();
+    this.getContacts();
   },
 });

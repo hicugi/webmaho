@@ -82,7 +82,23 @@
     <!-- main end -->
 
     <!-- footer -->
-    <footer class="app-footer"></footer>
+    <footer class="app-footer">
+      <div class="container">
+        <div class="footer__container">
+          <!-- logo -->
+          <div class="logo">MAG</div>
+          
+          <!-- soc networks -->
+          <ul class="socnets" v-if="contacts.socnets">
+            <li v-for="(item, index) in contacts.socnets" :key="index">
+              <a class="ico ico_socnet" :href="item.link" :variant="item.alias">
+                {{ item.title }}
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
   </div>
 
   <script src="assets/js/vue.min.js"></script>
