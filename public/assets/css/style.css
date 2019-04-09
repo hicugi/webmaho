@@ -251,9 +251,9 @@ body {
 }
 
 .catalog__item__image {
-  padding-top: 177.7777777777778%;
+  padding-top: 140%;
   position: relative;
-  background: no-repeat center;
+  background: no-repeat center top;
   background-size: cover;
 }
 .catalog__item__image img {
@@ -262,6 +262,7 @@ body {
   position: absolute;
   left: 0;
   top: 0;
+  opacity: 0;
 }
 
 .catalog__item__info {
