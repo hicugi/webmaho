@@ -91,7 +91,7 @@
           <!-- soc networks -->
           <ul class="socnets" v-if="contacts.socnets">
             <li v-for="(item, index) in contacts.socnets" :key="index">
-              <a class="ico ico_socnet" :href="item.link" :variant="item.alias">
+              <a class="ico ico_socnet" :href="item.link" :variant="item.alias" target="_blank">
                 {{ item.title }}
               </a>
             </li>
