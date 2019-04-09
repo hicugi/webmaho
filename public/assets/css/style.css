@@ -262,6 +262,16 @@ main {
   grid-row-gap: 30px;
   list-style: none;
 }
+@media (max-width: 768px) {
+  .catalog__items {
+    grid-template-columns: auto auto;
+  }
+}
+@media (max-width: 390px) {
+  .catalog__items {
+    grid-template-columns: auto;
+  }
+}
 .catalog__items_loading {
   height: 120px;
   position: relative;
