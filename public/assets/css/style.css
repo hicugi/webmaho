@@ -190,7 +190,8 @@ body {
 
 /* main */
 main {
-  margin-bottom: 80px;
+  min-height: calc(100vh - 50px);
+  padding-bottom: 80px;
 }
 
 .section-main {
