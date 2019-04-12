@@ -159,10 +159,70 @@ body {
 }
 .app-header__container {
   height: var(--header-height);
+  position: relative;
   display: grid;
   grid-auto-flow: column;
   justify-content: space-between;
   align-items: center;
+}
+
+.callback {
+  width: 100%;
+  max-width: 290px;
+  padding: 10px 15px;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  transform: rotate3d(0,1,0,90deg);
+  transform-origin: 100% 0%;
+  background-color: rgba(255,255,255,.95);
+  transition: .3s ease-in-out;
+}
+.callback--active {
+  transform: rotate3d(0,1,0,0deg);
+}
+.callback__footer {
+  padding-bottom: 5px;
+}
+.form-group {
+  margin-bottom: 15px;
+}
+.form-label {
+  margin-bottom: 5px;
+  display: block;
+  line-height: 1.5em;
+  color: #151515;
+}
+.form-control {
+  width: 100%;
+  padding: 0 8px;
+  background: #fff;
+  border: none;
+}
+input.form-control {
+  height: 32px;
+}
+textarea.form-control {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  resize: none;
+}
+.btn {
+  padding: 0 30px;
+  position: relative;
+  border: none;
+  font-size: 14px;
+  line-height: 40px;
+}
+.btn_block {
+  width: 100%;
+  display: block;
+}
+.btn_info {
+  background-color: var(--color-info);
+  color: #fff;
+  font-size: 16px;
+  text-transform: uppercase;
 }
 
 

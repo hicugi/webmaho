@@ -17,7 +17,13 @@ const app = new Vue({
     isCatalogLoading: true,
     catalogItems: [],
 
-    contacts: {}
+    contacts: {},
+
+    isCallbackActive: false,
+    modalEmail: '',
+    modalMessage: '',
+
+    formError: {}
   },
 
   methods: {
@@ -45,6 +51,28 @@ const app = new Vue({
       try {
         let { data } = await api.get('contacts');
         this.contacts = data;
+      } catch (error) {
+        console.error(error);
+      }
+    },
+
+    onToggleCallback() {
+      this.isCallbackActive = !this.isCallbackActive;
+    },
+    async onSubmit() {
+      let token = window.grecaptcha_token;
+      if (!token) return;
+
+      try {
+        const { modalEmail, modalMessage } = this;
+        let params = {
+          email: modalEmail,
+          message: modalMessage,
+          captcha: token
+        };
+        
+        let { data } = await api.post('callback', params);
+        console.log(data);
       } catch (error) {
         console.error(error);
       }
