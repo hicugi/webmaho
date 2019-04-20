@@ -1,7 +1,7 @@
 Vue.use(VueScrollTo);
 
 const api = axios.create({
-  baseURL: `https://api.webmaho.${ location.host.indexOf('webmaho') > -1 ? 'com' : 'localhost' }/`,
+  baseURL: `${ location.host.indexOf('webmaho') > -1 ? 'https://api.webmaho.com' : 'http://api.webmaho.localhost' }/`,
 });
 
 const app = new Vue({

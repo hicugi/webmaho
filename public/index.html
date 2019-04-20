@@ -29,7 +29,7 @@
           <div class="logo">MAG</div>
 
           <!-- btn -->
-          <a class="btn_clear btn_block" href="mailto:hicugi@gmail.com">
+          <a class="btn_clear btn_block" aria-label="Write email message" href="mailto:hicugi@gmail.com">
             <span class="ico ico_envelope"></span>
           </a>
         </div>
@@ -81,14 +81,14 @@
 
           <!-- arrow -->
           <div class="section-main__arrow">
-            <button class="btn_clear">
+            <button class="btn_clear" type="button" aria-label="Go to portfolio" @click="onScrollTo('#catalogSection')">
               <span class="ico ico_arrow ico_arrow_down"></span>
             </button>
           </div>
         </section>
 
         <!-- catalog -->
-        <section class="section-catalog">
+        <section id="catalogSection" class="section-catalog">
           <div class="container">
             <h2 class="section__title" align="center">Portfolio</h2>
 
@@ -106,8 +106,9 @@
 
                   <div class="catalog__item__info">
                     <h3>{{ item.title }}</h3>
-                    <a :href="item.link" target="_blank">
+                    <a :href="item.link" target="_blank" rel="noopener" :title="item.title">
                       <span class="ico ico_arrow ico_arrow_right"></span>
+                      <div class="hide">{{ item.title }}</div>
                     </a>
                   </div>
                 </div>
@@ -133,6 +134,7 @@
                   :href="item.link"
                   :variant="item.alias"
                   target="_blank"
+                  rel="noopener"
                 >
                   {{ item.title }}
                 </a>

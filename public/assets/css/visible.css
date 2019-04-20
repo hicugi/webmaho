@@ -1,3 +1,7 @@
+.hide {
+  display: none !important;
+}
+
 /* 4k */
 @media (max-width: 3839px) {
   .visible-4k {
