@@ -94,26 +94,60 @@
 
             <div class="loading" v-if="isCatalogLoading"></div>
 
+            <!-- items -->
             <ul class="catalog__items" v-else>
               <li v-for="(item, index) in catalogItems" :key="index">
-                <div class="catalog__item">
-                  <div
+                <article class="catalog__item">
+                  <!-- image -->
+                  <a
                     class="catalog__item__image"
                     :style="{ backgroundImage: item.image && `url('${ item.image }')` }"
+                    :aria-label="item.title"
+                    :href="item.link"
+                    target="_blank"
+                    rel="noopener"
                   >
                     <img :src="item.image" :alt="item.title" />
-                  </div>
+                  </a>
+                  <!-- image end -->
 
+                  <!-- info -->
                   <div class="catalog__item__info">
-                    <h3>{{ item.title }}</h3>
-                    <a :href="item.link" target="_blank" rel="noopener" :title="item.title">
-                      <span class="ico ico_arrow ico_arrow_right"></span>
-                      <div class="hide">{{ item.title }}</div>
-                    </a>
+                    <header class="catalog__item__header">
+                      <!-- title -->
+                      <a
+                        :href="item.link"
+                        target="_blank"
+                        rel="noopener"
+                      >
+                        <h3>{{ item.title }}</h3>
+                      </a>
+                      <!-- title end -->
+                      
+                      <!-- subtitle -->
+                      <div class="catalog__item__subtitle">
+                        <!-- date -->
+                        <time :datetime="item.created_at">
+                          {{ item.created_at | dateFormat('DD.MM.YYYY') }}
+                        </time>
+
+                        <template v-if="item.company">
+                          by
+                          <strong>{{ item.company }}</strong>
+                        </template>
+                      </div>
+                      <!-- subtitle end -->
+                    </header>
+
+                    <div class="catalog__item__body">
+                      <div class="catalog__item__description">{{ item.description }}</div>
+                    </div>
                   </div>
-                </div>
+                  <!-- info end -->
+                </article>
               </li>
             </ul>
+            <!-- items end -->
           </div>
         </section>
       </main>
@@ -148,6 +182,7 @@
     <script src="assets/js/vue.min.js"></script>
     <script src="assets/js/vue-scrollto.js"></script>
     <script src="assets/js/axios.min.js"></script>
+    <script src="assets/js/moment.min.js"></script>
     <script src="assets/js/scripts.js"></script>
   </body>
 </html>

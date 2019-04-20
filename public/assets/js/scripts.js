@@ -11,6 +11,12 @@ const app = new Vue({
     VueScrollTo,
   },
 
+  filters: {
+    dateFormat(value, format) {
+      return new moment(value).format(format);
+    }
+  },
+
   data: {
     isNavActive: false,
 
