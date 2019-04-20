@@ -101,13 +101,15 @@
                   <!-- image -->
                   <a
                     class="catalog__item__image"
-                    :style="{ backgroundImage: item.image && `url('${ item.image }')` }"
                     :aria-label="item.title"
                     :href="item.link"
                     target="_blank"
                     rel="noopener"
                   >
-                    <img :src="item.image" :alt="item.title" />
+                    <picture>
+                      <source v-if="item.image_webp" :srcset="item.image_webp" type="image/webp">
+                      <img class="image_cover" :src="item.image" type="image/jpg" :alt="item.title">
+                    </picture>
                   </a>
                   <!-- image end -->
 
