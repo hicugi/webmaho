@@ -1,0 +1,27 @@
+{
+  "name": "webmaho",
+  "version": "1.0.0",
+  "description": "Hicugi's portfolio",
+  "type": "module",
+  "main": "src/index.js",
+  "engines": {
+    "node": ">=22.6.0",
+    "npm": ">=10.8.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/hicugi/webmaho.git"
+  },
+  "keywords": [
+    "portfolio"
+  ],
+  "author": "Hicugi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hicugi/webmaho/issues"
+  },
+  "homepage": "https://github.com/hicugi/webmaho#readme"
+}
