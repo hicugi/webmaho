@@ -11,15 +11,12 @@
 </head>
 
 <body>
-  <!-- header -->
   <header class="app-header">
     <div class="app-header__container container">
-      <!-- logo -->
       <div class="logo">
         <img class="logo__img app-header__logo-img" src="/assets/img/logo.svg" alt="Logo" height="48px" />
       </div>
 
-      <!-- btn -->
       <a class="btn_clear btn_block" aria-label="Write email message" href="mailto:hicugi@gmail.com">
         <span class="ico ico_envelope"></span>
       </a>
@@ -27,9 +24,7 @@
   </header>
 
   <main>
-    <!-- main -->
     <section class="section-main">
-      <!-- background -->
       <div class="section-main__bg">
         <picture>
           <source media="(min-width: 3840px)" srcset="/assets/css/imgs/main/background--4k.jpg" />
@@ -42,7 +37,6 @@
         </picture>
       </div>
 
-      <!-- info -->
       <div class="section-main__container container" align="center">
         <div class="section-main__info">
           <h1>Mag @hicugi</h1>
@@ -50,7 +44,6 @@
         </div>
       </div>
 
-      <!-- arrow -->
       <div class="section-main__arrow">
         <button class="btn_clear" type="button" aria-label="Go to portfolio" @click="onScrollTo('#catalogSection')">
           <span class="ico ico_arrow ico_arrow_down"></span>
@@ -58,7 +51,6 @@
       </div>
     </section>
 
-    <!-- catalog -->
     <section id="catalogSection" class="section-catalog">
       <div class="container">
         <h2 class="section__title" align="center">Portfolio</h2>
@@ -69,16 +61,12 @@
     </section>
   </main>
 
-  <!-- footer -->
   <footer class="app-footer">
     <div class="container">
       <div class="footer__container">
-        <!-- logo -->
         <div class="logo">
           <img class="logo__img" src="/assets/img/logo-mini.svg" alt="Logo" height="24px" />
         </div>
-
-        <!-- soc networks -->
         <ul id="socnets" class="socnets"></ul>
       </div>
     </div>
