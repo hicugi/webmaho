@@ -103,6 +103,8 @@ const build = async () => {
   const catalog = await getCatalog();
   result = replaceValues(result, "catalog", catalog);
 
+  result = replaceValues(result, "timestamp", new Date().getTime());
+
   await fs.promises.access(BUILD_DIR).catch(() => fs.promises.mkdir(BUILD_DIR));
 
   await fs.promises.writeFile(BUILD_RESULT, result);
