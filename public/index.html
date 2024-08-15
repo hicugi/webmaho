@@ -1,190 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Webmaho</title>
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css?filemtime" />
-    <meta charset="utf-8" />
-    <meta name="description" content="Mag's portfolio" />
-    <meta property="og:type" content="article" />
-    <meta property="og:title" content="Post title" />
-    <meta property="og:description" content="Mag's portfolio" />
-    <meta
-      property="og:image"
-      content="/assets/css/imgs/main/background--lg.jpg"
-    />
-    <meta
-      property="twitter:image"
-      content="/assets/css/imgs/main/background--lg.jpg"
-    />
-  </head>
-  <body>
-    <div id="app">
-      <!-- header -->
-      <header class="app-header">
-        <div class="app-header__container container">
-          <!-- logo -->
-          <div class="logo">MAG</div>
 
-          <!-- btn -->
-          <a class="btn_clear btn_block" aria-label="Write email message" href="mailto:hicugi@gmail.com">
-            <span class="ico ico_envelope"></span>
-          </a>
-        </div>
-      </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Webmaho</title>
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
 
-      <!-- main -->
-      <main>
-        <!-- main -->
-        <section class="section-main item-bg__container">
-          <!-- background -->
-          <div class="item-bg">
-            <div
-              class="img-bg visible-4k"
-              style="background-image:url('/assets/css/imgs/main/background--4k.jpg')"
-            ></div>
-            <div
-              class="img-bg visible-3k"
-              style="background-image:url('/assets/css/imgs/main/background--3k.jpg')"
-            ></div>
-            <div
-              class="img-bg visible-1k"
-              style="background-image:url('/assets/css/imgs/main/background--1k.jpg')"
-            ></div>
-            <div
-              class="img-bg visible-xl"
-              style="background-image:url('/assets/css/imgs/main/background--xl.jpg')"
-            ></div>
-            <div
-              class="img-bg visible-lg"
-              style="background-image:url('/assets/css/imgs/main/background--lg.jpg')"
-            ></div>
-            <div
-              class="img-bg visible-md"
-              style="background-image:url('/assets/css/imgs/main/background--md.jpg')"
-            ></div>
-            <div
-              class="img-bg visible-sm"
-              style="background-image:url('/assets/css/imgs/main/background--sm.jpg')"
-            ></div>
-          </div>
+<body>
+  <header class="app-header">
+    <div class="app-header__container container">
+      <div class="logo">
+        <img class="logo__img app-header__logo-img" src="/assets/img/logo.svg" alt="Logo" height="48px" />
+      </div>
 
-          <!-- info -->
-          <div class="section-main__container container" align="center">
-            <div class="section-main__info">
-              <h1>Magzhan @hicugi</h1>
-              <p>web developer</p>
-            </div>
-          </div>
-
-          <!-- arrow -->
-          <div class="section-main__arrow">
-            <button class="btn_clear" type="button" aria-label="Go to portfolio" @click="onScrollTo('#catalogSection')">
-              <span class="ico ico_arrow ico_arrow_down"></span>
-            </button>
-          </div>
-        </section>
-
-        <!-- catalog -->
-        <section id="catalogSection" class="section-catalog">
-          <div class="container">
-            <h2 class="section__title" align="center">Portfolio</h2>
-
-            <div class="loading" v-if="isCatalogLoading"></div>
-
-            <!-- items -->
-            <ul class="catalog__items" v-else>
-              <li v-for="(item, index) in catalogItems" :key="index">
-                <article class="catalog__item">
-                  <!-- image -->
-                  <a
-                    class="catalog__item__image"
-                    :aria-label="item.title"
-                    :href="item.link"
-                    target="_blank"
-                    rel="noopener"
-                  >
-                    <picture>
-                      <source v-if="item.image_webp" :srcset="item.image_webp" type="image/webp">
-                      <img class="image_cover" :src="item.image" type="image/jpg" :alt="item.title">
-                    </picture>
-                  </a>
-                  <!-- image end -->
-
-                  <!-- info -->
-                  <div class="catalog__item__info">
-                    <header class="catalog__item__header">
-                      <!-- title -->
-                      <a
-                        :href="item.link"
-                        target="_blank"
-                        rel="noopener"
-                      >
-                        <h3>{{ item.title }}</h3>
-                      </a>
-                      <!-- title end -->
-                      
-                      <!-- subtitle -->
-                      <div class="catalog__item__subtitle">
-                        <!-- date -->
-                        <time :datetime="item.created_at">
-                          {{ item.created_at | dateFormat('DD.MM.YYYY') }}
-                        </time>
-
-                        <template v-if="item.company">
-                          by
-                          <strong>{{ item.company }}</strong>
-                        </template>
-                      </div>
-                      <!-- subtitle end -->
-                    </header>
-
-                    <div class="catalog__item__body">
-                      <div class="catalog__item__description">{{ item.description }}</div>
-                    </div>
-                  </div>
-                  <!-- info end -->
-                </article>
-              </li>
-            </ul>
-            <!-- items end -->
-          </div>
-        </section>
-      </main>
-      <!-- main end -->
-
-      <!-- footer -->
-      <footer class="app-footer">
-        <div class="container">
-          <div class="footer__container">
-            <!-- logo -->
-            <div class="logo">MAG</div>
-
-            <!-- soc networks -->
-            <ul class="socnets" v-if="contacts.socnets">
-              <li v-for="(item, index) in contacts.socnets" :key="index">
-                <a
-                  class="ico ico_socnet"
-                  :href="item.link"
-                  :variant="item.alias"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  {{ item.title }}
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </footer>
+      <a class="btn_clear btn_block" aria-label="Write email message" href="mailto:hicugi@gmail.com">
+        <span class="ico ico_envelope"></span>
+      </a>
     </div>
+  </header>
 
-    <script src="assets/js/vue.min.js"></script>
-    <script src="assets/js/vue-scrollto.js"></script>
-    <script src="assets/js/axios.min.js"></script>
-    <script src="assets/js/moment.min.js"></script>
-    <script src="assets/js/scripts.js?filemtime"></script>
-  </body>
+  <main>
+    <section class="section-main">
+      <div class="section-main__bg">
+        <picture>
+          <source media="(min-width: 3840px)" srcset="/assets/css/imgs/main/background--4k.jpg" />
+          <source media="(min-width: 2880px)" srcset="/assets/css/imgs/main/background--3k.jpg" />
+          <source media="(min-width: 1440px)" srcset="/assets/css/imgs/main/background--1k.jpg" />
+          <source media="(min-width: 1024px)" srcset="/assets/css/imgs/main/background--xl.jpg" />
+          <source media="(min-width: 768px)" srcset="/assets/css/imgs/main/background--lg.jpg" />
+          <source media="(min-width: 440px)" srcset="/assets/css/imgs/main/background--md.jpg" />
+          <img src="/assets/css/imgs/main/background--sm.jpg" alt="Background" />
+        </picture>
+      </div>
+
+      <div class="section-main__container container" align="center">
+        <div class="section-main__info">
+          <h1>Mag @hicugi</h1>
+          <p>web developer</p>
+        </div>
+      </div>
+
+      <div class="section-main__arrow">
+        <button class="btn_clear" type="button" aria-label="Go to portfolio" @click="onScrollTo('#catalogSection')">
+          <span class="ico ico_arrow ico_arrow_down"></span>
+        </button>
+      </div>
+    </section>
+
+    <section id="catalogSection" class="section-catalog">
+      <div class="container">
+        <h2 class="section__title" align="center">Portfolio</h2>
+        <div id="catalog">
+          <ul id="catalogItems" class="catalog__items"></ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <div class="container">
+      <div class="footer__container">
+        <div class="logo">
+          <img class="logo__img" src="/assets/img/logo-mini.svg" alt="Logo" height="24px" />
+        </div>
+        <ul class="socnets"><li>
+  <a class="ico ico_socnet ico_twitter" href="https://twitter.com/mrhicugi" target="_blank" rel="noopener">
+    Twitter
+  </a>
+</li><li>
+  <a class="ico ico_socnet ico_gitlab" href="https://gitlab.com/hicugi" target="_blank" rel="noopener">
+    Gitlab
+  </a>
+</li><li>
+  <a class="ico ico_socnet ico_github" href="https://github.com/hicugi" target="_blank" rel="noopener">
+    Github
+  </a>
+</li></ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/scripts.js"></script>
+</body>
+
 </html>

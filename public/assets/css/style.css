@@ -1,6 +1,30 @@
-@import url('fonts.css');
-@import url('vars.css');
-@import url('visible.css');
+@font-face {
+  font-family: "RobotoCondensed-Regular";
+  font-weight: 400;
+  src: url("fonts/RobotoCondensed-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: "RobotoCondensed-Light";
+  font-weight: 200;
+  src: url("fonts/RobotoCondensed-Light.woff") format("woff");
+}
+@font-face {
+  font-family: "RobotoCondensed-Bold";
+  font-weight: 700;
+  src: url("fonts/RobotoCondensed-Bold.woff") format("woff");
+}
+
+:root {
+  --color-info: #ff304f;
+  --color-default: #444;
+  --color-loading: #ff304f;
+
+  --font-regular: "RobotoCondensed-Regular";
+  --font-light: "RobotoCondensed-Light";
+  --font-bold: "RobotoCondensed-Bold";
+
+  --header-height: 70px;
+}
 
 *,
 *::before,
@@ -8,11 +32,11 @@
   box-sizing: border-box;
 }
 
-html,
 body {
   min-width: 320px;
   min-height: 100vh;
   margin: 0;
+  padding: 0;
   background-color: #f6f6f6;
   color: var(--color-default);
   font-family: var(--font-light);
@@ -20,88 +44,9 @@ body {
   line-height: 1.25em;
 }
 
-/* btn */
-.btn_clear {
-  padding: 0;
-  background: none;
-  border: none;
-}
-
-/* ico */
-.ico {
-  width: 32px;
-  height: 32px;
-  display: block;
-  background: no-repeat center;
-  background-size: 80%;
-}
-.ico_envelope {
-  background-image: url('imgs/ico/envelope.svg');
-}
-.ico_arrow {
-  position: relative;
-}
-.ico_arrow::before {
-  width: 50%;
-  height: 50%;
-  border: 2px solid;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: rotate(-45deg) translate(-50%, -50%);
-  transform-origin: 0% 0%;
-  content: '';
-}
-.ico_arrow_down::before {
-  margin-top: -2px;
-  border-color: transparent transparent #fff #fff;
-}
-.ico_arrow_right::before {
-  border-color: transparent #fff #fff transparent;
-}
-
-.ico_socnet {
-  width: 24px;
-  height: 24px;
-  color: transparent;
-  overflow: hidden;
-}
-.ico[variant=twitter] {
-  background-image: url('./imgs/ico/socnet_twitter.svg');
-}
-.ico[variant=gitlab] {
-  background-image: url('./imgs/ico/socnet_gitlab.svg');
-}
-.ico[variant=github] {
-  background-image: url('./imgs/ico/socnet_github.svg');
-}
-
-.item-bg__container {
-  z-index: 0;
-  position: relative;
-}
-.item-bg__container > * {
-  z-index: 3;
-  position: relative;
-}
-
-.item-bg {
-  width: 100%;
-  height: 100%;
-  z-index: 0 !important;
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-
-/* img */
-.img-bg {
-  height: 100%;
-  background: no-repeat center;
-  background-size: cover;
-}
-.image_cover {
-  object-fit: cover;
+main {
+  min-height: calc(100vh - 50px);
+  padding-bottom: 80px;
 }
 
 .container {
@@ -112,21 +57,35 @@ body {
   margin-right: auto;
 }
 
-.logo {
+.logo__img {
   display: block;
-  font-family: var(--font-regular);
-  font-size: 22px;
-  line-height: 1em;
+}
+
+.btn_info {
+  display: inline-block;
+  padding: 0 40px;
+  border: none;
+  font-size: 14px;
+  line-height: 34px;
+  background-color: var(--color-info);
   color: #fff;
 }
-
-.section__title {
-  margin: 0 0 1em;
-  font-size: 36px;
-  line-height: 1.25em;
+.btn_clear {
+  padding: 0;
+  background: none;
+  border: none;
 }
 
-/* loading */
+.socnets {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  list-style: none;
+}
+.socnets > li + li {
+  margin-left: 10px;
+}
+
 .loading {
   height: 260px;
   z-index: 0;
@@ -141,7 +100,7 @@ body {
   border: 2px solid;
   border-color: transparent transparent transparent var(--color-loading);
   border-radius: 100%;
-  content: '';
+  content: "";
   animation: linear 0.8s kyeLoading infinite;
 }
 @keyframes kyeLoading {
@@ -153,8 +112,6 @@ body {
   }
 }
 
-
-/* header */
 .app-header {
   width: 100%;
   z-index: 1;
@@ -171,67 +128,6 @@ body {
   align-items: center;
 }
 
-.callback {
-  width: 100%;
-  max-width: 290px;
-  padding: 10px 15px;
-  position: absolute;
-  top: 100%;
-  right: 0;
-  transform: rotate3d(0,1,0,90deg);
-  transform-origin: 100% 0%;
-  background-color: rgba(255,255,255,.95);
-  transition: .3s ease-in-out;
-}
-.callback--active {
-  transform: rotate3d(0,1,0,0deg);
-}
-.callback__footer {
-  padding-bottom: 5px;
-}
-.form-group {
-  margin-bottom: 15px;
-}
-.form-label {
-  margin-bottom: 5px;
-  display: block;
-  line-height: 1.5em;
-  color: #151515;
-}
-.form-control {
-  width: 100%;
-  padding: 0 8px;
-  background: #fff;
-  border: none;
-}
-input.form-control {
-  height: 32px;
-}
-textarea.form-control {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  resize: none;
-}
-.btn {
-  padding: 0 30px;
-  position: relative;
-  border: none;
-  font-size: 14px;
-  line-height: 40px;
-}
-.btn_block {
-  width: 100%;
-  display: block;
-}
-.btn_info {
-  background-color: var(--color-info);
-  color: #fff;
-  font-size: 16px;
-  text-transform: uppercase;
-}
-
-
-/* footer */
 .app-footer {
   background-color: #151515;
 }
@@ -242,27 +138,12 @@ textarea.form-control {
   align-items: center;
 }
 
-.socnets {
-  padding: 0;
-  margin: 0;
-  display: flex;
-  list-style: none;
-}
-.socnets > li + li {
-  margin-left: 10px;
-}
-
-
-/* main */
-main {
-  min-height: calc(100vh - 50px);
-  padding-bottom: 80px;
-}
-
 .section-main {
+  z-index: 0;
+  position: relative;
   height: 100vh;
   max-height: 740px;
-  box-shadow: 0px 0px 20px rgba(0,0,0,.3);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
   color: #fff;
 }
 .section-main::before {
@@ -274,7 +155,7 @@ main {
   top: 0;
   background-color: #000;
   opacity: 0.7;
-  content: '';
+  content: "";
 }
 
 .section-main__container {
@@ -282,6 +163,27 @@ main {
   padding-top: var(--header-height);
   display: grid;
   align-items: center;
+}
+
+.section-main__container > * {
+  z-index: 3;
+}
+
+.section-main__bg {
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.section-main__bg img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: no-repeat center;
+  background-size: cover;
+  object-fit: cover;
 }
 
 .section-main__info h1 {
@@ -292,7 +194,7 @@ main {
   line-height: 1.25em;
 }
 .section-main__info p {
-  font-size: 1.5em
+  font-size: 1.5em;
 }
 
 .section-main__arrow {
@@ -314,8 +216,6 @@ main {
   }
 }
 
-
-/* catalog */
 .section-catalog {
   padding-top: 50px;
 }
@@ -323,7 +223,9 @@ main {
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: calc(33.33333% - 20px) calc(33.33333% - 20px) calc(33.33333% - 20px);
+  grid-template-columns: calc(33.33333% - 20px) calc(33.33333% - 20px) calc(
+      33.33333% - 20px
+    );
   grid-column-gap: 30px;
   grid-row-gap: 30px;
   list-style: none;
@@ -339,17 +241,13 @@ main {
     grid-template-columns: 100%;
   }
 }
-.catalog__items_loading {
-  height: 120px;
-  position: relative;
-}
 
-/* item */
 .catalog__item {
   background-color: #fff;
 }
 .catalog__item a {
   color: inherit;
+  text-decoration: none;
 }
 
 .catalog__item__image {
@@ -369,7 +267,6 @@ main {
   top: 0;
 }
 
-/* item header */
 .catalog__item__header {
   height: 70px;
   padding: 15px 15px 0;
@@ -393,7 +290,6 @@ main {
   overflow: hidden;
 }
 
-/* item body */
 .catalog__item__body {
   padding: 0 15px 15px;
 }
@@ -404,4 +300,57 @@ main {
   overflow: hidden;
   font-size: 14px;
   line-height: 1.25em;
+}
+
+.catalog-btn {
+  padding-top: 30px;
+  text-align: center;
+}
+
+.ico {
+  width: 32px;
+  height: 32px;
+  display: block;
+  background: no-repeat center;
+  background-size: 80%;
+}
+.ico_envelope {
+  background-image: url("imgs/ico/envelope.svg");
+}
+.ico_arrow {
+  position: relative;
+}
+.ico_arrow::before {
+  width: 50%;
+  height: 50%;
+  border: 2px solid;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: rotate(-45deg) translate(-50%, -50%);
+  transform-origin: 0% 0%;
+  content: "";
+}
+.ico_arrow_down::before {
+  margin-top: -2px;
+  border-color: transparent transparent #fff #fff;
+}
+.ico_arrow_right::before {
+  border-color: transparent #fff #fff transparent;
+}
+
+.ico_socnet {
+  width: 24px;
+  height: 24px;
+  color: transparent;
+  overflow: hidden;
+}
+.ico_twitter {
+  background-image: url("./imgs/ico/socnet_twitter.svg");
+}
+.ico_gitlab {
+  background-image: url("./imgs/ico/socnet_gitlab.svg");
+}
+.ico_github {
+  background-image: url("./imgs/ico/socnet_github.svg");
 }

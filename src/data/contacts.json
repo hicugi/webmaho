@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Twitter",
+    "alias": "twitter",
+    "link": "https://twitter.com/mrhicugi"
+  },
+  {
+    "title": "Gitlab",
+    "alias": "gitlab",
+    "link": "https://gitlab.com/hicugi"
+  },
+  {
+    "title": "Github",
+    "alias": "github",
+    "link": "https://github.com/hicugi"
+  }
+]
