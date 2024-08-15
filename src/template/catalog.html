@@ -1,0 +1,24 @@
+<li>
+  <a class="catalog__item__image" href="{{ link }}" aria-label="{{ title }}" target="_blank" rel="noopener">
+    <picture>
+      <source srcset="{{ imageWebp }}" type="image/webp">
+      <img class="image_cover" src="{{ image }}" alt="{{ title }}" type="image/jpg">
+    </picture>
+  </a>
+
+  <article class="catalog__item">
+    <div class="catalog__item__info">
+      <header class="catalog__item__header">
+        <a href="{{ link }}" target="_blank" rel="noopener">
+          <h3>{{ title }}</h3>
+        </a>
+        <div class="catalog__item__subtitle"><time datetime="{{ date }}">{{ datePretty }}</time>
+          <span> by<strong> {{ company }}</strong></span>
+        </div>
+      </header>
+      <div class="catalog__item__body">
+        <div class="catalog__item__description">{{ description }}</div>
+      </div>
+    </div>
+  </article>
+</li>

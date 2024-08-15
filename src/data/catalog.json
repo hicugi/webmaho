@@ -1,0 +1,173 @@
+[
+  {
+    "title": "Dastan Education",
+    "company": "",
+    "link": "http://dastanedu.webmaho.com/",
+    "image": "https://api.webmaho.com/assets/img/project/dastanedu.jpg?1630491258",
+    "imageWebp": "https://api.webmaho.com/assets/img/project/dastanedu.webp?1630491257",
+    "date": "2021-07-07 10:15:00",
+    "description": "Frontend: HTML, CSS, JS"
+  },
+  {
+    "title": "Alim",
+    "company": "",
+    "link": "http://alim.webmaho.com",
+    "image": "https://api.webmaho.com/assets/img/project/alim.jpg?1555753818",
+    "imageWebp": "https://api.webmaho.com/assets/img/project/alim.webp?1555764587",
+    "date": "2017-12-21 17:30:00",
+    "description": "Backend: Nginx, MySQL 5.6, PHP 7, ModX\r\nFrontend: AngularJS, SASS"
+  },
+  {
+    "title": "UPQ",
+    "company": "4D click",
+    "link": "http://upq.webmaho.com/",
+    "image": "https://api.webmaho.com/assets/img/project/upq.jpg?1555753370",
+    "imageWebp": "https://api.webmaho.com/assets/img/project/upq.webp?1555764586",
+    "date": "2017-11-06 18:22:00",
+    "description": "Frontend: Gulp, HTML, SASS"
+  },
+  {
+    "title": "Maslodel",
+    "company": "Gobrand",
+    "link": "http://maslodel.webmaho.com",
+    "image": "https://api.webmaho.com/assets/img/project/maslodel.jpg?1555753816",
+    "imageWebp": "https://api.webmaho.com/assets/img/project/maslodel.webp?1555764586",
+    "date": "2018-03-27 16:55:00",
+    "description": "Backend: Nginx, MySQL 5.7, PHP 7.2, ModX\r\nFrontend: AngularJS, SASS"
+  },
+  {
+    "title": "ICORE",
+    "company": "ICORE",
+    "link": "http://icore.webmaho.com/",
+    "image": "https://api.webmaho.com/assets/img/project/icore.jpg?1555753817",
+    "imageWebp": "https://api.webmaho.com/assets/img/project/icore.webp?1555764587",
+    "date": "2018-09-10 19:55:00",
+    "description": "Backend: Nginx, MySQL 5.7, PHP 7.2, ModX\r\nFrontend: AngularJS, SASS"
+  },
+  {
+    "title": "Izum",
+    "company": "Gobrand",
+    "link": "http://izum.webmaho.com/",
+    "image": "https://api.webmaho.com/assets/img/project/izum.jpg?1555753817",
+    "imageWebp": "https://api.webmaho.com/assets/img/project/izum.webp?1555764586",
+    "date": "2017-08-10 20:08:00",
+    "description": "Backend: Nginx, MySQL 5.6, PHP 5.6, ModX\r\nFrontend: AngularJS, SASS"
+  },
+  {
+    "title": "Butterfly effect",
+    "company": "4D click",
+    "link": "http://butterfly-effect.webmaho.com/",
+    "image": "https://api.webmaho.com/assets/img/project/butterfly-effect.jpg?1555753818",
+    "imageWebp": "https://api.webmaho.com/assets/img/project/butterfly-effect.webp?1555764587",
+    "date": "2018-02-08 21:25:00",
+    "description": "Frontend: Gulp, HTML, SASS"
+  },
+  {
+    "title": "Software development",
+    "company": "ICORE",
+    "link": "http://swd.webmaho.com",
+    "image": "https://api.webmaho.com/assets/img/project/icore-swd.jpg?1555753817",
+    "imageWebp": "https://api.webmaho.com/assets/img/project/icore-swd.webp?1555764586",
+    "date": "2019-02-22 19:44:00",
+    "description": "Backend: Nginx, MySQL 5.7, PHP 7.2, ModX\r\nFrontend: HTML, SASS, Vue.js"
+  },
+  {
+    "title": "Gravity",
+    "company": "IlyasQali",
+    "link": "http://gravity.webmaho.com/",
+    "image": "https://api.webmaho.com/assets/img/project/gravity.jpg?1586187655",
+    "imageWebp": "https://api.webmaho.com/assets/img/project/gravity.webp?1586187655",
+    "date": "2017-04-08 15:36:00",
+    "description": "Backend: Nginx, MySQL 5.6, PHP 5.6, ModX\r\nFrontend: AngularJS"
+  },
+  {
+    "title": "Airplane",
+    "company": "",
+    "link": "http://airplane-vue.webmaho.com/",
+    "image": "https://api.webmaho.com/assets/img/project/airplane.jpg?1572877059",
+    "imageWebp": "https://api.webmaho.com/assets/img/project/airplane.webp?1572877059",
+    "date": "2019-08-26 14:18:00",
+    "description": "Frontend: HTML, CSS, Vue"
+  },
+  {
+    "title": "Sheber",
+    "company": "",
+    "link": "/?redirect=http%3A%2F%2Fsheberkz.webmaho.com",
+    "image": "https://api.webmaho.com/assets/img/project/sheber.jpg?1559721072",
+    "imageWebp": "https://api.webmaho.com/assets/img/project/sheber.webp?1559721071",
+    "date": "2019-05-03 19:44:00",
+    "description": "Backend: Nginx, MySQL 5.7, PHP 7.2, ModX\r\nFrontend: HTML, CSS, React"
+  },
+  {
+    "title": "Technical assistance center",
+    "company": "ICORE",
+    "link": "http://itac.webmaho.com",
+    "image": "https://api.webmaho.com/assets/img/project/icore-itac.jpg?1555753817",
+    "imageWebp": "https://api.webmaho.com/assets/img/project/icore-itac.webp?1555764587",
+    "date": "2018-11-01 19:59:00",
+    "description": "Backend: Nginx, MySQL 5.7, PHP 7.2, ModX\r\nFrontend: React, SASS"
+  },
+  {
+    "title": "Qali",
+    "company": "Ilyas Qali",
+    "link": "http://qali.webmaho.com/",
+    "image": "https://api.webmaho.com/assets/img/project/qali.jpg?1555753816",
+    "imageWebp": "https://api.webmaho.com/assets/img/project/qali.webp?1555764586",
+    "date": "2018-07-10 18:15:00",
+    "description": "Backend: Nginx, MySQL 5.7, PHP 7.2, ModX\r\nFrontend: AngularJS, SASS"
+  },
+  {
+    "title": "Citystroi",
+    "company": "",
+    "link": "http://citystroi.webmaho.com/",
+    "image": "https://api.webmaho.com/assets/img/project/citystroi.jpg?1555753817",
+    "imageWebp": "https://api.webmaho.com/assets/img/project/citystroi.webp?1555764587",
+    "date": "2018-05-18 18:49:00",
+    "description": "Frontend: Gulp, Pug, SASS"
+  },
+  {
+    "title": "Logoexpert",
+    "company": "Ilyas Qali",
+    "link": "http://logoexpert.webmaho.com/",
+    "image": "https://api.webmaho.com/assets/img/project/logoexpert.jpg?1555753816",
+    "imageWebp": "https://api.webmaho.com/assets/img/project/logoexpert.webp?1555764586",
+    "date": "2018-04-05 18:40:00",
+    "description": "Backend: Nginx, MySQL 5.7, PHP 7.2, ModX\r\nFrontend: React, SASS"
+  },
+  {
+    "title": "Interior",
+    "company": "Ilyas Qali",
+    "link": "http://interior.webmaho.com/",
+    "image": "https://api.webmaho.com/assets/img/project/interior.jpg?1555753817",
+    "imageWebp": "https://api.webmaho.com/assets/img/project/interior.webp?1555764586",
+    "date": "2018-04-05 18:29:00",
+    "description": "Backend: Nginx, MySQL 5.7, PHP 7.2, ModX\r\nFrontend: React, SASS"
+  },
+  {
+    "title": "120club",
+    "company": "4D click",
+    "link": "http://120club.webmaho.com/",
+    "image": "https://api.webmaho.com/assets/img/project/120club.jpg?1555753818",
+    "imageWebp": "https://api.webmaho.com/assets/img/project/120club.webp?1555764587",
+    "date": "2018-02-26 21:09:00",
+    "description": "Frontend: Gulp, HTML, SASS"
+  },
+  {
+    "title": "Autotech",
+    "company": "4D click",
+    "link": "http://autotech.webmaho.com/",
+    "image": "https://api.webmaho.com/assets/img/project/autotech.jpg?1555753818",
+    "imageWebp": "https://api.webmaho.com/assets/img/project/autotech.webp?1555755545",
+    "date": "2018-01-25 21:11:00",
+    "description": "Frontend: Gulp, HTML, SASS"
+  },
+  {
+    "title": "School",
+    "company": "4D click",
+    "link": "http://mektep.webmaho.com/",
+    "image": "https://api.webmaho.com/assets/img/project/school.jpg?1555753816",
+    "imageWebp": "https://api.webmaho.com/assets/img/project/school.webp?1555764586",
+    "date": "2017-11-10 21:31:00",
+    "description": "Frontend: Gulp, HTML, SASS"
+  }
+]

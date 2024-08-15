@@ -5,11 +5,6 @@ const DATA_DIR = path.join("src", "data");
 const TEMPLATE_DIR = path.join("src", "template");
 const BUILD_DIR = path.join("public");
 
-const CONTACTS_FILENAME = "contacts.json";
-
-const TEMPLATE = path.join(TEMPLATE_DIR, "index.html");
-const TEMPLATE_CONTACTS = path.join(TEMPLATE_DIR, "contacts.html");
-
 const BUILD_RESULT = path.join(BUILD_DIR, "index.html");
 
 const replaceValues = (template, key, value) => {
@@ -17,12 +12,12 @@ const replaceValues = (template, key, value) => {
   return template.replace(rgx, value);
 };
 
+const getTemplate = (name) => path.join(TEMPLATE_DIR, `${name}.html`);
+const getDataJson = (name) => path.join(DATA_DIR, `${name}.json`);
+
 async function getContacts() {
-  const template = await fs.promises.readFile(TEMPLATE_CONTACTS, "utf-8");
-  const data = await fs.promises.readFile(
-    path.join(DATA_DIR, CONTACTS_FILENAME),
-    "utf-8"
-  );
+  const template = await fs.promises.readFile(getTemplate("contacts"), "utf-8");
+  const data = await fs.promises.readFile(getDataJson("contacts"), "utf-8");
 
   let contacts;
 
@@ -45,13 +40,68 @@ async function getContacts() {
   return result;
 }
 
+async function getCatalog() {
+  const template = await fs.promises.readFile(getTemplate("catalog"), "utf-8");
+  const data = await fs.promises.readFile(getDataJson("catalog"), "utf-8");
+
+  let items;
+
+  try {
+    items = JSON.parse(data);
+  } catch (err) {
+    console.error(err);
+    return;
+  }
+
+  const keys = [
+    "title",
+    "company",
+    "link",
+    "image",
+    "imageWebp",
+    "date",
+    "description",
+  ];
+
+  const ssrItems = items.splice(0, 9);
+
+  const generateHtml = (items) => {
+    let result = "";
+    for (const item of items) {
+      let value = template;
+
+      keys.forEach((key) => {
+        value = replaceValues(value, key, item[key]);
+      });
+
+      const prettyDate = new Date(item.date).toLocaleDateString("en-GB", {
+        day: "2-digit",
+        month: "short",
+        year: "numeric",
+      });
+      value = replaceValues(value, "datePretty", prettyDate);
+
+      result += value;
+    }
+    return result;
+  };
+
+  const fetchData = generateHtml(items);
+  fs.promises.writeFile(path.join(BUILD_DIR, "catalog.html"), fetchData);
+
+  return generateHtml(ssrItems);
+}
+
 const build = async () => {
   const timeStart = new Date().getTime();
 
-  let result = await fs.promises.readFile(TEMPLATE, "utf-8");
+  let result = await fs.promises.readFile(getTemplate("index"), "utf-8");
 
   const contacts = await getContacts();
   result = replaceValues(result, "contacts", contacts);
+
+  const catalog = await getCatalog();
+  result = replaceValues(result, "catalog", catalog);
 
   await fs.promises.access(BUILD_DIR).catch(() => fs.promises.mkdir(BUILD_DIR));
 

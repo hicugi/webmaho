@@ -54,9 +54,11 @@
     <section id="catalogSection" class="section-catalog">
       <div class="container">
         <h2 class="section__title" align="center">Portfolio</h2>
-        <div id="catalog">
-          <ul id="catalogItems" class="catalog__items"></ul>
-        </div>
+        <ul class="catalog__items">{{ catalog }}</ul>
+        <ul id="catalogMoreItems" class="catalog__items" style="display: none"></ul>
+
+        <div id="catalogLoading" class="loading" style="display: none"></div>
+        <div id="catalogMore" class="catalog-btn"><button class="btn btn_info">More</button></div>
       </div>
     </section>
   </main>
