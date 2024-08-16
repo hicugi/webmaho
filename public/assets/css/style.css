@@ -1,27 +1,15 @@
-@font-face {
-  font-family: "RobotoCondensed-Regular";
-  font-weight: 400;
-  src: url("fonts/RobotoCondensed-Regular.woff") format("woff");
+h1,
+h2 {
+  font-weight: normal;
 }
-@font-face {
-  font-family: "RobotoCondensed-Light";
-  font-weight: 200;
-  src: url("fonts/RobotoCondensed-Light.woff") format("woff");
-}
-@font-face {
-  font-family: "RobotoCondensed-Bold";
+h3 {
   font-weight: 700;
-  src: url("fonts/RobotoCondensed-Bold.woff") format("woff");
 }
 
 :root {
   --color-info: #ff304f;
   --color-default: #444;
   --color-loading: #ff304f;
-
-  --font-regular: "RobotoCondensed-Regular";
-  --font-light: "RobotoCondensed-Light";
-  --font-bold: "RobotoCondensed-Bold";
 
   --header-height: 70px;
 }
@@ -39,7 +27,7 @@ body {
   padding: 0;
   background-color: #f6f6f6;
   color: var(--color-default);
-  font-family: var(--font-light);
+  font-family: Roboto, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.25em;
 }
@@ -144,6 +132,7 @@ main {
   height: 100vh;
   max-height: 740px;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+  background-color: #000;
   color: #fff;
 }
 .section-main::before {
@@ -159,14 +148,12 @@ main {
 }
 
 .section-main__container {
+  z-index: 1;
+  position: relative;
   height: 100%;
   padding-top: var(--header-height);
   display: grid;
   align-items: center;
-}
-
-.section-main__container > * {
-  z-index: 3;
 }
 
 .section-main__bg {
@@ -189,7 +176,6 @@ main {
 .section-main__info h1 {
   margin: 0 0 0.5em;
   font-size: 42px;
-  font-family: var(--font-regular);
   font-weight: normal;
   line-height: 1.25em;
 }
@@ -272,7 +258,6 @@ main {
 .catalog__item__header h3 {
   margin-top: 0;
   margin-bottom: 6px;
-  font-family: var(--font-bold);
   font-size: 18px;
   font-weight: 200;
   letter-spacing: 0.5px;
