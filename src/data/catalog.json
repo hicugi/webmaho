@@ -1,5 +1,14 @@
 [
   {
+    "title": "Magic Test",
+    "company": "",
+    "link": "https://hicugi.github.io/magic-test/",
+    "image": "images/magic-test.jpg",
+    "imageWebp": "images/magic-test.webp",
+    "date": "2021-12-22 10:15:00",
+    "description": "Pet project made for proposing\r\nFrontend: HTML, CSS, JS"
+  },
+  {
     "title": "Dastan Education",
     "company": "",
     "link": "http://dastanedu.webmaho.com/",
