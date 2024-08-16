@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/hicugi/webmaho/issues"
   },
-  "homepage": "https://github.com/hicugi/webmaho#readme"
+  "homepage": "https://github.com/hicugi/webmaho#readme",
+  "dependencies": {
+    "clean-css": "^5.3.3"
+  }
 }

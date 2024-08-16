@@ -1,5 +1,6 @@
 import path from "path";
 import fs from "fs";
+import CleeanCSS from "clean-css";
 
 const DATA_DIR = path.join("src", "data");
 const TEMPLATE_DIR = path.join("src", "template");
@@ -115,3 +116,14 @@ const build = async () => {
 
 fs.watch(DATA_DIR, build);
 fs.watch(TEMPLATE_DIR, build);
+
+const CSS_DIR = path.join(BUILD_DIR, "assets", "css");
+const styleFile = path.join(CSS_DIR, "style.css");
+fs.watch(styleFile, async () => {
+  const data = await fs.promises.readFile(styleFile);
+  const output = new CleeanCSS({}).minify(data);
+
+  fs.promises.writeFile(path.join(CSS_DIR, "style.min.css"), output.styles);
+
+  console.log("style.min.css generated");
+});
