@@ -2,6 +2,10 @@ import path from "path";
 import fs from "fs";
 import CleeanCSS from "clean-css";
 
+console.log(
+  "Starting to watch the template dir.\nMake a change to build HTML in the public dir."
+);
+
 const DATA_DIR = path.join("src", "data");
 const TEMPLATE_DIR = path.join("src", "template");
 const BUILD_DIR = path.join("public");
