@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dastan Education</title>
+    <link rel="stylesheet" href="/assets/fonts/Rubik/style.css" />
+    <link rel="stylesheet" href="/assets/styles.css" />
+  </head>
+  <body id="home">
+    <header class="app-header">
+      <div class="container">
+        <div class="app-header__row">
+          <div class="app-header__logo">
+            <a href="#home" class="logo logo_in-header"></a>
+          </div>
+
+          <div class="app-header__nav">
+            <button
+              id="navToggleBtn"
+              class="nav-toggle-btn"
+              type="button"
+              onclick="nav.toggle()"
+            >
+              <span>Открыть меню</span>
+            </button>
+            <nav
+              id="nav"
+              class="nav"
+              style="-webkit-transform: scale(0,0); transform: scale(0,0)"
+            >
+              <div class="nav__container">
+                <div class="nav__inner">
+                  <ul class="nav__list">
+                    <li class="nav__item">
+                      <a href="#aboutus" class="nav__link">О нас</a>
+                    </li>
+                    <li class="nav__item">
+                      <a href="#methods" class="nav__link">Методика</a>
+                    </li>
+                    <li class="nav__item">
+                      <a href="#prices" class="nav__link">Цена</a>
+                    </li>
+                    <li class="nav__item">
+                      <a href="#certs" class="nav__link">Сертификаты</a>
+                    </li>
+                    <li class="nav__item">
+                      <a href="#contacts" class="nav__link">Контакты</a>
+                    </li>
+                  </ul>
+                </div>
+
+                <ul class="nav-contacts" style="display: none">
+                  <li class="nav-contacts__item">
+                    <a class="nav-contacts__link" href="tel:+77020079887"
+                      >+7 (702) 007 98 87</a
+                    >
+                  </li>
+                  <li class="nav-contacts__item">
+                    <a
+                      class="nav-contacts__link"
+                      href="mailto:dastanedu@gmail.com"
+                      >dastanedu@gmail.com</a
+                    >
+                  </li>
+                  <li class="nav-contacts__item">
+                    <ul class="nav-contacts__socials" data-socials></ul>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+
+          <div class="app-header__contacts">
+            <ul class="socials">
+              <li class="contacts__item">
+                <a
+                  href="whatsapp://send?abid=+77020079887&text=Хочу%20на%20курсы"
+                  class="contacts__link icon icon_whatsapp"
+                  >Написать на WhatsApp</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="app-main">
+      <section>
+        <div class="container">
+          <div class="home">
+            <div class="home__info">
+              <h1 class="home__title">
+                Курсы английского, французского и подготовка к IELTS
+              </h1>
+              <p class="home__description">
+                С нами ты научишься писать, говорить, думать на двух языках.
+                Обучение в офлайн и онлайн форматах на выбор
+              </p>
+
+              <button
+                class="btn btn_default"
+                type="button"
+                onclick="handleCallback('Секция: Начни обучение сейчас')"
+              >
+                Начни обучение сейчас
+              </button>
+              <p class="home__introtext">
+                Получи бесплатную 2-х часовую консультацию
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="aboutus">
+        <div class="container">
+          <div class="aboutus">
+            <div class="aboutus__info">
+              <h2 class="aboutus__title">
+                С нами ты точно освоишь новый язык и сдашь IELTS
+              </h2>
+              <p class="aboutus__description">
+                Мы обучаем детей и взрослых любого возраста, и уровня знаний. Ты
+                научишься говорить, писать, читать и слушать на английском или
+                французском, а можно и сразу на 2-х языках!
+              </p>
+
+              <!-- <button class="btn-icon btn-icon_play">
+                Доверьтесь нам. Мы вам поможем
+              </button> -->
+              <div class="aboutus__break" style="height: 70px"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="benefits" class="benefits-section">
+        <div class="container">
+          <div class="benefits">
+            <div class="benefits__inner">
+              <div class="benefits__info">
+                <h2 class="benefits__title section-title">
+                  Почему выбирают нас?
+                </h2>
+                <button
+                  class="benefits-btn_first btn btn_default"
+                  type="button"
+                  onclick="handleCallback('Секция: Почему выбирают нас?')"
+                >
+                  Обратный звонок
+                </button>
+              </div>
+
+              <ul class="benefits__list benefits-list">
+                <li class="benefits-list__item">
+                  <div class="benefits-list__inner">
+                    <div
+                      class="benefits-list-icon benefits-list-icon_book"
+                    ></div>
+                    <h3 class="benefits-list__title">
+                      Бесплатные учебные материалы
+                    </h3>
+                    <p class="benefits-list__description">
+                      Ты получаешь все учебные материалы у нас. Больше никаких
+                      поисков книг по городу. И да, вес материал остается у тебя
+                      навсегда – ты можешь освежить знания в любой момент;
+                    </p>
+                  </div>
+                </li>
+                <li class="benefits-list__item">
+                  <div class="benefits-list__inner">
+                    <div
+                      class="benefits-list-icon benefits-list-icon_message"
+                    ></div>
+                    <h3 class="benefits-list__title">
+                      Speaking Movie <br />Club
+                    </h3>
+                    <p class="benefits-list__description">
+                      Каждые выходные у нас проводится Speaking Movie Club с
+                      носителем. Ты совершенствуешь свой язык просто общаясь на
+                      интересные темы и обсуждая классные фильмы;
+                    </p>
+                  </div>
+                </li>
+                <li class="benefits-list__item">
+                  <div class="benefits-list__inner">
+                    <div
+                      class="benefits-list-icon benefits-list-icon_aim"
+                    ></div>
+                    <h3 class="benefits-list__title">Индивидуальный подход</h3>
+                    <p class="benefits-list__description">
+                      Ты получишь свою индивидуальную стратегию обучения. Больше
+                      не нужно догонять или подстраиваться под темп других
+                      учеников. Каждая группа соответствует своим знаниям;
+                    </p>
+                  </div>
+                </li>
+                <li class="benefits-list__item">
+                  <div class="benefits-list__inner">
+                    <div
+                      class="benefits-list-icon benefits-list-icon_alphabet"
+                    ></div>
+                    <h3 class="benefits-list__title">
+                      Авторский метод преподавания детям
+                    </h3>
+                    <p class="benefits-list__description">
+                      Для самых маленьких разработана авторская программа
+                      изучения языка в игровой форме. Никаких изнурительных
+                      занятий, после которых малыши не хотят продолжать
+                      обучение.
+                    </p>
+                  </div>
+                </li>
+              </ul>
+
+              <button
+                class="benefits-btn_last btn btn_default"
+                type="button"
+                onclick="handleCallback('Секция: Почему выбирают нас?')"
+              >
+                Обратный звонок
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="methods">
+        <div class="container">
+          <div class="methods">
+            <h2 class="methods__title section-title">Как мы обучаем?</h2>
+
+            <ul class="methods-list">
+              <li class="methods-list__item">
+                <div class="methods-list__inner">
+                  <div class="methods-list__number">01</div>
+                  <h3 class="methods-list__title">
+                    Записываем вас на пробный урок
+                  </h3>
+                  <p class="methods-list__description">
+                    Запишись на консультацию: позвони или оставь заявку на
+                    сайте. Мы свяжемся с вами и подберем удобное время
+                  </p>
+                </div>
+              </li>
+              <li class="methods-list__item">
+                <div class="methods-list__inner">
+                  <div class="methods-list__number">02</div>
+                  <h3 class="methods-list__title">Познакомим вас со школой</h3>
+                  <p class="methods-list__description">
+                    Определи свой уровень языка, получи экскурсию по школе,
+                    познакомься с учителями и установи удобное для себя
+                    расписание
+                  </p>
+                </div>
+              </li>
+              <li class="methods-list__item">
+                <div class="methods-list__inner">
+                  <div class="methods-list__number">03</div>
+                  <h3 class="methods-list__title">Проведем <br />урок</h3>
+                  <p class="methods-list__description">
+                    Приходи на первый бесплатный пробный урок, чтобы увидеть,
+                    как проходит процесс обучения
+                  </p>
+                </div>
+              </li>
+              <li class="methods-list__item">
+                <div class="methods-list__inner">
+                  <div class="methods-list__number">04</div>
+                  <h3 class="methods-list__title">
+                    Вы получаете <br />результат
+                  </h3>
+                  <p class="methods-list__description">
+                    Наблюдай значительные результаты после 4-х месяцев обучения.
+                    Ты легко сможешь поддержать любой разговор с носителем
+                    французского и английского языков
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="prices-section">
+        <div class="prices-annotation">
+          <div class="prices-annotation__inner">
+            <h2 class="prices-annotation__title section-title">
+              Занимайся в удобном для тебя формате
+            </h2>
+            <p class="prices-annotation__description">
+              У нас действует онлайн и офлайн форматы обучения, при этом
+              качество остается на одинаковом – отличном, уровне. Вся программа
+              остается прежней, а учебные материалы отправляются по почте
+            </p>
+            <p class="prices-annotation__introtext">
+              С заботой о вашем здоровье!
+            </p>
+          </div>
+        </div>
+
+        <div class="container">
+          <div id="prices" class="prices">
+            <h2 class="prices__title section-title">Стоимость обучения</h2>
+            <p class="prices__subtitle">Настрой свой идеальный план обучения</p>
+            <p class="prices__description">
+              DASTAN Education предлагает обучение в теплой и душевной
+              атмосфере. Стань частью нашей маленькой семьи!
+            </p>
+
+            <div id="pricesTab" class="prices-tab">
+              <div class="prices-tab__container">
+                <div id="pricesTabBg" class="prices-tab__bg"></div>
+                <ul class="prices-tab__inner">
+                  <li class="prices-tab-item">
+                    <button
+                      class="prices-tab__btn"
+                      type="button"
+                      onclick="handlePriceTabClick(event, 0)"
+                    >
+                      12 занятий
+                    </button>
+                  </li>
+
+                  <li class="prices-tab-item prices-tab-item_single">
+                    <button
+                      class="prices-tab__btn"
+                      type="button"
+                      onclick="handlePriceTabClick(event, 1)"
+                    >
+                      Индивидуальные
+                    </button>
+                  </li>
+                  <li class="prices-tab-item prices-tab-item_single">
+                    <button
+                      class="prices-tab__btn"
+                      type="button"
+                      onclick="handlePriceTabClick(event, 2)"
+                    >
+                      IELTS
+                    </button>
+                  </li>
+
+                  <li class="prices-tab-item prices-tab-item_double">
+                    <button
+                      class="prices-tab__btn"
+                      type="button"
+                      onclick="handlePriceTabClick(event, 1)"
+                    >
+                      IELTS
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="prices-content">
+              <ul id="pricesContent" class="prices-content__inner">
+                <li class="prices-content-item">
+                  <div class="prices-content-item__inner">
+                    <div class="prices-content-item__box">
+                      <h3 class="prices-content__title">Груповые занятия</h3>
+                      <p class="prices-content__subtitle">12 занятий</p>
+                      <p class="prices-content__price">22500₸</p>
+                      <p class="prices-content__description">
+                        Быстрый старт для полного погружения в иностранную
+                        культуру
+                      </p>
+                      <button
+                        class="btn btn_default"
+                        type="button"
+                        onclick="handleCallback('Секция / Стоимость обучения: Груповые занятия')"
+                      >
+                        Начать обучение
+                      </button>
+                    </div>
+                  </div>
+                </li>
+                <li class="prices-content-item">
+                  <div class="prices-content-item__inner">
+                    <div class="prices-content-item__box">
+                      <div class="prices-content__discount">10%</div>
+                      <h3 class="prices-content__title">Индивидуальные</h3>
+                      <p class="prices-content__subtitle">12 занятий</p>
+                      <p class="prices-content__price">26500₸</p>
+                      <p class="prices-content__description">
+                        Полное сопровождение и поддержка со стороны наших
+                        учителей
+                      </p>
+                      <button
+                        class="btn btn_default"
+                        type="button"
+                        onclick="handleCallback('Секция / Стоимость обучения: Индивидуальные')"
+                      >
+                        Начать обучение
+                      </button>
+                    </div>
+                  </div>
+                </li>
+                <li class="prices-content-item">
+                  <div class="prices-content-item__inner">
+                    <div class="prices-content-item__box">
+                      <h3 class="prices-content__title">Подготовка к IELTS</h3>
+                      <p class="prices-content__subtitle">30 занятий</p>
+                      <p class="prices-content__price">54000₸</p>
+                      <p class="prices-content__description">
+                        Поднимем ваш результат на 1-3 балла!
+                      </p>
+                      <button
+                        class="btn btn_default"
+                        type="button"
+                        onclick="handleCallback('Секция / Стоимость обучения: Подготовка к IELTS')"
+                      >
+                        Начать обучение
+                      </button>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="certs" class="certs-section">
+        <div class="container">
+          <h2 class="certs__title section-title">Наши награды</h2>
+
+          <ul class="certs-list">
+            <li class="certs-list__item">
+              <button
+                class="certs-list__btn"
+                data-image="/assets/img/certs/IMG_1684_2.jpg"
+                style="
+                  background-image: url('/assets/img/certs/IMG_1684_2.jpg');
+                "
+              >
+                <img
+                  src="/assets/img/certs/IMG_1684_2.jpg"
+                  class="certs-list__image"
+                />
+              </button>
+            </li>
+            <li class="certs-list__item">
+              <button
+                class="certs-list__btn"
+                data-image="/assets/img/certs/IMG_1685_2.jpg"
+                style="
+                  background-image: url('/assets/img/certs/IMG_1685_2.jpg');
+                "
+              >
+                <img
+                  src="/assets/img/certs/IMG_1685_2.jpg"
+                  class="certs-list__image"
+                />
+              </button>
+            </li>
+            <li class="certs-list__item">
+              <button
+                class="certs-list__btn"
+                data-image="/assets/img/certs/IMG_1686_2.jpg"
+                style="
+                  background-image: url('/assets/img/certs/IMG_1686_2.jpg');
+                "
+              >
+                <img
+                  src="/assets/img/certs/IMG_1686_2.jpg"
+                  class="certs-list__image"
+                />
+              </button>
+            </li>
+            <li class="certs-list__item">
+              <button
+                class="certs-list__btn"
+                data-image="/assets/img/certs/IMG_1687_2.jpg"
+                style="
+                  background-image: url('/assets/img/certs/IMG_1687_2.jpg');
+                "
+              >
+                <img
+                  src="/assets/img/certs/IMG_1687_2.jpg"
+                  class="certs-list__image"
+                />
+              </button>
+            </li>
+            <li class="certs-list__item">
+              <button
+                class="certs-list__btn"
+                data-image="/assets/img/certs/IMG_1688.jpeg"
+                style="background-image: url('/assets/img/certs/IMG_1688.jpeg')"
+              >
+                <img
+                  src="/assets/img/certs/IMG_1688.jpeg"
+                  class="certs-list__image"
+                />
+              </button>
+            </li>
+            <li class="certs-list__item">
+              <button
+                class="certs-list__btn"
+                data-image="/assets/img/certs/IMG_1689.jpg"
+                style="background-image: url('/assets/img/certs/IMG_1689.jpg')"
+              >
+                <img
+                  src="/assets/img/certs/IMG_1689.jpg"
+                  class="certs-list__image"
+                />
+              </button>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="contacts" class="contacts-section">
+        <div class="contacts">
+          <div class="container">
+            <div class="contacts-row">
+              <div class="contacts-row__col">
+                <div class="contacts__info">
+                  <h2 class="contacts__title section-title">Наши контакты</h2>
+                  <p class="contacts__description">
+                    Ты можешь позвонить нам, написать нам, и посмотреть на
+                    теплую атмосферу нашей школы на страничке инстаграм
+                  </p>
+                  <div class="contacts__btn-container">
+                    <button
+                      class="btn-icon btn-icon_location"
+                      type="button"
+                      onclick="map.open()"
+                    >
+                      Карта проезда
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="contacts-row__col">
+                <form id="contactsForm" class="contacts-form">
+                  <div class="form-group">
+                    <input
+                      class="form-control form-control_dark form-control_large"
+                      type="text"
+                      name="name"
+                      placeholder="Имя"
+                      required
+                    />
+                  </div>
+
+                  <div class="contacts-form-row">
+                    <div class="contacts-form-row__col">
+                      <div class="form-group">
+                        <input
+                          class="
+                            form-control form-control_dark form-control_large
+                          "
+                          type="tel"
+                          name="phone"
+                          placeholder="Телефон"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div class="contacts-form-row__col">
+                      <div class="form-group">
+                        <input
+                          class="
+                            form-control form-control_dark form-control_large
+                          "
+                          type="email"
+                          name="email"
+                          placeholder="E-mail"
+                        />
+                      </div>
+                    </div>
+                    <div class="contacts-form-row__col">
+                      <div class="contacts-form__introtext">
+                        Нажимая на кнопку, я соглашаюсь на обработку
+                        персональных данных
+                      </div>
+                    </div>
+                    <div class="contacts-form-row__col">
+                      <button class="btn btn_reverse btn_block">
+                        Отправить
+                      </button>
+                    </div>
+                  </div>
+                </form>
+
+                <div
+                  id="contactsFormResults"
+                  class="contacts-form-results"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="app-footer">
+      <div class="container">
+        <div class="app-footer__row">
+          <div class="app-footer__main">
+            <a href="#home" class="footer__logo logo logo_light"></a>
+            <ul class="app-footer__socials socials" data-socials></ul>
+          </div>
+
+          <div class="app-footer__info">
+            <div class="footer-info-container">
+              <div class="footer-info">
+                <h3 class="footer-info__title">Контакты</h3>
+                <ul class="footer-info-list">
+                  <li class="footer-info-list__item">
+                    <a href="tel:+77020079887" class="footer-info-list__link"
+                      >+7 (702) 007 98 87</a
+                    >
+                  </li>
+                </ul>
+              </div>
+
+              <div class="footer-info">
+                <h3 class="footer-info__title">Адрес</h3>
+                <ul class="footer-info-list">
+                  <li class="footer-info-list__item">
+                    <button
+                      class="footer-info-list__link"
+                      type="button"
+                      onclick="map.open()"
+                    >
+                      Карта проезда
+                    </button>
+                  </li>
+                  <li class="footer-info-list__item">
+                    <button
+                      class="footer-info-list__link"
+                      type="button"
+                      onclick="map.open()"
+                    >
+                      г. Алматы, ул. Маркова 11
+                    </button>
+                  </li>
+                  <li class="footer-info-list__item">
+                    <a
+                      href="mailto:dastan.education@gmail.com"
+                      class="footer-info-list__link"
+                      >dastan.education@gmail.com</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__copyright">
+          © 2021 Dastan Education — Курсы английского, французского и подготовка
+          к IELTS
+        </div>
+      </div>
+    </footer>
+
+    <div class="fixed-control">
+      <div class="container">
+        <div class="fixed-control__inner">
+          <button id="fixedMainBtn" class="fixed__main-btn">
+            <span>Показать кнопки обратной связи</span>
+          </button>
+
+          <div id="fixedList" class="fixed-list">
+            <div class="fixed-list__inner">
+              <ul class="fixed-list__container">
+                <li class="fixed-list__item">
+                  <button
+                    class="fixed-list-btn fixed-list-btn_default"
+                    type="button"
+                    onclick="handleCallback('Фиксированная кнопка: Оставить заявку')"
+                  >
+                    Оставить заявку
+                  </button>
+                </li>
+                <li class="fixed-list__item">
+                  <a
+                    href="tel:+77020079887"
+                    class="fixed-list-btn fixed-list-btn_icon"
+                  >
+                    <span class="fixed-list-btn__icon icon2 icon2_phone"></span>
+                    <span>Написать на WhatsApp</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- modals -->
+    <div>
+      <!-- callback -->
+      <div id="callbackModal" class="modal">
+        <button class="modal__bg" type="button" onclick="handleCallbackClose()">
+          Закрыть диалоговое окно
+        </button>
+        <div class="modal__container">
+          <header class="modal__header">
+            <div class="modal__logo"></div>
+            <h3 class="modal__title">Dastan Education</h3>
+            <button
+              class="modal__close"
+              type="button"
+              onclick="handleCallbackClose()"
+            >
+              Закрыть диалоговое окно
+            </button>
+          </header>
+
+          <div class="modal__body">
+            <div class="callback">
+              <div id="callbackFormContainer">
+                <p class="callback__description">
+                  Если у вас есть вопросы о формате или вы не знаете что
+                  выбрать, оставьте свой номер: мы позвоним, чтобы ответить на
+                  все ваши вопросы
+                </p>
+
+                <form id="callbackForm" class="callback-form">
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="name"
+                      placeholder="Как к вам обращаться?"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <input
+                      type="tel"
+                      class="form-control"
+                      name="phone"
+                      placeholder="Телефон"
+                      required
+                    />
+                  </div>
+
+                  <button
+                    class="callback-form__btn btn btn_default btn_block"
+                    type="submit"
+                  >
+                    Отправить
+                  </button>
+
+                  <p class="callback-form__introtext">
+                    Если с вам не связались наберите
+                    <a href="tel:+77077777777">+7 (707) 777-77-77</a>
+                  </p>
+                </form>
+              </div>
+
+              <div id="callbackResult"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- gallery -->
+      <div id="galleryModal" class="modal modal_wide">
+        <button class="modal__bg" type="button" onclick="gallery.close()">
+          Закрыть диалоговое окно
+        </button>
+        <div class="modal__container">
+          <header class="modal__header">
+            <div class="modal__logo"></div>
+            <h3 class="modal__title">Сертификаты</h3>
+            <button
+              class="modal__close"
+              type="button"
+              onclick="gallery.close()"
+            >
+              Закрыть диалоговое окно
+            </button>
+          </header>
+
+          <div class="modal__body">
+            <div class="gallery">
+              <button
+                id="galleryPrev"
+                class="gallery-arrow gallery-arrow_prev"
+                type="button"
+              >
+                <span>Предыдущее изображение</span>
+                <svg
+                  width="28"
+                  height="46"
+                  viewBox="0 0 28 46"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M25 3L5 23L25 43"
+                    stroke="white"
+                    stroke-width="6"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </button>
+              <button
+                id="galleryNext"
+                class="gallery-arrow gallery-arrow_next"
+                type="button"
+              >
+                <span>Следующее изображение</span>
+                <svg
+                  width="28"
+                  height="46"
+                  viewBox="0 0 28 46"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M25 3L5 23L25 43"
+                    stroke="white"
+                    stroke-width="6"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </button>
+
+              <div class="gallery-list">
+                <ul id="galleryModalContent" class="gallery-list__inner"></ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- gallery -->
+      <div id="mapModal" class="modal modal_wide">
+        <button class="modal__bg" type="button" onclick="map.close()">
+          Закрыть диалоговое окно
+        </button>
+        <div class="modal__container">
+          <header class="modal__header">
+            <div class="modal__logo"></div>
+            <h3 class="modal__title">г. Алматы, ул. Маркова 11</h3>
+            <button class="modal__close" type="button" onclick="map.close()">
+              Закрыть диалоговое окно
+            </button>
+          </header>
+
+          <div class="modal__body">
+            <div class="map">
+              <iframe
+                class="map__iframe"
+                src="https://yandex.kz/map-widget/v1/-/CCUaVEEpCB"
+                allowfullscreen="true"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="svg-filters">
+      <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <defs>
+          <filter id="fixedMainBtnFilter">
+            <feImage
+              xlink:href="/assets/img/ripple.png"
+              x="-135.8421279999999"
+              y="-136.3421279999999"
+              width="311.6842559999998"
+              height="311.6842559999998"
+              result="ripple"
+            ></feImage>
+            <feDisplacementMap
+              xChannelSelector="R"
+              yChannelSelector="G"
+              color-interpolation-filters="sRGB"
+              in="SourceGraphic"
+              in2="ripple"
+              scale="7.163853333333346"
+              result="dm"
+            ></feDisplacementMap>
+            <feComposite operator="in" in2="ripple"></feComposite>
+            <feComposite in2="SourceGraphic"></feComposite>
+          </filter>
+        </defs>
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <defs>
+          <filter id="requestErrorFilter">
+            <feTurbulence
+              type="fractalNoise"
+              baseFrequency="0.000001"
+              numOctaves="1"
+              result="warp"
+            />
+            <feOffset dx="0" dy="0" result="warpOffset" />
+            <feDisplacementMap
+              xChannelSelector="R"
+              yChannelSelector="G"
+              scale="30"
+              in="SourceGraphic"
+              in2="warpOffset"
+            />
+          </filter>
+        </defs>
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <defs>
+          <filter id="requestSuccessFilter">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="7" result="blur" />
+            <feColorMatrix
+              in="blur"
+              mode="matrix"
+              values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9"
+              result="goo"
+            />
+            <feComposite in="SourceGraphic" in2="goo" />
+          </filter>
+        </defs>
+      </svg>
+    </div>
+
+    <script>
+      window.socials = {
+        instagram: "https://instagram.com/dastan_education/",
+        whatsapp: "whatsapp://send?abid=+77020079887&text=Хочу%20на%20курсы",
+      };
+    </script>
+    <script src="/assets/js/TweenMax.min.js"></script>
+    <script src="/assets/js/api.js"></script>
+    <script src="/assets/js/scripts.js"></script>
+  </body>
+</html>
