@@ -46,19 +46,19 @@ body {
 }
 
 .icon_whatsapp {
-  background-image: url(/assets/img/icon/whatsapp.svg);
+  background-image: url(assets/img/icon/whatsapp.svg);
 }
 
 .icon_facebook {
-  background-image: url(/assets/img/icon/facebook.svg);
+  background-image: url(assets/img/icon/facebook.svg);
 }
 
 .icon_instagram {
-  background-image: url(/assets/img/icon/instagram.svg);
+  background-image: url(assets/img/icon/instagram.svg);
 }
 
 .icon_telegram {
-  background-image: url(/assets/img/icon/telegram.svg);
+  background-image: url(assets/img/icon/telegram.svg);
 }
 
 .icon2 {
@@ -70,7 +70,7 @@ body {
 }
 
 .icon2_phone {
-  background-image: url(/assets/img/icon/phone.svg);
+  background-image: url(assets/img/icon/phone.svg);
 }
 
 .logo {
@@ -82,18 +82,18 @@ body {
 }
 
 .logo_light {
-  background-image: url("/assets/img/logo-light.svg");
+  background-image: url("assets/img/logo-light.svg");
 }
 
 .logo:not(.logo_light) {
-  background-image: url("/assets/img/logo.svg");
+  background-image: url("assets/img/logo.svg");
 }
 
 @media (max-width: 1023.9999px) {
   .logo_in-header {
     width: 137px;
     height: 26px;
-    background-image: url("/assets/img/logo-light.svg") !important;
+    background-image: url("assets/img/logo-light.svg") !important;
   }
 }
 
@@ -163,7 +163,7 @@ body {
   bottom: 30px;
   width: 400px;
   height: 380px;
-  background: url("/assets/img/nav-bg.svg") no-repeat center;
+  background: url("assets/img/nav-bg.svg") no-repeat center;
   content: '';
 }
 
@@ -415,11 +415,11 @@ body {
 }
 
 .btn-icon_play::before {
-  background: url("/assets/img/icon/play.svg") no-repeat center;
+  background: url("assets/img/icon/play.svg") no-repeat center;
 }
 
 .btn-icon_location::before {
-  background: url("/assets/img/icon/location.svg") no-repeat center;
+  background: url("assets/img/icon/location.svg") no-repeat center;
 }
 
 .section-title {
@@ -510,7 +510,7 @@ body {
           transform: translate(-50%, -50%);
   width: 60px;
   height: 58px;
-  background: url("/assets/img/callback/success.svg") no-repeat center;
+  background: url("assets/img/callback/success.svg") no-repeat center;
   content: '';
 }
 
@@ -575,7 +575,7 @@ body {
           transform: translate(-50%, -50%);
   width: 58px;
   height: 58px;
-  background: url("/assets/img/callback/error.svg") no-repeat center;
+  background: url("assets/img/callback/error.svg") no-repeat center;
   content: '';
 }
 
@@ -704,7 +704,7 @@ body {
   z-index: -2;
   height: 100%;
   bottom: 0;
-  background: url("/assets/img/home-2.svg") no-repeat center;
+  background: url("assets/img/home-2.svg") no-repeat center;
   background-position: right 10px;
 }
 
@@ -718,7 +718,7 @@ body {
   top: 50px;
   max-width: 520px;
   height: 560px;
-  background: url("/assets/img/home.svg") no-repeat center;
+  background: url("assets/img/home.svg") no-repeat center;
   background-size: contain;
 }
 
@@ -824,7 +824,7 @@ body {
   top: 100px;
   width: 555px;
   height: 310px;
-  background: url("/assets/img/aboutus.svg") no-repeat center;
+  background: url("assets/img/aboutus.svg") no-repeat center;
 }
 
 @media (min-width: 930px) {
@@ -884,7 +884,7 @@ body {
     top: calc(100% + 30px);
     width: 100%;
     height: 192px;
-    background: url("/assets/img/aboutus.svg") no-repeat center;
+    background: url("assets/img/aboutus.svg") no-repeat center;
     background-size: contain;
     content: '';
   }
@@ -937,7 +937,7 @@ body {
   top: 0;
   width: 920px;
   height: 670px;
-  background-image: url("/assets/img/benefits/shape-1.svg");
+  background-image: url("assets/img/benefits/shape-1.svg");
   content: '';
 }
 
@@ -946,7 +946,7 @@ body {
   bottom: 40px;
   width: 400px;
   height: 380px;
-  background-image: url("/assets/img/benefits/shape-2.svg");
+  background-image: url("assets/img/benefits/shape-2.svg");
 }
 
 @media (min-width: 1180px) {
@@ -1071,19 +1071,19 @@ body {
 }
 
 .benefits-list-icon_book {
-  background-image: url("/assets/img/benefits/book.svg");
+  background-image: url("assets/img/benefits/book.svg");
 }
 
 .benefits-list-icon_message {
-  background-image: url("/assets/img/benefits/message.svg");
+  background-image: url("assets/img/benefits/message.svg");
 }
 
 .benefits-list-icon_aim {
-  background-image: url("/assets/img/benefits/aim.svg");
+  background-image: url("assets/img/benefits/aim.svg");
 }
 
 .benefits-list-icon_alphabet {
-  background-image: url("/assets/img/benefits/alphabet.svg");
+  background-image: url("assets/img/benefits/alphabet.svg");
 }
 
 @media (max-width: 1179.9999px) {
@@ -1179,7 +1179,7 @@ body {
           transform: translateX(-50%);
   width: 969px;
   height: 100px;
-  background: url("/assets/img/methods.svg") no-repeat center;
+  background: url("assets/img/methods.svg") no-repeat center;
 }
 
 @media (min-width: 1280px) {
@@ -1678,7 +1678,7 @@ body {
   font-weight: 500;
   line-height: 28px;
   text-align: right;
-  background: url("/assets/img/prices-discount.svg") no-repeat right top;
+  background: url("assets/img/prices-discount.svg") no-repeat right top;
 }
 
 @media (max-width: 891.9999px) {
@@ -1857,7 +1857,7 @@ body {
           transform: translate(-50%, -50%) scale(0.5);
   width: 80px;
   height: 80px;
-  background: url("/assets/img/gallery/loop.svg") no-repeat center;
+  background: url("assets/img/gallery/loop.svg") no-repeat center;
   opacity: 0;
 }
 
@@ -1896,7 +1896,7 @@ body {
 
 .contacts {
   padding: 100px 0;
-  background: url("/assets/img/contacts.svg") no-repeat center;
+  background: url("assets/img/contacts.svg") no-repeat center;
   background-size: cover;
   color: #ffffff;
 }
@@ -2177,7 +2177,7 @@ body {
 .fixed__main-btn::after {
   width: 100%;
   height: 100%;
-  background: url("/assets/img/logo-solo_light.svg") no-repeat center;
+  background: url("assets/img/logo-solo_light.svg") no-repeat center;
 }
 
 .fixed__main-btn svg {
@@ -2342,7 +2342,7 @@ body {
 
 .modal__logo {
   width: 60px;
-  background: url("/assets/img/logo-solo.svg") no-repeat center;
+  background: url("assets/img/logo-solo.svg") no-repeat center;
 }
 
 .modal__title {
@@ -2556,4 +2556,3 @@ body {
   border: none;
   border-radius: 0 0 26px 26px;
 }
-/*# sourceMappingURL=styles.css.map */
