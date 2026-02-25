@@ -10,6 +10,7 @@
   },
   "scripts": {
     "build": "node .",
+    "build:readme": "node src/readme.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

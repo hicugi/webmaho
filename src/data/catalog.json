@@ -6,7 +6,7 @@
     "image": "images/magic-test.jpg",
     "imageWebp": "images/magic-test.webp",
     "date": "2021-12-22 10:15:00",
-    "description": "Pet project made for proposing\r\nFrontend: HTML, CSS, JS"
+    "description": "Project made for proposing\r\nFrontend: HTML, CSS, JS"
   },
   {
     "title": "Dastan Education",
@@ -155,7 +155,7 @@
   {
     "title": "120club",
     "company": "4D click",
-    "link": "http://120club.webmaho.com/",
+    "link": "https://hicugi.github.io/webmaho/120club",
     "image": "images/120club.jpg?1555753818",
     "imageWebp": "images/120club.webp?1555764587",
     "date": "2018-02-26 21:09:00",
