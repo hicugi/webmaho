@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>120club</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <style>body{opacity:0}html{background-color:#fff}</style>
+  </head>
+  <body><a class="nav-btn" onclick="app.nav(this)" data-target=".menu"><i></i></a>
+    <header>
+      <div class="container">
+        <div class="title">
+          <h1>Танцевальный клуб в Астане</h1>
+          <p>Современные и классические танцы опытные и профессинальные хореографы</p>
+        </div>
+        <div class="logo">
+          <div class="ico"></div><span>твоя особенная жизнь</span>
+          <div class="socns"><a class="i-vk" href="" target="_blank"></a><a class="i-twitter" href="" target="_blank"></a><a class="i-facebook" href="" target="_blank"></a></div>
+        </div>
+        <div class="contacts"><a class="d-phone" href="tel:+77273324004">+7 727 332 40 04 <span>доб.</span> 102</a><a class="d-email" href="mailto:ofice@ofice.mail.ru">ofice@ofice.mail.ru</a>
+          <div class="d-btn">
+            <button class="btn" onclick="app.modalHeader(1)">Пробный бесплатный урок</button>
+          </div>
+        </div>
+        <button class="header-btn visible-xs" onclick="app.modalHeader(1)"></button>
+        <div class="menu"><a class="menu-bg visible-xs" onclick="app.nav(this)" data-target=".menu"></a>
+          <ul>
+            <li><a href="#aboutus">О клубе</a></li>
+            <li><a href="#shares">Акции</a></li>
+            <li><a href="#teachers">Преподаватели</a></li>
+            <li><a href="#schedule">Расписание</a></li>
+            <li><a href="#carts">Клубные карты</a></li>
+            <li><a href="#gallery">Фото и видео</a></li>
+            <li><a href="#contacts">Контакты</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="header-modal">
+        <div class="container">
+          <form class="d-dialog" action="callback"><a class="d-close" onclick="app.modalHeader(0)"></a>
+            <h4><span>Запишитесь на пробный</span> Бесплатный урок</h4>
+            <div class="form-group v2">
+              <input name="name" placeholder="Ваше имя">
+            </div>
+            <div class="form-group v2">
+              <input name="phone" placeholder="Телефон" plugin="maskPhone" required>
+            </div>
+            <div class="form-group v2">
+              <input name="email" placeholder="E-mail">
+            </div>
+            <div class="d-btn">
+              <button class="btn" type="button" onclick="app.submit(this)">Пробная тренировка</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="header-back" onclick="app.modalHeader(0)"></div>
+    </header>
+    <articles id="main">
+      <section class="secn-slider">
+        <div class="container">
+          <div class="slider1" plugin="slick" data-cnf="{&quot;arrows&quot;:false,&quot;dots&quot;:false,&quot;asNavFor&quot;:&quot;.slider1-switcher&quot;}">
+            <div class="slider1-item">
+              <div class="d-wrap">
+                <div class="d-img" style="background-image:url(assets/img/slider/1.jpg);"></div>
+                <h4 class="secn-h4">Узнайте о нас <br>за 2 минуты</h4>
+                <div class="d-desc">
+                  <p>Club 120- место, где каждый может стать лучшей версией себя. Это творческое пространство для людей, готовых работать над собой каждый день. достигая новых высот</p>
+                </div>
+                <div class="d-extra">
+                  <p>С уважением, <br>МАДИНА БАУБЕКОВА, <br>Управляющий клуба Club120</p>
+                </div>
+              </div>
+            </div>
+            <div class="slider1-item">
+              <div class="d-wrap">
+                <div class="d-img" style="background-image:url(assets/img/slider/1.jpg);"></div>
+                <h4 class="secn-h4">Узнайте о нас <br>за 2 минуты</h4>
+                <div class="d-desc">
+                  <p>Club 120- место, где каждый может стать лучшей версией себя. Это творческое пространство для людей, готовых работать над собой каждый день. достигая новых высот</p>
+                </div>
+                <div class="d-extra">
+                  <p>С уважением, <br>МАДИНА БАУБЕКОВА, <br>Управляющий клуба Club120</p>
+                </div>
+              </div>
+            </div>
+            <div class="slider1-item">
+              <div class="d-wrap">
+                <div class="d-img" style="background-image:url(assets/img/slider/1.jpg);"></div>
+                <h4 class="secn-h4">Узнайте о нас <br>за 2 минуты</h4>
+                <div class="d-desc">
+                  <p>Club 120- место, где каждый может стать лучшей версией себя. Это творческое пространство для людей, готовых работать над собой каждый день. достигая новых высот</p>
+                </div>
+                <div class="d-extra">
+                  <p>С уважением, <br>МАДИНА БАУБЕКОВА, <br>Управляющий клуба Club120</p>
+                </div>
+              </div>
+            </div>
+            <div class="slider1-item">
+              <div class="d-wrap">
+                <div class="d-img" style="background-image:url(assets/img/slider/1.jpg);"></div>
+                <h4 class="secn-h4">Узнайте о нас <br>за 2 минуты</h4>
+                <div class="d-desc">
+                  <p>Club 120- место, где каждый может стать лучшей версией себя. Это творческое пространство для людей, готовых работать над собой каждый день. достигая новых высот</p>
+                </div>
+                <div class="d-extra">
+                  <p>С уважением, <br>МАДИНА БАУБЕКОВА, <br>Управляющий клуба Club120</p>
+                </div>
+              </div>
+            </div>
+            <div class="slider1-item">
+              <div class="d-wrap">
+                <div class="d-img" style="background-image:url(assets/img/slider/1.jpg);"></div>
+                <h4 class="secn-h4">Узнайте о нас <br>за 2 минуты</h4>
+                <div class="d-desc">
+                  <p>Club 120- место, где каждый может стать лучшей версией себя. Это творческое пространство для людей, готовых работать над собой каждый день. достигая новых высот</p>
+                </div>
+                <div class="d-extra">
+                  <p>С уважением, <br>МАДИНА БАУБЕКОВА, <br>Управляющий клуба Club120</p>
+                </div>
+              </div>
+            </div>
+            <div class="slider1-item">
+              <div class="d-wrap">
+                <div class="d-img" style="background-image:url(assets/img/slider/1.jpg);"></div>
+                <h4 class="secn-h4">Узнайте о нас <br>за 2 минуты</h4>
+                <div class="d-desc">
+                  <p>Club 120- место, где каждый может стать лучшей версией себя. Это творческое пространство для людей, готовых работать над собой каждый день. достигая новых высот</p>
+                </div>
+                <div class="d-extra">
+                  <p>С уважением, <br>МАДИНА БАУБЕКОВА, <br>Управляющий клуба Club120</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="slider1-switcher" plugin="slick" data-cnf="{&quot;slidesToShow&quot;:5,&quot;slidesToScroll&quot;:1,&quot;asNavFor&quot;:&quot;.slider1&quot;,&quot;focusOnSelect&quot;:true,&quot;dots&quot;:false}" data-responsive="[[1199,{&quot;slidesToShow&quot;:4}],[992,{&quot;slidesToShow&quot;:3}],[768,{&quot;slidesToShow&quot;:1}]]">
+            <div class="slider1-switcher-item">
+              <div class="d-wrap">
+                <h4 class="secn-h4-2">Бальные танцы</h4>
+                <div class="d-desc">
+                  <p><strong>детская/взрослая группа <br>от 500 тг/месяц</strong></p>
+                  <p>Расширенная версия описание даного раздела, может быть в несколько строк и содержать ссылки на другие разделы, также подсвечивается плажкой другого цвета</p>
+                </div>
+              </div>
+            </div>
+            <div class="slider1-switcher-item">
+              <div class="d-wrap">
+                <h4 class="secn-h4-2">Современные танцы</h4>
+                <div class="d-desc">
+                  <p><strong>детская/взрослая группа <br>от 500 тг/месяц</strong></p>
+                  <p>Краткое описание данного раздела, может быть в несколько строк и содержать ссылки на другие разделы</p>
+                </div>
+              </div>
+            </div>
+            <div class="slider1-switcher-item">
+              <div class="d-wrap">
+                <h4 class="secn-h4-2">Восток</h4>
+                <div class="d-desc">
+                  <p><strong>детская/взрослая группа <br>от 500 тг/месяц</strong></p>
+                  <p>Краткое описание данного раздела, может быть в несколько строк и содержать ссылки на другие разделы</p>
+                </div>
+              </div>
+            </div>
+            <div class="slider1-switcher-item">
+              <div class="d-wrap">
+                <h4 class="secn-h4-2">Аргентинское танго</h4>
+                <div class="d-desc">
+                  <p><strong>детская/взрослая группа <br>от 500 тг/месяц</strong></p>
+                  <p>Краткое описание данного раздела, может быть в несколько строк и содержать ссылки на другие разделы</p>
+                </div>
+              </div>
+            </div>
+            <div class="slider1-switcher-item">
+              <div class="d-wrap">
+                <h4 class="secn-h4-2">Social latin</h4>
+                <div class="d-desc">
+                  <p><strong>детская/взрослая группа <br>от 500 тг/месяц</strong></p>
+                  <p>Краткое описание данного раздела, может быть в несколько строк и содержать ссылки на другие разделы</p>
+                </div>
+              </div>
+            </div>
+            <div class="slider1-switcher-item">
+              <div class="d-wrap">
+                <h4 class="secn-h4-2">Бальные танцы</h4>
+                <div class="d-desc">
+                  <p><strong>детская/взрослая группа <br>от 500 тг/месяц</strong></p>
+                  <p>Расширенная версия описание даного раздела, может быть в несколько строк и содержать ссылки на другие разделы, также подсвечивается плажкой другого цвета</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="secn-aboutus" id="aboutus">
+        <div class="container">
+          <h2 class="secn-h2"><span>О нашем</span> Клубе</h2>
+          <p class="secn-desc">Club 120 – обучающее танцевальное пространство <br>Клуб по интересам, вступая в него, вы получаете не только уроки, отличное настроение, здоровое подтянутое тело, но и круг единомышленников. Общение с людьми разделяющие ваши интересы. У всех учеников нашего клуба есть возможность воплотить свои мечты, выступая на соревнованиях по всему миру в паре со своим преподавателем. Если Вам от 4 до 120 лет и Вы хотите танцевать ждём Вас!</p>
+          <ul class="list1">
+            <li><span><i style="background-image:url('assets/img/aboutus/1.png');"></i></span>
+              <p>Все танцевальные направления<br> в одном месте</p>
+            </li>
+            <li><span><i style="background-image:url('assets/img/aboutus/2.png');"></i></span>
+              <p>Гибкая ценовая <br>политика</p>
+            </li>
+            <li><span><i style="background-image:url('assets/img/aboutus/3.png');"></i></span>
+              <p>Профессиональные<br> преподаватели</p>
+            </li>
+            <li><span><i style="background-image:url('assets/img/aboutus/4.png');"></i></span>
+              <p>Удобное <br>местоположение</p>
+            </li>
+            <li><span><i style="background-image:url('assets/img/aboutus/5.png');"></i></span>
+              <p>Группы выходного дня для<br> взрослых и детей</p>
+            </li>
+            <li><span><i style="background-image:url('assets/img/aboutus/6.png');"></i></span>
+              <p>Бар с лучшим <br>кофе и магазин</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="secn-shares" id="shares">
+        <div class="container">
+          <h2 class="secn-h2-2">Действующие акции</h2>
+          <div class="shares" plugin="slick" data-cnf="{&quot;slidesToShow&quot;:4,&quot;slidesToScroll&quot;:4,&quot;arrows&quot;:false,&quot;dots&quot;:false}" data-responsive="[[1199,{&quot;slidesToShow&quot;:3,&quot;slidesToScroll&quot;:3}],[768,{&quot;slidesToShow&quot;:1,&quot;slidesToScroll&quot;:1}]]">
+            <div class="shares-item">
+              <div class="imgb">
+                <div class="imga" style="background-image:url('assets/img/shares/1.jpg');"></div>
+              </div>
+              <p class="d-date">24 декабря 2017</p>
+              <h4 class="secn-h4-2">Студентам скидки</h4>
+              <p class="d-desc">Расширенная версия описание даного раздела, может быть в несколько строк и содержать ссылки на другие разделы, также подсвечивается плажкой другого цвета</p>
+              <p class="d-link"><a>Подробнее</a></p>
+            </div>
+            <div class="shares-item">
+              <div class="imgb">
+                <div class="imga" style="background-image:url('assets/img/shares/2.jpg');"></div>
+              </div>
+              <p class="d-date">24 декабря 2017</p>
+              <h4 class="secn-h4-2">Новогодняя акция</h4>
+              <p class="d-desc">Расширенная версия описание даного раздела, может быть в несколько строк и содержать ссылки на другие разделы, также подсвечивается плажкой другого цвета</p>
+              <p class="d-link"><a>Подробнее</a></p>
+            </div>
+            <div class="shares-item">
+              <div class="imgb">
+                <div class="imga" style="background-image:url('assets/img/shares/3.jpg');"></div>
+              </div>
+              <p class="d-date">24 декабря 2017</p>
+              <h4 class="secn-h4-2">Первая тренировка - бесплатно</h4>
+              <p class="d-desc">Расширенная версия описание даного раздела, может быть в несколько строк и содержать ссылки на другие разделы, также подсвечивается плажкой другого цвета</p>
+              <p class="d-link"><a>Подробнее</a></p>
+            </div>
+            <div class="shares-item">
+              <div class="imgb">
+                <div class="imga" style="background-image:url('assets/img/shares/4.jpg');"></div>
+              </div>
+              <p class="d-date">24 декабря 2017</p>
+              <h4 class="secn-h4-2">Балетная подготовка</h4>
+              <p class="d-desc">Расширенная версия описание даного раздела, может быть в несколько строк и содержать ссылки на другие разделы, также подсвечивается плажкой другого цвета</p>
+              <p class="d-link"><a>Подробнее</a></p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="secn-schedule" id="schedule">
+        <div class="container">
+          <h2 class="secn-h2">Расписание <span>занятий в нашем клубе</span></h2>
+          <div class="schedule">
+            <div class="schedule-menu" onclick="app.class(this)">
+              <ul><a onclick="app.scheduleSel(this)">Взрослые</a><a onclick="app.scheduleSel(this)">Дети 4-5 лет</a><a onclick="app.scheduleSel(this)">Дети 6-8 лет</a><a onclick="app.scheduleSel(this)">Дети 9-12 лет</a>
+              </ul>
+            </div>
+            <div class="schedule-body">
+              <div class="d-col">
+                <div class="d-table">
+                  <div class="d-thead" onclick="app.class(this)">
+                    <div class="d-tr">
+                      <div class="d-th"></div>
+                      <div class="d-th" onclick="app.scheduleWeekSel(this)">Понедельник</div>
+                      <div class="d-th" onclick="app.scheduleWeekSel(this)">Вторник</div>
+                      <div class="d-th" onclick="app.scheduleWeekSel(this)">Среда</div>
+                      <div class="d-th" onclick="app.scheduleWeekSel(this)">Четверг</div>
+                      <div class="d-th" onclick="app.scheduleWeekSel(this)">Пятница</div>
+                      <div class="d-th" onclick="app.scheduleWeekSel(this)">Суббота</div>
+                      <div class="d-th" onclick="app.scheduleWeekSel(this)">Воскресенье</div>
+                    </div>
+                  </div>
+                  <div class="d-tbody">
+                    <div class="d-tr">
+                      <div class="d-td">7:00</div>
+                      <div class="d-td"><span>7.30</span><span>Детская</span></div>
+                      <div class="d-td"><span>7.30</span><span>Детская</span></div>
+                      <div class="d-td"><span>7.30</span><span>Взрослая</span></div>
+                      <div class="d-td"><span>7.30</span><span>Детская</span></div>
+                      <div class="d-td"><span>7.30</span><span>Взрослая</span></div>
+                      <div class="d-td"><span>7.30</span><span>Детская</span></div>
+                      <div class="d-td"><span>7.30</span><span>Детская</span></div>
+                    </div>
+                    <div class="d-tr">
+                      <div class="d-td">9:00</div>
+                      <div class="d-td"><span>9:30</span><span>Детская</span></div>
+                      <div class="d-td"></div>
+                      <div class="d-td"><span>9:30</span><span>Взрослая</span></div>
+                      <div class="d-td"></div>
+                      <div class="d-td"></div>
+                      <div class="d-td"><span>9:30</span><span>Детская</span></div>
+                      <div class="d-td"><span>9:30</span><span>Детская</span></div>
+                    </div>
+                    <div class="d-tr">
+                      <div class="d-td">11:00</div>
+                      <div class="d-td"></div>
+                      <div class="d-td"></div>
+                      <div class="d-td"><span>11:30</span><span>Взрослая</span></div>
+                      <div class="d-td"><span>11:30</span><span>Детская</span></div>
+                      <div class="d-td"></div>
+                      <div class="d-td"><span>11:30</span><span>Детская</span></div>
+                      <div class="d-td"><span>11:30</span><span>Детская</span></div>
+                    </div>
+                    <div class="d-tr">
+                      <div class="d-td">13:00</div>
+                      <div class="d-td"></div>
+                      <div class="d-td"><span>9:30</span><span>Детская</span></div>
+                      <div class="d-td"></div>
+                      <div class="d-td"></div>
+                      <div class="d-td"></div>
+                      <div class="d-td"><span>9:30</span><span>Детская</span></div>
+                      <div class="d-td"><span>9:30</span><span>Детская</span></div>
+                    </div>
+                    <div class="d-tr">
+                      <div class="d-td">15:00</div>
+                      <div class="d-td"></div>
+                      <div class="d-td"></div>
+                      <div class="d-td"><span>15:30</span><span>Взрослая</span></div>
+                      <div class="d-td"><span>15:30</span><span>Детская</span></div>
+                      <div class="d-td"></div>
+                      <div class="d-td"></div>
+                      <div class="d-td"></div>
+                    </div>
+                    <div class="d-tr">
+                      <div class="d-td">17:00</div>
+                      <div class="d-td"><span>9:30</span><span>Детская</span></div>
+                      <div class="d-td"></div>
+                      <div class="d-td"></div>
+                      <div class="d-td"></div>
+                      <div class="d-td"></div>
+                      <div class="d-td"><span>9:30</span><span>Детская</span></div>
+                      <div class="d-td"><span>9:30</span><span>Детская</span></div>
+                    </div>
+                  </div>
+                  <div class="d-tbody">
+                    <div class="d-tr">
+                      <div class="d-td">7:00</div>
+                      <div class="d-td"><span>7.30</span><span>Детская</span></div>
+                      <div class="d-td"><span>7.30</span><span>Детская</span></div>
+                      <div class="d-td"><span>7.30</span><span>Взрослая</span></div>
+                      <div class="d-td"><span>7.30</span><span>Детская</span></div>
+                      <div class="d-td"><span>7.30</span><span>Взрослая</span></div>
+                      <div class="d-td"><span>7.30</span><span>Детская</span></div>
+                      <div class="d-td"><span>7.30</span><span>Детская</span></div>
+                    </div>
+                    <div class="d-tr">
+                      <div class="d-td">9:00</div>
+                      <div class="d-td"><span>9:30</span><span>Детская</span></div>
+                      <div class="d-td"></div>
+                      <div class="d-td"><span>9:30</span><span>Взрослая</span></div>
+                      <div class="d-td"></div>
+                      <div class="d-td"></div>
+                      <div class="d-td"><span>9:30</span><span>Детская</span></div>
+                      <div class="d-td"><span>9:30</span><span>Детская</span></div>
+                    </div>
+                    <div class="d-tr">
+                      <div class="d-td">11:00</div>
+                      <div class="d-td"></div>
+                      <div class="d-td"></div>
+                      <div class="d-td"><span>11:30</span><span>Взрослая</span></div>
+                      <div class="d-td"><span>11:30</span><span>Детская</span></div>
+                      <div class="d-td"></div>
+                      <div class="d-td"><span>11:30</span><span>Детская</span></div>
+                      <div class="d-td"><span>11:30</span><span>Детская</span></div>
+                    </div>
+                    <div class="d-tr">
+                      <div class="d-td">13:00</div>
+                      <div class="d-td"></div>
+                      <div class="d-td"><span>9:30</span><span>Детская</span></div>
+                      <div class="d-td"></div>
+                      <div class="d-td"></div>
+                      <div class="d-td"></div>
+                      <div class="d-td"><span>9:30</span><span>Детская</span></div>
+                      <div class="d-td"><span>9:30</span><span>Детская</span></div>
+                    </div>
+                    <div class="d-tr">
+                      <div class="d-td">15:00</div>
+                      <div class="d-td"></div>
+                      <div class="d-td"></div>
+                      <div class="d-td"><span>15:30</span><span>Взрослая</span></div>
+                      <div class="d-td"><span>15:30</span><span>Детская</span></div>
+                      <div class="d-td"></div>
+                      <div class="d-td"></div>
+                      <div class="d-td"></div>
+                    </div>
+                    <div class="d-tr">
+                      <div class="d-td">17:00</div>
+                      <div class="d-td"><span>9:30</span><span>Детская</span></div>
+                      <div class="d-td"></div>
+                      <div class="d-td"></div>
+                      <div class="d-td"></div>
+                      <div class="d-td"></div>
+                      <div class="d-td"><span>9:30</span><span>Детская</span></div>
+                      <div class="d-td"><span>9:30</span><span>Детская</span></div>
+                    </div>
+                  </div>
+                  <div class="d-tbody">
+                    <div class="d-tr">
+                      <div class="d-td">7:00</div>
+                      <div class="d-td"><span>7.30</span><span>Детская</span></div>
+                      <div class="d-td"><span>7.30</span><span>Детская</span></div>
+                      <div class="d-td"><span>7.30</span><span>Взрослая</span></div>
+                      <div class="d-td"><span>7.30</span><span>Детская</span></div>
+                      <div class="d-td"><span>7.30</span><span>Взрослая</span></div>
+                      <div class="d-td"><span>7.30</span><span>Детская</span></div>
+                      <div class="d-td"><span>7.30</span><span>Детская</span></div>
+                    </div>
+                    <div class="d-tr">
+                      <div class="d-td">9:00</div>
+                      <div class="d-td"><span>9:30</span><span>Детская</span></div>
+                      <div class="d-td"></div>
+                      <div class="d-td"><span>9:30</span><span>Взрослая</span></div>
+                      <div class="d-td"></div>
+                      <div class="d-td"></div>
+                      <div class="d-td"><span>9:30</span><span>Детская</span></div>
+                      <div class="d-td"><span>9:30</span><span>Детская</span></div>
+                    </div>
+                    <div class="d-tr">
+                      <div class="d-td">11:00</div>
+                      <div class="d-td"></div>
+                      <div class="d-td"></div>
+                      <div class="d-td"><span>11:30</span><span>Взрослая</span></div>
+                      <div class="d-td"><span>11:30</span><span>Детская</span></div>
+                      <div class="d-td"></div>
+                      <div class="d-td"><span>11:30</span><span>Детская</span></div>
+                      <div class="d-td"><span>11:30</span><span>Детская</span></div>
+                    </div>
+                    <div class="d-tr">
+                      <div class="d-td">13:00</div>
+                      <div class="d-td"></div>
+                      <div class="d-td"><span>9:30</span><span>Детская</span></div>
+                      <div class="d-td"></div>
+                      <div class="d-td"></div>
+                      <div class="d-td"></div>
+                      <div class="d-td"><span>9:30</span><span>Детская</span></div>
+                      <div class="d-td"><span>9:30</span><span>Детская</span></div>
+                    </div>
+                    <div class="d-tr">
+                      <div class="d-td">15:00</div>
+                      <div class="d-td"></div>
+                      <div class="d-td"></div>
+                      <div class="d-td"><span>15:30</span><span>Взрослая</span></div>
+                      <div class="d-td"><span>15:30</span><span>Детская</span></div>
+                      <div class="d-td"></div>
+                      <div class="d-td"></div>
+                      <div class="d-td"></div>
+                    </div>
+                    <div class="d-tr">
+                      <div class="d-td">17:00</div>
+                      <div class="d-td"><span>9:30</span><span>Детская</span></div>
+                      <div class="d-td"></div>
+                      <div class="d-td"></div>
+                      <div class="d-td"></div>
+                      <div class="d-td"></div>
+                      <div class="d-td"><span>9:30</span><span>Детская</span></div>
+                      <div class="d-td"><span>9:30</span><span>Детская</span></div>
+                    </div>
+                  </div>
+                  <div class="d-tbody">
+                    <div class="d-tr">
+                      <div class="d-td">7:00</div>
+                      <div class="d-td"><span>7.30</span><span>Детская</span></div>
+                      <div class="d-td"><span>7.30</span><span>Детская</span></div>
+                      <div class="d-td"><span>7.30</span><span>Взрослая</span></div>
+                      <div class="d-td"><span>7.30</span><span>Детская</span></div>
+                      <div class="d-td"><span>7.30</span><span>Взрослая</span></div>
+                      <div class="d-td"><span>7.30</span><span>Детская</span></div>
+                      <div class="d-td"><span>7.30</span><span>Детская</span></div>
+                    </div>
+                    <div class="d-tr">
+                      <div class="d-td">9:00</div>
+                      <div class="d-td"><span>9:30</span><span>Детская</span></div>
+                      <div class="d-td"></div>
+                      <div class="d-td"><span>9:30</span><span>Взрослая</span></div>
+                      <div class="d-td"></div>
+                      <div class="d-td"></div>
+                      <div class="d-td"><span>9:30</span><span>Детская</span></div>
+                      <div class="d-td"><span>9:30</span><span>Детская</span></div>
+                    </div>
+                    <div class="d-tr">
+                      <div class="d-td">11:00</div>
+                      <div class="d-td"></div>
+                      <div class="d-td"></div>
+                      <div class="d-td"><span>11:30</span><span>Взрослая</span></div>
+                      <div class="d-td"><span>11:30</span><span>Детская</span></div>
+                      <div class="d-td"></div>
+                      <div class="d-td"><span>11:30</span><span>Детская</span></div>
+                      <div class="d-td"><span>11:30</span><span>Детская</span></div>
+                    </div>
+                    <div class="d-tr">
+                      <div class="d-td">13:00</div>
+                      <div class="d-td"></div>
+                      <div class="d-td"><span>9:30</span><span>Детская</span></div>
+                      <div class="d-td"></div>
+                      <div class="d-td"></div>
+                      <div class="d-td"></div>
+                      <div class="d-td"><span>9:30</span><span>Детская</span></div>
+                      <div class="d-td"><span>9:30</span><span>Детская</span></div>
+                    </div>
+                    <div class="d-tr">
+                      <div class="d-td">15:00</div>
+                      <div class="d-td"></div>
+                      <div class="d-td"></div>
+                      <div class="d-td"><span>15:30</span><span>Взрослая</span></div>
+                      <div class="d-td"><span>15:30</span><span>Детская</span></div>
+                      <div class="d-td"></div>
+                      <div class="d-td"></div>
+                      <div class="d-td"></div>
+                    </div>
+                    <div class="d-tr">
+                      <div class="d-td">17:00</div>
+                      <div class="d-td"><span>9:30</span><span>Детская</span></div>
+                      <div class="d-td"></div>
+                      <div class="d-td"></div>
+                      <div class="d-td"></div>
+                      <div class="d-td"></div>
+                      <div class="d-td"><span>9:30</span><span>Детская</span></div>
+                      <div class="d-td"><span>9:30</span><span>Детская</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="d-col">
+                <form class="form1" action="callback">
+                  <h4 class="secn-h4-3 text-center"><span>Запишитесь на пробный</span> Бесплатный урок</h4>
+                  <div class="d-forms">
+                    <div class="form-group">
+                      <input name="name" placeholder="Ваше имя">
+                    </div>
+                    <div class="form-group">
+                      <input name="phone" placeholder="Телефон" plugin="maskPhone" required>
+                    </div>
+                    <div class="form-group">
+                      <input name="email" placeholder="E-mail">
+                    </div>
+                  </div>
+                  <div class="d-btn">
+                    <div class="btn">Пробная тренировка</div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <p class="secn-desc">Внимание, расписание может меняться. Следите за изменением расписания на нашем сайте. Или звоните по телефонам +7 (123) 456-78-99</p>
+        </div>
+      </section>
+      <section class="secn-teachers" id="teachers">
+        <div class="container">
+          <h2 class="secn-h2"><span>Наши</span> преодаватели</h2>
+          <div class="teachers" plugin="slick" data-cnf="{&quot;slidesToShow&quot;:5,&quot;slidesToScroll&quot;:5,&quot;dots&quot;:false}" data-responsive="[ [1199,{&quot;slidesToShow&quot;:4,&quot;slidesToScroll&quot;:4}] ,[992,{&quot;slidesToShow&quot;:3,&quot;slidesToScroll&quot;:3}] ,[768,{&quot;slidesToShow&quot;:1,&quot;slidesToScroll&quot;:1}] ]">
+            <div class="teacher-item">
+              <div class="imgb">
+                <div class="imga imga-contain" style="background-image:url('assets/img/teacher/1.png');"></div>
+              </div>
+              <div class="d-info">
+                <h4 class="secn-h4-2">Аркадий Иванов</h4>
+                <p class="d-subtitle">Тренер по бальному танцам</p>
+                <p class="d-desc">Краткое описание даного раздела, может быть в 	несколько строк и содержать ссылки на другие разделы</p>
+              </div>
+            </div>
+            <div class="teacher-item">
+              <div class="imgb">
+                <div class="imga imga-contain" style="background-image:url('assets/img/teacher/2.png');"></div>
+              </div>
+              <div class="d-info">
+                <h4 class="secn-h4-2">Аркадий Иванов</h4>
+                <p class="d-subtitle">Тренер по бальному танцам</p>
+                <p class="d-desc">Краткое описание даного раздела, может быть в 	несколько строк и содержать ссылки на другие разделы</p>
+              </div>
+            </div>
+            <div class="teacher-item">
+              <div class="imgb">
+                <div class="imga imga-contain" style="background-image:url('assets/img/teacher/3.png');"></div>
+              </div>
+              <div class="d-info">
+                <h4 class="secn-h4-2">Аркадий Иванов</h4>
+                <p class="d-subtitle">Тренер по бальному танцам</p>
+                <p class="d-desc">Краткое описание даного раздела, может быть в 	несколько строк и содержать ссылки на другие разделы</p>
+              </div>
+            </div>
+            <div class="teacher-item">
+              <div class="imgb">
+                <div class="imga imga-contain" style="background-image:url('assets/img/teacher/4.png');"></div>
+              </div>
+              <div class="d-info">
+                <h4 class="secn-h4-2">Аркадий Иванов</h4>
+                <p class="d-subtitle">Тренер по бальному танцам</p>
+                <p class="d-desc">Краткое описание даного раздела, может быть в 	несколько строк и содержать ссылки на другие разделы</p>
+              </div>
+            </div>
+            <div class="teacher-item">
+              <div class="imgb">
+                <div class="imga imga-contain" style="background-image:url('assets/img/teacher/5.png');"></div>
+              </div>
+              <div class="d-info">
+                <h4 class="secn-h4-2">Аркадий Иванов</h4>
+                <p class="d-subtitle">Тренер по бальному танцам</p>
+                <p class="d-desc">Краткое описание даного раздела, может быть в 	несколько строк и содержать ссылки на другие разделы</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="secn-carts" id="carts">
+        <div class="container">
+          <h2 class="secn-h2-2">Виды карт и специальных предложений</h2>
+          <div class="carts" plugin="slick" data-cnf="{&quot;slidesToShow&quot;:4,&quot;slidesToScroll&quot;:4,&quot;arrows&quot;:true,&quot;dots&quot;:false}" data-responsive="[[1199,{&quot;slidesToShow&quot;:3,&quot;slidesToScroll&quot;:3}],[768,{&quot;slidesToShow&quot;:1,&quot;slidesToScroll&quot;:1}]]">
+            <div class="cart-item">
+              <div class="d-wrap">
+                <h4>Студенческий билет</h4>
+                <p class="d-subtitle">взрослая группа <br>от 500 тг/месяц</p>
+                <p class="d-desc">Краткое описание даного раздела, может быть в несколько строк и сожержать ссылки на другие разделы</p>
+              </div>
+            </div>
+            <div class="cart-item">
+              <div class="d-wrap">
+                <h4>Новогодний калейдоскоп</h4>
+                <p class="d-subtitle">взрослая группа <br>от 500 тг/месяц</p>
+                <p class="d-desc">Краткое описание даного раздела, может быть в несколько строк и сожержать ссылки на другие разделы</p>
+              </div>
+            </div>
+            <div class="cart-item">
+              <div class="d-wrap">
+                <h4>Бодрое утро</h4>
+                <p class="d-subtitle">взрослая группа <br>от 500 тг/месяц</p>
+                <p class="d-desc">Краткое описание даного раздела, может быть в несколько строк и сожержать ссылки на другие разделы</p>
+              </div>
+            </div>
+            <div class="cart-item">
+              <div class="d-wrap">
+                <h4>Вечерний променад</h4>
+                <p class="d-subtitle">взрослая группа <br>от 500 тг/месяц</p>
+                <p class="d-desc">Краткое описание даного раздела, может быть в несколько строк и сожержать ссылки на другие разделы</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="secn-gallery" id="gallery">
+        <div class="container">
+          <h2 class="secn-h2-3"><span>Фото и видео галерея</span></h2>
+          <p class="secn-subtitle">Расширенная версия описание даного раздела, может быть в несколько строк и содержать ссылки на другие разделы, <br>также подсвечивается плажкой другого цвета</p>
+          <div class="gallery-slick" plugin="slick" data-cnf="{&quot;dots&quot;:false,&quot;arrows&quot;:false}">
+            <div class="gallery-slick-item">
+              <div class="gallery">
+                <div class="slider2" slider="2">
+                  <ul class="slider2-images">
+                    <li class="gallery-item" onclick="app.slick.modal(this)" data-target="#modal-gallery">
+                      <div class="imgb">
+                        <div class="imga" style="background-image:url('assets/img/gallery/1.jpg?');"></div>
+                      </div>
+                    </li>
+                    <li class="gallery-item" onclick="app.slick.modal(this)" data-target="#modal-gallery">
+                      <div class="imgb">
+                        <div class="imga" style="background-image:url('assets/img/gallery/2.jpg?');"></div>
+                      </div>
+                    </li>
+                    <li class="gallery-item" onclick="app.slick.modal(this)" data-target="#modal-gallery">
+                      <div class="imgb">
+                        <div class="imga" style="background-image:url('assets/img/gallery/3.jpg?');"></div>
+                      </div>
+                    </li>
+                    <li class="gallery-item" onclick="app.slick.modal(this)" data-target="#modal-gallery">
+                      <div class="imgb">
+                        <div class="imga" style="background-image:url('assets/img/gallery/4.jpg?');"></div>
+                      </div>
+                    </li>
+                    <li class="gallery-item" onclick="app.slick.modal(this)" data-target="#modal-gallery">
+                      <div class="imgb">
+                        <div class="imga" style="background-image:url('assets/img/gallery/5.jpg?');"></div>
+                      </div>
+                    </li>
+                    <li class="gallery-item" onclick="app.slick.modal(this)" data-target="#modal-gallery">
+                      <div class="imgb">
+                        <div class="imga" style="background-image:url('assets/img/gallery/6.jpg?');"></div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="gallery-slick-item">
+              <div class="gallery">
+                <div class="slider2" slider="2">
+                  <ul class="slider2-images">
+                    <li class="gallery-item" onclick="app.slick.modal(this)" data-target="#modal-gallery">
+                      <div class="imgb">
+                        <div class="imga" style="background-image:url('assets/img/gallery/1.jpg?');"></div>
+                      </div>
+                    </li>
+                    <li class="gallery-item" onclick="app.slick.modal(this)" data-target="#modal-gallery">
+                      <div class="imgb">
+                        <div class="imga" style="background-image:url('assets/img/gallery/2.jpg?');"></div>
+                      </div>
+                    </li>
+                    <li class="gallery-item" onclick="app.slick.modal(this)" data-target="#modal-gallery">
+                      <div class="imgb">
+                        <div class="imga" style="background-image:url('assets/img/gallery/3.jpg?');"></div>
+                      </div>
+                    </li>
+                    <li class="gallery-item" onclick="app.slick.modal(this)" data-target="#modal-gallery">
+                      <div class="imgb">
+                        <div class="imga" style="background-image:url('assets/img/gallery/4.jpg?');"></div>
+                      </div>
+                    </li>
+                    <li class="gallery-item" onclick="app.slick.modal(this)" data-target="#modal-gallery">
+                      <div class="imgb">
+                        <div class="imga" style="background-image:url('assets/img/gallery/5.jpg?');"></div>
+                      </div>
+                    </li>
+                    <li class="gallery-item" onclick="app.slick.modal(this)" data-target="#modal-gallery">
+                      <div class="imgb">
+                        <div class="imga" style="background-image:url('assets/img/gallery/6.jpg?');"></div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="gallery-slick-item">
+              <div class="gallery">
+                <div class="slider2" slider="2">
+                  <ul class="slider2-images">
+                    <li class="gallery-item" onclick="app.slick.modal(this)" data-target="#modal-gallery">
+                      <div class="imgb">
+                        <div class="imga" style="background-image:url('assets/img/gallery/1.jpg?');"></div>
+                      </div>
+                    </li>
+                    <li class="gallery-item" onclick="app.slick.modal(this)" data-target="#modal-gallery">
+                      <div class="imgb">
+                        <div class="imga" style="background-image:url('assets/img/gallery/2.jpg?');"></div>
+                      </div>
+                    </li>
+                    <li class="gallery-item" onclick="app.slick.modal(this)" data-target="#modal-gallery">
+                      <div class="imgb">
+                        <div class="imga" style="background-image:url('assets/img/gallery/3.jpg?');"></div>
+                      </div>
+                    </li>
+                    <li class="gallery-item" onclick="app.slick.modal(this)" data-target="#modal-gallery">
+                      <div class="imgb">
+                        <div class="imga" style="background-image:url('assets/img/gallery/4.jpg?');"></div>
+                      </div>
+                    </li>
+                    <li class="gallery-item" onclick="app.slick.modal(this)" data-target="#modal-gallery">
+                      <div class="imgb">
+                        <div class="imga" style="background-image:url('assets/img/gallery/5.jpg?');"></div>
+                      </div>
+                    </li>
+                    <li class="gallery-item" onclick="app.slick.modal(this)" data-target="#modal-gallery">
+                      <div class="imgb">
+                        <div class="imga" style="background-image:url('assets/img/gallery/6.jpg?');"></div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="secn-contacts" id="contacts">
+        <div class="map">
+          <iframe></iframe>
+        </div>
+        <div class="container">
+          <div class="contacts-block">
+            <h2 class="secn-h2-4">Контакты</h2>
+            <p class="secn-subtitle">2063, Казахстан, г. Алматы, ул. <br>Название улицы, дом 20, оф 204</p>
+            <div class="contacts"><a class="d-phone" href="tel:+74953747043">+7 (495) 374 70 43</a><br><a class="d-email" href="mailto:ofice@ofice.mail.ru">ofice@ofice.mail.ru</a></div>
+          </div>
+        </div>
+      </section>
+    </articles>
+    <footer>
+      <div class="container">
+        <div class="title">
+          <h1>Танцевальный клуб в Астане</h1>
+          <p>Современные и классические танцы опытные и профессинальные хореографы</p>
+        </div>
+        <div class="logo">
+          <div class="ico"></div><span>твоя особенная жизнь</span>
+          <div class="socns"><a class="i-vk" href="" target="_blank"></a><a class="i-twitter" href="" target="_blank"></a><a class="i-facebook" href="" target="_blank"></a></div>
+        </div>
+        <div class="contacts"><a class="d-phone" href="tel:+77273324004">+7 727 332 40 04 <span>доб.</span> 102</a><a class="d-email" href="mailto:ofice@ofice.mail.ru">ofice@ofice.mail.ru</a>
+          <div class="d-btn">
+            <button class="btn" onclick="app.modalHeader(1)">Пробный бесплатный урок</button>
+          </div>
+        </div>
+        <button class="header-btn visible-xs" onclick="app.modalHeader(1)"></button>
+        <div class="menu"><a class="menu-bg visible-xs" onclick="app.nav(this)" data-target=".menu"></a>
+          <ul>
+            <li><a href="#aboutus">О клубе</a></li>
+            <li><a href="#shares">Акции</a></li>
+            <li><a href="#teachers">Преподаватели</a></li>
+            <li><a href="#schedule">Расписание</a></li>
+            <li><a href="#carts">Клубные карты</a></li>
+            <li><a href="#gallery">Фото и видео</a></li>
+            <li><a href="#contacts">Контакты</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        <div class="container">
+          <div class="d-wrap">
+            <p>© 2005 — 2017 120Club. Все права защищены Разработка сайта&nbsp;<a href="https://4dclick.kz" target="_blank">4DClick Internet Agancy</a></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div id="modals">
+      <div class="modal fade in" id="modal-callback">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-body"><a class="nav-btn active" data-dismiss="modal" aria-hidden="true"></a>
+              <h4 name="title">Обратный звонок</h4>
+              <form class="form1" action="callback">
+                <div class="form-group form-group1">
+                  <label>имя</label>
+                  <input name="name">
+                </div>
+                <div class="form-group form-group1">
+                  <label>Телефон</label>
+                  <input name="phone" plugin="maskPhone" required>
+                </div>
+                <div class="form-group form-group1">
+                  <label>Вопрос</label>
+                  <textarea name="question"></textarea>
+                </div>
+                <div class="d-btn">
+                  <button class="btn" type="button" onclick="app.submit(this)">Отправить</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade in" id="modal-gallery">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-body"><a class="nav-btn active" data-dismiss="modal" aria-hidden="true"></a>
+              <div class="gallery-modal" plugin="slick">
+                <div>
+                  <div class="imgb">
+                    <div class="imga" style="background-image:url('assets/img/gallery/1.jpg?');"></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="imgb">
+                    <div class="imga" style="background-image:url('assets/img/gallery/2.jpg?');"></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="imgb">
+                    <div class="imga" style="background-image:url('assets/img/gallery/3.jpg?');"></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="imgb">
+                    <div class="imga" style="background-image:url('assets/img/gallery/4.jpg?');"></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="imgb">
+                    <div class="imga" style="background-image:url('assets/img/gallery/5.jpg?');"></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="imgb">
+                    <div class="imga" style="background-image:url('assets/img/gallery/6.jpg?');"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="assets/js/scripts.min.js?filemtime"></script>
+    <link rel="stylesheet" href="assets/css/main.min.css?filemtime">
+  </body>
+</html>
