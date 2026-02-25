@@ -16,7 +16,7 @@
 - Frontend: HTML, CSS, JS
 - 2021-07-07 10:15:00
 
-[<img src="public/images/dastanedu.jpg?1630491258" />](http://dastanedu.webmaho.com/)
+[<img src="public/images/dastanedu.jpg?1630491258" />](https://hicugi.github.io/webmaho/dastanedu)
 <hr />
 
 ### Alim
