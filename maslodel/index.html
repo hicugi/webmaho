@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ru" ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <title>Главная</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta property="og:url" data-url="http://142.93.171.163/">
+    <meta property="og:title" content="Главная">
+    <meta property="og:description" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <style>body{opacity:0}html{background-color:#fff}</style>
+  </head>
+  <body class="page-{{location.path ? location.path : 'home'}}" ng-controller="bodyCtrl" ng-class="{ menuactive: nav }">
+    <nav class="menu" ng-class="{active: nav}">
+      <div class="d-bg" ng-click="nav=0"></div>
+      <div class="d-dialog">
+        <div class="d-body">
+          <ul>
+            <li class="a-catalog" ng-class="{active: vMenuCatalog || location.path.indexOf('catalog')==0}"><a ng-click="vMenuCatalog=!vMenuCatalog"><span>Продукция</span></a>
+              <ul ng-if="vMenuCatalog || location.path.indexOf('catalog')==0">
+                <li ng-class="{ active: location.path.length &amp;&amp; location.path.indexOf('catalog/fatoil')==0 }"><a href="catalog/fatoil">Масложировая продукция</a></li>
+                <li ng-class="{ active: location.path.length &amp;&amp; location.path.indexOf('catalog/milk')==0 }"><a href="catalog/milk">Молочная продукция</a></li>
+              </ul>
+            </li>
+            <li ng-repeat="v in base.menu | orderBy: 'menuindex'" ng-class="{ active: location.path.length &amp;&amp; location.path.indexOf(v.uri)==0 }" ng-if="!v.hidemenu"><a ng-href="{{v.uri}}">{{v.title}}</a></li>
+          </ul>
+        </div>
+        <div class="d-footer">
+          <div class="contacts">
+            <div class="d">
+              <h4>Контакты:</h4>
+              <p><a ng-href="tel:{{base.phone &amp;&amp; getPhone(base.phone)}}">{{base.phone}}</a><br><a ng-href="tel:{{base.phone2 &amp;&amp; getPhone(base.phone2)}}">{{base.phone2}}</a></p>
+            </div>
+            <div class="d">
+              <h4>Подписывайтесь:</h4>
+              <ul class="socns">
+                <li><a class="fa fa-facebook" ng-href="{{base.socnfacebook}}" target="_blank"></a></li>
+                <li><a class="fa fa-vk" ng-href="{{base.socnvk}}" target="_blank"></a></li>
+                <li><a class="fa fa-instagram" ng-href="{{base.socninstagram}}" target="_blank"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <header>
+      <div class="container"><a class="logo" href="/" ng-class="{active: nav}"></a><a class="nav-btn" ng-class="{active: nav}" ng-click="nav=!nav"><i></i><span>меню</span></a></div>
+    </header>
+    <div class="page-{{page.id}}" id="main">
+      <ng-view></ng-view>
+    </div>
+    <div id="modals">
+      <div class="modal fade in v1" id="modal-callback">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-body"><a class="nav-btn active" data-dismiss="modal" aria-hidden="true"></a>
+              <h4>Форма заявки</h4>
+              <div class="u-list2" ng-class="{active: modalCallbackSelClick}" ng-click="modalCallbackSelClick=!modalCallbackSelClick">
+                <ul ng-init="modalCallback=[ 'Предприятие' ,'Частное лицо' ];modalCallbackSel=0">
+                  <li ng-repeat="v in modalCallback" ng-class="{active: $parent.modalCallbackSel==$index}"><a ng-click="$parent.modalCallbackSel=$index">{{v}}</a></li>
+                </ul>
+              </div>
+              <form action="callback">
+                <input type="hidden" name="title" value="Форма заявки">
+                <input type="hidden" name="from" value="{{v}}" ng-repeat="v in modalCallback" ng-if="$parent.modalCallbackSel==$index">
+                <div class="row">
+                  <div class="col-md-6" ng-if="!modalCallbackSel || 1">
+                    <div class="form-group">
+                      <select name="city" required>
+                        <option ng-repeat="v in base.contactsList" ng-if="v.country=='Казахстан'">{{v.city}}</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-md-6" ng-if="!modalCallbackSel || 0">
+                    <div class="form-group">
+                      <input type="text" name="company" placeholder="Название компании" required>
+                    </div>
+                  </div>
+                  <div class="col-md-6" ng-if="!modalCallbackSel || 1">
+                    <div class="form-group">
+                      <input type="text" name="name" placeholder="Контактное лицо" required>
+                    </div>
+                  </div>
+                  <div class="col-md-6" ng-if="!modalCallbackSel || 1">
+                    <div class="form-group">
+                      <input type="text" name="phone" placeholder="Телефон" required plugin="maskPhone">
+                    </div>
+                  </div>
+                  <div class="col-md-6" ng-if="!modalCallbackSel || 0">
+                    <div class="form-group">
+                      <input type="text" name="activity" placeholder="Сфера деятельности" required>
+                    </div>
+                  </div>
+                  <div class="col-md-6" ng-if="!modalCallbackSel || 1">
+                    <div class="form-group">
+                      <input type="text" name="address" placeholder="Ваш адрес">
+                    </div>
+                  </div>
+                  <div class="col-md-6" ng-if="!modalCallbackSel || 1">
+                    <div class="form-group">
+                      <input type="text" name="email" placeholder="Электронная почта">
+                    </div>
+                  </div>
+                  <div class="col-md-6" ng-if="!modalCallbackSel || 1">
+                    <div class="form-group">
+                      <input type="text" name="product" placeholder="Наименование товара">
+                    </div>
+                  </div>
+                  <div class="col-md-6" ng-if="!modalCallbackSel || 1">
+                    <div class="form-group">
+                      <input type="text" name="count" placeholder="Количество товара">
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <textarea name="comment" placeholder="Комментарии" rows="1"></textarea>
+                </div>
+                <div class="form-btn">
+                  <button class="btn" type="button" onclick="hg.submit(this)">Оставить заявку</button>
+                </div>
+                <div class="form-importnat"><span>*</span> поля, обязательные к заполнению</div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade in" id="modal-success">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-body"><a class="nav-btn active" data-dismiss="modal" aria-hidden="true"></a>
+              <h4 class="text-center">Спасибо за обращение <br>Мы вскоре с вами свяжемся</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade in" id="modal-slider">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-body"><a class="nav-btn active" data-dismiss="modal" aria-hidden="true"></a>
+              <div class="slider v4 text-center"><a class="btnArrow slider-arrow slider-prev" ng-click="slider.slide('modalSlider' ,'prev')"></a><a class="btnArrow slider-arrow slider-next" ng-click="slider.slide('modalSlider' ,'next')"></a>
+                <div class="slider-items">
+                  <div class="slider-item d{{ slider.getClass('modalSlider' ,$index)+1 }}" ng-repeat="v in slider.modalImages" ng-init="$index == 0 &amp;&amp; slider.init({ key: 'modalSlider' ,items: slider.modalImages ,step: 1 })">
+                    <div class="imga" ng-style="{ 'background-image': v.image &amp;&amp; 'url('+v.image+')' }"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="container">
+        <p class="copyright">© «МаслоДел» 2017</p>
+        <ul class="socns">
+          <li><a class="fa fa-facebook" ng-href="{{base.socnfacebook}}" target="_blank"></a></li>
+          <li><a class="fa fa-vk" ng-href="{{base.socnvk}}" target="_blank"></a></li>
+          <li><a class="fa fa-instagram" ng-href="{{base.socninstagram}}" target="_blank"></a></li>
+        </ul>
+        <div class="contacts">
+          <div class="d">
+            <h4>Контакты:</h4>
+            <p><a ng-href="tel:{{base.phone &amp;&amp; getPhone(base.phone)}}">{{base.phone}}</a><br><a ng-href="tel:{{base.phone2 &amp;&amp; getPhone(base.phone2)}}">{{base.phone2}}</a></p>
+          </div>
+          <div class="d">
+            <h4>Подписывайтесь:</h4>
+            <ul class="socns">
+              <li><a class="fa fa-facebook" ng-href="{{base.socnfacebook}}" target="_blank"></a></li>
+              <li><a class="fa fa-vk" ng-href="{{base.socnvk}}" target="_blank"></a></li>
+              <li><a class="fa fa-instagram" ng-href="{{base.socninstagram}}" target="_blank"></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="menu2">
+          <ul>
+            <li ng-repeat="v in base.menu | orderBy: 'menuindex'" ng-class="{ active: location.path.length &amp;&amp; location.path.indexOf(v.uri)==0 }" ng-if="!v.hidemenu"><a ng-href="{{v.uri}}">{{v.title}}</a></li>
+          </ul>
+        </div><a class="logo" href="/"></a>
+      </div>
+    </footer><a class="nav-top" ng-click="scrollTo('html,body',0)"></a>
+    <script>var templates={"news":1522341600,"catalog":1522341600,"news_inner":1522341600,"recipes_inner":1522341600,"shares":1522341600,"shares_inner":1522341600,"articles":1522341600,"contacts":1522341600,"home":1522341600,"aboutus":1522341600,"catalog_category":1522341600,"articles_inner":1522341600,"recipes":1522341600,"catalog_item":1522341600,"404":1522341600,"partners":1522341600};</script>
+    <script src="assets/js/angularjs/angular.min.js?1517246796"></script>
+    <script src="assets/js/angularjs/angular-route.min.js?1517246848"></script>
+    <script src="assets/js/angularjs/angular-sanitize.min.js?1517249928"></script>
+    <script src="assets/js/angularjs/angular-touch.min.js?1519138476"></script>
+    <script src="assets/js/route.js?1520738758"></script>
+    <script src="assets/js/controller.js?1522321052"></script>
+    <script src="assets/js/scripts.min.js?1522341642"></script>
+    <link rel="stylesheet" href="assets/css/main.min.css?1522341598">
+  </body>
+</html>
