@@ -19,13 +19,14 @@
 [<img src="public/images/dastanedu.jpg?1630491258" />](https://hicugi.github.io/webmaho/dastanedu)
 <hr />
 
-### Alim
+### Kindergarten Alim
 
 - Backend: Nginx, MySQL 5.6, PHP 7, ModX
   Frontend: AngularJS, SASS
 - 2017-12-21 17:30:00
+- GoBrand
 
-[<img src="public/images/alim.jpg?1555753818" />](http://alim.webmaho.com)
+[<img src="public/images/alim.jpg?1555753818" />](https://hicugi.github.io/webmaho/kindergarten-alim)
 <hr />
 
 ### UPQ
@@ -42,7 +43,7 @@
 - Backend: Nginx, MySQL 5.7, PHP 7.2, ModX
   Frontend: AngularJS, SASS
 - 2018-03-27 16:55:00
-- Gobrand
+- GoBrand
 
 [<img src="public/images/maslodel.jpg?1555753816" />](http://maslodel.webmaho.com)
 <hr />
@@ -62,7 +63,7 @@
 - Backend: Nginx, MySQL 5.6, PHP 5.6, ModX
   Frontend: AngularJS, SASS
 - 2017-08-10 20:08:00
-- Gobrand
+- GoBrand
 
 [<img src="public/images/izum.jpg?1555753817" />](http://izum.webmaho.com/)
 <hr />

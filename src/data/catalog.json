@@ -18,9 +18,9 @@
     "description": "Frontend: HTML, CSS, JS"
   },
   {
-    "title": "Alim",
-    "company": "",
-    "link": "http://alim.webmaho.com",
+    "title": "Kindergarten Alim",
+    "company": "GoBrand",
+    "link": "https://hicugi.github.io/webmaho/kindergarten-alim",
     "image": "images/alim.jpg?1555753818",
     "imageWebp": "images/alim.webp?1555764587",
     "date": "2017-12-21 17:30:00",
@@ -37,7 +37,7 @@
   },
   {
     "title": "Maslodel",
-    "company": "Gobrand",
+    "company": "GoBrand",
     "link": "http://maslodel.webmaho.com",
     "image": "images/maslodel.jpg?1555753816",
     "imageWebp": "images/maslodel.webp?1555764586",
@@ -55,7 +55,7 @@
   },
   {
     "title": "Izum",
-    "company": "Gobrand",
+    "company": "GoBrand",
     "link": "http://izum.webmaho.com/",
     "image": "images/izum.jpg?1555753817",
     "imageWebp": "images/izum.webp?1555764586",
