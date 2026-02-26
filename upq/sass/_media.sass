@@ -1,0 +1,572 @@
+@import "vars"
+
+/*==========	Desktop First	==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1199px)
+	h2
+		font-size: 48px
+	.video
+		height: 210px
+	.order-modal
+		.i-prices
+			margin-top: 30px
+		.i-price
+			margin-top: 0
+	#order
+		.shapes
+			display: none
+	#game
+		margin-top: 0
+		padding-top: 30px
+		.shapes
+			display: none
+		.img-bg
+			right: -30px
+	#logic
+		.shapes i
+			&:nth-child(2)
+				display: none
+		.img-bg
+			left: 338px
+			top: 70px
+	#yourself
+		.img-bg
+			left: 9px
+		.info
+			padding-right: 40px
+	#attention
+		.container
+			padding-top: 110px
+		.shapes
+			display: none
+		.img-bg
+			left: 290px
+		h2::before
+			left: 0
+			top: 0
+	#secret
+		.button-block
+			margin: 0px auto
+	#play
+		.shapes
+			display: none
+		.img-bg
+			left: 50%
+			margin-left: -264px
+		.col
+			&:nth-child(1)
+				li
+					&::before
+						left: 220px
+						right: auto
+					div
+						width: 200px
+			&:nth-child(2)
+				li
+					&::before
+						left: auto
+						right: 278px
+					div
+						width: 258px
+		li
+			font-size: 22px
+		form
+			h2
+				font-size: 46px
+	#happy
+		.button-block
+			button
+				margin-left: 0
+	#profit
+		.img-bg
+			left: 410px
+			top: 40px
+	#details
+		margin-top: 40px
+		.img-bg
+			left: -63px
+		form
+			.button-block
+				margin-top: 68px
+	#steps
+		form
+			margin-top: 125px
+		.form-group
+			margin-top: 44px
+		.button-block
+			margin-top: 0
+@media only screen and (max-width : 1024px)
+	#logic
+		&::before
+			background-image: url(imgs/logic/bg-md.png)
+	#secret
+		padding: 110px 0px 0px
+		height: 256px
+		&::before
+			background-image: url(imgs/secret/bg-md.png)
+			top: 0
+			height: 660px
+	#play
+		margin-top: -160px
+		padding-top: 220px
+		&::before
+			background-image: url(imgs/play/bg-md.png)
+	#profit
+		padding-top: 0
+		height: 743px
+		.container
+			padding-top: 40px
+		&::before
+			background-image: url(imgs/profit/bg-md.png)
+	#steps
+		margin-top: 0
+		height: 670px
+		&::before
+			background-image: url(imgs/steps/bg-md.png)
+			top: 0
+			height: 660px
+		.container
+			padding-top: 100px
+@media only screen and (max-width : 991px)
+	h1
+		font-size: 40px
+		line-height: 1.25
+	h2
+		font-size: 34px
+		&.v2
+			font-size: 40px
+	p
+		font-size: 16px
+	.title
+		font-size: 15px
+	.order-ico
+		i
+			$s: 30px
+			font-size: 20px
+			padding-bottom: 2px
+			width: $s
+			height: $s
+	.order-modal
+		.i-price-profit
+			font-size: 24px
+	.price
+		font-size: 26px
+	.price-profit
+		font-size: 14px
+	.price-before
+		font-size: 42px
+	.info
+		br
+			display: none
+	.video
+		height: 158px
+	.reviews
+		p
+			font-size: 16px
+	#home
+		&::before
+			background-image: url(imgs/home/bg-sm.png)
+		.shapes
+			display: none
+		.button-block.v2
+			position: absolute
+	#order
+		.col:nth-child(2n)
+			height: 160px
+		h3
+			font-size: 24px
+		.button-block
+			button
+				padding-right: 20px
+			p::before
+				right: -40px
+			br
+				display: none
+	#game
+		.img-bg
+			right: -270px
+	#logic
+		.container
+			padding-top: 190px
+		.img-bg
+			left: 386px
+	#yourself
+		.img-bg
+			left: -110px
+	#attention
+		.container
+			padding-top: 140px
+		.img-bg
+			left: 210px
+			top: 30px
+	#play
+		h2
+			position: relative
+			z-index: 1
+			span
+				width: 250px
+		li
+			font-size: 20px
+		.col
+			&:nth-child(1)
+				li
+					$w: 160px
+					&::before
+						left: $w+20
+					div
+						width: $w
+			&:nth-child(2)
+				li
+					$w: 220px
+					&::before
+						right: $w+20
+					div
+						width: $w
+		form
+			h2
+				font-size: 30px
+	#profit
+		.img-bg
+			left: 248px
+	#details
+		.img-bg
+			left: -290px
+@media only screen and (max-width : 767px)
+	.nav-btn
+		display: block
+	h1
+		font-size: 30px
+	h2 ,h2.v2 ,h2.v3 ,h2.v4
+		font-size: 26px
+	h3
+		font-size: 24px
+	p
+		font-size: 14px
+		margin-bottom: 1em
+		br
+			display: none
+	button
+		&.v2
+			background-image: url(imgs/btn/v2-xs.png)
+			font-size: 18px
+			padding: 0px 50px !important
+			min-width: 290px
+			height: 83px
+		&.v4
+			font-size: 24px
+		&.v5
+			background-image: url(imgs/btn/v5-xs.png)
+			width: 290px
+			height: 87px
+	.visible-xs
+		display: block !important
+	.logo
+		width: 103px
+		height: 39.5px
+	.phone
+		font-size: 20px
+		margin-bottom: 0
+	.callback-text
+		font-size: 14px
+	.button-block
+		&.v3
+			padding-right: 30px
+		&.v4
+			p
+				margin: 0px 0px 10px
+				&::before
+					left: 310px
+					transform: rotate(10deg)
+		&.v6
+			button
+				margin-right: 0
+			p::before
+				left: -42px
+				top: -63px
+				transform: rotate(173deg)
+	.price-before
+		text-align: center
+	.video
+		height: 224px
+	.reviews
+		.col
+			min-width: 290px
+			margin-bottom: 30px
+	.list3
+		font-size: 14px
+		line-height: 1.25em
+		br
+			display: none
+		li
+			$p: 5px
+			padding-left: $p
+			padding-right: $p
+	.order-list
+		.col
+			min-width: 100%
+		.col:nth-child(2n)
+			height: auto !important
+	.order-modal
+		.i-prices
+			text-align: center
+			margin-bottom: 30px
+	header
+		background-color: #f8f5f8
+		.col
+			height: 64px
+			&:nth-child(2) ,&:nth-child(3)
+				display: none
+		.fa
+			$s: 40px
+			color: #1c2027
+			font-size: 24px
+			line-height: $s
+			text-align: center
+			position: absolute
+			top: 12px
+			width: $s
+			z-index: 1
+			&.fa-phone
+				right: 15px
+			&.fa-paper-plane
+				right: 55px
+	footer
+		position: static
+		.col
+			&:nth-child(1)
+				max-width: 150px
+			&:nth-child(2)
+				display: none
+	section
+		background-color: #fff
+	#home
+		background: none
+		padding-bottom: 30px
+		height: auto
+		&::before
+			top: 0
+			width: 100%
+			height: 100%
+			z-index: -1
+		.container
+			padding-top: 100px
+		.col
+			&:nth-child(2)
+				justify-content: center
+		.button-block
+			&.v1
+				padding-left: 15px
+			&.v2
+				position: static
+		&.active::before
+			position: fixed
+	#order
+		margin-top: 0
+		padding-top: 40px
+		.row
+			display: block
+		h3
+			display: none
+	#game
+		padding-top: 50px
+		height: auto
+		h2
+			margin-bottom: 15px
+			br
+				display: none
+		h3
+			margin-bottom: 15px
+			&::before
+				display: none
+			br
+				display: none
+		.img-bg
+			display: none
+	#logic
+		margin-top: 0
+		height: 491px
+		&::before
+			background-image: url(imgs/logic/bg-xs.png)
+		.container
+			padding-top: 0px
+			display: flex
+			align-items: center
+			height: 100%
+		.img-bg
+			display: none
+		h2
+			.shapes i
+				top: -20px
+	#yourself
+		margin-top: 0
+		.container
+			padding-top: 60px
+			height: auto
+		.img-bg
+			display: none
+	#attention
+		height: auto
+		.container
+			padding-top: 100px
+		.img-bg
+			display: none
+	#secret
+		margin-top: 0
+		padding-top: 40px
+		height: 240px
+		&::before
+			background-image: url(imgs/secret/bg-xs.png)
+	#play
+		background: none
+		margin-top: -12px
+		padding-top: 40px
+		height: auto
+		&::before
+			background-image: url(imgs/play/bg-xs.png)
+			top: 0
+			height: 1228px
+		.img-bg
+			display: none
+		h2
+			margin-bottom: 30px
+		ul
+			margin-bottom: 0
+		li
+			justify-content: flex-start !important
+			text-align: left !important
+			padding-left: 118px
+			margin-bottom: 20px
+			&::before
+				left: 0 !important
+			div
+				width: auto !important
+				strong
+					&:nth-child(1)
+						padding-left: 0 !important
+					&:nth-child(2)
+						padding-left: 1em !important
+					&:nth-child(3)
+						padding-left: 2em !important
+		button
+			margin: 0px auto
+	#happy
+		margin-top: 0
+		.container
+			padding-top: 80px
+		h2
+			margin-bottom: 30px
+	#profit
+		margin-top: 0
+		height: auto
+		&::before
+			background-image: url(imgs/profit/bg-xs.png)
+		.container
+			padding-top: 50px
+			height: 692px
+		.img-bg
+			$w: 345px
+			left: 50%
+			top: auto
+			bottom: 40px
+			margin-left: -$w/2
+			width: $w
+			height: 225px
+			i
+				background-image: url(imgs/profit/img-xs.png)
+	#details
+		.img-bg
+			display: none
+		h2
+			margin-bottom: 20px
+			br
+				display: none
+		.form-group
+			margin-top: 0
+		.button-block
+			margin-top: 0 !important
+	#steps
+		height: auto
+		padding-bottom: 35px
+		&::before
+			background-image: url(imgs/steps/bg-xs.png)
+			top: 0
+		.container
+			padding-top: 100px
+		h2 br
+			display: none
+		p
+			font-size: inherit
+		.list3
+			margin-top: 0
+		form
+			margin-top: 70px
+		.form-group
+			margin-top: 0
+		button
+			margin: 0px auto
+	#modals
+		h5
+			font-size: 26px
+		.modal-title
+			p
+				font-size: 12px
+			br
+				display: block
+		#modal-chose
+			.button-block
+				margin-bottom: 40px
+@media only screen and (max-width : 374px)
+	h1
+		font-size: 24px
+	button
+		&.v1
+			width: 280px
+			height: 95px
+		&.v2
+			padding: 0px 30px
+	.list
+		font-size: 14px
+		li
+			padding-top: 7px
+	.button-block
+		&.v1
+			padding-left: 10px
+			button
+				margin-bottom: 20px
+			p::before
+				top: -64px
+	#order
+		button.v2
+			font-size: 22px
+	#logic
+		.shapes
+			display: none
+
+
+/*==========	Mobile First	==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+	/**/
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+	/**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+	/**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+	/**/
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+	.container
+		max-width: 1170px
