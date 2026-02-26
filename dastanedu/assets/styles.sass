@@ -55,7 +55,7 @@ body
 
   @each $item in $icons
     &_#{$item}
-      background-image: url(/assets/img/icon/#{$item}.svg)
+      background-image: url(img/icon/#{$item}.svg)
 
   &2
     $size: 29px
@@ -68,7 +68,7 @@ body
     $items: phone
     @each $item in $items
       &_#{$item}
-        background-image: url(/assets/img/icon/#{$item}.svg)
+        background-image: url(img/icon/#{$item}.svg)
 
 .logo
   width: 264px
@@ -78,15 +78,15 @@ body
   background-size: contain
 
   &_light
-    background-image: url('/assets/img/logo-light.svg')
+    background-image: url('img/logo-light.svg')
   &:not(&_light)
-    background-image: url('/assets/img/logo.svg')
+    background-image: url('img/logo.svg')
 
   @media (max-width: $header-break-max)
     &_in-header
       width: 137px
       height: 26px
-      background-image: url('/assets/img/logo-light.svg') !important
+      background-image: url('img/logo-light.svg') !important
 
 .nav
   $gap: 20px
@@ -142,7 +142,7 @@ body
       bottom: 30px
       width: 400px
       height: 380px
-      background: url('/assets/img/nav-bg.svg') no-repeat center
+      background: url('img/nav-bg.svg') no-repeat center
       content: ''
 
     &__item
@@ -326,7 +326,7 @@ body
   $icons: play, location
   @each $item in $icons
     &_#{$item}::before
-      background: url('/assets/img/icon/#{$item}.svg') no-repeat center
+      background: url('img/icon/#{$item}.svg') no-repeat center
 
 .section-title
   $break-max: $text-break-max
@@ -409,7 +409,7 @@ body
         transform: translate(-50%, -50%)
         width: 60px
         height: 58px
-        background: url('/assets/img/callback/success.svg') no-repeat center
+        background: url('img/callback/success.svg') no-repeat center
         content: ''
 
       &__bg
@@ -460,7 +460,7 @@ body
         transform: translate(-50%, -50%)
         width: $size
         height: $size
-        background: url('/assets/img/callback/error.svg') no-repeat center
+        background: url('img/callback/error.svg') no-repeat center
         content: ''
 
 .svg-filters
@@ -556,7 +556,7 @@ body
     z-index: -2
     height: 100%
     bottom: 0
-    background: url('/assets/img/home-2.svg') no-repeat center
+    background: url('img/home-2.svg') no-repeat center
     background-position: right 10px
     @media (max-width: $break-max)
       background-position: right bottom
@@ -564,7 +564,7 @@ body
     top: 50px
     max-width: 520px
     height: 560px
-    background: url('/assets/img/home.svg') no-repeat center
+    background: url('img/home.svg') no-repeat center
     background-size: contain
     @media (max-width: $break-max)
       top: 10px
@@ -631,7 +631,7 @@ body
     top: 100px
     width: 555px
     height: 310px
-    background: url('/assets/img/aboutus.svg') no-repeat center
+    background: url('img/aboutus.svg') no-repeat center
     @media (min-width: $mobile-break)
       content: ''
     @media (max-width: $break-max)
@@ -668,7 +668,7 @@ body
         top: calc(100% + 30px)
         width: 100%
         height: $img-height
-        background: url('/assets/img/aboutus.svg') no-repeat center
+        background: url('img/aboutus.svg') no-repeat center
         background-size: contain
         content: ''
 
@@ -709,14 +709,14 @@ body
     top: 0
     width: 920px
     height: 670px
-    background-image: url('/assets/img/benefits/shape-1.svg')
+    background-image: url('img/benefits/shape-1.svg')
     content: ''
   &::after
     left: 40px
     bottom: 40px
     width: 400px
     height: 380px
-    background-image: url('/assets/img/benefits/shape-2.svg')
+    background-image: url('img/benefits/shape-2.svg')
     @media (min-width: $break-text)
       content: ''
 
@@ -790,7 +790,7 @@ body
       $items: book, message, aim, alphabet
       @each $item in $items
         &_#{$item}
-          background-image: url('/assets/img/benefits/#{$item}.svg')
+          background-image: url('img/benefits/#{$item}.svg')
 
       @media (max-width: $break-text-max)
         margin-left: auto
@@ -859,7 +859,7 @@ body
       transform: translateX(-50%)
       width: 969px
       height: 100px
-      background: url('/assets/img/methods.svg') no-repeat center
+      background: url('img/methods.svg') no-repeat center
       @media (min-width: $break)
         content: ''
 
@@ -1197,7 +1197,7 @@ body
       font-weight: 500
       line-height: 28px
       text-align: right
-      background: url('/assets/img/prices-discount.svg') no-repeat right top
+      background: url('img/prices-discount.svg') no-repeat right top
       @media (max-width: $break-sm-max)
         $size: 90px
         padding: 10px
@@ -1313,7 +1313,7 @@ body
         transform: translate(-50%, -50%) scale(0.5)
         width: $size
         height: $size
-        background: url('/assets/img/gallery/loop.svg') no-repeat center
+        background: url('img/gallery/loop.svg') no-repeat center
         opacity: 0
       &:hover
         &::before
@@ -1346,7 +1346,7 @@ body
   $break-sm-max: 919.9999px
 
   padding: 100px 0
-  background: url('/assets/img/contacts.svg') no-repeat center
+  background: url('img/contacts.svg') no-repeat center
   background-size: cover
   color: #ffffff
 
@@ -1528,7 +1528,7 @@ body
     &::after
       width: 100%
       height: 100%
-      background: url('/assets/img/logo-solo_light.svg') no-repeat center
+      background: url('img/logo-solo_light.svg') no-repeat center
 
     svg
       width: 100%
@@ -1660,7 +1660,7 @@ body
 
   &__logo
     width: $header-height
-    background: url('/assets/img/logo-solo.svg') no-repeat center
+    background: url('img/logo-solo.svg') no-repeat center
   &__title
     margin: 0
     border: 1px solid #EBEBEB
