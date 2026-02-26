@@ -35,7 +35,7 @@
 - 2017-11-06 18:22:00
 - 4D click
 
-[<img src="public/images/upq.jpg?1555753370" />](http://upq.webmaho.com/)
+[<img src="public/images/upq.jpg?1555753370" />](https://hicugi.github.io/webmaho/upq)
 <hr />
 
 ### Maslodel
@@ -45,7 +45,7 @@
 - 2018-03-27 16:55:00
 - GoBrand
 
-[<img src="public/images/maslodel.jpg?1555753816" />](http://maslodel.webmaho.com)
+[<img src="public/images/maslodel.jpg?1555753816" />](https://hicugi.github.io/webmaho/maslodel)
 <hr />
 
 ### ICORE
@@ -55,7 +55,7 @@
 - 2018-09-10 19:55:00
 - ICORE
 
-[<img src="public/images/icore.jpg?1555753817" />](http://icore.webmaho.com/)
+[<img src="public/images/icore.jpg?1555753817" />](https://hicugi.github.io/webmaho/icore)
 <hr />
 
 ### Izum
@@ -65,7 +65,7 @@
 - 2017-08-10 20:08:00
 - GoBrand
 
-[<img src="public/images/izum.jpg?1555753817" />](http://izum.webmaho.com/)
+[<img src="public/images/izum.jpg?1555753817" />](https://hicugi.github.io/webmaho/izum)
 <hr />
 
 ### Butterfly effect
@@ -74,7 +74,7 @@
 - 2018-02-08 21:25:00
 - 4D click
 
-[<img src="public/images/butterfly-effect.jpg?1555753818" />](http://butterfly-effect.webmaho.com/)
+[<img src="public/images/butterfly-effect.jpg?1555753818" />](https://hicugi.github.io/webmaho/butterfly-effect)
 <hr />
 
 ### Software development
@@ -84,7 +84,7 @@
 - 2019-02-22 19:44:00
 - ICORE
 
-[<img src="public/images/icore-swd.jpg?1555753817" />](http://swd.webmaho.com)
+[<img src="public/images/icore-swd.jpg?1555753817" />](https://hicugi.github.io/webmaho/swd)
 <hr />
 
 ### Gravity
@@ -94,7 +94,7 @@
 - 2017-04-08 15:36:00
 - IlyasQali
 
-[<img src="public/images/gravity.jpg?1586187655" />](http://gravity.webmaho.com/)
+[<img src="public/images/gravity.jpg?1586187655" />](https://hicugi.github.io/webmaho/gravity)
 <hr />
 
 ### Airplane
@@ -102,7 +102,7 @@
 - Frontend: HTML, CSS, Vue
 - 2019-08-26 14:18:00
 
-[<img src="public/images/airplane.jpg?1572877059" />](http://airplane-vue.webmaho.com/)
+[<img src="public/images/airplane.jpg?1572877059" />](https://hicugi.github.io/webmaho/airplane)
 <hr />
 
 ### Sheber
@@ -111,7 +111,7 @@
   Frontend: HTML, CSS, React
 - 2019-05-03 19:44:00
 
-[<img src="public/images/sheber.jpg?1559721072" />](/?redirect=http%3A%2F%2Fsheberkz.webmaho.com)
+[<img src="public/images/sheber.jpg?1559721072" />](https://hicugi.github.io/webmaho/sheber)
 <hr />
 
 ### Technical assistance center
@@ -121,7 +121,7 @@
 - 2018-11-01 19:59:00
 - ICORE
 
-[<img src="public/images/icore-itac.jpg?1555753817" />](http://itac.webmaho.com)
+[<img src="public/images/icore-itac.jpg?1555753817" />](https://hicugi.github.io/webmaho/itac)
 <hr />
 
 ### Qali
@@ -131,7 +131,7 @@
 - 2018-07-10 18:15:00
 - Ilyas Qali
 
-[<img src="public/images/qali.jpg?1555753816" />](http://qali.webmaho.com/)
+[<img src="public/images/qali.jpg?1555753816" />](https://hicugi.github.io/webmaho/qali)
 <hr />
 
 ### Citystroi
@@ -139,7 +139,7 @@
 - Frontend: Gulp, Pug, SASS
 - 2018-05-18 18:49:00
 
-[<img src="public/images/citystroi.jpg?1555753817" />](http://citystroi.webmaho.com/)
+[<img src="public/images/citystroi.jpg?1555753817" />](https://hicugi.github.io/webmaho/citystroi)
 <hr />
 
 ### Logoexpert
@@ -149,7 +149,7 @@
 - 2018-04-05 18:40:00
 - Ilyas Qali
 
-[<img src="public/images/logoexpert.jpg?1555753816" />](http://logoexpert.webmaho.com/)
+[<img src="public/images/logoexpert.jpg?1555753816" />](https://hicugi.github.io/webmaho/logoexpert)
 <hr />
 
 ### Interior
@@ -159,7 +159,7 @@
 - 2018-04-05 18:29:00
 - Ilyas Qali
 
-[<img src="public/images/interior.jpg?1555753817" />](http://interior.webmaho.com/)
+[<img src="public/images/interior.jpg?1555753817" />](https://hicugi.github.io/webmaho/interior)
 <hr />
 
 ### 120club
@@ -177,15 +177,15 @@
 - 2018-01-25 21:11:00
 - 4D click
 
-[<img src="public/images/autotech.jpg?1555753818" />](http://autotech.webmaho.com/)
+[<img src="public/images/autotech.jpg?1555753818" />](https://hicugi.github.io/webmaho/autotech)
 <hr />
 
-### School
+### Mektep
 
 - Frontend: Gulp, HTML, SASS
 - 2017-11-10 21:31:00
 - 4D click
 
-[<img src="public/images/school.jpg?1555753816" />](http://mektep.webmaho.com/)
+[<img src="public/images/school.jpg?1555753816" />](https://hicugi.github.io/webmaho/mektep)
 
 
