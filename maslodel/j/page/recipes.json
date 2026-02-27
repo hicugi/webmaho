@@ -1,0 +1,63 @@
+{
+    "title": "Рецепты",
+    "id": 7,
+    "template": 8,
+    "page": 1,
+    "pages": 2,
+    "childs": [
+        {
+            "title": "Тонкие блины на сливочном масле",
+            "link_attributes": "",
+            "uri": "recipes/pancakes.html",
+            "shareImage": "assets/img/cache/d81b7dde1f685805e59371f9b5cf51e9.jpeg"
+        },
+        {
+            "title": "Овсяное печенье",
+            "link_attributes": "",
+            "uri": "recipes/oat-cookies.html",
+            "shareImage": "assets/img/cache/34ffff63ceac3b254c01834b80a9433a.jpeg"
+        },
+        {
+            "title": "Диетический чизкейк",
+            "link_attributes": "",
+            "uri": "recipes/dietary-cheesecake.html",
+            "shareImage": "assets/img/cache/2608b2dd4f440eff3bb8c9989e0016e2.jpeg"
+        },
+        {
+            "title": "Салат с кусочками семги",
+            "link_attributes": "",
+            "uri": "recipes/salad-with-slices-of-salmon.html",
+            "shareImage": "assets/img/cache/5a093a0195805facf8cc99a3a2e58828.jpeg"
+        },
+        {
+            "title": "Шоколадные кексы с карамельным кремом",
+            "link_attributes": "",
+            "uri": "recipes/chocolate-muffins-with-caramel-cream.html",
+            "shareImage": "assets/img/cache/6045711a93d6b6ef8d625d99ce702579.jpeg"
+        },
+        {
+            "title": "Диетические котлеты",
+            "link_attributes": "",
+            "uri": "recipes/dietary-cutlets.html",
+            "shareImage": "assets/img/cache/128a1945fc75fb5b56161ece39aca3cc.jpeg"
+        },
+        {
+            "title": "Рулетики из баклажана",
+            "link_attributes": "",
+            "uri": "recipes/eggplant-rolls.html",
+            "shareImage": "assets/img/cache/be67e527cfc7ab3d7923dfbc36c92ce0.jpeg"
+        },
+        {
+            "title": "Суп-пюре из цветной капусты с пармезаном",
+            "link_attributes": "",
+            "uri": "recipes/cauliflower-soup-with-parmesan-cheese.html",
+            "shareImage": "assets/img/cache/07e6d9b80cd4a1708144848a3fab1b80.jpeg"
+        },
+        {
+            "title": "Какое масло употреблять в пищу для здоровья",
+            "link_attributes": "",
+            "uri": "recipes/what-oil-to-eat-for-health.html",
+            "shareImage": "assets/img/cache/eec0ddc969f145044f59c5de2699a029.jpeg"
+        }
+    ]
+}

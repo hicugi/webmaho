@@ -1,0 +1,187 @@
+{
+    "title": "Контакты",
+    "id": 8,
+    "template": 7,
+    "longtitle": "+7 (727) 381-36-53",
+    "description": "Республика Казахстан\r\nг. Алматы, пр. Рыскулова, 276",
+    "introtext": "+7 (727) 259-82-18\r\n+7 (727) 258-49-90",
+    "link_attributes": "[ 43.228293 ,76.899614 ,[ [\"PONDOK INDAH MALL\",43.22822,76.898933] ] ]",
+    "contacts": [
+        {
+            "MIGX_id": "1",
+            "country": "Казахстан",
+            "city": "Алматы",
+            "phone": "+7 (701) 035-34-85\n+7 (701) 991-27-70",
+            "email": "dir_alm@maslodel.kz",
+            "address": "пр. Рыскулова, 276"
+        },
+        {
+            "MIGX_id": "2",
+            "country": "Казахстан",
+            "city": "Астана",
+            "phone": "+7 (7172) 94-21-66",
+            "email": "astana@maslodel.kz",
+            "address": "ул. Акбидай, 6/5"
+        },
+        {
+            "MIGX_id": "3",
+            "country": "Казахстан",
+            "city": "Актау",
+            "phone": "+7 (7192) 50-14-00",
+            "email": "aktau@maslodel.kz",
+            "address": "3\"Б\" мкр. База ОРСА\nзд. 6600/2 3 этаж"
+        },
+        {
+            "MIGX_id": "4",
+            "country": "Казахстан",
+            "city": "Актобе",
+            "phone": "+7 (7132) 53-67-51",
+            "email": "aktobe@maslodel.kz",
+            "address": "Ул. Вохра, д. 6"
+        },
+        {
+            "MIGX_id": "5",
+            "country": "Казахстан",
+            "city": "Атырау",
+            "phone": "+7 (7122) 45-66-10",
+            "email": "atyrau@maslodel.kz",
+            "address": "пр. Азаттык, 114 А"
+        },
+        {
+            "MIGX_id": "6",
+            "country": "Казахстан",
+            "city": "Балхаш",
+            "phone": "+7 (7103) 65-35-11",
+            "email": "balkhash@maslodel.kz",
+            "address": "ул. Язева, 10"
+        },
+        {
+            "MIGX_id": "7",
+            "country": "Казахстан",
+            "city": "Жезказган",
+            "phone": "+7 (7102) 72-24-04",
+            "email": "zhezkazgan@maslodel.kz",
+            "address": "ул. Холмецкого, 4"
+        },
+        {
+            "MIGX_id": "8",
+            "country": "Казахстан",
+            "city": "Караганда",
+            "phone": "+7 (7212) 33-02-88",
+            "email": "karaganda@maslodel.kz",
+            "address": "ул. Складская, 2"
+        },
+        {
+            "MIGX_id": "9",
+            "country": "Казахстан",
+            "city": "Кокшетау",
+            "phone": "+7 (7162) 76-28-22",
+            "email": "kokshetau@maslodel.kz",
+            "address": "ул. Горветка, 1"
+        },
+        {
+            "MIGX_id": "10",
+            "country": "Казахстан",
+            "city": "Костанай",
+            "phone": "+7 (7142) 25-53-23",
+            "email": "kustanay@maslodel.kz",
+            "address": "ул. Карбышева, 36/1"
+        },
+        {
+            "MIGX_id": "11",
+            "country": "Казахстан",
+            "city": "Кызылорда",
+            "phone": "+7 (7242) 22-42-49",
+            "email": "kyzyl-orda@maslodel.kz",
+            "address": "ул. Шымбая, 107"
+        },
+        {
+            "MIGX_id": "12",
+            "country": "Казахстан",
+            "city": "Павлодар",
+            "phone": "+7 (7182) 55-68-53",
+            "email": "pavlodar@maslodel.kz",
+            "address": "ул. Черепанова,\n10 офис 5,9"
+        },
+        {
+            "MIGX_id": "13",
+            "country": "Казахстан",
+            "city": "Петропавловск",
+            "phone": "+7 (7152) 54-05-07",
+            "email": "dir_predstav@maslodel.kz",
+            "address": "ул. Ауезова, 266"
+        },
+        {
+            "MIGX_id": "14",
+            "country": "Казахстан",
+            "city": "Сарыагаш",
+            "phone": "+7 (7253) 72-80-78",
+            "email": "maslodel-trade@maslodel.kz",
+            "address": "ул. Мостовая, 1"
+        },
+        {
+            "MIGX_id": "15",
+            "country": "Казахстан",
+            "city": "Семей",
+            "phone": "+7 (7222) 53-50-59",
+            "email": "semey@maslodel.kz",
+            "address": "ул. Шугаева, 164"
+        },
+        {
+            "MIGX_id": "16",
+            "country": "Казахстан",
+            "city": "Талдыкорган",
+            "phone": "+7 (7282) 24-35-09",
+            "email": "taldykurgan@maslodel.kz",
+            "address": "ул. Абая, 254 А"
+        },
+        {
+            "MIGX_id": "17",
+            "country": "Казахстан",
+            "city": "Тараз",
+            "phone": "+7 (7262) 50-05-50",
+            "email": "taraz@maslodel.kz",
+            "address": "ул. Жамбыла, дом 1,3"
+        },
+        {
+            "MIGX_id": "18",
+            "country": "Казахстан",
+            "city": "Уральск",
+            "phone": "+7 (7112) 23-00-72",
+            "email": "uralsk@maslodel.kz",
+            "address": "ул. Сырым Датова 3/5"
+        },
+        {
+            "MIGX_id": "19",
+            "country": "Казахстан",
+            "city": "Усть-каменогорс",
+            "phone": "+7 (7232) 62-40-19",
+            "email": "ust-kaman@maslodel.kz",
+            "address": "ул. Абая, 191"
+        },
+        {
+            "MIGX_id": "20",
+            "country": "Казахстан",
+            "city": "Шу",
+            "phone": "+7 (72643) 2 29-37",
+            "email": "maslodelshu@maslodel.kz",
+            "address": "ул. Сатпаева, 44 А"
+        },
+        {
+            "MIGX_id": "21",
+            "country": "Казахстан",
+            "city": "Шымкент",
+            "phone": "+7 (7252) 55-81-16",
+            "email": "shimkent@maslodel.kz",
+            "address": "ул. Сатпаева, 44 А"
+        },
+        {
+            "MIGX_id": "22",
+            "country": "Россия",
+            "city": "Москва",
+            "phone": "+7 (7252) 55-81-16",
+            "email": "shimkent@maslodel.kz",
+            "address": "ул. Сатпаева, 44 А"
+        }
+    ]
+}

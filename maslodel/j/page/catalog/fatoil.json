@@ -1,0 +1,34 @@
+{
+    "title": "Масложировая продукция",
+    "id": 30,
+    "template": 2,
+    "description": "",
+    "image": "assets/img/cache/80ecbee5edf95108dea64cb87d988af0.jpeg",
+    "childs": [
+        {
+            "title": "O'live",
+            "uri": "catalog/fatoil/olive/",
+            "image": "assets/img/cache/870ccad94f2c67fd868769845d3299cd.jpeg"
+        },
+        {
+            "title": "Маргарины",
+            "uri": "catalog/fatoil/margarines/",
+            "image": "assets/img/cache/cd908360c78b08ceba53202fcf699a2b.jpeg"
+        },
+        {
+            "title": "Масло сливочное и спреды",
+            "uri": "catalog/fatoil/butter/",
+            "image": "assets/img/cache/588d960322ebdafbb93f19d1816ba1e4.jpeg"
+        },
+        {
+            "title": "Соусы",
+            "uri": "catalog/fatoil/sauces/",
+            "image": "assets/img/cache/8ea2c10800b11ef14a85c9943da6bc35.jpeg"
+        },
+        {
+            "title": "Томатная паста",
+            "uri": "catalog/fatoil/tomato/",
+            "image": "assets/img/cache/35953a10fbb16c35cfd10860aa7b506d.jpeg"
+        }
+    ]
+}

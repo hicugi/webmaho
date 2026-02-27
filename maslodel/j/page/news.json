@@ -1,0 +1,63 @@
+{
+    "title": "Новости",
+    "id": 41,
+    "template": 8,
+    "page": 1,
+    "pages": 1,
+    "childs": [
+        {
+            "title": "Аттестация торговой команды «Масло-Дел»",
+            "link_attributes": "03 Май 2017",
+            "uri": "news/certification-of-the-trading-team.html",
+            "image": "assets/img/cache/9b8e7c9ea179297c86b07645e66c04fd.jpeg"
+        },
+        {
+            "title": "Майские праздники с ветеранами",
+            "link_attributes": "10 Май 2017",
+            "uri": "news/may-holidays-with-veterans.html",
+            "image": "assets/img/cache/5da4dda69b7ad138dd0118b5f1571eac.jpeg"
+        },
+        {
+            "title": "Студенты на МЖК",
+            "link_attributes": "26 Май 2017",
+            "uri": "news/students-on-the-swc.html",
+            "image": "assets/img/cache/aba17decf1f44c202c0423115a6d31d2.jpeg"
+        },
+        {
+            "title": "Итоги майских благотворительных акций",
+            "link_attributes": "31 Май 2017",
+            "uri": "news/results-of-the-may-charity-events.html",
+            "image": "assets/img/cache/27f5acee72179343eda4e49ea6395a84.jpeg"
+        },
+        {
+            "title": "Экскурсия на одно их крупных предприятий города",
+            "link_attributes": "",
+            "uri": "news/excursion-to-one-of-the-largest-enterprises-of-the-city.html",
+            "image": "assets/img/cache/a10bbf8f87818b9088c19b568e0a227a.jpeg"
+        },
+        {
+            "title": "Лучший по O'live",
+            "link_attributes": "31 Январь 2017",
+            "uri": "news/best-by-olive.html",
+            "image": "assets/img/cache/3d4970c56793e36d4e1f2a0eed7774bc.jpeg"
+        },
+        {
+            "title": "Успешный слет!",
+            "link_attributes": "10 Марта 2017",
+            "uri": "news/successful-rally.html",
+            "image": "assets/img/cache/410e67e103f9f7d20685e8affc0114e2.jpeg"
+        },
+        {
+            "title": "С 1 апреля, мы запускаем горячую линию",
+            "link_attributes": "31 Марта 2017",
+            "uri": "news/hot-line.html",
+            "image": "assets/img/cache/e9ccfe39a8eb1792f9aef2ee36a11871.jpeg"
+        },
+        {
+            "title": "Продукция во благо",
+            "link_attributes": "27 Декабрь 2016",
+            "uri": "news/products-for-the-benefit-of.html",
+            "image": "assets/img/cache/f290564cd18c77cdfd34c09afdc323f6.jpeg"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+<section id="home" ng-swipe-left="homeSel = homeSel == 'milk' ? 'fatoil' : 'milk'" ng-swipe-right="homeSel = homeSel == 'milk' ? 'fatoil' : 'milk'"><a class="icon icon-{{ homeSel == 'milk' ? 'fatoil' : 'milk' }}" ng-click="homeSel = homeSel == page.catalog[0].alias ? page.catalog[1].alias : page.catalog[0].alias"></a>
+  <div class="d-bg" ng-init="homeSel='fatoil'">
+    <div class="d" ng-repeat="v in page.catalog" ng-class="{ active: $parent.homeSel == v.alias }" ng-click="$parent.homeSel = v.alias"></div>
+  </div>
+  <div class="d-info">
+    <div class="container">
+      <div class="d" ng-repeat="v in page.catalog" ng-class="{ active: v.alias == $parent.homeSel }">
+        <div class="d-wrap">
+          <h2 class="t-h2"><span ng-click="$parent.homeSel = v.alias">{{v.title}}</span></h2>
+          <div class="d-btn"><a class="btn btn-more" ng-href="{{v.uri}}">Подробнее</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,17 @@
+{
+    "title": "Главная",
+    "id": 1,
+    "template": 1,
+    "catalog": [
+        {
+            "title": "Масложировая продукция",
+            "uri": "catalog/fatoil",
+            "alias": "fatoil"
+        },
+        {
+            "title": "Молочная продукция",
+            "uri": "catalog/milk",
+            "alias": "milk"
+        }
+    ]
+}

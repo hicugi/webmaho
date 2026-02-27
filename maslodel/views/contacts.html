@@ -1,0 +1,58 @@
+<section class="secn-header v2">
+  <div class="imga" style="background-image:url('assets/img/contacts-header.jpg');"></div>
+  <div class="container">
+    <div>
+      <h1 class="t-h1">{{page.title}}</h1>
+    </div>
+  </div>
+</section>
+<section class="secn-contacts">
+  <div class="container">
+    <ul class="u-contacts">
+      <li class="ico-l ico-marker">
+        <p>{{page.description}}</p>
+      </li>
+      <li class="ico-l ico-phone">
+        <p><span ng-bind-html="page.introtext && getPhones( page.introtext )"></span></p>
+      </li>
+      <li class="ico-l ico-fax">
+        <p><a href="tel:{{ page.longtitle && getPhone(page.longtitle) }}">{{page.longtitle}}</a></p>
+      </li>
+      <li class="ico-l ico-email">
+        <p><a href="mailto:{{base.phone}}">{{base.phone}}</a></p>
+      </li>
+    </ul>
+    <div class="d-btn text-center"><a class="btn" ng-click="modal.callback()">Обратная связь</a></div>
+  </div>
+</section>
+<section class="secn-map">
+  <div class="map" ng-init="map.get( '.map iframe' ,'link_attributes' )">
+    <iframe></iframe>
+  </div>
+</section>
+<section class="secn-contacts2">
+  <div class="container">
+    <div class="select" ng-init="selContact='Казахстан'">
+      <label>Выбрать страну:</label>
+      <select ng-model="selContact">
+        <option ng-repeat="v in page.contacts" ng-if="!$index || v.country != page.contacts[$index-1].country">{{v.country}}</option>
+      </select>
+    </div>
+    <div class="d-table2">
+      <div class="d-header">
+        <p>Город</p>
+        <p>Телефон</p>
+        <p>E-mail</p>
+        <p>Адрес</p>
+      </div>
+      <ul class="d-body">
+        <li ng-repeat="v in page.contacts" ng-if="v.country==$parent.selContact">
+          <p>{{ v.city }}</p>
+          <p ng-bind-html="v.phone &amp;&amp; getPhones(v.phone)"></p>
+          <p><a ng-href="{{'mailto:'+v.email}}">{{ v.email }}</a></p>
+          <p>{{ v.address }}</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,57 @@
+{
+    "title": "Сгущенное молоко",
+    "id": 66,
+    "template": 11,
+    "description": "",
+    "content": "<h2>Сгущённое молоко</h2>\r\n<p>В соответствии с ГОСТ-ом в настоящем сгущенном молоке, изготовленном по традиционной классической технологии, содержится до 9% жиров, 8,1% белков, 56% углеводов, витамины А1, В1, В2, В12, С, РР. Именно таким и является сгущенное молоко компании «МАСЛО-ДЕЛ», которая производит «Цельное молоко сгущенное ГОСТ» и сгущенное молоко «Петропавловское».</p>\r\n<p>Сгущенное молоко компании «МАСЛО-ДЕЛ» производится только из натурального (невосстановленного) коровьего молока Северо-Казахстанской области, наиболее экологически чистого района нашей страны.</p>",
+    "image": "assets/img/cache/8ec41e1320ba9ecad86c538c35f40b61.jpeg",
+    "items": [
+        {
+            "title": "Сгущенка «Керемет»",
+            "uri": "catalog/milk/condensed/keremet.html",
+            "thumb2": "assets/images/products/144/360x270/1.jpg"
+        },
+        {
+            "title": "Сгущенка с сахаром",
+            "uri": "catalog/milk/condensed/with-sugar.html",
+            "thumb2": "assets/images/products/143/360x270/2.jpg"
+        },
+        {
+            "title": "Сгущенка «Буренка»",
+            "uri": "catalog/milk/condensed/burenka.html",
+            "thumb2": "assets/images/products/142/360x270/3.jpg"
+        },
+        {
+            "title": "Сгущенка",
+            "uri": "catalog/milk/condensed/akbulak.html",
+            "thumb2": "assets/images/products/141/360x270/4.jpg"
+        },
+        {
+            "title": "Сгущенка",
+            "uri": "catalog/milk/condensed/akbulak-kremv.html",
+            "thumb2": "assets/images/products/140/360x270/5.jpg"
+        },
+        {
+            "title": "Сгущенка",
+            "uri": "catalog/milk/condensed/choko.html",
+            "thumb2": "assets/images/products/116/360x270/6.jpg"
+        },
+        {
+            "title": "Сгущенка",
+            "uri": "catalog/milk/condensed/special.html",
+            "thumb2": "assets/images/products/115/360x270/7.jpg"
+        },
+        {
+            "title": "Сгущенка",
+            "uri": "catalog/milk/condensed/civil.html",
+            "thumb2": "assets/images/products/114/360x270/8.jpg"
+        },
+        {
+            "title": "Сгущенка",
+            "uri": "catalog/milk/condensed/cow.html",
+            "thumb2": "assets/images/products/113/360x270/9.jpg"
+        }
+    ],
+    "recipies": [],
+    "articles": []
+}

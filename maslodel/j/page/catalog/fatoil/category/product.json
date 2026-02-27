@@ -1,0 +1,71 @@
+{
+    "title": "Южный 80%",
+    "id": 135,
+    "template": 3,
+    "description": "",
+    "content": "",
+    "parent": 63,
+    "image": "assets/images/products/135/yuzhnyi.jpg",
+    "attrs": [
+        {
+            "MIGX_id": "1",
+            "title": "Жир",
+            "value": "Lorem ipsum"
+        },
+        {
+            "MIGX_id": "3",
+            "title": "Нетто",
+            "value": "Lorem ipsum"
+        },
+        {
+            "MIGX_id": "2",
+            "title": "Коллории",
+            "value": "Lorem ipsum"
+        },
+        {
+            "MIGX_id": "4",
+            "title": "Жир",
+            "value": "Lorem ipsum"
+        },
+        {
+            "MIGX_id": "5",
+            "title": "Нетто",
+            "value": "Lorem ipsum"
+        },
+        {
+            "MIGX_id": "6",
+            "title": "Коллории",
+            "value": "Lorem ipsum"
+        }
+    ],
+    "similar": [
+        {
+            "title": "Мамин рецепт - сливочный",
+            "uri": "catalog/fatoil/margarines/mom-creamy.html",
+            "image": "assets/images/products/151/mom.jpg"
+        },
+        {
+            "title": "Мамин рецепт - нежный",
+            "uri": "catalog/fatoil/margarines/mom-smooth.html",
+            "image": "assets/images/products/152/mom2.jpg"
+        },
+        {
+            "title": "Южный 60%",
+            "uri": "catalog/fatoil/margarines/yuzhnyi2.html",
+            "image": "assets/images/products/134/yuzhnyi2.jpg"
+        },
+        {
+            "title": "Южный 55%",
+            "uri": "catalog/fatoil/margarines/yuzhnyi3.html",
+            "image": "assets/images/products/133/yuzhnyi3.jpg"
+        },
+        {
+            "title": "Южный 83%",
+            "uri": "catalog/fatoil/margarines/yuzhnyi4.html",
+            "image": "assets/images/products/132/yuzhnyi4.jpg"
+        }
+    ],
+    "filters": [],
+    "recipies": [],
+    "articles": []
+}

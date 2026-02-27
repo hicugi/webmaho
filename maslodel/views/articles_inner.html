@@ -1,0 +1,64 @@
+<section class="secn-header v3">
+  <div class="imga" style="background-image:url('assets/img/{{page.image}}');"></div>
+  <div class="container">
+    <div>
+      <h1 class="t-h1">{{page.title}}</h1>
+    </div>
+  </div>
+</section>
+<section class="secn-content">
+  <div class="container">
+    <div class="d-wrap text-center" ng-bind-html="page.content"></div>
+  </div>
+</section>
+<section class="secn-image">
+  <div class="container">
+    <div class="row row-xs">
+      <div class="col-sm-6" ng-repeat="v in page.images">
+        <div class="imgb">
+          <div class="imga" ng-style="{ 'background-image': v &amp;&amp; 'url('+v+')' }"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="secn-content">
+  <div class="container">
+    <div class="d-wrap text-center" ng-bind-html="page.extraContent"></div>
+  </div>
+</section>
+<section class="secn-share">
+  <div class="container">
+    <div class="flex flex-center">
+      <div class="share">
+        <label>Поделиться:</label>
+        <ul>
+          <li><a class="fa fa-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://{{location.host +'/'+ location.path}}" target="_blank"></a></li>
+          <li><a class="fa fa-vk" href="https://vk.com/share.php?url=http://{{location.host +'/'+ location.path}}" target="_blank"></a></li>
+          <li><a class="fa fa-instagram" href="https://instagram.com/share.php?url=http://{{location.host +'/'+ location.path}}" target="_blank"></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="secn-slider2" ng-if="page.articles[0]">
+  <div class="container text-center">
+    <h2>Читайте также</h2>
+    <h3>Узнавайте больше</h3>
+  </div>
+  <div class="slider v3 text-center">
+    <div class="container"><a class="btnArrow slider-arrow slider-prev" ng-click="slider.slide('articleInnerSlider' ,'prev')"></a><a class="btnArrow slider-arrow slider-next" ng-click="slider.slide('articleInnerSlider' ,'next')"></a></div>
+    <div class="slider-items">
+      <div class="slider-item d{{ slider.getClass('articleInnerSlider' ,$index)+1 }}" ng-repeat="v in page.articles" ng-init="$index == 0 &amp;&amp; slider.init({ key: 'articleInnerSlider' ,items: page.articles ,step: 1 })">
+        <div class="imga" ng-style="{ 'background-image': v.image &amp;&amp; 'url('+v.image+')' }"></div>
+        <div class="container">
+          <div>
+            <h2>{{v.title}}</h2>
+            <p>{{v.introtext}}</p>
+            <div class="d-btn"><a class="btn btn-more" ng-href="{{v.uri}}">Подробнее</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

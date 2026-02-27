@@ -1,0 +1,29 @@
+{
+    "title": "Молочная продукция",
+    "id": 29,
+    "template": 2,
+    "description": "",
+    "image": "assets/img/cache/f7fa95392fbbf7aa798bec3fd6344f86.jpeg",
+    "childs": [
+        {
+            "title": "Масло «Петропавловское»",
+            "uri": "catalog/milk/petrpavl/",
+            "image": "assets/img/cache/8917e1bbb8c5c31856862212665bc7e9.jpeg"
+        },
+        {
+            "title": "Кисломолочные продукты",
+            "uri": "catalog/milk/diary/",
+            "image": "assets/img/cache/7198370cc77ca187f7d20f0a1af78299.jpeg"
+        },
+        {
+            "title": "Сгущенное молоко",
+            "uri": "catalog/milk/condensed/",
+            "image": "assets/img/cache/25333dd86d3f345d6c5a7aefe2946c01.jpeg"
+        },
+        {
+            "title": "Молоко",
+            "uri": "catalog/milk/base/",
+            "image": "assets/img/cache/d529e83b859c161edc54b71c0ce8c268.jpeg"
+        }
+    ]
+}

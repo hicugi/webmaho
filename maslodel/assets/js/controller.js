@@ -80,10 +80,8 @@ appNg.controller('bodyCtrl' ,['$scope','$http','$sce','$routeParams' ,'$location
   sr.query = function( url ,prm ){
 
     url = url.replace( /^\/|\/$/ ,'' );
+    url = [BASE_PATH, url].join('/');
     prm = prm != undefined ? prm : {};
-
-    if( location.hostname == 'localhost' )
-      url = 'http://maslodel.localhost/'+url;
 
     if( prm.method == undefined )
       prm.method = 'POST';
@@ -318,7 +316,7 @@ appNg.controller('bodyCtrl' ,['$scope','$http','$sce','$routeParams' ,'$location
 
       var self = this;
 
-      sr.query( 'j/base' ,{ method: 'JSON' } ).then(function(r){
+      sr.query( 'j/base.json' ,{ method: 'JSON' } ).then(function(r){
 
         if( !r.data ) return 0;
 
@@ -338,6 +336,11 @@ appNg.controller('bodyCtrl' ,['$scope','$http','$sce','$routeParams' ,'$location
     sr.pageLoading = 1;
 
     sr.pageGet = function(){
+      const KEY = 'maslodel';
+      let path = location.pathname;
+      path = path.substring(path.indexOf(KEY) + KEY.length)
+        .replace(/\/$/, '')
+        .replace('.html', '') + '.json';
 
       var v = location.search.replace( /^\?/ ,'' );
 
@@ -345,7 +348,7 @@ appNg.controller('bodyCtrl' ,['$scope','$http','$sce','$routeParams' ,'$location
       sr.pageLoading = 1;
 
       sr.query(
-        'j/page'+location.pathname
+        'j/page'+path
         ,{
           method: 'JSON'
           ,data: v

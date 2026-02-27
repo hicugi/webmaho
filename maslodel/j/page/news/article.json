@@ -1,0 +1,66 @@
+{
+    "title": "Итоги майских благотворительных акций",
+    "id": 42,
+    "template": 10,
+    "longtitle": "В конце мая компания «Масло-дел» подводит итоги по оказанию благотворительной помощи.",
+    "parent": 41,
+    "content": "<p>Важно отметить, что отдельное место в жизни компании занимает благотворительность. Практически ежемесячно мы выдаем продуктовые пакеты различным неправительственным организациям. В мае традиционно мы помогаем участникам ВОВ, неправительственным организациям, и совместно с акиматом устраиваем для нуждающихся праздники. В частности на регулярной основе наши продукты питания выдаются:</p>\r\n<ul>\r\n<li>Республиканский Общественный Союз Ветеранов и Инвалидов войны в Афганистане «Ардагер»</li>\r\n<li>Благотворительный фонд инвалидов Казахстана «Мир добрых людей»</li>\r\n<li>Приход храма великомученицы Параскевны</li>\r\n<li>Благотворительное учреждение «Таугуль»</li>\r\n<li>Ассоциация организаций ветеранов войны в Афганистане «Ветераны Казахстана»</li>\r\n<li>Совете ветеранов ВОВ, тружеников тыла и детей войны</li>\r\n<li>Приход в честь Владимирской иконы Божией Матери</li>\r\n</ul>",
+    "image": "news/results-of-the-may-charity-events/image.jpg",
+    "extraContent": "<p>Так, в мае мы организовали свыше 350-ти продуктовых пакетов на сумму свыше 500 тысяч тг.<br />ТОО «МАСЛО-ДЕЛ» вот уже на протяжении 17 лет предлагает высококачественный вкусный, а главное полезный продукт, который повсеместно можно встретить на столах жителей нашей страны, что, безусловно, является главным показателем доверия к нашей компании.</p>",
+    "images": [
+        "assets/img/news/results-of-the-may-charity-events/imgs/1.jpg",
+        "assets/img/news/results-of-the-may-charity-events/imgs/2.jpg",
+        "assets/img/news/results-of-the-may-charity-events/imgs/3.jpg",
+        "assets/img/news/results-of-the-may-charity-events/imgs/4.jpg"
+    ],
+    "articles": [
+        {
+            "title": "Студенты на МЖК",
+            "introtext": "",
+            "uri": "news/students-on-the-swc.html",
+            "image": "assets/img/cache/87146b38eac7aa3213ef7af2a16e7737.jpeg"
+        },
+        {
+            "title": "Майские праздники с ветеранами",
+            "introtext": "",
+            "uri": "news/may-holidays-with-veterans.html",
+            "image": "assets/img/cache/082eb57870342968b211adc738bf45e6.jpeg"
+        },
+        {
+            "title": "Аттестация торговой команды «Масло-Дел»",
+            "introtext": "",
+            "uri": "news/certification-of-the-trading-team.html",
+            "image": "assets/img/cache/8491ba1c6c8d84ac8e31d52622256a3e.jpeg"
+        },
+        {
+            "title": "Экскурсия на одно их крупных предприятий города",
+            "introtext": "",
+            "uri": "news/excursion-to-one-of-the-largest-enterprises-of-the-city.html",
+            "image": "assets/img/cache/27ca0cfec8c10a7b55071375081b547e.jpeg"
+        },
+        {
+            "title": "С 1 апреля, мы запускаем горячую линию",
+            "introtext": "",
+            "uri": "news/hot-line.html",
+            "image": "assets/img/cache/bf292de472d5388780d42e2495de9807.jpeg"
+        },
+        {
+            "title": "Успешный слет!",
+            "introtext": "",
+            "uri": "news/successful-rally.html",
+            "image": "assets/img/cache/9c5ec1acff48c3a6a3931c10db9706af.jpeg"
+        },
+        {
+            "title": "Лучший по O'live",
+            "introtext": "",
+            "uri": "news/best-by-olive.html",
+            "image": "assets/img/cache/fc5e2f3056dc4d6b5eb68f624083700a.jpeg"
+        },
+        {
+            "title": "Продукция во благо",
+            "introtext": "",
+            "uri": "news/products-for-the-benefit-of.html",
+            "image": "assets/img/cache/4280328ac30aab668ab3ff39f6577096.jpeg"
+        }
+    ]
+}

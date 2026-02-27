@@ -1,0 +1,25 @@
+<section class="secn-header v4">
+  <div class="imga" style="background-image:url('{{page.image}}');"></div>
+  <div class="container">
+    <div>
+      <h1 class="t-h1">{{page.description ? page.description : page.title}}</h1>
+      <p class="t-h1-sub">{{page.longtitle}}</p>
+    </div>
+  </div>
+</section>
+<section class="secn-catalog">
+  <div class="container">
+    <ul class="u-catalog v2">
+      <li ng-repeat="v in page.childs">
+        <div class="catalog-item v2">
+          <div class="imga" ng-style="{ 'background-image': v.image ? 'url(&quot;'+v.image+'&quot;)' : '' }"></div><a ng-href="{{v.uri}}"></a>
+          <div>
+            <p ng-if="v.link_attributes">{{v.link_attributes}}</p>
+            <h4>{{v.title}}</h4>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <div class="d-btn text-center hide"><a class="btn btn-refresh"><span>Показать ещё</span></a></div>
+  </div>
+</section>

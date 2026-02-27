@@ -1,0 +1,81 @@
+<section class="secn-header">
+  <div class="imga" style="background-image:url('assets/img/aboutus/header.jpg');"></div>
+  <div class="container">
+    <div>
+      <h1 class="t-h1">{{page.title}}</h1>
+      <p class="t-h1-sub">{{page.longtitle}}</p>
+    </div>
+  </div>
+</section>
+<section class="secn-content">
+  <div class="container">
+    <div class="d-wrap text-center" ng-bind-html="page.content"></div>
+  </div>
+</section>
+<section class="secn-video">
+  <div class="imga" style="background-image:url('assets/img/aboutus/video.jpg');"></div>
+  <div class="video" onclick="hg.video(this)" data-value="{{page.video}}"><a class="btnPlay"><span>Посмотреть видео</span></a>
+    <iframe allowfullscreen="true"></iframe>
+  </div>
+</section>
+<section class="secn-tabs">
+  <div class="container text-center">
+    <h2>Наша история</h2>
+    <h3>Как все начиналась</h3>
+    <ul class="tabs-nav" ng-init="selHistory=0">
+      <li ng-repeat="v in page.history" ng-class="{ active: $parent.selHistory == $index ,activeBefore: $index &lt; $parent.selHistory }"><a ng-click="$parent.selHistory = $index">{{$index+1}}</a></li>
+    </ul>
+    <div class="tabs-body">
+      <p ng-repeat="v in page.history" ng-if="$parent.selHistory == $index">{{v.description}}</p>
+    </div>
+  </div>
+</section>
+<section class="secn-content v2">
+  <div class="imga" style="background-image:url('assets/img/aboutus/structure.png');"></div>
+  <div class="container text-center">
+    <div class="d-wrap" ng-bind-html="page.structure"></div>
+    <ul class="u-list">
+      <li ng-repeat="v in page.structures">{{v.description}}</li>
+    </ul>
+  </div>
+</section>
+<section class="secn-slider">
+  <div class="container text-center">
+    <h2>Наши достижения</h2>
+    <div class="slider v1"><a class="btnArrow slider-arrow slider-prev" ng-click="slider.slide('abusAchiv' ,'prev')"></a><a class="btnArrow slider-arrow slider-next" ng-click="slider.slide('abusAchiv' ,'next')"></a>
+      <div class="slider-items">
+        <div class="slider-item d{{ slider.getClass('abusAchiv' ,$index)+1 }}" ng-repeat="v in page.achivements" ng-init="$index == 0 &amp;&amp; slider.init({ key: 'abusAchiv' ,items: page.achivements ,step: 4 ,stepMd: 3 ,stepXs: 1 })">
+          <div class="imgb">
+            <div class="imga imga-auto" ng-style="{ 'background-image': v ? 'url('+v.thumbnail+')' : '' }" ng-click="slider.modal(page.achivements)"></div>
+          </div>
+          <h4><span>{{v.description}}</span>
+          </h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="secn-content v2 v3">
+  <div class="imga" style="background-image:url('assets/img/aboutus/export.jpg');"></div>
+  <div class="container text-center">
+    <div class="d-wrap" ng-bind-html="page.export"></div>
+    <div class="d-btn">
+      <div class="btn" ng-click="modal.show('callback')">Обратная связь</div>
+    </div>
+  </div>
+</section>
+<section class="secn-slider">
+  <div class="container text-center">
+    <h2>Сертификаты качества</h2>
+    <h3>Награждены</h3>
+    <div class="slider v2"><a class="btnArrow slider-arrow slider-prev" ng-click="slider.slide('abusCert' ,'prev')"></a><a class="btnArrow slider-arrow slider-next" ng-click="slider.slide('abusCert' ,'next')"></a>
+      <div class="slider-items">
+        <div class="slider-item d{{ slider.getClass('abusCert' ,$index)+1 }}" ng-repeat="v in page.certificates" ng-init="$index == 0 &amp;&amp; slider.init({ key: 'abusCert' ,items: page.certificates ,step: 3 ,stepXs: 1 })">
+          <div class="imgb">
+            <div class="imga imga-auto" ng-style="{ 'background-image': v ? 'url('+v.thumbnail+')' : '' }" ng-click="slider.modal(page.certificates)"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,5 +1,9 @@
 var appNg = angular.module('app' ,[ 'ngSanitize' ,'ngRoute' ,'ngTouch' ]);
 
+document.querySelectorAll('a[href="/"]').forEach((elm) => {
+  elm.href = BASE_PATH;
+});
+
 // route config
 appNg.config([
   '$routeProvider','$locationProvider'
@@ -10,39 +14,43 @@ appNg.config([
     ,requireBase: false
   });
 
-  if( !window.templates )
-    window.templates = {};
+    const routes = {
+      '/': 'home.html',
+
+      // single pages
+      '/aboutus.html': 'aboutus.html',
+      '/partners': 'partners.html',
+      '/contacts.html': 'contacts.html',
+
+      // catalog & products
+      '/catalog/:catalog': 'catalog.html',
+      '/catalog/:catalog/:category': 'catalog_category.html',
+      '/catalog/:catalog/:category/:item': 'catalog_item.html',
+
+      // news
+      '/news': 'news.html',
+      '/news/:item': 'news_inner.html',
+
+      // articles
+      '/articles': 'articles.html',
+      '/articles/:item': 'articles_inner.html',
+
+      // shares
+      '/shares': 'shares.html',
+      '/shares/:item': 'shares_inner.html',
+
+      // recipes
+      '/recipes': 'recipes.html',
+      '/recipes/:item': 'recipes_inner.html',
+    };
+
+    for (const route in routes) {
+      $routeProvider.when(route, { templateUrl: ['views', routes[route]].join('/') })
+    }
 
   // select template
   $routeProvider
-    .when( '/' ,{ templateUrl: '/views/home.html?'+( templates.home ? templates.home : 0 ) })
-
-    // single pages
-    .when( '/aboutus.html' ,{ templateUrl: '/views/aboutus.html?'+( templates.aboutus ? templates.aboutus : 0 ) })
-    .when( '/partners' ,{ templateUrl: '/views/partners.html?'+( templates.aboutus ? templates.aboutus : 0 ) })
-    .when( '/contacts.html' ,{ templateUrl: '/views/contacts.html?'+( templates.contacts ? templates.contacts : 0 ) })
-
-    // catalog & products
-    .when( '/catalog/:catalog' ,{ templateUrl: '/views/catalog.html?'+( templates.catalog ? templates.catalog : 0 ) })
-    .when( '/catalog/:catalog/:category' ,{ templateUrl: '/views/catalog_category.html?'+( templates.catalog_category ? templates.catalog_category : 0 ) })
-    .when( '/catalog/:catalog/:category/:item' ,{ templateUrl: '/views/catalog_item.html?'+( templates.catalog_item ? templates.catalog_item : 0 ) })
-
-    // news
-    .when( '/news' ,{ templateUrl: '/views/news.html?'+( templates.articles ? templates.articles : 0 ) })
-    .when( '/news/:item' ,{ templateUrl: '/views/news_inner.html?'+( templates.articles ? templates.articles : 0 ) })
-
-    // articles
-    .when( '/articles' ,{ templateUrl: '/views/articles.html?'+( templates.articles ? templates.articles : 0 ) })
-    .when( '/articles/:item' ,{ templateUrl: '/views/articles_inner.html?'+( templates.articles_inner ? templates.articles_inner : 0 ) })
-
-    // shares
-    .when( '/shares' ,{ templateUrl: '/views/shares.html?'+( templates.shares ? templates.shares : 0 ) })
-    .when( '/shares/:item' ,{ templateUrl: '/views/shares_inner.html?'+( templates.shares_inner ? templates.shares_inner : 0 ) })
-
-    // recipes
-    .when( '/recipes' ,{ templateUrl: '/views/recipes.html?'+( templates.recipes ? templates.recipes : 0 ) })
-    .when( '/recipes/:item' ,{ templateUrl: '/views/recipes_inner.html?'+( templates.recipes_inner ? templates.recipes_inner : 0 ) })
-    .otherwise({ templateUrl: '/views/404.html' });
+    .otherwise({ templateUrl: 'views/404.html' });
 }]);
 
 // filters

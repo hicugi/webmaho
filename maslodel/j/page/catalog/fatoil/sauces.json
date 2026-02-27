@@ -1,0 +1,62 @@
+{
+    "title": "Соусы",
+    "id": 61,
+    "template": 11,
+    "description": "",
+    "content": "<h2>О масле «Петропавловское»</h2>\r\n<h3>Холестерин нужен Вашему организму</h3>\r\n<p>Научно доказано, один из основных продуктов, который питает клетки мозга, нервные ткани, помогает развитию интеллекта и умственному развитию, является сливочное масло. Есть страх, что сливочное масло, содержит много холестерина и может привести к ожирению. Однако холестерин в организме регулируется лецитином, которого в молоке и сливках, больше , чем холестерина. Вывод, получаете холестерин или пополняете холестерино - лецитиновый баланс, напрямую зависит каким методом обработано сливочное масло. Отсюда следует, если есть правильное сливочное масло, в умеренных количествах, то он не откладывает жир, а дает энергию для всего организма.</p>",
+    "image": "assets/img/cache/5af74ffb05b82c74fc6a21daa7b52896.jpeg",
+    "items": [
+        {
+            "title": "Майонез «Saltanat» Классик 200мл",
+            "uri": "catalog/fatoil/sauces/saltanat-classic-200.html",
+            "thumb2": "assets/images/products/150/360x270/9.jpg"
+        },
+        {
+            "title": "Майонез «Провансаль»",
+            "uri": "catalog/fatoil/sauces/provansal.html",
+            "thumb2": "assets/images/products/146/360x270/7.jpg"
+        },
+        {
+            "title": "Майонезый соус «Любительский»",
+            "uri": "catalog/fatoil/sauces/lyubitelskiy.html",
+            "thumb2": "assets/images/products/145/360x270/6.jpg"
+        },
+        {
+            "title": "Майонез «Saltanat» Провансаль 200мл",
+            "uri": "catalog/fatoil/sauces/provansal200.html",
+            "thumb2": "assets/images/products/147/360x270/8.jpg"
+        },
+        {
+            "title": "Майонез «Дельный» Салатный",
+            "uri": "catalog/fatoil/sauces/delnyi-salatnyi.html",
+            "thumb2": "assets/images/products/129/360x270/5.jpg"
+        },
+        {
+            "title": "Майонез «Дельный» Провансаль",
+            "uri": "catalog/fatoil/sauces/delnyi-provansal.html",
+            "thumb2": "assets/images/products/128/360x270/4.jpg"
+        },
+        {
+            "title": "Майонез «Saltanat» Провансаль 400мл",
+            "uri": "catalog/fatoil/sauces/saltanat-provansl.html",
+            "thumb2": "assets/images/products/127/360x270/3.jpg"
+        },
+        {
+            "title": "Майонез «Saltanat» Лёгкий 400мл",
+            "uri": "catalog/fatoil/sauces/saltanat-legkiy-400.html",
+            "thumb2": "assets/images/products/149/360x270/400g2.jpg"
+        },
+        {
+            "title": "Майонез «Saltant» Классик 400мл",
+            "uri": "catalog/fatoil/sauces/saltanat-classic-400.html",
+            "thumb2": "assets/images/products/148/360x270/400g.jpg"
+        },
+        {
+            "title": "Майонез «Saltanat» 200мл",
+            "uri": "catalog/fatoil/sauces/saltanat.html",
+            "thumb2": "assets/images/products/126/360x270/2.jpg"
+        }
+    ],
+    "recipies": [],
+    "articles": []
+}

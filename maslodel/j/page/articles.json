@@ -1,0 +1,63 @@
+{
+    "title": "Статьи",
+    "id": 4,
+    "template": 8,
+    "page": 1,
+    "pages": 2,
+    "childs": [
+        {
+            "title": "Какое масло полезнее",
+            "link_attributes": "31 Май 2017",
+            "uri": "articles/usefuloil.html",
+            "image": "assets/img/cache/21e67f1f4205904c55e5c7e6ca5a554e.jpeg"
+        },
+        {
+            "title": "Технология приготовления кисломолочной продукции",
+            "link_attributes": "31 Май 2017",
+            "uri": "articles/techofcook2.html",
+            "image": "assets/img/cache/df5e2cb197dbca8c72f74e1c08821bf4.jpeg"
+        },
+        {
+            "title": "Какое масло употреблять в пищу для здоровья",
+            "link_attributes": "31 Май 2017",
+            "uri": "articles/whatoil3.html",
+            "image": "assets/img/cache/096c2859d0781ac03eacd5e568ac230f.jpeg"
+        },
+        {
+            "title": "Какое молоко употреблять в пищу для здоровья",
+            "link_attributes": "31 Май 2017",
+            "uri": "articles/whatmilk2.html",
+            "image": "assets/img/cache/21e67f1f4205904c55e5c7e6ca5a554e.jpeg"
+        },
+        {
+            "title": "Технология приготовления масложировой продукции",
+            "link_attributes": "31 Май 2017",
+            "uri": "articles/technology-of-cooking-fat-and-oil-products.html",
+            "image": "assets/img/cache/fa138c06d8293bb1b4e91d5afa34d75e.jpeg"
+        },
+        {
+            "title": "Какое масло полезнее",
+            "link_attributes": "31 Май 2017",
+            "uri": "articles/which-oil-is-more-useful.html",
+            "image": "assets/img/cache/16732ca5a924d1a3f35b1cc09a693d08.jpeg"
+        },
+        {
+            "title": "Какое молоко употреблять в пищу для здоровья",
+            "link_attributes": "31 Май 2017",
+            "uri": "articles/milk-for-health.html",
+            "image": "assets/img/cache/f5f8826b6b8ca71562c9410f31f78a58.jpeg"
+        },
+        {
+            "title": "Технология приготовления кисломолочной продукции",
+            "link_attributes": "31 Май 2017",
+            "uri": "articles/techofcook.html",
+            "image": "assets/img/cache/df5e2cb197dbca8c72f74e1c08821bf4.jpeg"
+        },
+        {
+            "title": "Какое масло употреблять в пищу для здоровья",
+            "link_attributes": "31 Май 2017",
+            "uri": "articles/choseoil.html",
+            "image": "assets/img/cache/e1a59e82551810442a8a40cf764991f9.jpeg"
+        }
+    ]
+}

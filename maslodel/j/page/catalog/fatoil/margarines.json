@@ -1,0 +1,42 @@
+{
+    "title": "Маргарины",
+    "id": 63,
+    "template": 11,
+    "description": "",
+    "content": "<h2>Маргарин</h2>\r\n<p>Маргарин - это пищевой продукт, изготовленный из пищевых жиров и масел. Максимальная жирность продукта составляет 82%. Маргарин представляет собой высокодисперсную жиро-водную эмульсию.</p>\r\n<p>В состав маргарина входят пищевые жиры, соль, сахар, пищевые красители и другие добавки, а их пищевая ценность и качество определяется их составом, соотношением жировой и водной фаз, видом жира, наполнителя, пищевой и биологической ценностью, физико-химическими и органолептическими характеристиками. По пищевой и биологической ценности при одинаковой жирности маргарин не уступает сливочному маслу. Калорийность продукта близка к калорийности сливочного масла и находится в пределах 637-748 ккал на 100 гр продукта.</p>",
+    "image": "assets/img/cache/a45927bda35bae6c02f826f0007352ad.jpeg",
+    "items": [
+        {
+            "title": "Мамин рецепт - сливочный",
+            "uri": "catalog/fatoil/margarines/mom-creamy.html",
+            "thumb2": "assets/images/products/151/360x270/mom.jpg"
+        },
+        {
+            "title": "Мамин рецепт - нежный",
+            "uri": "catalog/fatoil/margarines/mom-smooth.html",
+            "thumb2": "assets/images/products/152/360x270/mom2.jpg"
+        },
+        {
+            "title": "Южный 60%",
+            "uri": "catalog/fatoil/margarines/yuzhnyi2.html",
+            "thumb2": "assets/images/products/134/360x270/yuzhnyi2.jpg"
+        },
+        {
+            "title": "Южный 55%",
+            "uri": "catalog/fatoil/margarines/yuzhnyi3.html",
+            "thumb2": "assets/images/products/133/360x270/yuzhnyi3.jpg"
+        },
+        {
+            "title": "Южный 80%",
+            "uri": "catalog/fatoil/margarines/yuzhnyi.html",
+            "thumb2": "assets/images/products/135/360x270/yuzhnyi.jpg"
+        },
+        {
+            "title": "Южный 83%",
+            "uri": "catalog/fatoil/margarines/yuzhnyi4.html",
+            "thumb2": "assets/images/products/132/360x270/yuzhnyi4.jpg"
+        }
+    ],
+    "recipies": [],
+    "articles": []
+}

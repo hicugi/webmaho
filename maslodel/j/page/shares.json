@@ -1,0 +1,63 @@
+{
+    "title": "Акции",
+    "id": 6,
+    "template": 8,
+    "page": 1,
+    "pages": 1,
+    "childs": [
+        {
+            "title": "Акция на масло «Петропавловское»",
+            "link_attributes": "22 Ноябрь 2017",
+            "uri": "shares/petrpvoil2.html",
+            "shareImage": "assets/img/cache/e0a0e4c134f37ff5efa8db946638d350.jpeg"
+        },
+        {
+            "title": "Акция на сгущенное молоко",
+            "link_attributes": "15 Октябрь 2017",
+            "uri": "shares/condensed-milk.html",
+            "shareImage": "assets/img/cache/ff03a6980b39e2d29f832cde6be8d1e5.jpeg"
+        },
+        {
+            "title": "Акция на маргарин «Мамин рецепт»",
+            "link_attributes": "26 Сентябрь 2017",
+            "uri": "shares/momrecept.html",
+            "shareImage": "assets/img/cache/744f1493b16ac9644df5e175f089ac21.jpeg"
+        },
+        {
+            "title": "Акция на молоко «Петропавловское»",
+            "link_attributes": "22 Ноябрь 2017",
+            "uri": "shares/petrpv.html",
+            "shareImage": "assets/img/cache/574057b3074f3965bcc12bfc55ccb373.jpeg"
+        },
+        {
+            "title": "Акция на рапсовое масло «O'live»",
+            "link_attributes": "13 Август 2017",
+            "uri": "shares/olive.html",
+            "shareImage": "assets/img/cache/3081ff305ab3c013d0fc8d325df9d2e1.jpeg"
+        },
+        {
+            "title": "Акция на томатную пасту «Томатный»",
+            "link_attributes": "31 Май 2017",
+            "uri": "shares/tomatnyi.html",
+            "shareImage": "assets/img/cache/61dbf410e3927cbeb29300c40ffb1004.jpeg"
+        },
+        {
+            "title": "Акция на соусы «Bon Appetit»",
+            "link_attributes": "31 Май 2017",
+            "uri": "shares/bonappetit.html",
+            "shareImage": "assets/img/cache/c79be9fe2839750fe90b719f4092f1b7.jpeg"
+        },
+        {
+            "title": "Акция на масло «Маслодел»",
+            "link_attributes": "31 Май 2017",
+            "uri": "shares/maslodel.html",
+            "shareImage": "assets/img/cache/3d37ce7ea6b646f35ed116bde93c1629.jpeg"
+        },
+        {
+            "title": "Акция на молоко «Петропавловское»",
+            "link_attributes": "31 Май 2017",
+            "uri": "shares/petropavl.html",
+            "shareImage": "assets/img/cache/574057b3074f3965bcc12bfc55ccb373.jpeg"
+        }
+    ]
+}

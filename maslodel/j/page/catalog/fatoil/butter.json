@@ -1,0 +1,32 @@
+{
+    "title": "Масло сливочное и спреды",
+    "id": 62,
+    "template": 11,
+    "description": "",
+    "content": "<h2>Масло сливочное</h2>\r\n<p>Любимые всеми сливочные масла «Коровье», «Крестьянское» и «Петропавловское» компании «МАСЛО-ДЕЛ» производятся из натурального, богатого белком, коровьего молока, полученного в Северо-Казахстанской области по стандарту ГОСТ методом высокожирных сливок. Они упакованы в фольгу, благодаря которой витамины и полезные свойства продукта сохраняются и на стол к нашему потребителю попадает качественный, вкусный и полезный продукт!</p>",
+    "image": "assets/img/cache/ce98150e46c646a172adbd4c0fb298e9.jpeg",
+    "items": [
+        {
+            "title": "Коровье",
+            "uri": "catalog/fatoil/butter/cow.html",
+            "thumb2": "assets/images/products/131/360x270/cow.jpg"
+        },
+        {
+            "title": "Масло «Крестьянское» особое",
+            "uri": "catalog/fatoil/butter/civil-special.html",
+            "thumb2": "assets/images/products/130/360x270/civil-special.jpg"
+        },
+        {
+            "title": "Масло «Крестьянское»",
+            "uri": "catalog/fatoil/butter/civil.html",
+            "thumb2": "assets/images/products/74/360x270/civil.jpg"
+        },
+        {
+            "title": "Алматинское",
+            "uri": "catalog/fatoil/butter/almaty.html",
+            "thumb2": "assets/images/products/73/360x270/almaty2.jpg"
+        }
+    ],
+    "recipies": [],
+    "articles": []
+}

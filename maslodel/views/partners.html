@@ -1,0 +1,66 @@
+<section class="secn-header v2">
+  <div class="imga" style="background-image:url('assets/img/partners/header.jpg');"></div>
+  <div class="container">
+    <div>
+      <h1 class="t-h1">{{page.title}}</h1>
+    </div>
+  </div>
+</section>
+<section class="secn-list">
+  <div class="container text-center">
+    <h2>Выгодное сотрудничество</h2>
+    <h3>Стоит нас выбрать</h3>
+    <ul class="u-carts">
+      <li ng-repeat="v in page.cooperations" ng-class="$index != 1 &amp;&amp; 'l-margin'">
+        <div class="d-wrap">
+          <div class="d-header"><i class="icon" ng-style="{ 'background-image': v.icon ? 'url(assets/img/'+v.icon+')' : '' }"></i>
+            <div class="imga" ng-style="{ 'background-image': v.icon ? 'url(assets/img/'+v.image+')' : '' }"></div>
+            <h4>{{v.title}}</h4>
+          </div>
+          <div class="d-body">
+            <p>{{v.description}}</p>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+<hr/>
+<section class="secn-tabs">
+  <div class="container text-center">
+    <div class="u-list2" ng-init="selPartner=0" ng-class="{ active: selPartnerActive }" ng-click="selPartnerActive=!selPartnerActive">
+      <ul>
+        <li ng-repeat="v in page.childs" ng-class="{ active: $parent.selPartner == $index }"><a ng-click="$parent.selPartner=$index">{{v.description ? v.description : v.title}}</a></li>
+      </ul>
+    </div>
+    <div class="tabs-body">
+      <div class="d" ng-repeat="v in page.childs" ng-if="$parent.selPartner == $index">
+        <h2>{{v.title}}</h2>
+        <div class="d-content" ng-bind-html="v.content"></div>
+      </div>
+    </div>
+    <div class="d-btn"><a class="btn" ng-click="modal.callback(v.title)">Оставить заявку</a></div>
+    <table class="d-table" ng-repeat="v in page.childs" ng-if="$parent.selPartner == $index" ng-init="v.selected={}">
+      <thead>
+        <tr>
+          <th>№</th>
+          <th>Наименование</th>
+          <th>Упаковка</th>
+          <th>Вес</th>
+        </tr>
+      </thead>
+      <tbody ng-repeat="vc in v.partnerFats">
+        <tr class="t-head" ng-if="!$index || v.partnerFats[$index-1].category != vc.category" ng-class="{active: v[vc.category]}">
+          <td></td>
+          <td colspan="99"><a ng-click="v[vc.category]=!v[vc.category]">{{vc.category}}</a></td>
+        </tr>
+        <tr ng-if="v[vc.category]">
+          <td>{{$index+1}}</td>
+          <td>{{vc.title}}</td>
+          <td>{{vc.pack}}</td>
+          <td>{{vc.weight}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
