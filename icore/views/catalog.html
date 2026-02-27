@@ -1,0 +1,53 @@
+
+<section class="scnSlider" ng-class="{ empty: !page.slider.length }">
+  <div class="catalog__bglines"></div>
+  <div class="container" ng-if="page.slider.length">
+    <div class="services">
+      <svg viewBox="0 0 230 230" ng-class="{ active: page.slider.length }">
+        <line class="st0" y2="224.10001" x2="167.39999" y1="105.3" x1="127.4"></line>
+        <line class="st0" y2="105.3" x2="127.4" y1="11.3" x1="210.3"></line>
+        <line class="st0" y2="105.3" x2="127.4" y1="80.5" x1="4.5"></line>
+        <path class="st0" d="m 130.6,114.8 c 3.3,-1.1 5.9,-3.9 6.6,-7.5 0.7,-3.6 -0.6,-7.2 -3.2,-9.5 l -6.6,7.5 z" id="path926" inkscape:connector-curvature="0"></path>
+        <path class="st0" d="m 125.5,115.1 c 1.8,0.4 3.6,0.2 5.2,-0.3 l -3.2,-9.5 -9.8,-2 c -1.2,5.4 2.3,10.7 7.8,11.8 z" id="path928" inkscape:connector-curvature="0"></path>
+      </svg>
+      <div><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+      </div>
+      <ul>
+        <li class="services-docs">Документы</li>
+        <li class="services-team">Команда</li>
+        <li class="services-equp">Оборудование</li>
+      </ul>
+    </div>
+    <div class="slider" ng-if="page.slider.length &amp;&amp; !pageLoading" ng-init="slider.init({ key: 'slider'+page.id+'', items: page.slider })">
+      <div class="slider-arrow slider-prev" ng-if="page.slider.length&gt;1" ng-click="slider.slide( 'slider'+page.id+'', 'prev' )"></div>
+      <div class="slider-arrow slider-next" ng-if="page.slider.length&gt;1" ng-click="slider.slide( 'slider'+page.id+'', 'next' )"></div>
+      <div class="slider-items">
+        <div class="slider-item i{{ slider.getClass('slider'+page.id+'', $index) }}" ng-repeat="v in page.slider">
+          <h4>{{v.title}}</h4>
+          <p>{{v.description}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="scnCatalogInner bg1">
+  <div class="container">
+    <h2 class="fh22 text-center" ng-bind-html=" pageCatalog[ location.path.split('/')[0] ].longtitle.replace('[','&lt;span&gt;').replace(']','&lt;/span&gt;') "></h2>
+    <ul class="catalog">
+      <li ng-repeat="v in pageCatalog[ location.path.split('/')[0] ].items">
+        <div class="catalog-parent" ng-class="{ 'has-child': v.listProducts.length }"><a ng-href="{{v.uri}}" onclick="app.modal.show('product')"></a>
+          <div class="imgb">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 119.756 109.3" style="enable-background:new 0 0 77.7 72.8;" xml:space="preserve">
+              <path d="m 2.7998398,77.900002 38.9000002,-67.4 c 8.1,-14.0000005 28.2,-14.0000005 36.3,0 l 38.9,67.4 c 8.1,14 -2,31.399998 -18.1,31.399998 h -77.8 C 4.8998398,109.3 -5.2001602,91.800002 2.7998398,77.900002 Z"></path>
+            </svg><img ng-if="v.image" ng-src="{{v.image}}"/>
+          </div>
+          <p>{{v.longtitle}}</p>
+          <h4>{{v.pagetitle}}</h4>
+        </div>
+        <ul ng-if="v.listProducts">
+          <li ng-repeat="vp in v.listProducts"><a ng-href="{{vp.uri}}">{{vp.title}}</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</section>

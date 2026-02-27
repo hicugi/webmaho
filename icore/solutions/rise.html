@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ru" ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <title>Главная</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <style>body{opacity:0}html{background-color:#fff}</style>
+    <script>
+      const BASE_PATH = (() => {
+        const KEY = 'icore';
+        let val = location.pathname;
+        const idx = val.indexOf(KEY);
+
+        if (idx === -1) {
+          return '';
+        }
+
+        return val.substring(0, idx + KEY.length);
+      })();
+
+      const BASE_FULL_PATH = location.origin + BASE_PATH;
+      Object.assign(window, { BASE_PATH, BASE_FULL_PATH });
+
+      (() => {
+        const base = document.createElement('BASE');
+        base.href = BASE_FULL_PATH + '/';
+        document.querySelector('head').appendChild(base);
+      })();
+
+      setTimeout(() => {
+        document.querySelectorAll('a[href="/"]').forEach((elm) => {
+          elm.href = BASE_PATH;
+        });
+      }, 300);
+    </script>
+  </head>
+  <body ng-controller="bodyCtrl">
+    <header>
+      <div class="r1">
+        <div class="container">
+          <ul class="history">
+            <li ng-repeat="v in base.history"><a ng-mouseover="base.historySel=v" ng-mouseout="base.historySel=0">{{v.title}}</a></li>
+          </ul>
+        </div>
+        <div class="history-dialog" ng-class="{ active: base.historySel }">
+          <div class="container">
+            <h4 class="fh2">{{base.historySel.title}}</h4>
+            <div ng-bind-html="base.historySel.content"></div>
+          </div>
+        </div>
+      </div>
+      <div class="r2"><i></i>
+        <div class="container">
+          <div class="logo"><a href="/"></a></div>
+          <button class="search_btn" ng-click="base.search=!base.search;dom.focus('.search_form input')">
+            <div class="ico ico-search"></div>
+          </button>
+        </div>
+      </div>
+    </header>
+    <div class="search_form" ng-class="{ active: base.search }">
+      <div class="search-form__close" ng-click="base.search=false"></div>
+      <div class="container">
+        <div class="search_form-header">
+          <button class="search_btn" ng-click="search.event()"><i class="ico ico-search"></i></button>
+          <div class="form-group">
+            <input type="text" ng-model="$root.search.form" placeholder="поиск..." ng-keypress="search.event()" ng-change="search.event()">
+          </div>
+        </div>
+        <ul ng-if="search.items.length">
+          <li ng-repeat="v in search.items"><a ng-href="{{v.uri}}">{{v.pagetitle}}</a></li>
+        </ul>
+      </div>
+    </div>
+    <button class="nav-btn hidden-lg-up" ng-class="{ active: nav }" ng-click="$root.nav=!nav"><i></i></button>
+    <nav class="menu" ng-class="{ active: nav }">
+      <div class="container">
+        <ul>
+          <li ng-repeat="v in base.menu" ng-class="{ active: page.id == v.id }"><a ng-href="{{v.uri}}" ng-mouseover="base.navCatalog = !pageLoading &amp;&amp; v.uri == 'catalog/'">{{v.pagetitle}}</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav class="menu-sub" ng-class="{ active: base.navCatalog }" ng-mouseover="base.navCatalog = !pageLoading" ng-mouseout="base.navCatalog = 0">
+      <div class="container">
+        <h4>{{base.direction.menutitle}}</h4>
+        <ul>
+          <li ng-repeat="v in base.direction.items"><a ng-href="{{v.uri}}"><span>{{v.longtitle}}</span><span>{{v.pagetitle}}</span></a></li>
+        </ul>
+      </div>
+    </nav>
+    <main>
+      <div class="main__bg hidden-xs" ng-style="{ 'background-image': base.image &amp;&amp; 'url('+base.image+')' }"></div>
+      <div class="main__bg visible-xs" ng-style="{ 'background-image': base.image &amp;&amp; 'url('+base.imagexs+')' }"></div>
+      <div class="hide" ng-view></div>
+      <div ng-if="location.path == ''" ng-include="'views/home.html'"></div>
+      <div ng-if="location.path == 'aboutus.html'" ng-include="'views/aboutus.html'"></div>
+      <div ng-if="location.path.indexOf('catalog') > -1 || location.path.indexOf('solutions') > -1" ng-include="'views/catalog.html'"></div>
+      <section class="scnContacts" ng-if="6 == page.template">
+        <ul class="tab-header2" ng-if="page.contacts.length" ng-init="page.contactsSel=page.contacts[0]">
+          <li ng-repeat="v in page.contacts"><a ng-click="page.contactsSel=v">{{v.title}}</a></li>
+        </ul>
+        <iframe ng-src="{{ trust.url( page.contactsSel.map ) }}"></iframe>
+      </section>
+    </main>
+    <div id="modals">
+      <div class="v3 modal fade in" id="modal-callback">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-body"><a class="modal-close" data-dismiss="modal" aria-hidden="true"></a>
+              <h4>{{ request.callbackdone ? 'Спасибо за вопрос' : 'Обратная связь' }}</h4>
+              <form ng-class="{ done: request.callbackdone }">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <input type="text" ng-model="request.forms.name" placeholder="ваше имя">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <input type="text" ng-model="request.forms.phone" plugin="maskPhone" placeholder="контакты">
+                      <p class="error-log" ng-if="request.formsError.phone">{{request.formsError.phone}}</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <textarea rows="3" ng-model="request.forms.question" placeholder="вопрос"></textarea>
+                </div>
+              </form>
+              <div class="row">
+                <div class="col-md-6"><a class="modal-phone" ng-href="{{ 'tel:'+val.tel(base.phone) }}">{{base.phone}}</a></div>
+                <div class="col-md-6">
+                  <button class="btn2" ng-if="request.callbackdone" data-dismiss="modal" aria-hidden="true">закрыть</button>
+                  <button class="btn2" ng-if="!request.callbackdone" ng-click="request.submit('Обратная связь')">отправить</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="v2 modal fade in" id="modal-certificates">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-body"><a class="modal-close" data-dismiss="modal" aria-hidden="true"></a>
+              <div class="slider2" ng-if="page.certificates.length" ng-init="slider.init({ key: 'modalCertificates', items: page.certificates })" ng-swipe-left="slider.slide( 'modalCertificates', 'next' )" ng-swipe-right="slider.slide( 'modalCertificates', 'prev' )">
+                <button class="slider-arrow slider-prev v2" ng-click="slider.slide('modalCertificates', 'prev')"></button>
+                <button class="slider-arrow slider-next v2" ng-click="slider.slide('modalCertificates', 'next')"></button>
+                <div class="slider2-items">
+                  <div class="i{{ slider.getClass('modalCertificates', $index) }}" ng-repeat="v in page.certificates">
+                    <div class="imgb">
+                      <div class="imga" ng-style="{ 'background-image': 'url(&quot;'+v.image+'&quot;)' }"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="v1 modal fade in" id="modal-product">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-body"><a class="modal-close" data-dismiss="modal" aria-hidden="true"></a>
+              <ul class="tab-header3">
+                <li ng-class="{ active: page.id == page.parent.id || page.parent.items[0].parent_active }"><a ng-href="{{ page.parent.uri }}">{{page.parent.pagetitle}}</a></li>
+                <li ng-repeat="v in page.parent.items" ng-if="$index" ng-class="{ active: page.id == v.id || v.parent_active }"><a ng-href="{{ v.items[0].uri }}">{{v.pagetitle}}</a></li>
+              </ul>
+              <div class="product-container" data-simplebar>
+                <div class="product-header">
+                  <div class="imgb" ng-if="page.parent.image">
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 119.756 109.3" style="enable-background:new 0 0 77.7 72.8;" xml:space="preserve">
+                      <path d="m 2.7998398,77.900002 38.9000002,-67.4 c 8.1,-14.0000005 28.2,-14.0000005 36.3,0 l 38.9,67.4 c 8.1,14 -2,31.399998 -18.1,31.399998 h -77.8 C 4.8998398,109.3 -5.2001602,91.800002 2.7998398,77.900002 Z"></path>
+                    </svg><img ng-src="{{page.parent.image}}">
+                  </div>
+                  <p>{{page.parent.longtitle}}</p>
+                </div>
+                <ul class="products-list" ng-if="page.id == page.parent.id || page.parent.items[0].parent_active">
+                  <li ng-class="{ active: page.id == page.parent.id }"><a ng-href="{{ page.parent.uri }}">{{page.parent.pagetitle}}</a></li>
+                  <li ng-repeat="vc in page.parent.items[0].items" ng-class="{ active: vc.id == page.id }"><a ng-href="{{vc.uri}}">{{vc.pagetitle}}</a></li>
+                </ul>
+                <ul class="products-list" ng-repeat="v in page.parent.items" ng-if="$index &amp;&amp; v.parent_active">
+                  <li><a ng-href="{{ page.parent.uri }}">{{page.parent.pagetitle}}</a></li>
+                  <li ng-repeat="vc in v.items" ng-class="{ active: vc.id == page.id }"><a ng-href="{{vc.uri}}">{{vc.pagetitle}}</a></li>
+                </ul>
+                <div class="product-content" ng-bind-html="trust.html( page.content )"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="req1 modal fade in" id="modal-consultation">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-body"><a class="modal-close" data-dismiss="modal" aria-hidden="true"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade in" id="modal-success">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-body"><a class="modal-close" data-dismiss="modal" aria-hidden="true"></a>
+              <h4 class="text-center">Спасибо за обращение <br>Мы вскоре с вами свяжемся</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="footer__top"></div>
+      <div class="footer__top__bg"></div>
+      <div class="footer__middle"></div>
+      <div class="footer__middle__bg"></div>
+      <div class="footer__bot"></div>
+      <div class="container"><a class="logo-shape" href="/"></a>
+        <div class="dinfo address">
+          <p>{{base.address}}</p>
+          <p><a ng-href="{{ 'mailto:'+base.email }}">{{base.email}}</a></p>
+          <p><a ng-href="{{ 'mailto:'+base.email2 }}">{{base.email2}}</a></p>
+        </div>
+        <div class="dinfo contacts">
+          <p>{{base.address2}}</p>
+          <p ng-if="base.phone"><a ng-href="{{ 'tel:'+val.tel(base.phone) }}">{{base.phone}}</a></p>
+          <p>{{base.site}}</p>
+        </div>
+        <button class="btn btn-xs callback" ng-click="modal.show('callback')">форма обратной связи</button>
+      </div>
+    </footer>
+    <script>window.templates = { "catalog":1536254188,"empty":1536254188,"home":1536254188,"aboutus":1536254188 };</script>
+    <script src="assets/js/scripts.min.js?1536595082"></script>
+    <link rel="stylesheet" href="assets/css/main.min.css?1536597734">
+  </body>
+</html>
