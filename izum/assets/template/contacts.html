@@ -1,0 +1,29 @@
+<section>
+
+  <div class="i-shadow"></div>
+
+  <!-- title -->
+  <h1 class="i-title" ng-style="{'background-image': page.image[0] && 'url('+page.image[0]+')'}"></h1>
+
+  <div class="container">
+    <div class="row">
+
+      <!-- address -->
+      <div class="col-md-6">
+        <div class="i-info i-info-address">
+          <strong ng-bind-html="page.introtext"></strong>
+        </div>
+      </div>
+
+      <!-- phones -->
+      <div class="col-md-6 col-lg-5 col-lg-offset-1">
+        <div class="i-info i-info-phones">
+          <a href="tel:{{page.longtitle|setPhone}}"><strong ng-bind-html="page.longtitle"></strong></a>
+          <a href="tel:{{page.description|setPhone}}"><strong ng-bind-html="page.description"></strong></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="i-map" plugin-init="map"></div>
+</section>

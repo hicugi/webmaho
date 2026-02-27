@@ -1,0 +1,1399 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+body
+	font-family: $default-font
+	font-size: 14px
+	min-width: 320px
+	position: relative
+	line-height: 1.75
+	overflow-x: hidden
+	opacity: 1
+
+a
+	outline: none !important
+	color: inherit
+	cursor: pointer
+	transition: linear .3s color
+	&.active ,&:hover ,&:focus
+		color: $color
+		text-decoration: none
+
+img
+	max-width: 100%
+
+.c-white
+	color: white
+
+.text-center
+	text-align: center
+
+.ul-clear
+	list-style: none
+	margin: 0
+	padding: 0
+
+.flex
+	display: flex
+	&.flex-middle
+		align-items: center
+	&.flex-between
+		justify-content: space-between
+	&.flex-end
+		justify-content: flex-end
+
+.h100vh
+	height: 100vh
+
+.overflow-hidden
+	overflow: hidden
+
+
+.ico
+	background: no-repeat center
+	background-size: contain
+	display: inline-block
+.ico-bars
+	$s: 16px
+	display: block
+	position: relative
+	margin: 0 auto
+	width: $s
+	height: $s
+	z-index: 0
+	span
+		background-color: $color-b
+		position: absolute
+		left: 0
+		width: $s
+		height: 2px
+		opacity: 1
+		transition: linear all .2s
+		&.i1
+			left: 0
+			top: 2px
+		&.i2
+			top: 7px
+		&.i3
+			top: 12px
+	&.active
+		.i2
+			opacity: 0
+		.i1
+			left: -1px
+			top: 5px
+			transform: rotate(45deg)
+		.i3
+			left: -1px
+			top: 5px
+			transform: rotate(-45deg)
+
+.form-control
+	border: 1px solid #212121
+	box-shadow: none
+	font-style: 14px
+	line-height: 24px
+	outline: none
+	display: block
+	margin-bottom: 20px
+	padding: 7px 20px
+	width: 100%
+.form-radio2
+	$f: 18
+	display: table
+	width: 100%
+	.form-radio2-col
+		text-align: center
+		display: table-cell
+		width: 50%
+	input[type=radio]
+		display: none
+	label
+		background-color: #ebebeb
+		border: 1px solid #000
+		border-radius: 2px
+		font-size: ($f/14)+em
+		line-height: (55/$f)+em
+		display: block
+		margin: 0
+		cursor: pointer
+		&.i1
+			border-radius: 2px 0px 0px 2px
+		&.i2
+			border-left: none
+			border-radius: 0px 2px 2px 0px
+	input:checked+label
+		background-color: #fff
+		transition: .3s all
+
+.btn
+	$b: #fff
+	$c: #333
+	$f: 11
+	$h: (65/$f)+em
+	background: url(../img/btn.jpg) no-repeat center $b
+	background-size: cover
+	border: none
+	border-radius: $h
+	box-shadow: 0px 10px 35px rgba(0,0,0,.2)
+	outline: none !important
+	color: $c
+	font-family: $font-GeometriaBold
+	font-size: ($f/14)+em
+	line-height: $h
+	text-align: center
+	text-transform: uppercase
+	display: inline-block
+	position: relative
+	margin: (40/$f)+em 0
+	width: (370/$f)+em
+	z-index: 0
+	transition: linear .3s color
+	span
+		border-radius: $h
+		display: block
+		z-index: -1
+		transition: linear .3s
+	&::before ,&::after
+		content: ''
+		border: 1px solid #fff
+		border-radius: $h
+		display: block
+		position: absolute
+		animation: 2s infinite btnHover
+		z-index: -2
+	&::before
+		left: -(15/$f)+em
+		top: -(15/$f)+em
+		width: (400/$f)+em
+		height: (95/$f)+em
+		opacity: .5
+	&::after
+		left: -(40/$f)+em
+		top: -(40/$f)+em
+		width: (450/$f)+em
+		height: (145/$f)+em
+		opacity: .3
+	&:hover
+		color: $c
+		span
+			box-shadow: 0px 20px 25px rgba(0,0,0,.25)
+		&::before ,&::after
+			animation: 2s btnHover
+	&.btn-success
+		background-image: url(../img/btn-a.png)
+		&::before ,&::after
+			border-color: $color
+	&.btn-block
+		display: block
+		padding-left: 0
+		padding-right: 0
+		width: 100%
+@keyframes btnHover
+	0%
+		transform: scale(0)
+	50%
+		transform: scale(1)
+	100%
+		transform: scale(0)
+
+
+.img-box
+	display: block
+	position: relative
+	z-index: 0
+	.img-bg
+		background: no-repeat center
+		background-size: cover
+		position: absolute
+		left: 0
+		top: 0
+		width: 100%
+		height: 100%
+		z-index: -1
+		&.img-contain
+			background-size: contain
+		&.img-base
+			background-size: auto
+
+.modal
+	display: none
+	position: fixed
+	left: 0
+	top: 0
+	height: 100%
+	width: 100%
+	z-index: 999
+	&.active
+		display: block
+	.modal-bg
+		background: black
+		position: fixed
+		width: 100%
+		height: 100%
+		z-index: 0
+		opacity: 0
+	.modal-dialog
+		padding: 0 15px
+		height: 100%
+		overflow-y: auto
+		.modal-content
+			background-color: white
+			border-radius: 8px
+			position: relative
+			margin: 30px auto
+			max-width: 740px
+			overflow: hidden
+			z-index: 1
+			animation-duration: .5s
+	.modal-header
+		border-bottom: 1px solid #ddd
+		text-align: center
+		position: relative
+	.modal-close
+		$c: #131313
+		$s: 24px
+		line-height: $s
+		text-align: center
+		position: absolute
+		right: 0
+		top: 0
+		width: $s * 1.1
+		height: $s
+		&::before ,&::after
+			content: ''
+			background-color: $c
+			position: absolute
+			left: 7px
+			top: $s / 2
+			width: $s / 1.8
+			height: 1px
+			transform: rotate(45deg)
+		&::after
+			transform: rotate(-45deg)
+	.modal-body ,.modal-footer
+		padding-left: 40px
+		padding-right: 40px
+	.modal-body
+		padding-top: 20px
+		padding-bottom: 20px
+		.data-form
+			position: relative
+			z-index: 0
+			.data-log
+				$h: 20px
+				color: red
+				line-height: $h
+				position: absolute
+				right: 0
+				bottom: -$h
+				opacity: 0
+				z-index: -1
+				transition: linear .3s
+			&.has-error
+				.data-log
+					opacity: 1
+	.modal-footer
+		padding-top: 10px
+		padding-bottom: 20px
+
+
+body
+	background-color: #fcfcfc
+	h1,h2,h3,h4
+		font-size: inherit
+		text-transform: uppercase
+		margin: 0
+	strong
+		font-family: $font-GeometriaBold
+	.h2
+		$f: 40
+		color: $color-b
+		font-family: $font-GeometriaExtaBold
+		font-size: ($f/14)+em
+		line-height: (60/$f)+em
+		letter-spacing: 3px
+		text-transform: uppercase
+		margin-bottom: (20/$f)+em
+		span
+			color: $color
+	h1.h2
+		margin-bottom: (80/40)+em
+		c
+			opacity: 0
+		&.active
+			c
+				opacity: 1
+			@for $i from 1 through 40
+				c:nth-child(#{$i})
+					transition-delay: (120*$i)+ms
+	.h3
+		$f: 25
+		color: #444444
+		font-family: $font-GeometriaBold
+		font-size: ($f/14)+em
+		letter-spacing: 4px
+		line-height: 2em
+		margin-bottom: (40/$f)+em
+		white-space: pre-wrap
+	&.i-page
+		padding-top: (55/14)+em
+	.i-contacts
+		white-space: nowrap
+		display: table
+		transition: linear .3s
+		div
+			vertical-align: middle
+			display: table-cell
+		strong
+			color: $color-b
+			font-size: (11/14)+em
+			line-height: 1.3em
+			position: relative
+		strong+strong
+			margin-left: (24/11)+em
+			&::before
+				content: ''
+				background-color: $color-b
+				position: absolute
+				left: -(14/11)+em
+				top: 50%
+				margin-top: -(10/11)+em
+				width: 1px
+				height: (20/11)+em
+	.i-socn
+		display: flex
+		align-items: center
+		ul
+			list-style: none
+			margin: 0
+			padding: 0
+			li
+				display: inline-block
+			a
+				display: block
+			li+li
+				margin-left: (24/14)+em
+	.modal
+		background-color: #fff
+		.modal-bg
+			opacity: 0 !important
+		.modal-dialog
+			.modal-content
+				background-color: $color
+				border-radius: 0
+				padding-left: (130/14)+em
+				padding-right: (130/14)+em
+				max-width: 695px
+			.modal-header
+				border: none
+				padding: 95px 20px 0px
+				position: static
+				.modal-close
+					top: 20px
+					right: 15px
+					&::before ,&::after
+						background-color: white
+					&::before
+						top: 12px
+				.h2
+					position: relative
+					margin-bottom: 45px
+					z-index: 0
+					&::before
+						content: ''
+						background-color: #fff
+						display: block
+						position: absolute
+						left: 50%
+						bottom: 7px
+						margin-left: -60px
+						width: 120px
+						height: 15px
+						z-index: -1
+				p
+					color: #444
+					line-height: 2.5em
+					margin: 0
+			.modal-body
+				padding: 30px 20px 20px
+				.form-control
+					background: none
+					border: none
+					border-bottom: 2px solid #fff
+					color: $color-b
+					font-family: $font-GeometriaBold
+					font-size: (11/14)+em
+					font-weight: bold
+					line-height: (40/11)+em
+					text-transform: uppercase
+					padding: 0 (14/11)+em
+				.has-error
+					.form-control
+						border-color: red
+						transition: linear .3s
+			.modal-footer
+				border: none
+				text-align: right
+				padding: 10px 20px (80/14)+em
+				.i-btn
+					color: $color-b
+					font-size: (11/14)+em
+					text-transform: uppercase
+					position: relative
+					padding-right: (32/11)+em
+					&::before
+						content: ''
+						background: url(../img/ico/arrow-left.png) no-repeat center
+						background-size: contain
+						display: block
+						position: absolute
+						right: 0
+						top: 0
+						width: (15/11)+em
+						height: 100%
+						transform: rotate(180deg)
+		&#modal-message
+			.modal-header
+				padding-bottom: 35px
+				.h2
+					margin-bottom: 60px
+					&::after
+						content: ''
+						background: url(../img/ico/love.png) no-repeat center
+						display: block
+						position: absolute
+						left: 50%
+						bottom: -28px
+						margin-left: -7.5px
+						width: 15px
+						height: 13px
+			.modal-footer
+				text-align: center
+	.navUp
+		$s: 28px
+		background-color: $color
+		border-radius: 100%
+		color: #fcfcfc
+		line-height: $s
+		text-align: center
+		position: fixed
+		bottom: -($s+10)
+		right: 0
+		margin: 10px
+		width: $s
+		opacity: .8
+		z-index: 10
+		transition: .3s linear
+		&::before
+			display: inline-block
+		&.active
+			bottom: 0
+		&:hover
+			opacity: 1
+	#animate
+		position: absolute
+		top: 0
+		width: 100%
+		height: 100%
+		overflow: hidden
+		.container
+			position: relative
+			height: 100%
+			.center-wrapper
+				position: static !important
+		.EDGE
+			position: absolute !important
+			margin: 0 !important
+			opacity: 0
+			&.active
+				z-index: 2 !important
+		// sneaks
+		.EDGE-177873857
+			left: 200% !important
+			top: auto !important
+			bottom: 734px !important
+			transform: scale(.8) !important
+			&.active
+				animation: 6s linear izumSneaks
+		// scared
+		.EDGE-112938118
+			left: auto !important
+			right: -1500px !important
+			top: 460px !important
+			transform: scale(.6) !important
+			&.active
+				animation: 3s linear izumScared
+		// jump
+		.EDGE-177873858
+			left: 200% !important
+			top: 404px !important
+			transform: scale(.5) !important
+			&.active
+				animation: 12s linear izumJump
+		// parachute
+		.EDGE-112938119
+			position: fixed !important
+			left: 35.5% !important
+			top: 100% !important
+			transform: scale(.75) rotate(0deg) !important
+			opacity: 0
+			&.active
+				z-index: 11 !important
+				animation: 5.1s linear izumParachute
+		// walk
+		.EDGE-106708248
+			left: 120% !important
+			top: 220px !important
+			transform: scale(.5) !important
+			&.active
+				z-index: 2 !important
+				animation: 4s linear izumWalk
+	&.animate-hide
+		#animate
+			display: none !important
+@keyframes izumSneaks
+	0%
+		left: -50%
+		opacity: 0
+	5%
+		opacity: 1
+	95%
+		opacity: 1
+	100%
+		right: 200%
+		opacity: 0
+@keyframes izumScared
+	0%
+		right: -400px
+		opacity: 0
+	5%
+		opacity: 1
+	20%
+		right: -200px
+	60%
+		right: -200px
+	90%
+		opacity: 1
+	100%
+		right: -1500px
+		opacity: 0
+@keyframes izumJump
+	0%
+		left: -30%
+		opacity: 0
+	4%
+		left: 1.4%
+		opacity: 1
+	5.5%
+		left: 1.4%
+	9.2%
+		left: 27%
+	23%
+		left: 27%
+	27%
+		left: 65%
+	30%
+		left: 65%
+		opacity: 1
+	33.4%
+		left: 100%
+		opacity: 0
+@keyframes izumParachute
+	0%
+		left: 53%
+		top: -40%
+		transform: scale(.75) rotate(-10deg)
+		opacity: 0
+	5%
+		opacity: 1
+	// 11
+	21.5%
+		left: 45%
+		top: -9%
+		transform: scale(.75) rotate(-10deg)
+	// 13
+	23.5%
+		left: 45%
+		top: 6%
+		transform: scale(.75) rotate(10deg)
+	// 17
+	33.3%
+		left: 40.5%
+		top: 18%
+		transform: scale(.75) rotate(0deg)
+	// 24
+	47%
+		left: 42.4%
+		top: 38%
+		transform: scale(.75) rotate(6deg)
+	// 25
+	49%
+		left: 42.4%
+		top: 39%
+		opacity: 1
+		transform: scale(.75) rotate(8deg)
+	// 32
+	62.7%
+		left: 41%
+		top: 55%
+		opacity: .8
+		transform: scale(.75) rotate(3deg)
+	// 47
+	92.1%
+		left: 35.5%
+		top: 92%
+		transform: scale(.75) rotate(0deg)
+	95%
+		opacity: 1
+	100%
+		left: 35.5%
+		top: 100%
+		opacity: 0
+		transform: scale(.5) rotate(0deg)
+@keyframes izumWalk
+	0%
+		left: -20%
+		opacity: 0
+	5%
+		opacity: 1
+	95%
+		opacity: 1
+	100%
+		right: 120%
+		opacity: 0
+
+header
+	background-color: #fff
+	position: fixed
+	left: 0
+	top: 0
+	width: 100%
+	z-index: 5
+	transition: linear .3s
+	.i-logo
+		transition: linear .3s
+		a
+			background: url(../img/logo.png) no-repeat center
+			background-size: contain
+			display: block
+			width: (70/14)+em
+			height: (55/14)+em
+			transition: linear .3s
+	ul
+		list-style: none
+		display: table
+		position: absolute
+		margin: 0
+		padding: 0
+		transition: linear .3s
+		li
+			display: inline-block
+		a
+			color: $color-b
+			font-family: $font-GeometriaBold
+			font-size: (10/14)+em
+			line-height: (55/10)+em
+			text-transform: uppercase
+			display: block
+			margin: 0 auto
+		li+li
+			a
+				margin-left: (60/14)+em
+	.i-contacts
+		margin-left: auto
+		height: (55/14)+em
+	&.i-home
+		background: none
+		.i-logo
+			padding-top: (53/14)+em
+			a
+				height: (31/14)+em
+		ul
+			opacity: 0
+			margin-top: -90px
+			&.i-menu-paper
+				list-style: none
+				display: table
+				margin: (25/14)+em 0px 0px
+				padding: 0
+				width: 100%
+				opacity: 1
+				z-index: 6
+				li
+					display: table-cell
+					&.i-1
+						padding-top: 19px
+						a
+							width: (152/14)+em
+							height: (94/14)+em
+							animation-delay: .2s
+					&.i-2
+						padding-top: 14px
+						a
+							width: (233/14)+em
+							height: (96/14)+em
+							animation-delay: .4s
+					&.i-3
+						padding-top: 13px
+						a
+							width: (202/14)+em
+							height: (98/14)+em
+							animation-delay: .6s
+				a
+					background: no-repeat center
+					background-size: contain
+					color: transparent
+					font-size: 14px
+					display: block
+					margin: 0 auto
+		.i-contacts
+			margin-top: (55/14)+em
+			div
+				animation-delay: .8s
+			a:hover
+				color: white
+	&.i-home.active
+		.i-logo
+			a
+				height: (55/14)+em
+		ul
+			opacity: 1
+			margin-top: 0
+			&.i-menu-paper
+				opacity: 0
+				margin-top: -90px
+		.i-contacts
+			a:hover
+				color: $color
+	&.active
+		background-color: #fff
+		box-shadow: 0px 0px 15px rgba(0,0,0,.2)
+		.i-logo
+			padding-top: 0
+		.i-contacts
+			margin-top: 0
+
+nav
+	background-color: white
+	text-align: center
+	position: fixed
+	right: -100%
+	top: 0
+	padding-top: 80px
+	z-index: 4
+	transition: linear .3s right
+	width: 100%
+	height: 100%
+	&::before
+		content: ''
+		background-color: $color
+		display: block
+		position: absolute
+		left: 0
+		top: 0
+		width: 100%
+		height: 465px
+		z-index: -1
+	ul
+		list-style: none
+		margin: 0px 0px 20px
+		padding: 0
+		li
+			a
+				color: $color-b
+				font-family: $font-GeometriaExtaBold
+				font-size: 25px
+				letter-spacing: 5px
+				line-height: 55px
+				text-transform: uppercase
+				&:hover
+					color: $color-b
+			&.active
+				a
+					color: white
+	.i-contacts
+		margin: 0px auto 10px
+		strong
+			font-size: 9px
+	.i-socn
+		ul
+			margin: 0 auto 15px
+	&.active
+		right: 0
+
+main
+	display: table
+	position: relative
+	width: 100%
+	z-index: 1
+	section
+		position: relative
+		.i-title
+			background: no-repeat center
+			position: relative
+			margin-bottom: (10/14)+em
+			height: (80/14)+em
+		.i-shadow
+			position: absolute
+			left: 0
+			top: 0
+			width: 100%
+			height: 100%
+			opacity: .1
+			overflow: hidden
+			&::before
+				content: ''
+				box-shadow: 0px -60px 100px #000
+				display: block
+				width: 50%
+				height: 100%
+		.i-portfolio
+			position: relative
+			margin: 0 -15px
+			height: (630/14)+em
+			.item
+				position: absolute
+				padding: 0 15px
+				a
+					background: #f4f4f4 no-repeat center
+					box-shadow: 0px 5px 15px rgba(0,0,0,.15)
+					display: flex
+					align-items: center
+					justify-content: center
+					padding: 0 30px
+					height: 100%
+					filter: grayscale(100%)
+					transition: all .3s linear
+					overflow: hidden
+					&:hover
+						filter: grayscale(0)
+						.i-portfolio-title
+							opacity: 1
+					.i-portfolio-title
+						$h: (60/10)+em
+						font-size: (10/14)+em
+						line-height: 2em
+						position: absolute
+						padding: 0 20px
+						left: 0
+						top: 5px
+						width: 100%
+						opacity: 0
+						transition: linear .3s
+						div
+							background-color: $color
+							color: $color-b
+							font-family: $font-GeometriaBold
+							display: flex
+							align-items: center
+							position: relative
+							padding: 0 55px 0px 15px
+							height: $h
+							&::before
+								content: ''
+								background: url(../img/ico/eye.png) no-repeat right center
+								position: absolute
+								top: 0
+								right: 15px
+								width: 24px
+								height: 100%
+					img
+						max-height: 60%
+		.i-portfolio1
+			margin-bottom: (75/14)+em
+			.item-1 ,.item-3
+				left: 0
+			.item-1 ,.item-2 ,.item-5
+				top: 0
+			.item-1 ,.item-4 ,.item-5
+
+				width: 25%
+			.item-1 ,.item-2 ,.item-3 ,.item-4
+				height: (300/14)+em
+			.item-2
+				left: 25%
+			.item-2 ,.item-3
+				width: 50%
+			.item-3 ,.item-4
+				bottom: 0
+			.item-4
+				left: 50%
+			.item-5
+				right: 0
+			.item-5
+				height: 100%
+		.i-portfolio2
+			position: relative
+			margin: 0 15px
+			height: (1650/14)+em
+			.item
+				position: absolute
+				padding: 0 15px
+				$w1: 25%
+				$w2: 50%
+				$h1: (300/14)+em
+				$h2: (630/14)+em
+				$h3: (960/14)+em
+				$h4: (1290/14)+em
+				&.item-1
+					left: 0
+					top: 0
+					width: $w1
+					height: $h1
+				&.item-2
+					left: $w1
+					top: 0
+					width: $w2
+					height: $h1
+				&.item-3
+					left: 0
+					top: $h1
+					margin-top: 30px
+					width: $w2
+					height: $h2
+				&.item-4
+					left: 50%
+					top: $h1
+					margin-top: 30px
+					width: $w1
+					height: $h1
+				&.item-5
+					right: 0
+					top: 0
+					width: $w1
+					height: $h2
+				&.item-6
+					right: 0
+					top: $h2
+					margin-top: 30px
+					width: $w2
+					height: $h1
+				&.item-7
+					left: 0
+					top: $h3
+					margin-top: 30px
+					width: $w1
+					height: $h2
+				&.item-8
+					left: $w1
+					top: $h3
+					margin-top: 30px
+					width: $w1
+					height: $h1
+				&.item-9
+					left: $w1
+					top: $h4
+					margin-top: 30px
+					width: $w1
+					height: $h1
+				&.item-10
+					right: 0
+					top: $h3
+					margin-top: 30px
+					width: $w2
+					height: $h2
+		.i-partners
+			background-color: #fff
+			ul
+				list-style: none
+				position: relative
+				margin: 0
+				padding: 0
+				height: (150/14)+em
+				overflow: hidden
+				li
+					position: absolute
+					left: 37.5%
+					top: -100%
+					width: 25%
+					height: 100%
+					transition: .5s
+					a
+						background: no-repeat center
+						display: block
+						height: 100%
+					&.active
+						top: 0
+				.i1
+					left: 25%
+				.i2
+					left: 50%
+				.i3
+					left: 0%
+				.i4
+					left: 75%
+		.i-content
+			color: #444
+			p
+				margin: 0px 0px 2em
+			p
+				line-height: 2.5em
+			ul ,ol
+				line-height: 1.5em
+				margin-top: -2.5em
+	&#home
+		.secn-1
+			background-color: $color
+			position: relative
+			height: 100vh
+			min-height: 620px
+			.i-shadow
+				&::before
+					margin-left: auto
+			.i-text
+				$f: 345
+				color: #f3e200
+				font-family: $font-ClickBait
+				font-size: ($f/14)+em
+				text-align: center
+				line-height: (230/$f)+em
+				position: absolute
+				left: 0
+				top: 0
+				margin-top: (125/$f)+em
+				width: 100%
+				transform: rotate(-6deg)
+				div
+					margin: 0 auto
+					max-width: 1600px
+			.i-paper
+				$w: 912px
+				$h: 771px
+				position: absolute
+				left: 50%
+				top: 0
+				margin-top: 140px
+				margin-left: -$w/2
+				width: $w
+				height: $h
+				div
+					background: no-repeat center
+					position: absolute
+					left: 0
+					top: 0
+					width: 100%
+					height: 100%
+			.i-scroll
+				position: absolute
+				left: 50%
+				bottom: -(62/14)+em
+				margin-left: -(53/14)+em
+				width: (106/14)+em
+				height: (124/14)+em
+				z-index: 1
+				&::before ,&::after
+					content: ''
+					border: 1px solid #fff
+					border-radius: 100%
+					display: block
+					position: absolute
+					opacity: 1
+					z-index: -1
+					animation: 2s infinite btnHover
+				&::before
+					$s: 80
+					$se: ($s/14)+em
+					$m: (($s/2)/14)+em
+					left: 50%
+					top: 50%
+					margin-left: -$m
+					margin-top: -$m
+					width: $se
+					height: $se
+				&::after
+					$s: 130
+					$se: ($s/14)+em
+					$m: (($s/2)/14)+em
+					left: 50%
+					top: 50%
+					margin-left: -$m
+					margin-top: -$m
+					width: $se
+					height: $se
+				div
+					background: url(../img/home/scroll.png) no-repeat center
+					background-size: contain
+					height: 100%
+				a
+					$s: 50
+					$se: ($s/14)+em
+					$m: (($s/2)/14)+em
+					display: block
+					position: absolute
+					left: 50%
+					top: 50%
+					margin-left: -$m
+					margin-top: -$m
+					width: $se
+					height: $se
+		.secn-2
+			position: relative
+			padding-top: (215/14)+em
+			height: (660/14)+em
+			z-index: 0
+			.i-h1-extra
+				$f: 10
+				color: $color-b
+				line-height: 1em
+				font-size: ($f/14)+em
+				position: absolute
+				top: (264/$f)+em
+				margin-left: -(93/$f)+em
+			h1.h2
+				&.active
+					span
+						@for $i from 1 through 4
+							c:nth-child(#{$i})
+								transition-delay: ((120*21)+120*$i)+ms
+		.secn-3
+			background-color: $color
+			padding: (105/14)+em 0 (40/14)+em
+			.i-shadow
+				&::before
+					margin-left: auto
+			.h2
+				color: #fff
+			.h3
+				text-align: right
+			.i-btn
+				text-align: center
+	&#aboutus
+		section
+			padding: (60/14)+em 0
+		.i-title
+			height: 94px
+		.i-info
+			padding-top: (100/14)+em
+		.h2
+			color: $color
+		.h3
+			margin-bottom: 0
+		.i-content
+			max-width: (540/14)+em
+		.img-box
+			margin-left: -15px
+			height: (592/14)+em
+			.img-bg
+				background-position: left center
+	&#contacts
+		section
+			padding-top: (60/14)+em
+		.i-title
+			height: 98px
+		.i-info
+			color: #444444
+			font-size: (25/14)+em
+			letter-spacing: 4px
+			line-height: 2em
+			text-transform: uppercase
+			position: relative
+			padding-left: (100/25)+em
+			&::before
+				$s: (50/25)+em
+				content: ''
+				background: url(../img/contacts/icons.png) no-repeat center
+				background-size: 200%
+				display: block
+				position: absolute
+				left: 0
+				width: $s
+				height: 100%
+			&.i-info-address::before
+				background-position: left center
+			&.i-info-phones::before
+				background-position: right center
+			a
+				display: block
+			strong
+				white-space: pre-wrap
+		.i-map
+			background-color: $color-b
+			margin: (190/14)+em auto (60/14)+em
+			width: 100%
+			max-width: (1324/14)+em
+			height: (620/14)+em
+	&#portfolio
+		section
+			padding-top: (60/14)+em
+		.i-title
+			margin-bottom: (75/14)+em
+			height: 96px
+	&#portfolio_more
+		.i-base
+			padding-top: (50/14)+em
+		.i-back
+			color: #999
+			font-size: (9/14)+em
+			text-transform: uppercase
+			margin-bottom: (20/14)+em
+			a
+				background: url(../img/ico/arrow-left.png) no-repeat left center
+				padding-left: (30/9)+em
+		.h2
+			text-align: center
+			span
+				display: block
+		.row1
+			.img-box
+				position: absolute
+				right: 0
+				top: 0
+				width: (960/14)+em
+				height: (425/14)+em
+			.i-info
+				color: #444
+				font-size: (9/14)+em
+				text-align: right
+				text-transform: uppercase
+				position: relative
+				margin-top: (100/14)+em
+				margin-bottom: (125/9)+em
+				padding-right: (124/9)+em
+				&::before
+					content: ''
+					background-color: $color
+					display: block
+					position: absolute
+					right: 0
+					top: 50%
+					margin-top: -1px
+					width: (100/9)+em
+					height: 2px
+				span
+					padding: 0 15px
+		.row2
+			margin-bottom: (55/14)+em
+			height: (220/14)+em
+		.row3
+			.i-content
+				white-space: pre-wrap
+				margin-bottom: (60/14)+em
+				max-width: (550/14)+em
+			.col2
+				padding-top: (75/14)+em
+				.i-content
+					padding-left: (25/14)+em
+		.i-img-box
+			margin-bottom: (44/14)+em
+			height:	(520/14)+em
+		.row4
+			.i-content
+				margin-bottom: (70/14)+em
+				padding-top: (20/14)+em
+		.i-img-box-last
+			margin-bottom: 0
+		.i-more
+			$p: 120px
+			padding: 0 15px
+			.col
+				padding: 0
+			.col1
+				text-align: right
+				a
+					padding-right: $p
+			.col2
+				a
+					padding-left: $p
+			a
+				text-transform: uppercase
+				display: table
+				position: relative
+				width: 100%
+				height: (180/14)+em
+				filter: grayscale(100%)
+				z-index: 0
+				transition: .3s linear
+				&::before
+					content: ''
+					background-color: #fff
+					position: absolute
+					left: 0
+					top: 0
+					display: block
+					width: 100%
+					height: 100%
+					z-index: -1
+					opacity: .6
+					transition: .3s linear
+				span
+					vertical-align: middle
+					display: table-cell
+					opacity: .5
+					transition: .3s linear
+				&:hover
+					filter: grayscale(0%)
+					&::before
+						opacity: 0
+					span
+						opacity: 0
+
+footer
+	background-color: #f8f8f8
+	position: relative
+	padding-top: (64/14)+em
+	overflow: hidden
+	z-index: 1
+	&::before
+		content: ''
+		box-shadow: 20px -10px 100px #000
+		display: block
+		position: absolute
+		left: 0
+		top: -100px
+		width: 50%
+		height: 100px
+		opacity: .2
+	&::after
+		$w: 265
+		$h: (374/14)+em
+		content: ''
+		background: url(../img/izum.png) no-repeat center
+		background-size: contain
+		display: block
+		position: absolute
+		left: 50%
+		bottom: -$h
+		margin-left: -(($w/2)/14)+em
+		width: ($w/14)+em
+		height: $h
+		transition: linear .5s
+	&.active
+		&::after
+			bottom: -(40/14)+em
+	.i-btn
+		margin-bottom: (340/14)+em
+	.row2
+		background-color: #fff
+		.i-contacts
+			height: (40/14)+em
+		.i-socn
+			ul
+				display: flex
+				align-items: center
+				height: (40/14)+em
+				margin-left: auto
+
+
+@import "media" // Всегда в конце

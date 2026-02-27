@@ -1,0 +1,375 @@
+@import "vars"
+
+/*==========	Desktop First	==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1199px)
+	header
+		&.i-home
+			ul.i-menu-paper
+				margin-left: -60px
+				a
+					font-size: 11.5px
+					margin: 0 15px
+@media only screen and (max-width : 991px)
+	header
+		background-color: rgba(255,255,255,.3) !important
+		.i-logo
+			padding-top: 0 !important
+			a
+				height: 60px !important
+		.i-menu-xs
+			color: $color-b
+			font-size: 11px
+			line-height: 60px
+			text-align: right
+			text-transform: uppercase
+			padding-right: 40px
+			position: relative
+			margin-left: auto
+			.ico
+				position: absolute
+				right: 0
+				top: 50%
+				margin-top: -8px
+	main
+		section
+			.i-portfolio1
+				margin-bottom: 0
+				height: 850px
+				$w1: 33.3333%
+				$w2: 66.6666%
+				$h1: 240px
+				$h2: 510px
+				.item-1
+					left: 0
+					top: 0
+					width: $w1
+					height: $h1
+				.item-2
+					left: auto
+					right: 0
+					top: 0
+					width: 66.6666%
+					height: $h1
+				.item-3
+					left: 0
+					top: $h1+30
+					width: $w2
+					height: $h2
+				.item-4
+					left: auto
+					right: 0
+					top: $h1+30
+					width: $w1
+					height: $h1
+				.item-5
+					left: auto
+					right: 0
+					top: $h1*2+30*2
+					width: $w1
+					height: $h1
+		&#home
+			.secn-1
+				padding: 100px 0px 80px
+				height: auto
+				.img-box
+					background-color: #fff
+					height: 235px
+				.i-scroll
+					div
+						background-image: url(../img/home/scroll-xs.png)
+			.secn-2
+				padding: 150px 0
+				height: auto
+				.h2
+					margin: 0 auto 50px
+					max-width: 600px
+			.secn-3
+				.h2
+					margin: 0
+					max-width: 300px
+				.h3
+					text-align: right
+					margin: -60px 0px 40px auto
+					max-width: 300px
+					white-space: normal
+		&#aboutus
+			section
+				padding-bottom: 40px
+				height: auto
+			.i-title
+				margin-bottom: 35px
+			.i-info
+				padding-top: (30/14)+em
+			.img-box
+				height: 260px
+			.i-content
+				text-align: center
+				margin-top: 40px
+				max-width: 100%
+		&#portfolio
+			section
+				padding-top: 50px
+				padding-bottom: 50px
+			.i-title
+				margin-bottom: 50px
+			.i-portfolio
+				height: 1620px
+				$w1: 33.3333%
+				$w2: 66.6666%
+				$h1: 240px
+				$h2: 510px
+				.item
+					margin: 0
+					height: $h1
+				.item-1 ,.item-6
+					left: 0
+					top: 0
+					width: $w1
+				.item-2 ,.item-7
+					left: $w1
+					top: 0
+					width: $w2
+				.item-3 ,.item-8
+					left: 0
+					top: $h1+30
+					width: $w2
+					height: $h2
+				.item-4 ,.item-9
+					left: $w2
+					top: $h1+30
+					width: $w1
+					height: $h1
+				.item-5 ,.item-10
+					left: $w2
+					top: $h1*2+30*2
+					width: $w1
+					height: $h1
+				.item-6 ,.item-7 ,.item-8 ,.item-9 ,.item-10
+					margin-top: 810px
+		&#portfolio_more
+			.h2
+				margin-bottom: 60px
+			.row3
+				.i-content
+					margin: 0px 0px 30px
+					max-width: 100%
+				.col2
+					padding-top: 0
+					.i-content
+						margin-bottom: 50px
+						padding: 0
+			.i-more
+				$p: 40px
+				.col1 a
+					padding-right: $p
+				.col2 a
+					padding-left: $p
+		&#contacts
+			.i-title
+				margin-bottom: 80px
+			.i-info
+				margin-bottom: 80px
+			.i-info-phones
+				text-align: right
+				padding-left: 0
+				padding-right: 100px
+				&::before
+					left: auto
+					right: 0
+			.i-map
+				margin-top: 0
+				height: 590px
+	footer
+		.i-contacts
+			strong
+				font-size: 9px
+@media only screen and (max-width : 767px)
+	.btn
+		width: 250px
+	body
+		.h2
+			font-size: 20px
+			line-height: 2em
+		.h3
+			font-size: 15px
+			line-height: 35px
+		.modal
+			.modal-dialog
+				.modal-content
+					padding-left: 0
+					padding-right: 0
+				.modal-header
+					padding-top: 55px
+					.h2
+						margin-bottom: 25px
+						&::before
+							bottom: 9px
+							width: 110px
+							height: 10px
+					p
+						font-size: 12px
+				.modal-body
+					padding-bottom: 0
+					.form-control
+						font-size: 9px
+						margin-bottom: 15px
+				.modal-footer
+					padding-bottom: 40px
+	main
+		section
+			.i-portfolio
+				height: auto !important
+				.item
+					position: relative !important
+					left: 0 !important
+					top: 0 !important
+					margin: 0px 0px 15px !important
+					width: 100% !important
+					height: 240px !important
+			.i-partners
+			.i-partners
+				ul
+					height: 90px
+					li
+						left: 25%
+						top: -100% !important
+						width: 50%
+					.i1 ,.i2
+						top: 0 !important
+					.i1
+						left: 0
+					.i2
+						left: 50%
+		&#home
+			.secn-1
+				padding: 75px 0px 70px
+			.secn-2
+				padding: 70px 0px 70px
+			.secn-3
+				padding-bottom: 50px
+				.h2
+					max-width: 160px
+				.h3
+					margin-top: -35px
+					max-width: 160px
+				.i-portfolio
+					margin-bottom: 30px
+		&#aboutus
+			.i-title
+				margin-bottom: 15px
+			.i-info
+				padding-top: 0
+			.h2 ,.h3
+				text-align: center
+			.i-content
+				font-size: 12px
+				margin-top: 5px
+		&#portfolio_more
+			h1.h2
+				margin-bottom: 30px
+			.i-img-box
+				margin-bottom: 30px
+				height: 230px
+			.i-content
+				font-size: 12px
+				text-align: center
+			.row1
+				.i-info
+					line-height: 22px
+					text-align: center
+					margin: 0px 0px 20px
+					padding: 0px 0px 14px
+					&::before
+						left: 50%
+						top: auto
+						bottom: 0
+						margin-left: -25px
+						width: 50px
+					strong
+						display: block
+					span
+						display: none
+				.img-box
+					position: relative
+					margin-bottom: 38px
+					width: 100%
+			.row2
+				text-align: center
+				margin-bottom: 25px
+				height: auto
+				.h3
+					margin: 0 -15px
+			.row4
+				.i-content
+					margin-bottom: 40px
+			.i-more
+				.col
+					text-align: center
+					a
+						padding: 0
+						height: 130px
+						span
+							font-size: 13px
+							line-height: 20px
+		&#contacts
+			section
+				padding-top: 45px
+			.i-title
+				margin-bottom: 40px
+			.i-info
+				font-size: 15px
+				line-height: 35px
+				text-align: center
+				padding: 70px 0px 0px
+				margin-bottom: 45px
+				&::before
+					left: 50%
+					top: 0
+					margin-left: -25px
+					width: 50px
+					height: 50px
+			.i-map
+				margin-top: 15px
+	footer
+		padding-top: 20px
+		&::after
+			display: none
+		.i-btn
+			margin-bottom: 50px
+		.row2
+			padding-bottom: 10px
+			.i-contacts ,.i-socn ul
+				margin: 0 auto
+			.i-contacts
+				height: 36px
+			.i-socn
+				height: 30px
+@media only screen and (max-width : 480px)
+	/* */
+@media only screen and (max-width : 320px)
+	/* */
+
+// home paper
+@media only screen and (max-height : 919px)
+	#home
+		.i-paper
+			transform: scale(.6)
+			transform-origin: center top
+
+
+/*==========	Mobile First	==========*/
+@media only screen and (min-width : 320px)
+	/* */
+@media only screen and (min-width : 480px)
+	/* */
+@media only screen and (min-width : 768px)
+	/* */
+@media only screen and (min-width : 992px)
+	main
+		&#home
+			.secn-1
+				height: 300vh
+@media only screen and (min-width : 1200px)
+	/* */

@@ -1,0 +1,112 @@
+<!-- base info -->
+<section class="i-base">
+
+  <div class="i-shadow"></div>
+
+  <!-- date & info -->
+  <div class="container">
+
+    <!-- portfolio -->
+    <div class="row">
+      <div class="col-xs-6 col-xs-offset-6">
+        <div class="i-back">
+          <a href="portfolio"><strong>в портфолио</strong></a>
+        </div>
+      </div>
+    </div>
+
+    <h1 class="h2" ng-bind-html="page.pagetitle"></h1>
+
+    <!-- image & info -->
+    <div class="row row1">
+
+      <!-- image -->
+      <div class="col-sm-6 hidden-xs">
+        <div class="img-box">
+          <div class="img-bg" ng-style="{'background-image':'url('+page.images[0]+')'}"></div>
+        </div>
+      </div>
+
+      <!-- info -->
+      <div class="col-sm-6">
+
+        <div class="i-info">
+          <strong>{{page.link_attributes}}</strong>
+          <span>|</span>
+          <strong>Interior Design</strong>
+        </div>
+
+        <div class="row visible-xs">
+          <div class="img-box">
+            <div class="img-bg" ng-style="{'background-image':'url('+page.images[0]+')'}"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- pagetitle -->
+    <div class="row row2">
+      <div class="col-sm-8 col-sm-offset-4 col-md-6 col-md-offset-5">
+
+        <h2 class="h3" ng-bind-html="page.longtitle"></h2>
+      </div>
+    </div>
+
+    <!-- description & introtext -->
+    <div class="row row3">
+
+      <div class="col1 col-md-6">
+        <div class="i-content" ng-bind-html="page.description"></div>
+      </div>
+
+      <div class="col2 col-md-6">
+        <div class="i-content" ng-bind-html="page.introtext"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- images -->
+  <div class="img-box i-img-box" ng-repeat="v in page.images" ng-if="$index && $index+1 < (page.images|length)">
+    <div class="img-bg" ng-style="{'background-image':'url('+v+')'}"></div>
+  </div>
+
+  <!-- content -->
+  <div class="container">
+    <div class="row4">
+      <div class="i-content" ng-bind-html="page.content"></div>
+    </div>
+  </div>
+
+  <!-- last image -->
+  <div class="img-box i-img-box i-img-box-last">
+    <div class="img-bg" ng-style="{'background-image':'url('+page.images[(page.images|length)-1]+')'}"></div>
+  </div>
+</section>
+
+<!-- prev & next portfolio -->
+<section class="i-more">
+  <div class="row">
+
+    <!-- prev -->
+    <div class="col col1 col-xs-6">
+      <a href="{{vs.uri}}"
+        ng-repeat="v in page.portfolio"
+        ng-if="v.id==page.id"
+        ng-init="vs = page.portfolio[$index ? $index-1 : (page.portfolio|length)-1]"
+        ng-style="{'background-image': vs.image[1] && 'url('+vs.image[1]+')'}">
+        <span class="h3">предыдущая работа</span>
+      </a>
+    </div>
+
+    <!-- next -->
+    <div class="col col2 col-xs-6">
+      <a href="{{vs.uri}}"
+        ng-repeat="v in page.portfolio"
+        ng-if="v.id==page.id"
+        ng-init="vs = page.portfolio[$index < (page.portfolio|length)-1 ? $index+1 : 0]"
+        ng-style="{'background-image': vs.image[1] && 'url('+vs.image[1]+')'}">
+        <span class="h3">следующая работа</span>
+      </a>
+    </div>
+  </div>
+</section>

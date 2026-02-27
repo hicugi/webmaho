@@ -1,0 +1,110 @@
+<section class="secn-{{$index+1}}" ng-repeat="v in page.childs">
+
+  <!-- header -->
+  <div ng-if="$index==0">
+
+    <!-- shadow -->
+    <div class="i-shadow"></div>
+
+    <!-- text -->
+    <div class="i-text hidden-xs hidden-sm">
+      <div ng-bind-html="v.pagetitle"></div>
+    </div>
+
+    <!-- paper -->
+    <div class="i-paper hidden-xs hidden-sm">
+      <div ng-repeat="vi in v.images"
+        ng-style="{ 'background-image': 'url('+vi+')' ,display: v.imagePos == $index ? 'block' : 'none' }"></div>
+    </div>
+
+    <!-- scroll -->
+    <div class="i-scroll">
+      <div></div>
+      <a ng-click="scrollTo('.secn-2')"></a>
+    </div>
+
+    <!-- logo xs,sm & menu -->
+    <div class="container">
+
+      <!-- logo xs,sm -->
+      <div class="img-box visible-xs visible-sm">
+        <div class="img-bg img-base" ng-style="{'background-image': 'url('+v.image[1]+')'}"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- slogan -->
+  <div ng-if="$index==1">
+
+    <div class="i-shadow"></div>
+
+    <div class="container text-center">
+
+      <h1 class="h2" ng-bind-html="v.pagetitleBase|seperate:'c'" active-scroll></h1>
+      <strong class="hide i-h1-extra" ng-bind-html="v.longtitle"></strong>
+
+      <h2 class="h3" ng-bind-html="v.description"></h2>
+    </div>
+  </div>
+
+  <!-- portfolio -->
+  <div ng-if="$index==2">
+
+    <div class="i-shadow"></div>
+
+    <div class="container">
+
+      <!-- title -->
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+
+          <h2 class="h2" ng-bind-html="v.longtitle"></h2>
+          <h3 class="h3" ng-bind-html="v.description"></h3>
+        </div>
+      </div>
+
+      <!-- items -->
+      <div class="i-portfolio i-portfolio1">
+
+        <div class="item item-{{$index+1}}" ng-repeat="vc in v.childs | limitTo:5">
+          <a href="portfolio/1.html" title="{{v.pagetitle}}">
+            <img ng-src="{{vc.image[0]}}">
+          </a>
+        </div>
+      </div>
+
+      <!-- btn -->
+      <div class="i-btn">
+        <a class="btn" href="{{v.uri}}"><span ng-bind-html="v.introtext"></span></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- partners -->
+  <div class="i-partners" ng-if="$index==3">
+
+    <div class="i-shadow"></div>
+
+    <div class="container" ng-controller="partnersCtrl">
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+
+          <!-- xs -->
+          <ul class="visible-xs" ng-init="prtns.init(v.childs ,{ pos: 0 ,max: 2 })">
+            <li class="i{{vc.active}}" ng-repeat="vc in prtns.items[0].items" ng-class="{'active': vc.active}">
+              <a href="{{vc.longtitle}}" target="_blank" title="{{vc.pagetitle}}" ng-style="{'background-image': 'url('+vc.image+')'}"></a>
+            </li>
+          </ul>
+
+          <!-- other -->
+          <ul class="hidden-xs" ng-init="prtns.init(v.childs ,{ pos: 0 ,max: 4 })">
+
+            <li class="i{{vc.active}}" ng-repeat="vc in prtns.items[1].items" ng-class="{ 'active': vc.active }">
+              <a href="{{vc.longtitle}}" target="_blank" title="{{vc.pagetitle}}" ng-style="{'background-image': 'url('+vc.image+')'}"></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

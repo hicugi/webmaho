@@ -1,0 +1,24 @@
+<section>
+
+  <div class="i-shadow"></div>
+
+  <!-- title -->
+  <h1 class="i-title" ng-style="{'background-image': page.image[0] && 'url('+page.image[0]+')'}"></h1>
+
+  <div class="container">
+
+    <div class="i-portfolio i-portfolio2" active-scroll>
+
+      <div class="item item-{{$index+1}}" ng-repeat="v in page.childs | limitTo: 10">
+        <a href="portfolio/1.html">
+          <div class="i-portfolio-title">
+            <div>
+              <h4 ng-bind-html="v.pagetitle"></h4>
+            </div>
+          </div>
+          <img ng-src="{{v.image[0]}}">
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

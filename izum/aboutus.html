@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ru" ng-app="app">
+<head>
+  <meta charset="utf-8">
+
+  <title>Title</title>
+  <meta name="description" content="">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <script>
+    const BASE_PATH = (() => {
+      const KEY = 'izum';
+      let val = location.pathname;
+      const idx = val.indexOf(KEY);
+
+      if (idx === -1) {
+        return '';
+      }
+
+      return val.substring(0, idx + KEY.length);
+    })();
+
+    const BASE_FULL_PATH = location.origin + BASE_PATH;
+    Object.assign(window, { BASE_PATH, BASE_FULL_PATH });
+
+    (() => {
+      const base = document.createElement('BASE');
+      base.href = BASE_FULL_PATH + '/';
+      document.querySelector('head').appendChild(base);
+    })();
+
+    setTimeout(() => {
+      document.querySelectorAll('a[href="/"]').forEach((elm) => {
+        elm.href = BASE_PATH;
+      });
+    }, 300);
+  </script>
+
+  <meta property="og:image" content="path/to/image.jpg">
+  <link rel="shortcut icon" href="assets/img/favicon/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="assets/img/favicon/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="assets/img/favicon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="assets/img/favicon/apple-touch-icon-114x114.png">
+
+  <meta name="theme-color" content="#000"><!-- Chrome, Firefox OS and Opera -->
+  <meta name="msapplication-navbutton-color" content="#000"><!-- Windows Phone -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="#000"><!-- iOS Safari -->
+
+  <style>body { opacity: 0; overflow-x: hidden; } html { background-color: #fff; }</style>
+</head>
+<body
+  ng-controller="bodyCtrl"
+  ng-class="{
+    'i-home': page.alias == 'home'
+    ,'i-page': page.alias != 'home'
+    ,'overflow-hidden': modal.active() || nav
+    ,'animate-hide': device[3] == 'Android'
+  }">
+
+  <!-- header -->
+  <header ng-class="{'i-home': page.alias == 'home'}">
+    <div class="container">
+      <div class="row">
+
+        <!-- logo -->
+        <div class="col-xs-6 col-md-2">
+          <div class="i-logo">
+            <a href="/" class="animated fadeInLeft"></a>
+          </div>
+        </div>
+
+        <!-- menu -->
+        <div class="col-xs-6 col-lg-7">
+
+          <a class="i-menu-xs visible-xs visible-sm" ng-click="$root.nav=!$root.nav">
+            <strong>Меню</strong>
+            <div class="ico ico-bars"
+              ng-class="{'active': nav}">
+              <span class="i i1"></span>
+              <span class="i i2"></span>
+              <span class="i i3"></span>
+            </div>
+          </a>
+
+          <ul class="hidden-xs hidden-sm">
+            <li
+              ng-repeat="v in site.childs"
+              ng-if="!v.hidemenu">
+              <a href="{{v.uri}}">{{v.pagetitle}}</a>
+            </li>
+          </ul>
+
+          <!-- paper menu -->
+          <ul class="i-menu-paper hidden-xs hidden-sm">
+            <li class="i-{{$index}}"
+              ng-repeat="v in site.childs"
+              ng-if="!v.hidemenu">
+              <a class="animated fadeInDown" href="{{v.uri}}" ng-style="{'background-image': page.alias == 'home' && 'url(assets/img/menu/'+v.alias+'.png)'}"></a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- contacts -->
+        <div class="hidden-xs hidden-sm col-md-4 col-lg-3">
+          <div class="i-contacts">
+            <div class="animated fadeInRight">
+              <strong>{{site.address}}</strong>
+              <strong><a href="tel:{{site.phone|setPhone}}">{{site.phone}}</a></strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- nav -->
+  <nav class="visible-xs visible-sm" ng-class="{'active': nav}">
+
+    <!-- menu -->
+    <ul>
+      <li ng-repeat="v in site.childs" ng-class="{'active': page.id == v.id}">
+        <a href="{{v.uri}}">{{v.pagetitle}}</a>
+      </li>
+    </ul>
+
+    <!-- contacts -->
+    <div class="i-contacts">
+      <div>
+        <strong>{{site.address}}</strong>
+        <strong><a href="tel:{{site.phone|setPhone}}">{{site.phone}}</a></strong>
+      </div>
+    </div>
+
+    <!-- socn -->
+    <div class="i-socn">
+      <ul>
+        <li ng-repeat="v in [ 'facebook' ,'vk' ,'instagram' ,'youtube' ]">
+          <a class="fa fa-{{v}}" href="{{site['socn_'+v]}}" target="_blank"></a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- btn -->
+    <div class="i-btn">
+      <button class="btn" ng-click="modal.show('modal-request')"><span ng-bind-html="pages.home.longtitle"></span></button>
+    </div>
+  </nav>
+
+  <!-- main -->
+  <main id="{{page.template}}" ng-class="{}">
+    <div ng-include="template[ page.template ]"></div>
+    <div class="hide" ng-view></div>
+  </main>
+
+  <!-- footer -->
+  <footer ng-show="page.id">
+    <div class="container">
+      <div class="i-btn text-center">
+        <button class="btn btn-success" ng-click="modal.show('modal-request')"><span ng-bind-html="pages.home.longtitle"></span></button>
+      </div>
+    </div>
+
+    <!-- contacts & socn -->
+    <div class="row2">
+      <div class="container">
+        <div class="row">
+
+          <!-- contacts -->
+          <div class="col-sm-6">
+            <div class="i-contacts">
+              <div>
+                <strong>{{site.address}}</strong>
+                <strong><a href="tel:{{site.phone|setPhone}}">{{site.phone}}</a></strong>
+              </div>
+            </div>
+          </div>
+
+          <!-- socn -->
+          <div class="col-sm-6">
+            <div class="i-socn">
+              <ul>
+                <li ng-repeat="v in [ 'facebook' ,'vk' ,'instagram' ,'youtube' ]">
+                  <a class="fa fa-{{v}}" href="{{site['socn_'+v]}}" target="_blank"></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <a class="navUp fa fa-angle-up" ng-click="scrollTo()"></a>
+
+
+  <!-- modals -->
+  <div id="modals">
+
+    <!-- modal request -->
+    <div id="modal-request" class="modal">
+
+      <div class="modal-bg" ng-click="modal.hide()"></div>
+
+      <div class="modal-dialog">
+        <form action="request" class="modal-content">
+
+          <!-- header -->
+          <div class="modal-header">
+
+            <!-- close btn -->
+            <a class="modal-close" ng-click="modal.hide()"></a>
+
+            <h3 class="h2">Форма заявки</h3>
+            <p>Пожалуйста, заполните формы и отправьте заявку.<br>Мы свяжемся с Вами в ближайшее время.</p>
+          </div>
+
+          <!-- body -->
+          <div class="modal-body">
+
+            <!-- type -->
+            <input type="hidden" name="type" value="{{modal.type}}">
+
+            <!-- name -->
+            <div class="data-form">
+              <input type="text" name="name" class="form-control" placeholder="Имя" ng-model="i.name">
+              <div class="data-log"></div>
+            </div>
+
+            <!-- email -->
+            <div class="data-form">
+              <input type="text" name="email" class="form-control" placeholder="E-Mail" ng-model="i.email">
+              <div class="data-log"></div>
+            </div>
+
+            <!-- phone -->
+            <div class="data-form">
+              <input type="text" name="phone" class="form-control" placeholder="Телефон" plugin-init="maskPhone" ng-model="i.phone">
+              <div class="data-log"></div>
+            </div>
+          </div>
+
+          <!-- footer -->
+          <div class="modal-footer">
+            <a class="i-btn" ng-click="form.sendPost($event)"><strong>Отправить</strong></a>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- modal message -->
+    <div id="modal-message" class="modal">
+
+      <div class="modal-bg" ng-click="modal.hide()"></div>
+
+      <div class="modal-dialog">
+        <form action="request" class="modal-content">
+
+          <!-- header -->
+          <div class="modal-header">
+
+            <!-- close btn -->
+            <a class="modal-close" ng-click="modal.hide()"></a>
+
+            <h3 class="h2">Замечательно!</h3>
+            <p>Ваша заявка уже обрабатывается!<br>В скором времени наш менеджер свяжется с Вами.</p>
+          </div>
+
+          <!-- footer -->
+          <div class="modal-footer text-right">
+            <a class="i-btn" ng-click="modal.hide()"><strong>Спасибо!</strong></a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- aniamte -->
+  <div id="animate" class="visible-md visible-lg">
+    <div class="container">
+
+      <!-- sneaks -->
+      <div class="EDGE EDGE-177873857" ng-init="animate.init('EDGE-177873857' ,'sneaks' ,1)"></div>
+
+      <!-- scared -->
+      <div class="EDGE EDGE-112938118" ng-init="animate.init('EDGE-112938118' ,'scared' ,2)"></div>
+
+      <!-- jump -->
+      <div class="EDGE EDGE-177873858" ng-init="animate.init('EDGE-177873858' ,'jump' ,3)"></div>
+
+      <!-- parachute -->
+      <div class="EDGE EDGE-112938119" ng-init="animate.init( 'EDGE-112938119' ,'parachute' ,3)"></div>
+
+      <!-- walk -->
+      <div class="EDGE EDGE-106708248" ng-init="animate.init('EDGE-106708248' ,'walk' ,4)"></div>
+    </div>
+  </div>
+
+
+  <link rel="stylesheet" href="assets/css/main.min.css?filetime">
+  <script>var templateTime=0,template = { empty: 'assets/template/empty.html' ,home: 'assets/template/home.html' ,aboutus: 'assets/template/aboutus.html' ,portfolio: 'assets/template/portfolio.html' ,portfolio_more: 'assets/template/portfolio_more.html' ,contacts: 'assets/template/contacts.html' };</script>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBiF2BQwQ65szvY-hxRwLZ33utfzRoFZmI"></script>
+  <script src="assets/js/scripts.min.js?filetime"></script>
+</body>
+</html>

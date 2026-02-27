@@ -1,0 +1,40 @@
+
+<section>
+
+  <div class="i-shadow"></div>
+
+  <div class="container">
+
+    <!-- title -->
+    <h1 class="i-title" ng-style="{'background-image': page.image[0] && 'url('+page.image[0]+')'}"></h1>
+
+    <!-- content & image -->
+    <div class="row">
+
+      <!-- content -->
+      <div class="col-sm-5 col-md-6">
+        <div class="i-info">
+
+          <div class="row">
+            <div class="col-xs-8 col-xs-offset-2 col-sm-12 col-sm-offset-0">
+              <h2 class="h3" ng-bind-html="page.description"></h2>
+              <h3 class="h2" ng-bind-html="page.longtitle"></h3>
+            </div>
+          </div>
+
+          <div class="i-content hidden-sm" ng-bind-html="page.content"></div>
+        </div>
+      </div>
+
+      <!-- image -->
+      <div class="col-xs-6 col-xs-offset-6 col-sm-offset-1 col-md-offset-0">
+        <div class="img-box">
+          <div class="img-bg img-contain" ng-style="{'background-image': page.image[1] && 'url('+page.image[1]+')'}"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- xs,sm content -->
+    <div class="i-content visible-sm" ng-bind-html="page.content"></div>
+  </div>
+</section>
