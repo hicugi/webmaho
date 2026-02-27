@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,shrink-to-fit=no"
+    />
+    <script>
+      const BASE_PATH = (() => {
+        const KEY = 'swd';
+        let val = location.pathname;
+        const idx = val.indexOf(KEY);
+
+        if (idx === -1) {
+          return '';
+        }
+
+        return val.substring(0, idx + KEY.length);
+      })();
+
+      const BASE_FULL_PATH = location.origin + BASE_PATH;
+      Object.assign(window, { BASE_PATH, BASE_FULL_PATH });
+
+      (() => {
+        const base = document.createElement('BASE');
+        base.href = BASE_FULL_PATH + '/';
+        document.querySelector('head').appendChild(base);
+      })();
+
+
+      const fetchOriginal = fetch;
+      window.fetch = (url, ...atrs) => {
+        return fetchOriginal(BASE_PATH + url, ...atrs);
+      }
+
+      setTimeout(() => {
+        document.querySelectorAll('a[href="/"]').forEach((elm) => {
+          elm.href = BASE_PATH;
+        });
+      }, 300);
+    </script>
+    <meta name="theme-color" content="#000000" />
+    <link rel="manifest" href="manifest.json" />
+    <link rel="shortcut icon" href="assets/img/favicon.ico?1539233290" />
+    <title>ICORE Software Development</title>
+    <link href="static/css/main.ca15b2a0.css" rel="stylesheet" />
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <script type="text/javascript" src="static/js/main.ab975b89.js"></script>
+  </body>
+</html>
