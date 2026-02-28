@@ -1,0 +1,21 @@
+<div class="container">
+
+	<h2 class="text-center">{{nSpacs.pagetitle}}</h2>
+
+	<div class="row">
+
+		<div class="item-col col-md-4" ng-repeat="v in nPacs">
+			<div class="item">
+
+				<h2 class="item-title">{{v.pagetitle}}</h2>
+
+				<div class="item-info">
+
+					<div class="item-content" ng-bind-html="v.content"></div>
+
+					<div class="text-center"><button class="btn btn-3" ng-click="modalCallback('pacs' ,{pactype:v.pagetitle})">заказать</button></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

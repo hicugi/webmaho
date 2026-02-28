@@ -1,0 +1,21 @@
+<div class="container">
+
+	<h2 class="text-center">{{nSguarantee.pagetitle}}</h2>
+
+	<div class="row">
+
+		<div class="col-sm-5">
+			<img src="{{nSguarantee.image}}" width="100%"/>
+		</div>
+
+		<div class="col-sm-7">
+
+			<div class="item-content" ng-bind-html="nSguarantee.content"></div>
+			<p class="text-right"><strong>{{nSguarantee.longtitle}}</strong></p>
+
+			<div class="text-center">
+				<button class="btn btn-3" ng-click="modalCallback('callme')">обратная связь</button>
+			</div>
+		</div>
+	</div>
+</div>

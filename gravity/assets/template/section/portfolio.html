@@ -1,0 +1,19 @@
+<div class="container">
+
+	<div class="row">
+
+		<div class="col-xs-6 col-sm-4 col-md-3" ng-repeat="v in nPortfolio.items | limitTo: nPortfolio.page*nPortfolio.max">
+			<a class="item" ng-style="{'background-image':'url('+v.image+')'}">
+				<div class="item-info text-center">
+
+					<h3 class="item-title">{{v.pagetitle}}</h3>
+					<p>{{v.longtitle}}</p>
+				</div>
+			</a>
+		</div>
+	</div>
+
+	<div class="text-center">
+		<button class="btn btn-3" ng-click="nPortfolio.page=nPortfolio.page+1" ng-hide="nPortfolio.page*nPortfolio.max >= nPortfolio.count">показать ещё</button>
+	</div>
+</div>

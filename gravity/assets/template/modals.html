@@ -1,0 +1,95 @@
+<div id="modal-message" class="modal fade">
+	<div class="modal-dialog">
+		<div class="modal-content">
+
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+				<h4 class="modal-title">Уведомление</h4>
+			</div>
+
+			<div class="modal-body">
+
+				<div class="message"></div>
+
+				<div class="text-right">
+					<a class="btn btn-modal" data-dismiss="modal">Закрыть</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="modal-callback" class="modal fade" ng-init="bodyChange()">
+	<div class="modal-dialog">
+		<div class="modal-content">
+
+			<div class="modal-header">
+
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+				<h4 class="modal-title">
+					<a href="tel:{{nSite.phone_1_href}}">{{nSite.phone_1}}</a>
+				</h4>
+			</div>
+
+			<div class="modal-body">
+
+				<p>Если по какой-то причине вы не можете позвонить или дозвониться, оставьте свой номер и мы сами вам перезвоним</p>
+
+				<form action="post/request" class="form-horizontal">
+
+					<div class="hide" data-form>
+						<input type="hidden" name="type" value=""/>
+
+						<div class="hidevalues"></div>
+					</div>
+
+					<!-- form -->
+					<div class="form-group" data-form>
+
+						<label class="col-xs-12">Имя:</label>
+						<div class="col-xs-12">
+
+							<input type="text" name="name" class="control-form"/>
+							<div class="text-right"><small class="data-log"></small></div>
+						</div>
+					</div>
+
+					<!-- form -->
+					<div class="form-group" data-form>
+
+						<label class="col-xs-12">Телефон:</label>
+						<div class="col-xs-12">
+
+							<input type="text" name="phone" class="control-form" placeholder="+7 (700) 000 00 00" pluginMaskPhone/>
+							<div class="text-right"><small class="data-log"></small></div>
+						</div>
+					</div>
+
+					<!-- form -->
+					<div class="form-group" data-form>
+
+						<label class="col-xs-12">Комментарии:</label>
+						<div class="col-xs-12">
+
+							<textarea type="text" name="comment" class="control-form" rows="3"></textarea>
+						</div>
+					</div>
+
+					<!-- captcha -->
+					<div class="form-group" data-form>
+						<div class="col-xs-12">
+
+							<input type="hidden" name="captcha"/>
+							<div class="g-recaptcha" data-sitekey="6LctvBQUAAAAAPlnzCD5akzJ4oVy87dOsII9i2OK"></div>
+							<div class="text-right"><small class="data-log"></small></div>
+						</div>
+					</div>
+
+					<div class="text-center">
+						<button type="button" class="btn btn-modal" ng-click="sendPost('#modal-callback form')">позвоните мне</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

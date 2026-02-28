@@ -1,0 +1,72 @@
+<div class="container">
+
+	<div class="col-sm-6">
+
+		<h2>{{nSorder.pagetitle}}</h2>
+		<ul>
+			<li>
+				<div class="hide-sm-up"><span><img src="assets/img/order/1.svg?2"/></span></div>
+				<span class="hide-sm-down"><img src="assets/img/order/1.svg?2"/></span>
+				Анализ ниши рынка
+			</li>
+			<li>
+				<div class="hide-sm-up"><span><img src="assets/img/order/2.svg?2"/></span></div>
+				<span class="hide-sm-down"><img src="assets/img/order/2.svg?2"/></span>
+				Анализ целевой аудитории
+			</li>
+			<li>
+				<div class="hide-sm-up"><span><img src="assets/img/order/3.svg?2"/></span></div>
+				<span class="hide-sm-down"><img src="assets/img/order/3.svg?2"/></span>
+				Анализ конкурентов
+			</li>
+			<li>
+				<div class="hide-sm-up"><span><img src="assets/img/order/4.svg?2"/></span></div>
+				<span class="hide-sm-down"><img src="assets/img/order/4.svg?2"/></span>
+				Психология продукта
+			</li>
+		</ul>
+	</div>
+
+	<div class="col-sm-6">
+		<form action="post/request" ng-init="bodyChange()">
+
+			<h4 class="item-title text-center">Получить маркетинговый анализ</h4>
+			<p class="text-center"><small>Мы проконсультируем Вас по вопросам<br/>маркетингового анализа</small></p>
+
+			<div class="item-forms">
+
+				<div class="item-forms-window">
+
+					<h3 class="text-center text-transform-none">Заполните форму</h3>
+
+					<div class="hide" data-form>
+						<input type="hidden" name="type" value="analysis"/>
+					</div>
+
+					<!-- name -->
+					<div data-form>
+						<input type="text" name="name" placeholder="Ваше имя"/>
+						<small class="data-log text-right"></small>
+					</div>
+
+					<!-- email -->
+					<div data-form>
+						<input type="text" name="email" placeholder="E-mail"/>
+						<small class="data-log text-right"></small>
+					</div>
+
+					<!-- phone -->
+					<div class="item-phone" data-form>
+						<input type="text" name="phone" placeholder="+7 (700) 000 00 00" pluginMaskPhone/>
+						<small class="data-log text-right"></small>
+					</div>
+
+					<div class="text-center">
+						<button type="button" class="btn btn-block btn-3" ng-click="sendPost('#order form')">Получить<span class="hide-sm-down"> бесплатную консультацию</span></button>
+						<small>Или позвоните нам по номеру <br class="hide-sm-up"/><a href="tel:+77010000000">+7 701 000 00 00</a></small>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>

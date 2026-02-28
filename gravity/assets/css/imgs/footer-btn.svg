@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="360px" height="40px" viewBox="0 0 360 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>Rectangle 15</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="gravity" transform="translate(-780.000000, -7275.000000)" fill="#5321A8">
+            <g id="10.-footer" transform="translate(0.000000, 6705.000000)">
+                <g id="button" transform="translate(780.000000, 570.000000)">
+                    <path d="M30,20 C30,8.954305 38.9580241,0 50.0035985,0 L309.996401,0 C321.044084,0 330,8.95187636 330,20 C330,31.045695 359.996401,40 359.996401,40 L0.00359850026,40 C0.00359850026,40 30,31.0481236 30,20 Z" id="Rectangle-15"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

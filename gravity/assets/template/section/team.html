@@ -1,0 +1,17 @@
+<div class="container">
+
+	<h2 class="text-center">{{nSteam.pagetitle}}</h2>
+
+	<div class="items">
+
+		<div class="item" ng-repeat="v in nTeam">
+
+			<div class="item-image" ng-style="{'background-image':'url({{v.image}})'}">
+
+				<h4 class="item-name">{{v.longtitle}}</h4>
+			</div>
+
+			<h4 class="item-spec">{{v.pagetitle}}</h4>
+		</div>
+	</div>
+</div>

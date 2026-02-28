@@ -1,0 +1,26 @@
+<div class="container">
+
+	<h2 class="text-center">{{nShowww.pagetitle}}</h2>
+
+	<div class="items">
+
+		<div class="item-btn text-center">
+			<button class="btn btn-2" ng-click="modalCallback('callme')">отправить заявку</button>
+		</div>
+
+		<div class="item" ng-repeat="v in nHowWW" ng-class="{'item-last':$index==nHowWW.length-1}">
+
+			<div class="item-info hide-sm-up">
+
+				<h3 class="item-title">{{v.pagetitle}}</h3>
+				<div class="item-description" ng-bind-html="v.content"></div>
+			</div>
+
+			<h3 class="item-title text-right item-left hide-sm-down" ng-show="$index%2==0">{{v.pagetitle}}</h3>
+			<div class="item-description text-right item-left hide-sm-down" ng-show="$index%2!=0" ng-bind-html="v.content"></div>
+
+			<h3 class="item-title item-right hide-sm-down" ng-show="$index%2!=0">{{v.pagetitle}}</h3>
+			<div class="item-description item-right hide-sm-down" ng-show="$index%2==0" ng-bind-html="v.content"></div>
+		</div>
+	</div>
+</div>

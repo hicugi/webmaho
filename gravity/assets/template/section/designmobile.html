@@ -1,0 +1,63 @@
+<div class="container">
+
+	<div class="text-center">
+
+		<h2>{{nSdesignmobile.pagetitle}}</h2>
+		<h3 class="m-b20">{{nSdesignmobile.longtitle}}</h3>
+	</div>
+
+	<div class="blocks hide-sm-up">
+		<div class="items">
+
+			<div class="item text-center" ng-repeat="v in nDesignMobile">
+
+				<div class="m-b10">
+					<img ng-src="{{v.image}}"/>
+				</div>
+
+				<h3>{{v.pagetitle}}</h3>
+				<p ng-bind-html="v.description"></p>
+			</div>
+		</div>
+	</div>
+
+	<div class="blocks hide-sm-down">
+
+		<div class="items text-right">
+
+			<div class="item" ng-repeat="v in nDesignMobile" ng-if="$index<3">
+
+				<div class="item-info">
+
+					<h3>{{v.pagetitle}}</h3>
+					<p ng-bind-html="v.description"></p>
+				</div>
+
+				<div class="item-ico">
+					<img ng-src="{{v.image}}"/>
+				</div>
+			</div>
+		</div>
+
+		<div class="item-image text-center">
+			<img src="assets/img/design-mobile/iphone.png"/>
+		</div>
+
+		<div class="items">
+
+			<div class="item" ng-repeat="v in nDesignMobile" ng-if="$index>=3">
+
+				<div class="item-ico">
+					<img ng-src="{{v.image}}"/>
+				</div>
+
+				<div class="item-info">
+
+					<h3>{{v.pagetitle}}</h3>
+					<p ng-bind-html="v.description"></p>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>

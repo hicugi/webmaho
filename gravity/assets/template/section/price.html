@@ -1,0 +1,44 @@
+<div class="container">
+
+	<div class="text-center">
+		<h2>{{nSprice.pagetitle}}</h2>
+		<p>{{nSprice.description}}</p>
+	</div>
+
+	<form action="post/request" class="row" ng-init="bodyChange()">
+
+		<div class="hide" data-form>
+			<input type="hidden" name="type" value="price"/>
+		</div>
+
+		<div class="col-sm-6">
+
+			<div class="item-form" data-form>
+
+				<input type="text" name="name" placeholder="Ваше имя"/>
+				<small class="data-log text-right"></small>
+			</div>
+
+			<div class="item-form" data-form>
+
+				<input type="text" name="phone" placeholder="+7 (700) 000 00 00" pluginMaskPhone/>
+				<small class="data-log text-right"></small>
+			</div>
+		</div>
+
+		<div class="col-sm-6">
+
+			<div class="item-form" data-form>
+
+				<input type="text" name="email" placeholder="Ваше e-mail"/>
+				<small class="data-log text-right"></small>
+			</div>
+
+			<div class="item-form">
+
+				<button type="button" class="btn btn-3 btn-block" ng-click="sendPost('#price form')">получить расчет</button>
+				<small class="text-center">Или позвоните нам по номеру <a href="tel:{{nSite.phone_1}}">{{nSite.phone_1}}</a></small>
+			</div>
+		</div>
+	</form>
+</div>

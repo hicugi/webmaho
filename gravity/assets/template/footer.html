@@ -1,0 +1,42 @@
+<h3>Контакты</h3>
+
+<div class="item-map">
+
+	<iframe src="{{nSite.map}}" frameborder="0" allowfullscreen></iframe>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-4">
+				<div class="item-info">
+
+					<div class="item-block">
+						<h4>Наш адрес:</h4>
+						<p>{{nSite.address}}</p>
+					</div>
+
+					<div class="item-block">
+
+						<h4>Телефоны:</h4>
+						<p><a href="tel:{{nSite.phone_1_href}}">{{nSite.phone_1}}</a></p>
+						<p><a href="tel:{{nSite.phone_2_href}}">{{nSite.phone_2}}</a></p>
+
+						<p><button class="btn btn-1" ng-click="modalCallback('callme')">заказать звонок</button></p>
+					</div>
+
+					<h4>Соц.Сети:</h4>
+					<p><a href="{{nSite.instagram}}"><i class="fa fa-instagram"></i></a></p>
+					<p><a href="{{nSite.vk}}"><i class="fa fa-vk"></i></a></p>
+					<p><a href="{{nSite.facebook}}"><i class="fa fa-facebook"></i></a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="item-questions">
+		<button class="btn btn-3"><span>остались вопросы?</span></button>
+	</div>
+</div>
+
+<div class="item-copyright">
+	<div class="container">Copyright © Studio 2017</div>
+</div>

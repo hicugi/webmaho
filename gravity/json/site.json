@@ -1,0 +1,16 @@
+{
+	"name"		:"Gravity"
+	,"phone_1"	:"+7 700 775 07 57"
+	,"phone_1_href"	:"+77007750757"
+	,"phone_2"	:"+7 707 303 03 10"
+	,"phone_2_href"	:"+77073030310"
+	,"map"		:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2906.768840428387!2d76.92037331514287!3d43.23530597913785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDPCsDE0JzA3LjEiTiA3NsKwNTUnMjEuMiJF!5e0!3m2!1sru!2skz!4v1486105314729"
+
+	,"menu"		:[{"pagetitle":"\u0413\u043b\u0430\u0432\u043d\u0430\u044f","alias":"index"},{"pagetitle":"\u0417\u0430\u043a\u0430\u0436\u0438 \u0441\u0430\u0439\u0442 \u0438 \u043f\u043e\u043b\u0443\u0447\u0438\u0442\u0435 \u043c\u0430\u0440\u043a\u0435\u0442\u0438\u043d\u0433\u043e\u0432\u044b\u0439 \u0430\u043d\u0430\u043b\u0438\u0437 \u0432 \u043f\u043e\u0434\u0430\u0440\u043e\u043a!","alias":"order","menutitle":"\u041c\u0430\u0440\u043a\u0435\u0442\u0438\u043d\u0433\u043e\u0432\u044b\u0439 \u0430\u043d\u0430\u043b\u0438\u0437"},{"pagetitle":"\u0427\u0442\u043e \u043e\u0441\u043e\u0431\u043e \u0432\u0430\u0436\u043d\u043e \u043d\u0430\u0448\u0438\u043c \u043a\u043b\u0438\u0435\u043d\u0442\u0430\u043c?","alias":"recomend","menutitle":"\u0427\u0442\u043e \u0432\u0430\u0436\u043d\u043e?"},{"pagetitle":"\u041a\u0430\u043a \u043c\u044b \u0440\u0430\u0431\u043e\u0442\u0430\u0435\u043c","alias":"howww"},{"pagetitle":"\u041f\u043e\u0440\u0442\u0444\u043e\u043b\u0438\u043e","alias":"portfolio","menutitle":"\u041f\u043e\u0440\u0442\u0444\u043e\u043b\u0438\u043e"},{"pagetitle":"\u0410\u0434\u0430\u043f\u0442\u0438\u0432\u043d\u044b\u0439 \u0434\u0438\u0437\u0430\u0439\u043d \u0438 \u0432\u0435\u0440\u0441\u0442\u043a\u0430","alias":"design"},{"pagetitle":"\u0414\u0438\u0437\u0430\u0439\u043d \u043c\u043e\u0431\u0438\u043b\u044c\u043d\u044b\u0445 \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0439","alias":"designmobile"},{"pagetitle":"\u041f\u0430\u043a\u0435\u0442\u044b","alias":"pacs","menutitle":"\u041f\u0430\u043a\u0435\u0442\u044b"},{"pagetitle":"\u0420\u0430\u0441\u0447\u0435\u0442 \u0441\u0442\u043e\u0438\u043c\u043e\u0441\u0442\u0438 \u0438 \u0441\u0440\u043e\u043a\u043e\u0432","alias":"price"},{"pagetitle":"\u041a\u043e\u043c\u0430\u043d\u0434\u0430","alias":"team"},{"pagetitle":"\u0413\u0430\u0440\u0430\u043d\u0442\u0438\u044f \u0433\u0435\u043d\u0435\u0440\u0430\u043b\u044c\u043d\u043e\u0433\u043e \u0434\u0438\u0440\u0435\u043a\u0442\u043e\u0440\u0430","alias":"guarantee","menutitle":"\u0413\u0430\u0440\u0430\u043d\u0442\u0438\u044f"},{"pagetitle":"\u041e\u0442\u0437\u044b\u0432\u044b","alias":"reviews"},{"pagetitle":"\u0417\u0430\u043f\u0440\u043e\u0441\u044b json","alias":"json"},{"pagetitle":"\u0417\u0430\u043f\u0440\u043e\u0441\u044b post","alias":"post"}]
+	,"header_1"	:"Создание и продвижение<br/>правильных сайтов"
+	,"header_2"	:"Разработка мобильных приложений"
+	,"header_3"	:"UI/UX решения любой сложности"
+	,"header_4"	:"В феврале от <span>320000</span> 169990"
+	,"header_5"	:"Притяжение клиентов неизбежно"
+	,"header_6"	:"Хочу Gravity"
+}

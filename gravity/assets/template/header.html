@@ -1,0 +1,55 @@
+<video preload="auto" autoplay loop>
+
+	<source src="assets/video/Spacious.webm" type="video/webm">
+	Your browser does not support the video tag. I suggest you upgrade your browser.
+
+	<source src="assets/video/Spacious.mp4" type="video/mp4">
+	Your browser does not support the video tag. I suggest you upgrade your browser.
+</video>
+
+<div class="navhead">
+	<div class="container">
+		<div class="row row-1">
+
+			<div class="col-xs-8">
+				<a class="item-logo">
+					<span class="item-logo-image"></span>
+					<span class="item-logo-text hide-sm-down">{{nSite.name}}</span>
+				</a>
+			</div>
+
+			<div class="col-xs-4 text-right">
+
+				<span class="item-phones hide-sm-down">
+
+					<a href="tel:{{nSite.phone_1_href}}"><strong>{{nSite.phone_1}}</strong></a>
+					<a href="tel:{{nSite.phone_2_href}}"><strong>{{nSite.phone_2}}</strong></a>
+				</span>
+
+				<span class="dropdown">
+
+					<a class="dropdown-toggle item-menu" data-toggle="dropdown"><img src="assets/css/imgs/ico/menu.svg"/></a>
+
+					<ul class="dropdown-menu pull-right animated fadeIn">
+
+						<li ng-repeat="v in nSite.menu" ng-show="v.menutitle"><a ng-click="bodyScroll('#'+v.alias)">{{v.menutitle}}</a></li>
+					</ul>
+				</span>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="container">
+	<div class="item-info text-center m-b10">
+
+		<h1 class="row-2" ng-bind-html="nSite.header_1"></h1>
+		<p class="row-3 hide-sm-down"><strong ng-bind-html="nSite.header_2"></strong></p>
+		<p class="row-4 hide-sm-down"><strong ng-bind-html="nSite.header_3"></strong></p>
+		<p class="row-5 hide-sm-down"><button class="btn btn-1" ng-bind-html="nSite.header_4" ng-click="modalCallback('callme')"></button></p>
+		<p class="row-6 hide-sm-down"><strong>{{nSite.header_5}}</strong></p>
+		<p class="row-7"><button class="btn btn-2" ng-click="modalCallback('callme')">{{nSite.header_6}}</button></p>
+	</div>
+</div>
+
+<a class="item-scroll row-8" ng-click="bodyScroll('#order')"><i></i></a>

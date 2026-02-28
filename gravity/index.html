@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html class="no-focus" lang="en" ng-app="myApp">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+		<meta name="MobileOptimized" content="device-width"/>
+		<script>
+			const BASE_PATH = (() => {
+				const KEY = 'gravity';
+				let val = location.pathname;
+				const idx = val.indexOf(KEY);
+
+				if (idx === -1) {
+					return '';
+				}
+
+				return val.substring(0, idx + KEY.length);
+			})();
+
+			const BASE_FULL_PATH = location.origin + BASE_PATH;
+			Object.assign(window, { BASE_PATH, BASE_FULL_PATH });
+
+			(() => {
+				const base = document.createElement('BASE');
+				base.href = BASE_FULL_PATH + '/';
+				document.querySelector('head').appendChild(base);
+			})();
+
+			setTimeout(() => {
+				document.querySelectorAll('a[href="/"]').forEach((elm) => {
+					elm.href = BASE_PATH;
+				});
+			}, 300);
+		</script>
+		<link rel="shortcut icon" href="assets/img/favicon.ico?1486523928"/>
+
+		<title>Gravity</title>
+
+		<link rel="stylesheet" type="text/css" href="assets/plugins/animate.min.css?1481368946"/>
+		<link rel="stylesheet" type="text/css" href="assets/plugins/bootstrap/css/bootstrap.min.css?1481368946"/>
+		<link rel="stylesheet" type="text/css" href="assets/plugins/font-awesome/css/font-awesome.min.css?1481368946"/>
+		<link rel="stylesheet" type="text/css" href="assets/css/template.css?1486553242"/>
+		<link rel="stylesheet" type="text/css" href="assets/css/style.css?1486552156"/>
+	</head>
+
+	<body ng-controller="ctrlBody">
+
+		<header ng-include="'assets/template/header.html?1486551620'"></header>
+
+		<div id="sections">
+
+			<section id="order">
+				<div ng-init="nSorder={'pagetitle':'Закажи сайт и получите маркетинговый анализ в подарок!'}" ng-include="'assets/template/section/order.html?1486523928'"></div>
+			</section>
+
+			<section id="recomend">
+				<div class="section-bg" style="background-image:url(assets/css/imgs/recomend.png?1485973752)"></div>
+				<div ng-init="nSrecomend={'pagetitle':'Что особо важно нашим клиентам?','image':'assets/css/imgs/recomend.png'}" ng-include="'assets/template/section/recomend.html?1486552374'"></div>
+			</section>
+
+			<section id="howww">
+				<div class="section-bg" style="background-image:url(assets/css/imgs/howww.png?1486497518)"></div>
+				<div ng-init="nShowww={'pagetitle':'Как мы работаем','image':'assets/css/imgs/howww.png'}" ng-include="'assets/template/section/howww.html?1486523928'"></div>
+			</section>
+
+			<section id="portfolio">
+				<div ng-init="nSportfolio={'pagetitle':'Портфолио'}" ng-include="'assets/template/section/portfolio.html?1486492170'"></div>
+			</section>
+
+			<section id="design">
+				<div class="section-bg" style="background-image:url(assets/css/imgs/design.png?1485979976)"></div>
+				<div ng-init="nSdesign={'pagetitle':'Адаптивный дизайн и верстка','image':'assets/css/imgs/design.png'}" ng-include="'assets/template/section/design.html?1486405924'"></div>
+			</section>
+
+			<section id="designmobile">
+				<div ng-init="nSdesignmobile={'pagetitle':'Дизайн мобильных приложений','longtitle':'UI/UX решения любой сложности'}" ng-include="'assets/template/section/designmobile.html?1486406376'"></div>
+			</section>
+
+			<section id="pacs">
+				<div class="section-bg" style="background-image:url(assets/css/imgs/pacs.png?1485980004)"></div>
+				<div ng-init="nSpacs={'pagetitle':'Пакеты','image':'assets/css/imgs/pacs.png'}" ng-include="'assets/template/section/pacs.html?1486523928'"></div>
+			</section>
+
+			<section id="price">
+				<div ng-init="nSprice={'pagetitle':'Расчет стоимости и сроков'}" ng-include="'assets/template/section/price.html?1486523928'"></div>
+			</section>
+
+			<section id="team">
+				<div ng-init="nSteam={'pagetitle':'Команда'}" ng-include="'assets/template/section/team.html?1486493264'"></div>
+			</section>
+
+			<section id="guarantee">
+				<div class="section-bg" style="background-image:url(assets/img/guarantee/direktor.jpg?1485980098)"></div>
+				<div ng-init="nSguarantee={'pagetitle':'Гарантия генерального директора','longtitle':'Ильяс Калиев','image':'assets/img/guarantee/direktor.jpg','content':'<p>Я рад приветствовать Вас на официальном сайте Unique Logo Kazakhstan! На протяжении всей истории нашего холдинга, мы искренне стремимся повышать сервис оказываемых нами услуг.</p>
+<p>Создавая и продвигая лучшие услуги, мы в первую очередь заботимся об удовлетворении потребностей наших клиентов. Мы гарантируем качественный сервис, контроль качества продукта и соблюдение сроков!</p>
+<p>Я с радостью приму все пожелания и рекомендации лично!</p>'}" ng-include="'assets/template/section/guarantee.html?1486523928'"></div>
+			</section>
+
+			<section id="reviews">
+				<div ng-init="nSreviews={'pagetitle':'Отзывы'}" ng-include="'assets/template/section/reviews.html?1486494280'"></div>
+			</section>
+		</div>
+
+		<footer ng-include="'assets/template/footer.html?1486523928'"></footer>
+
+
+		<!-- message -->
+		<div class="modals" ng-include="'assets/template/modals.html?1486553164'"></div>
+
+
+		<script src="assets/plugins/jquery/jquery-1.9.1.min.js?1481368946"></script>
+		<script src="assets/plugins/masked-input/masked-input-1.14.js?1481368946"></script>
+		<script src="assets/plugins/bootstrap/js/bootstrap.min.js?1481368946"></script>
+		<script src="assets/plugins/angularjs/angular.min.js?1481368946"></script>
+		<script src="assets/plugins/angularjs/angular-resource.min.js?1481368946"></script>
+		<script src="assets/plugins/angularjs/angular-route.min.js?1481368946"></script>
+		<script src="assets/plugins/angularjs/angular-cookies.min.js?1481368946"></script>
+		<script src="assets/plugins/angularjs/angular-sanitize.min.js?1481368946"></script>
+		<script src="assets/plugins/angularjs/angular-touch.min.js?1481368946"></script>
+		<script src="assets/js/route.js?1486057954"></script>
+		<script src="assets/js/controller.js?1486523928"></script>
+		<script src="assets/js/site.js?1486551794"></script>
+	</body>
+</html>
