@@ -1,0 +1,23 @@
+<!DOCTYPE html><html lang=en><head>    <script>
+      const BASE_PATH = (() => {
+        const KEY = 'airplane';
+        let val = location.pathname;
+        const idx = val.indexOf(KEY);
+
+        if (idx === -1) {
+          return '';
+        }
+
+        return val.substring(0, idx + KEY.length);
+      })();
+
+      const BASE_FULL_PATH = location.origin + BASE_PATH;
+      Object.assign(window, { BASE_PATH, BASE_FULL_PATH });
+
+      (() => {
+        const base = document.createElement('BASE');
+        base.href = BASE_FULL_PATH + '/';
+        document.querySelector('head').appendChild(base);
+      })();
+    </script>
+<meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><link rel=icon href="favicon.ico"><title>Airplane</title><link href="css/app.3e9adf57.css" rel=stylesheet></head><body><noscript><strong>We're sorry but codesandbox doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id=app></div><script src="js/chunk-vendors.b1d09810.js"></script><script src="js/app.1bb5f876.js"></script></body></html>
