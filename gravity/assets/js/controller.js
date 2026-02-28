@@ -241,8 +241,8 @@
 			}
 		}
 
-		const httpGet = (params) => {
-			return $http({ ...params, url: BASE_PATH + '/' + params.url + '.json' });
+		const httpGet = (url) => {
+			return $http({ url: BASE_PATH + '/' + url + '.json' });
 		}
 
 
@@ -250,11 +250,7 @@
 		{
 			$scope.nSite = [];
 
-			httpGet({
-				url: 'json/site'
-				,method: 'JSON'
-			}).success(function(data){
-
+			httpGet('json/site').success(function(data){
 				data.map = location.host.indexOf('.dev') == -1 ? $sce.trustAsResourceUrl( data.map ) : '';
 				$scope.nSite = data;
 			});
@@ -265,11 +261,7 @@
 		{
 			$scope.nHowWW = [];
 
-			httpGet({
-				url: 'json/howww'
-				,method: 'JSON'
-			}).success(function(data){
-
+			httpGet('json/howww').success(function(data){
 				$scope.nHowWW = data;
 			});
 		}
@@ -285,11 +277,7 @@
 				,items: []
 			};
 
-			httpGet({
-				url: 'json/portfolio'
-				,method: 'JSON'
-			}).success(function(data){
-
+			httpGet('json/portfolio').success(function(data){
 				$scope.nPortfolio.count = data.length;
 				$scope.nPortfolio.items = data;
 			});
@@ -300,11 +288,7 @@
 		{
 			$scope.nDesignMobile = [];
 
-			httpGet({
-				url: 'json/design-mobile'
-				,method: 'JSON'
-			}).success(function(data){
-
+			httpGet('json/design-mobile').success(function(data){
 				$scope.nDesignMobile = data;
 			});
 		}
@@ -314,11 +298,7 @@
 		{
 			$scope.nPacs = [];
 
-			httpGet({
-				url: 'json/pacs'
-				,method: 'JSON'
-			}).success(function(data){
-
+			httpGet('json/pacs').success(function(data){
 				$scope.nPacs = data;
 			});
 		}
@@ -328,11 +308,7 @@
 		{
 			$scope.nTeam = [];
 
-			httpGet({
-				url: 'json/team'
-				,method: 'JSON'
-			}).success(function(data){
-
+			httpGet('json/team').success(function(data){
 				$scope.nTeam = data;
 			});
 		}
@@ -342,11 +318,7 @@
 		{
 			$scope.nReviews = [];
 
-			httpGet({
-				url: 'json/reviews'
-				,method: 'JSON'
-			}).success(function(data){
-
+			httpGet('json/reviews').success(function(data){
 				for( i=0; i < data.length; i++ )
 					data[i].video = $sce.trustAsResourceUrl( data[i].video );
 
