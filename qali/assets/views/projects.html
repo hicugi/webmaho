@@ -1,0 +1,23 @@
+
+<nav class="menu2">
+  <div class="container">
+    <ul>
+      <li ng-class="{active: location.path == 'projects/'}"><a href="projects">Все проекты</a></li>
+      <li ng-repeat="v in page.menu" ng-class="{ active: location.path.indexOf( v.uri ) &gt; -1 }"><a ng-href="{{v.uri}}">{{v.pagetitle}}</a></li>
+    </ul>
+  </div>
+</nav>
+<section>
+  <div class="container">
+    <div class="projects" ng-init="k=0">
+      <div class="{{'i'+k}}" ng-repeat="i in [] | range: page.projects.length / 3 + 3" ng-init="k=k&gt;4?1:k+1">
+        <div class="project" ng-repeat="j in [] | range: 3" ng-if="page.projects[i*3+j]" ng-init="v = page.projects[i*3+j]">
+          <div class="imgb"><a ng-href="{{v.uri}}"></a>
+            <div class="imga" ng-style="{ 'background-image': v.image &amp;&amp; 'url('+v.image+')' }"></div>
+            <h4 class="fh4-2">{{v.pagetitle}}</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

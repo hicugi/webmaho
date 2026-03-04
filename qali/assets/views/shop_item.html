@@ -1,0 +1,116 @@
+
+<div class="push30 hidden-lg-up"></div>
+<div class="push60 hidden-md-down"></div>
+<section class="scnProduct">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="slider1" ng-if="page.images" ng-init="slider.init({ key: 'shopProduct' ,items: page.images })">
+          <div class="slider1-base imgb">
+            <div class="slider1-arrow slider1-prev ico ico-arrow" ng-click="slider.slide( 'shopProduct' ,'prev')"></div>
+            <div class="slider1-arrow slider1-next ico ico-arrow" ng-click="slider.slide( 'shopProduct' ,'next')"></div>
+            <div class="imga" ng-repeat="v in page.images" ng-if="slider.getClass( 'shopProduct' ,$index ) == 0" ng-style="{ 'background-image': v.image &amp;&amp; 'url('+v.image+')' }"></div>
+          </div>
+          <div class="push25"></div>
+          <ul class="slider1-nav">
+            <li class="i{{slider.getClass( 'shopProduct' ,$index )}}" ng-repeat="v in page.images">
+              <div class="imgb"><a class="imga" ng-style="{ 'background-image': v.image &amp;&amp; 'url('+v.image+')' }" ng-click="slider.slide( 'shopProduct' ,$index)"></a></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-2 hidden-lg-up"></div>
+      <div class="col-2 col-xl-1"></div>
+      <div class="col-10 col-lg-6 col-xl-5">
+        <div class="d-link_back hidden-md-down"><a class="link-back f-dark" href="{{ location.path.substr( 0 ,location.path.lastIndexOf('/') ) }}">Назад</a></div>
+        <div class="push65 hidden-lg-up"></div>
+        <div class="push76 hidden-xs"></div>
+        <h1 class="fh2-2">«{{page.pagetitle}}»</h1>
+        <div class="push15 visible-xs"></div>
+        <div class="push24 hidden-xs"></div>
+        <p class="f-categoryName">{{page.parentInf.pagetitle}}</p>
+        <div class="push25 visible-xs"></div>
+        <div class="push36 hidden-xs"></div>
+        <p class="f-price">{{ page.price + (pagelg=='eng' ? '$' : 'тг') }}</p>
+        <div class="push15 visible-xs"></div>
+        <div class="push28 hidden-xs"></div>
+        <div class="content">
+          <p class="t-wrap">{{page.introtext}}</p>
+        </div>
+        <div class="push30"></div>
+        <div class="row">
+          <div class="col-md-5" ng-if="page.size[0]">
+            <div class="form-select">
+              <label>Размер:</label>
+              <select name="size" ng-init="page.mdSize=page.size[0]?page.size[0]:''" ng-model="page.mdSize">
+                <option ng-repeat="v in page.size">{{v}}</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-7" ng-if="page.id" ng-init="page.mdCount=1">
+            <div class="push20 visible-xs"></div>
+            <div class="form-count">
+              <label>Количество:</label>
+              <div class="form-count_inp">
+                <input type="number" name="count" value="1" ng-model="page.mdCount"/><a class="form-count_m" ng-click="page.mdCount=page.mdCount&gt;1 ? page.mdCount-1 : 1"></a><a class="form-count_p" ng-click="page.mdCount=page.mdCount+1"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="push45"></div>
+        <ul class="list2">
+          <li>
+            <button class="btn btn-inv btn-wide" type="button" ng-click="cart.add( page.id ,{ size: page.mdSize ,count: page.mdCount } )">В корзину</button>
+          </li>
+          <li>
+            <button class="btn btn-inv btn-favourite" ng-click="profile.favourite(page.id)"></button>
+          </li>
+          <li>
+            <button class="btn btn-inv btn-share"></button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="scnProductSimilar">
+  <div class="container">
+    <div class="push60 visible-xs"></div>
+    <div class="push95 visible-md"></div>
+    <div class="push115 hidden-md-down"></div>
+    <div class="row">
+      <div class="col-md-2 col-lg-1"></div>
+      <div class="col-md-10 col-lg-11">
+        <h1 class="fh2-2">Смотрите также</h1>
+      </div>
+    </div>
+    <div class="push40 visible-xs"></div>
+    <div class="push55 visible-md"></div>
+    <div class="push75 hidden-md-down"></div>
+    <div class="row">
+      <div class="col-md-4" ng-repeat="v in page.similar">
+        <div class="product"><a ng-href="{{v.uri}}"></a>
+          <div class="imgb">
+            <div class="imga imga-contain" ng-style="{ 'background-image': v.image &amp;&amp; 'url('+v.image+')' }"></div>
+          </div>
+          <div class="product_info">
+            <div class="row">
+              <div class="col-6">
+                <p class="f-category">{{v.parentInfo.pagetitle}}</p>
+                <p class="f-categoryName">{{v.pagetitle}}</p>
+              </div>
+              <div class="col-6 text-right">
+                <div class="product_prices">
+                  <div>
+                    <p class="f-priceold" ng-if="v.old_price">{{v.old_price}}$</p>
+                    <p class="f-price2" ng-class="{ 'f-discount': v.old_price }">{{ v.price + (pagelg=='eng' ? '$' : 'тг') }}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

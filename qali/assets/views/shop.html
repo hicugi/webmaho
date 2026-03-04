@@ -1,0 +1,40 @@
+
+<nav class="menu2">
+  <div class="container">
+    <ul>
+      <li ng-class="{active: location.path == 'shop/'}"><a href="shop">{{pagelg=='eng' ? 'All' : 'Все товары'}}</a></li>
+      <li ng-repeat="v in page.menu" ng-class="{ active: location.path.indexOf( v.uri.substr(0,v.uri.length-1) ) &gt; -1 }"><a ng-href="{{v.uri}}">{{v.pagetitle}}</a></li>
+    </ul>
+  </div>
+</nav>
+<section class="scnCatalog">
+  <div class="container">
+    <div class="projects" ng-init="k=0">
+      <div class="{{'i'+k}}" ng-repeat="i in [] | range: page.items.length / 3 + 3" ng-init="k=k&gt;4?1:k+1">
+        <div class="project" ng-repeat="j in [] | range: 3" ng-if="page.items[i*3+j]" ng-init="v = page.items[i*3+j]">
+          <div class="product"><a ng-href="{{v.uri}}"></a>
+            <div class="imgb">
+              <div class="imga imga-contain" ng-style="{ 'background-image': v.image &amp;&amp; 'url('+v.image+')' }"></div>
+            </div>
+            <div class="product_info">
+              <div class="row">
+                <div class="col-6">
+                  <p class="f-category">{{v.parentInfo.pagetitle}}</p>
+                  <p class="f-categoryName">{{v.pagetitle}}</p>
+                </div>
+                <div class="col-6 text-right">
+                  <div class="product_prices">
+                    <div>
+                      <p class="f-priceold" ng-if="v.old_price">{{v.old_price}}$</p>
+                      <p class="f-price2" ng-class="{ 'f-discount': v.old_price }">{{ v.price + (pagelg=='eng' ? '$' : 'тг') }}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

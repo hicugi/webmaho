@@ -1,0 +1,269 @@
+
+<section class="scnMessage" ng-if="!cart.items.length">
+  <div class="container">
+    <div class="push60"></div>
+    <h1 class="text-center">Корзина пуста</h1>
+  </div>
+</section>
+<section class="scnCart" ng-if="cart.items.length">
+  <div class="container">
+    <div class="push60 hidden-lg-down"></div>
+    <div class="push5 visible-lg"></div>
+    <div class="push70 hidden-lg-up"></div>
+    <div class="hidden-xl-up">
+      <div class="row">
+        <div class="col-2 col-md-1"></div>
+        <div class="col-10 col-md-11">
+          <div class="d-linkback"><a class="link-back f-dark" ng-if="!cart.checkoutDone" onclick="history.back()">Назад</a><a class="link-back f-dark" ng-if="cart.checkoutDone" ng-click="cart.checkoutDone=0">Назад</a></div>
+          <div class="push76 hidden-xs"></div>
+          <div class="push60 visible-xs"></div>
+          <h1 class="fh2-2"><span ng-if="!cart.checkoutDone">Корзина</span><span ng-if="cart.checkoutDone">Оформление заказа</span></h1>
+        </div>
+      </div>
+      <div class="hidden-xl-up">
+        <div class="push40 hidden-xs"></div>
+        <div class="push50 visible-xs"></div>
+        <div class="row" ng-if="cart.checkoutDone">
+          <div class="col-md-6">
+            <div class="form-input">
+              <input type="text" ng-model="cart.form.name" placeholder="Имя"/>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-input">
+              <input type="text" ng-model="cart.form.secondname" placeholder="Фамилия"/>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-input">
+              <input type="text" ng-model="cart.form.phone" placeholder="Телефон" plugin="maskPhone"/>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-input">
+              <input type="text" ng-model="cart.form.email" placeholder="E-mail адрес"/>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-select2">
+              <select ng-model="cart.form.country" ng-init="cart.form.country=''">
+                <option disabled="disabled" selected="selected" value="">Страна</option>
+                <option ng-repeat="v in cart.countries" value="{&quot;name&quot;:&quot;country&quot;,&quot;title&quot;:&quot;Страна&quot;,&quot;type&quot;:&quot;select&quot;}">{{v}}</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-input">
+              <input type="text" ng-model="cart.form.city" placeholder="Город"/>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-input">
+              <input type="text" ng-model="cart.form.street" placeholder="Улица"/>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-input">
+              <input type="text" ng-model="cart.form.home" placeholder="Дом"/>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-input">
+              <input type="text" ng-model="cart.form.apartment" placeholder="Квартира"/>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-input">
+              <input type="text" ng-model="cart.form.zip" placeholder="Почтовый индекс"/>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-select2">
+              <select ng-model="cart.form.payment" ng-init="cart.form.payment=''">
+                <option disabled="disabled" selected="selected" value="">Способ оплаты</option>
+                <option ng-repeat="v in cart.payments">{{v.name}}</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-select2">
+              <select ng-model="cart.form.deliver" ng-init="cart.form.deliver=''">
+                <option disabled="disabled" selected="selected" value="">Доставка</option>
+                <option ng-repeat="v in cart.deliveries">{{v.name}}</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="push60"></div>
+    </div>
+    <div class="row">
+      <div class="col-xl-6">
+        <div class="row">
+          <div class="col-md-6 col-lg-4 col-xl-12" ng-repeat="v in cart.items" ng-init="vp = v.product">
+            <div class="push25 hidden-lg-down" ng-if="$index"></div>
+            <div class="cart-item_lg">
+              <div>
+                <div class="imgb"><a class="imga" ng-href="{{vp.uri}}" ng-style="{'background-image': vp.image &amp;&amp; 'url('+vp.image+')'}"></a></div>
+              </div>
+              <div>
+                <div class="cart-item_info">
+                  <div class="row">
+                    <div class="col-6 col-xl-12">
+                      <h5><a ng-href="{{vp.parentInfo.uri}}">{{vp.parentInfo.pagetitle}}</a></h5>
+                      <h4><a ng-href="{{vp.uri}}">{{vp.pagetitle}}</a></h4>
+                    </div>
+                    <div class="col-6 col-xl-12">
+                      <p class="f-price2">{{vp.price * v.count}}{{pagelg=='eng' ? '$' : 'тг'}}</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-8 col-xl-12" ng-if="!cart.checkoutDone">
+                      <div class="form-count form-wrap form-xs">
+                        <label>Количество:</label>
+                        <div class="form-count_inp">
+                          <input type="number" name="count" value="1" ng-model="v.count"/><a class="form-count_m" ng-click="v.count=v.count&gt;1 ? v.count-1 : 1"></a><a class="form-count_p" ng-click="v.count=v.count+1"></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-4 col-xl-12">
+                      <p class="cart-removetext" ng-if="!cart.checkoutDone"><a ng-click="cart.remove(v.id)">Удалить</a></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-5 col-xl-1">
+        <div class="push10"></div>
+      </div>
+      <div class="col-md-6 col-lg-7 col-xl-5">
+        <div class="hidden-lg-down">
+          <div class="d-linkback"><a class="link-back f-dark" ng-if="!cart.checkoutDone" onclick="history.back()">Назад</a><a class="link-back f-dark" ng-if="cart.checkoutDone" ng-click="cart.checkoutDone=0">Назад</a></div>
+          <div class="push76 hidden-xs"></div>
+          <div class="push60 visible-xs"></div>
+          <h1 class="fh2-2"><span ng-if="!cart.checkoutDone">Корзина</span><span ng-if="cart.checkoutDone">Оформление заказа</span></h1>
+          <div class="push32"></div>
+        </div>
+        <div class="hidden-lg-down">
+          <div class="row" ng-if="cart.checkoutDone">
+            <div class="col-md-6">
+              <div class="form-input">
+                <input type="text" ng-model="cart.form.name" placeholder="Имя"/>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-input">
+                <input type="text" ng-model="cart.form.secondname" placeholder="Фамилия"/>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-input">
+                <input type="text" ng-model="cart.form.phone" placeholder="Телефон" plugin="maskPhone"/>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-input">
+                <input type="text" ng-model="cart.form.email" placeholder="E-mail адрес"/>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-select2">
+                <select ng-model="cart.form.country" ng-init="cart.form.country=''">
+                  <option disabled="disabled" selected="selected" value="">Страна</option>
+                  <option ng-repeat="v in cart.countries" value="{&quot;name&quot;:&quot;country&quot;,&quot;title&quot;:&quot;Страна&quot;,&quot;type&quot;:&quot;select&quot;}">{{v}}</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-input">
+                <input type="text" ng-model="cart.form.city" placeholder="Город"/>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-input">
+                <input type="text" ng-model="cart.form.street" placeholder="Улица"/>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-input">
+                <input type="text" ng-model="cart.form.home" placeholder="Дом"/>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-input">
+                <input type="text" ng-model="cart.form.apartment" placeholder="Квартира"/>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-input">
+                <input type="text" ng-model="cart.form.zip" placeholder="Почтовый индекс"/>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-select2">
+                <select ng-model="cart.form.payment" ng-init="cart.form.payment=''">
+                  <option disabled="disabled" selected="selected" value="">Способ оплаты</option>
+                  <option ng-repeat="v in cart.payments">{{v.name}}</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-select2">
+                <select ng-model="cart.form.deliver" ng-init="cart.form.deliver=''">
+                  <option disabled="disabled" selected="selected" value="">Доставка</option>
+                  <option ng-repeat="v in cart.deliveries">{{v.name}}</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div ng-if="!cart.checkoutDone">
+            <div class="push32 hidden-lg-down"></div>
+            <div class="push70 visible-lg"></div>
+            <div class="push40 visible-md"></div>
+            <p class="f-desc">Сумма</p>
+            <div class="push15 hidden-xs"></div>
+            <p class="f-price">{{cart.price}}{{pagelg=='eng' ? '$' : 'тг'}}</p>
+          </div>
+          <div ng-if="cart.checkoutDone">
+            <div class="push25"></div>
+            <div class="row">
+              <div class="col-lg-4">
+                <p class="f-desc2">Сумма</p>
+                <div class="push5"></div>
+                <p class="f-price2">{{cart.price}}{{pagelg=='eng' ? '$' : 'тг'}}</p>
+                <div ng-if="cart.delivery">
+                  <div class="push40"></div>
+                  <p class="f-desc2">Доставка</p>
+                  <div class="push15"></div>
+                  <p class="f-price2">{{cart.delivery}}{{pagelg=='eng' ? '$' : 'тг'}}</p>
+                </div>
+              </div>
+              <div class="col-lg-8">
+                <p class="f-desc">Итого</p>
+                <div class="push15 hidden-xs"></div>
+                <p class="f-price">{{cart.price + cart.delivery}}{{pagelg=='eng' ? '$' : 'тг'}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hidden-lg-down">
+          <div class="push22"></div>
+          <div class="content">
+            <p>Для каждого проекта подход основывается на тщательном понимании пространства или его нынешних и исторических характеристик.</p>
+          </div>
+        </div>
+        <div class="push48 hidden-md-down"></div>
+        <div class="push35 hidden-lg-up"></div>
+        <div class="dbtn">
+          <button class="btn btn-wide btn-inv" ng-if="!cart.checkoutDone" ng-click="cart.checkout()">Оформить заказ</button>
+          <button class="btn btn-wide btn-inv" ng-if="cart.checkoutDone" ng-click="cart.order()">Отправить заказ</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

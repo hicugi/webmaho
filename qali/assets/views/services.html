@@ -1,0 +1,39 @@
+
+<section class="scnServices">
+  <div class="container">
+    <div class="push40 visible-xs"></div>
+    <div class="push90 hidden-xs"></div>
+    <div class="services2">
+      <div class="service-block2" ng-repeat="v in page.items">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="imgb">
+              <div class="imga" ng-style="{ 'background-image': v.serviceCatalogImage &amp;&amp; 'url('+v.serviceCatalogImage+')' }"></div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="service-block2_header row">
+              <div class="col-sm-5">
+                <h4 class="fh3">{{v.pagetitle}}</h4>
+              </div>
+              <div class="col-sm-7 hidden-xs"><a class="link-more" ng-href="{{v.uri}}">Подробнее</a></div>
+            </div>
+            <div class="service-block2_desc row justify-content-between">
+              <div class="col-lg-6 col-xl-5">
+                <h4 class="fh4-3">{{v.description}}</h4>
+                <div class="push10 hidden-lg-up"></div>
+              </div>
+              <div class="col-lg-6 col-xl-5">
+                <p class="f-price hidden-md-down">{{v.servicePrice}}</p>
+                <p class="f-price2 hidden-lg-up">{{v.servicePrice}}</p>
+              </div>
+            </div>
+            <div class="service-block2_intro">
+              <p class="fp2 t-wrap"><span ng-repeat="vc in v.serviceList"><br ng-if="$index">{{vc.title}}</span></p><a class="link-more visible-xs" ng-href="{{v.uri}}">Подробнее</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

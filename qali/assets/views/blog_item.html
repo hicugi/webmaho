@@ -1,0 +1,162 @@
+
+<section class="scnHome scnHomeBlog">
+  <div class="imga" ng-style="{ 'background-image': page.image &amp;&amp; 'url('+page.image+')' }"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-9 col-lg-6">
+        <h1 class="fh1-2">{{page.pagetitle}}</h1>
+        <div><div class="list1"><ul><li></li><li>{{page.longtitle}}</li><li></li><li>{{page.date}}</li></ul></div></div>
+      </div>
+      <div class="col-md-2"><a class="link-back" href="{{ location.path.substr( 0 ,location.path.lastIndexOf('/') ) }}">Назад</a></div>
+    </div>
+  </div>
+</section>
+<section class="scnBlock" ng-repeat="v in page.blocks">
+  <div class="container" ng-if="v.type == 'Двойной текс'">
+    <div class="row">
+      <div class="col-2 col-md-1"></div>
+      <div class="col-10 col-md-9 col-lg-11">
+        <h2 class="fh2">{{v.title}}</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-9 col-lg-5">
+        <div class="info1">
+          <p class="t-wrap">{{v.description1}}</p>
+        </div>
+      </div>
+      <div class="col-md-2 visible-md"></div>
+      <div class="col-md-1 visible-md"></div>
+      <div class="col-md-9 col-lg-5">
+        <div class="info1">
+          <p class="t-wrap">{{v.description2}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container blockPImg text-right" ng-if="v.type.indexOf('Текст и изображение')==0" ng-class="{ v2: v.type == 'Текст и изображение 2' }">
+    <div class="row">
+      <div class="col-md-1 col-lg-12"></div>
+      <div class="col-md-11 hidden-lg-up">
+        <div class="img1 imgb">
+          <div class="imga imga-contain" ng-style="{ 'background-image': v.image &amp;&amp; 'url('+v.image+')' }"></div>
+        </div>
+      </div>
+      <div class="col-md-2 col-lg-1"></div>
+      <div class="col-10 col-md-7 col-lg-5 col-xl-4">
+        <h2 class="fh2 text-right">{{v.title}}</h2>
+        <div class="info1 v-max">
+          <p class="t-wrap">{{v.description1}}</p>
+        </div>
+      </div>
+      <div class="col-md-2 visible-md"></div>
+      <div class="col-lg-1 hidden-lg-down"></div>
+      <div class="col-lg-6 hidden-md-down">
+        <div class="img1 imgb">
+          <div class="imga imga-contain" ng-style="{ 'background-image': v.image &amp;&amp; 'url('+v.image+')' }"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container blockPImg" ng-if="v.type == 'Изображение и текст'">
+    <div class="row">
+      <div class="col-md-11 col-lg-6">
+        <div class="img1 imgb">
+          <div class="imga imga-contain" ng-style="{ 'background-image': v.image &amp;&amp; 'url('+v.image+')' }"></div>
+        </div>
+      </div>
+      <div class="col-2 col-md-3 col-lg-1"></div>
+      <div class="col-10 col-md-7 col-lg-5 col-xl-4">
+        <h2 class="fh2">{{v.title}}</h2>
+        <div class="info1">
+          <p class="t-wrap">{{v.description1}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container blockImg" ng-if="v.type == 'Изображение'">
+    <div class="imgb img3">
+      <div class="imga imga-contain imga-xl" ng-style="{ 'background-image': v.image &amp;&amp; 'url('+v.image+')' }"></div>
+      <div class="imga imga-contain imga-lg" ng-style="{ 'background-image': v.image &amp;&amp; 'url('+v.image+')' }"></div>
+      <div class="imga imga-contain imga-md" ng-style="{ 'background-image': v.image2 &amp;&amp; 'url('+v.image2+')' }"></div>
+      <div class="imga imga-xs" ng-style="{ 'background-image': v.image2 &amp;&amp; 'url('+v.image2+')' }"></div>
+    </div>
+  </div>
+  <div class="container" ng-if="v.type == '3 изображении'">
+    <div class="row">
+      <div class="col-2 col-md-1"></div>
+      <div class="col-10 col-md-9 col-lg-5">
+        <h2 class="fh2">{{v.title}}</h2>
+        <div class="info1">
+          <p class="t-wrap">{{v.description1}}</p>
+        </div>
+      </div>
+    </div>
+    <div class="imgs3 row">
+      <div class="col-md-4" ng-repeat="vi in v.images">
+        <div class="img2 imgb">
+          <div class="imga" ng-style="{ 'background-image': vi &amp;&amp; 'url('+vi+')' }"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container" ng-if="v.type == '4 изображении'">
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10 col-lg-6">
+        <h2 class="fh2">{{v.title}}</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-9 col-lg-5">
+        <div class="info1">
+          <p class="t-wrap">{{v.description1}}</p>
+        </div>
+      </div>
+    </div>
+    <div class="imgs3 row">
+      <div class="col-md-6" ng-repeat="vi in v.images">
+        <div class="img2 imgb">
+          <div class="imga" ng-style="{ 'background-image': vi &amp;&amp; 'url('+vi+')' }"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container" ng-if="v.type == 'Форма'">
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <h2 class="fh2 hidden-lg-up">{{v.title}}</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 hidden-xs">
+        <div class="img4 imgb imgb-left">
+          <div class="imga" ng-style="{'background-image': v.image &amp;&amp; 'url('+v.image+')'}"></div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <h2 class="fh2 hidden-md-down">{{v.title}}</h2>
+        <form action="callback">
+          <div class="form-input">
+            <input type="text" ng-model="request.forms.name" placeholder="{{pagelg == 'eng' ? 'Your Name' : 'Ваше Имя'}}"/>
+          </div>
+          <div class="form-input">
+            <input type="text" ng-model="request.forms.phone" placeholder="{{pagelg == 'eng' ? 'Your Phone' : 'Ваш Телефон'}} *" plugin="maskPhone"/>
+          </div>
+          <div class="push24"></div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="dbtn">
+                <button class="btn btn-inv btn-block" type="button" ng-click="request.submit(page.title+': '+v.title)">{{pagelg == 'eng' ? 'Send' : 'Отправить'}}</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

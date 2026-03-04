@@ -1,0 +1,13 @@
+
+<section class="scnBlog">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6" ng-repeat="v in page.items">
+        <div class="listItem imgb"><a ng-href="{{v.uri}}"></a>
+          <div class="imga" ng-style="{ 'background-image': v.image &amp;&amp; 'url('+v.image+')' }"></div>
+          <h4 class="fh4-2">{{v.pagetitle}}</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

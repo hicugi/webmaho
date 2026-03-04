@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ru" ng-app="app">
+  <head>
+    <script>
+      const BASE_PATH = (() => {
+        const KEY = 'qali';
+        let val = location.pathname;
+        const idx = val.indexOf(KEY);
+
+        if (idx === -1) {
+          return '';
+        }
+
+        return val.substring(0, idx + KEY.length);
+      })();
+
+      const BASE_FULL_PATH = location.origin + BASE_PATH;
+      Object.assign(window, { BASE_PATH, BASE_FULL_PATH });
+
+      (() => {
+        const base = document.createElement('BASE');
+        base.href = BASE_FULL_PATH + '/';
+        document.querySelector('head').appendChild(base);
+      })();
+
+      setTimeout(() => {
+        document.querySelectorAll('a[href="/"]').forEach((elm) => {
+          elm.href = BASE_PATH;
+        });
+      }, 300);
+    </script>
+    <meta charset="utf-8">
+    <title>Title</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <link type="image/png" rel="shortcut icon" href="assets/img/favicon.ico">
+    <style>body{opacity:0}html{background-color:#fff}</style>
+  </head>
+  <body class="page{{page.id}}" ng-controller="bodyCtrl" ng-class="{ page: [ 0 ,2 ,4 ,6 ,8 ,9 ,10 ].indexOf(page.template) &gt; -1 ,loading: pageLoading }">
+    <div class="loading_elm"><i></i></div>
+    <div id="cart" ng-class="{ active: cart.active }">
+      <div class="cart_bg" ng-click="cart.active=false"></div>
+      <div class="container">
+        <div class="cart_dialog">
+          <div class="cart_body">
+            <p class="cart_empty" ng-if="!cart.items.length">{{pagelg == 'eng' ? 'Basket is empty' : 'Корзина пуста'}}</p>
+            <div class="cart_items" ng-if="cart.items" ng-class="{ cart_items_more: cart.items.length &gt; 3 }">
+              <ul>
+                <li class="cart_item" ng-repeat="v in cart.items">
+                  <div>
+                    <div class="imgb">
+                      <div class="imga" ng-style="{ 'background-image': v.product.image &amp;&amp; 'url('+v.product.image+')' }"></div>
+                    </div>
+                  </div>
+                  <div class="cart_item_info">
+                    <h5>{{v.product.parentInfo.pagetitle}}</h5>
+                    <h4>{{v.product.pagetitle}}</h4>
+                    <p class="f-price2">{{v.product.price + (pagelg=='eng' ? '$' : 'тг')}}</p><a class="cart_remove" ng-click="cart.remove(v.id)"></a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="cart_footer"><a href="cart">{{pagelg == 'eng' ? 'Go to basket' : 'Перейти в корзину'}}</a></div>
+        </div>
+      </div>
+    </div>
+    <header>
+      <div class="container">
+        <div class="languages hidden-md-down t-upper"><a ng-click="pageLgChange(pagelg=='eng'?'ru':'eng')">{{pagelg=='eng'?'ru':'eng'}}</a></div><a class="logo" href="/"></a><a class="profile" ng-click="modal.show('profile')"></a>
+        <button class="cart_button" ng-click="cart.toggle()" ng-class="{ active: cart.items ,animate: cart.animateActive }"><i ng-if="cart.items.length">{{cart.items.length}}</i></button>
+      </div>
+    </header><a class="nav-btn hidden-lg-up" ng-class="{active: nav}" ng-click="$root.nav=!nav"><i></i></a>
+    <nav class="menu" ng-class="{active: nav}">
+      <div class="container"><a class="link-back-xs visible-xs" onclick="history.back()"></a>
+        <div class="languages hidden-lg-up"><a class="t-upper" ng-click="pageLgChange(pagelg=='eng'?'ru':'eng')">{{pagelg=='eng'?'ru':'eng'}}</a></div>
+        <ul>
+          <li ng-repeat="v in base.menu" ng-class="{ active: ( !$index &amp;&amp; location.path == '/' ) || ( $index &amp;&amp; location.path.indexOf( v.uri ) &gt; -1 ) }"><a ng-href="{{v.uri}}">{{v.menutitle || v.pagetitle}}</a></li>
+        </ul>
+        <div class="socns v2 hidden-lg-up"><a class="fa fa-instagram"></a><a class="fa fa-facebook"></a><a class="fa fa-behance"></a>
+        </div>
+      </div>
+    </nav>
+    <main>
+      <div class="ngview" ng-view></div>
+    </main>
+    <footer>
+      <div class="container"><a class="logo" href="/"><img src="assets/img/logo.svg"></a>
+        <div class="contacts">
+          <div>
+            <h4 class="fh4">{{pagelg == 'eng' ? 'Address' : 'Адрес'}}</h4>
+            <p>{{base.address}}</p>
+          </div>
+          <div>
+            <h4 class="fh4">{{pagelg == 'eng' ? 'Contacts' : 'Контакты'}}</h4>
+            <p><a href="tel:{{base.phone|setPhone}}">{{base.phone}}</a><br><a href="tel:{{base.phone2|setPhone}}">{{base.phone2}}</a></p>
+          </div>
+          <div>
+            <h4 class="fh4">E-mail</h4>
+            <p><a href="mailto:{{base.email}}">{{base.email}}</a></p>
+          </div>
+        </div><a class="callback" ng-click="modal.show('callback')">{{pagelg == 'eng' ? 'Reuqest callback' : 'Заказать звонок'}}</a>
+        <p class="copyright">©2018 Qali</p>
+        <div class="socns"><a>Instagram</a><a>Facebook</a><a>Behance</a>
+        </div>
+      </div>
+    </footer>
+    <div id="modals">
+      <div class="modal fade in" id="modal-profile">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-body"><a class="modal-close active" data-dismiss="modal" aria-hidden="true"></a>
+              <div class="dlogin" ng-if="!modalProfileSignin">
+                <h4 class="fh-modal">Вход в аккаунт</h4>
+                <div class="user-form row">
+                  <div class="col-md-6">
+                    <div class="form-input">
+                      <input type="text" ng-model="user.loginForm.email" placeholder="E-mail">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-input">
+                      <input type="password" ng-model="user.loginForm.password" placeholder="Пароль">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="push10 visible-xs"></div>
+                    <button class="btn btn-inv btn-block" type="button" ng-click="user.login()">Войти</button>
+                  </div>
+                  <div class="col-md-6">
+                    <p class="f-forgetpass"><a>Забыли пароль?</a></p>
+                  </div>
+                </div>
+                <h4 class="fh-modal">Не зарегестрированы?</h4>
+                <div class="row">
+                  <div class="col-md-6">
+                    <button class="btn btn-inv btn-block" type="button" ng-click="$parent.modalProfileSignin=true">Регистрация</button>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="push15 visible-xs"></div>
+                    <div class="btns-auth">
+                      <div>
+                        <button class="btn btn-inv btn-ico"><i class="fa fa-vk"></i></button>
+                      </div>
+                      <div>
+                        <button class="btn btn-inv btn-ico"><i class="fa fa-facebook"></i></button>
+                      </div>
+                      <div>
+                        <button class="btn btn-inv btn-ico"><i class="fa fa-google"></i></button>
+                      </div>
+                      <p>Вход через соцсети</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="dsignin" ng-if="modalProfileSignin">
+                <h4 class="fh-modal">Регистрация</h4>
+                <div class="user-form row">
+                  <div class="col-md-6">
+                    <div class="form-input" ng-class="{hasError: user.signinFormError.name}">
+                      <input type="text" ng-model="user.signinForm.name" placeholder="Имя">
+                      <p class="hasError-log">{{user.signinFormError.name}}</p>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-input" ng-class="{hasError: user.signinFormError.sname}">
+                      <input type="text" ng-model="user.signinForm.sname" placeholder="Фамилия">
+                      <p class="hasError-log">{{user.signinFormError.sname}}</p>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-input" ng-class="{hasError: user.signinFormError.phone}">
+                      <input type="phone" ng-model="user.signinForm.phone" placeholder="Телефон" plugin="maskPhone">
+                      <p class="hasError-log">{{user.signinFormError.phone}}</p>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-input" ng-class="{hasError: user.signinFormError.email}">
+                      <input type="email" ng-model="user.signinForm.email" placeholder="E-mail">
+                      <p class="hasError-log">{{user.signinFormError.email}}</p>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-input" ng-class="{hasError: user.signinFormError.pass}">
+                      <input type="password" ng-model="user.signinForm.pass" placeholder="Пароль">
+                      <p class="hasError-log">{{user.signinFormError.pass}}</p>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-input" ng-class="{hasError: user.signinFormError.repass}">
+                      <input type="password" ng-model="user.signinForm.repass" placeholder="Повторить пароль">
+                      <p class="hasError-log">{{user.signinFormError.repass}}</p>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <button class="btn btn-inv btn-block" type="button" ng-click="user.signin()">Регистрация</button>
+                  </div>
+                  <div class="col-md-6">
+                    <p class="f-forgetpass" ng-click="$parent.modalProfileSignin=false"><a class="dback">Назад</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="undefined modal fade in" id="modal-callback">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-body"><a class="modal-close active" data-dismiss="modal" aria-hidden="true"></a>
+              <h4 class="fh-modal">{{pagelg == 'eng' ? 'Reuqest callback' : 'Заказать звонок'}}</h4>
+              <form class="row">
+                <div class="col-md-6">
+                  <div class="form-input">
+                    <input type="text" ng-model="request.forms.name" placeholder="{{pagelg == 'eng' ? 'Your Name' : 'Ваше Имя'}}">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-input">
+                    <input type="text" ng-model="request.forms.phone" placeholder="{{pagelg == 'eng' ? 'Your Phone' : 'Ваш Телефон'}} *" plugin="maskPhone">
+                  </div>
+                </div>
+                <div class="col-md-6"></div>
+                <div class="col-md-6">
+                  <div class="push10 visible-xs"></div>
+                  <button class="btn btn-inv btn-block" type="button" ng-click="request.submit( pagelg == 'eng' ? 'Reuqest callback' : 'Заказать звонок' )">{{pagelg == 'eng' ? 'Send' : 'Отправить'}}</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="undefined modal fade in" id="modal-specialoffer">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-body"><a class="modal-close active" data-dismiss="modal" aria-hidden="true"></a>
+              <h4 class="fh-modal">{{pagelg == 'eng' ? 'Special offer' : 'Специальное предложение'}}</h4>
+              <form class="row">
+                <div class="col-md-6">
+                  <div class="form-input">
+                    <input type="text" ng-model="request.forms.name" placeholder="{{pagelg == 'eng' ? 'Your Name' : 'Ваше Имя'}}">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-input">
+                    <input type="text" ng-model="request.forms.phone" placeholder="{{pagelg == 'eng' ? 'Your Phone' : 'Ваш Телефон'}} *" plugin="maskPhone">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <p class="f-forgetpass h100p flex flex-middle">{{page.specialoffer_title}}</p>
+                </div>
+                <div class="col-md-6">
+                  <div class="push10 visible-xs"></div>
+                  <button class="btn btn-inv btn-block" type="button" ng-click="request.submit( (pagelg == 'eng' ? 'Special offer' : 'Специальное предложение') + ': ' + page.specialoffer_title )">{{pagelg == 'eng' ? 'Send' : 'Отправить'}}</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>var templates={"blog_item":1530718882,"cart":1530718882,"services":1530718882,"blog":1530718882,"contacts":1532977864,"home":1530719054,"services_item":1530718882,"courses_item":1530718882,"projects":1530718882,"shop_item":1530718882,"shop":1530718882,"projects_item":1530718882,"404":1530718882};</script>
+    <script src="assets/js/sweetalert.min.js?1524717640"></script>
+    <script src="assets/js/angularjs/angular.min.js?1517246798"></script>
+    <script src="assets/js/angularjs/angular-route.min.js?1517246848"></script>
+    <script src="assets/js/angularjs/angular-sanitize.min.js?1517249928"></script>
+    <script src="assets/js/angularjs/angular-touch.min.js?1519138478"></script>
+    <script src="assets/js/scripts.min.js?1524717638"></script>
+    <script src="assets/js/route.js?1527694568"></script>
+    <script src="assets/js/controller.js?1532974160"></script>
+    <link rel="stylesheet" href="assets/css/main.min.css?1541604206">
+  </body>
+</html>
