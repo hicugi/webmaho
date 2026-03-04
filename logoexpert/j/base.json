@@ -1,0 +1,726 @@
+{
+    "longtitle": "QALI Brand Design",
+    "description": "[СНАЧАЛА] мы делаем Вам эскизы, \r\nВы платите [ПОСЛЕ!]",
+    "introtext": "Закажи ЛОГОТИП со скидкой и получи ФИРМЕННЫЙ СТИЛЬ в ПОДАРОК!",
+    "link_attributes": "#d93eff",
+    "logo": "assets/img/./logo-brand-design.svg",
+    "images": [
+        "assets/img/slider/99.jpg"
+    ],
+    "test": "asd",
+    "form_message_error": "Что то пошло не так... Свяжитесь с нами [phone]",
+    "form_message_success": "Спасибо! Ваш запрос прошел успешно. Мы вскоре свяжемся с вами",
+    "contacts": {
+        "longtitle": "https://yandex.kz/map-widget/v1/-/CBB1jXVPOD",
+        "description": "СВЯЗАТЬСЯ \r\nС НАМИ",
+        "introtext": "успейте получить бесплатную консультацию",
+        "address": "г. Алматы, пр. Сатпаева 30/1, офис 86",
+        "phone": "+7 (778) 818-89-19",
+        "worktime": "пон.-пт. 9:00-18:00"
+    },
+    "image": "assets/img/./logo-brand-design.svg",
+    "aboutus": {
+        "pagetitle": "КОРОТКО О НАС",
+        "description": "[Ильяс Калиев], \r\nоснователь Qali Design Group, \r\n@qali.ilyas, +77017717719",
+        "introtext": "«Я гарантирую качественное исполнение \r\nВашего проекта, следование оговоренным срокам \r\nи исполнение желаний»",
+        "content": "<p>Вас приветствует Команда графических дизайнеров Q A L I Design Group.</p>\r\n<p>Мы занимаемся разработкой логотипов с 2014 года, реализовали 69 проектов для новых предприятий и крупных компаний.</p>\r\n<p>Каждый проект для нас уникальный, каждый клиент особенный, каждое </p>\r\n<p>дизайн-решение – актуальное и тщательно проработанное.</p>",
+        "image": "assets/img/./IMG_9718.jpg",
+        "list": [
+            {
+                "title": "2014-2018 - 4 ГОДА ОПЫТА",
+                "description": "",
+                "image": "",
+                "image2": ""
+            },
+            {
+                "title": "69 ПРОЕКТОВ",
+                "description": "",
+                "image": "",
+                "image2": ""
+            }
+        ]
+    },
+    "services": {
+        "pagetitle": "К ВАШИМ УСЛУГАМ",
+        "image": "assets/img/services/critique-design-designer-17845.jpg",
+        "list": [
+            {
+                "title": "Разработка \nлоготипа",
+                "description": "Разработка логотипа компании в 3 этапа",
+                "image": "assets/img/services/004-drawing-tablet.svg",
+                "image2": ""
+            },
+            {
+                "title": "Фирменный \nстиль",
+                "description": "Фирменный \nстиль",
+                "image": "assets/img/services/003-computer.svg",
+                "image2": ""
+            },
+            {
+                "title": "Брендбук",
+                "description": "Брендбук",
+                "image": "assets/img/services/005-art-book.svg",
+                "image2": ""
+            },
+            {
+                "title": "Графический \nдизайн",
+                "description": "Графический дизайн",
+                "image": "assets/img/services/002-graphic-tool.svg",
+                "image2": ""
+            },
+            {
+                "title": "Дизайн \nполиграфии",
+                "description": "Дизайн полиграфии",
+                "image": "assets/img/services/001-album.svg",
+                "image2": ""
+            },
+            {
+                "title": "Разработка \nпрезентаций",
+                "description": "Разработка презентаций",
+                "image": "assets/img/services/007-editorial-design.svg",
+                "image2": ""
+            },
+            {
+                "title": "Дизайн \nрекламы",
+                "description": "Дизайн \nрекламы",
+                "image": "assets/img/services/006-pencil-case.svg",
+                "image2": ""
+            },
+            {
+                "title": "Дизайн \nсоц. сетей",
+                "description": "Дизайн соц. сетей",
+                "image": "assets/img/services/008-instagram.svg",
+                "image2": ""
+            }
+        ]
+    },
+    "benefits": {
+        "description": "ЧТО ВЫ ПОЛУЧАЕТЕ..",
+        "image": "",
+        "list": "",
+        "childs": [
+            {
+                "pagetitle": "ФИРМЕННЫЙ СТИЛЬ В ПОДАРОК",
+                "description": "Фирменный стиль в ПОДАРОК! Закажите разработку логотипа и получите фирменный стиль в подарок!",
+                "image": "assets/img/benefits/IMG_1344.JPG"
+            },
+            {
+                "pagetitle": "БЕСПЛАТНЫЙ АНАЛИЗ КОНКУРЕНТОВ",
+                "description": "Прежде чем приступать к разработке графического дизайна мы тщательно изучаем локальные и зарубежные аналоги.",
+                "image": "assets/img/benefits/IMG_1349.JPG"
+            },
+            {
+                "pagetitle": "ДЕТАЛЬНАЯ ПРОРАБОТКА ЛОГОТИПА",
+                "description": "Каждый эскиз прорабатывается детально. Это своеобразный ювелирный подход к каждому элементу.",
+                "image": "assets/img/benefits/SWD-2018-FINALа.jpg"
+            },
+            {
+                "pagetitle": "БЕСПЛАТНЫЙ ПОДБОР АНАЛОГОВ",
+                "description": "Мы собираем подборку аналогов из соответствующей сферы деятельности. Тем самым мы демонстрируем свою неповторимость.",
+                "image": "assets/img/benefits/SWD-2018-FINAL22.jpg"
+            },
+            {
+                "pagetitle": "КОПИРАЙТИНГ БОНУС",
+                "description": "Мы помогаем нашим заказчиком во всем. В том числе мы можем помочь с написанием слоганов, дискрипторов и названия.",
+                "image": "assets/img/benefits/DSC02759.jpg"
+            },
+            {
+                "pagetitle": "ПОДБОР ДОМЕНА САЙТА",
+                "description": "По желанию заказчика, для новых компаний, мы можем сделать подборку свободных доменов для сайта.",
+                "image": "assets/img/benefits/IMG_1346.JPG"
+            },
+            {
+                "pagetitle": "ВИЗИТКИ В ПОДАРОК",
+                "description": "Визитная карточка необходимый элемент любой компании. Каждому клиенту мы дарим дизайн фирменных визиток.",
+                "image": "assets/img/benefits/business-card-design-inspiration-60-eye-catching-examples-business-card-design-inspiration.jpg"
+            },
+            {
+                "pagetitle": "ТИПОГРАФИИ",
+                "description": "За время работы мы построили отношения с разными партнерами. Мы рекомендуем только проверенные производства.",
+                "image": "assets/img/benefits/Screen-Shot-2017-02-24-at-4.49.49-PM.jpg"
+            },
+            {
+                "pagetitle": "ПОДБОР ДИЗАЙНЕРСКОЙ БУМАГИ",
+                "description": "Выбор материала для фирменного стиля крайне важная задача. Мы сопровождаем каждого клиента и рекомендуем своих партнеров.",
+                "image": "assets/img/benefits/12395269414857.5b8029ea92b1e.jpg"
+            }
+        ]
+    },
+    "consulting": {
+        "pagetitle": "Получите бесплатную консультацию",
+        "longtitle": "Мы против рассылок, и гарантируем конфиденциальность",
+        "image": "assets/img/./consulting2.jpg"
+    },
+    "portfolio": {
+        "pagetitle": "ПОРТФОЛИО",
+        "longtitle": "",
+        "image": "portfolio/bg.jpg",
+        "childs": [
+            {
+                "images": [
+                    "assets/img/portfolio/Yubileinyi/4.PNG"
+                ],
+                "pagetitle": "Супермаркет Юбилейный",
+                "longtitle": "логотип и фирменный стиль | 07 февраля, 2017",
+                "description": "Образы в логотипе: руки, казан, блюдо, очаг, огонь. В совокупности образы призваны иллюстрировать гостеприимство и изобилие. Дастархан. Красный цвет - традиционный цвет сети Дастархан.",
+                "image": "assets/img/portfolio/Yubileinyi/4.PNG"
+            },
+            {
+                "images": [
+                    "assets/img/portfolio/KHAN/Hanskie.png"
+                ],
+                "pagetitle": "Ханские колбаски",
+                "longtitle": "логотип | 18 июля, 2018",
+                "description": "В основу логотипа заложен образ Хана. Образ дополнен национальным узором. Выражение лица Хана строгое но доброжелательное. Данный образ взят для отображения знака качества.",
+                "image": "assets/img/portfolio/KHAN/Hanskie.png"
+            },
+            {
+                "images": [
+                    "assets/img/portfolio/ICORE/LOGO-PORTFOLIO-2018-73.PNG"
+                ],
+                "pagetitle": "ICORE Integration",
+                "longtitle": "логотип и фирменный стиль | 22 февраля, 2017",
+                "description": "ICORE Integration - интегрирация систем ИБ на предприятия. Логотип выполнен из лент градиентов отражая следующие образы: дом, защита - замок, руки - забота, щит - охрана, ядро - информация.",
+                "image": "assets/img/portfolio/ICORE/LOGO-PORTFOLIO-2018-73.PNG"
+            },
+            {
+                "images": [
+                    "assets/img/portfolio/Board/LOGO-PORTFOLIO-2018-64.PNG"
+                ],
+                "pagetitle": "Board House Almaty",
+                "longtitle": "логотип и дизайн сайта | 25 декабря, 2017",
+                "description": "Board House - магазин инвентаря для экстремальных видов спорта. Логотип выполнен в стиле Old School. Образы: прародители современных досок для скейтбординга, смоуборда и серфинга.",
+                "image": "assets/img/portfolio/Board/LOGO-PORTFOLIO-2018-64.PNG"
+            },
+            {
+                "pagetitle": "Qamal Comunity",
+                "longtitle": "логотип и фирменный стиль | 15 января, 2017",
+                "description": "Qamal Comunity - системы контроля доступа. В логотип заложены следующие образы: крепость - (qamal на каз.), щит, буква \"Q\". Цвет Серебристый металлик подчеркивает стальную прочность.",
+                "image": "assets/img/portfolio/QAMAL/qamal-final.png"
+            },
+            {
+                "images": [
+                    "assets/img/portfolio/Fitlife/3.PNG"
+                ],
+                "pagetitle": "Fit Life",
+                "longtitle": "логотип и фирменный стиль | 6 марта, 2017",
+                "description": "Fit Life - студия эффективных ЕМС тренировок. В образе логотипа скрыты: образ человека, вихрь, буква \"F\", динамика - движение. ",
+                "image": "assets/img/portfolio/Fitlife/3.PNG"
+            },
+            {
+                "images": [
+                    "assets/img/portfolio/SOFT/LOGO-PORTFOLIO-2018-6.png"
+                ],
+                "pagetitle": "Software Development",
+                "longtitle": "логотип | 26 декабря, 2017",
+                "description": "Software Development - компания по разработке ПО для предприятий. Образы: древо кодинга, микросхемы, стилизованная буква \"S\".",
+                "image": "assets/img/portfolio/SOFT/LOGO-PORTFOLIO-2018-6.png"
+            },
+            {
+                "images": [
+                    "assets/img/portfolio/SUCC/LOGO-PORTFOLIO-2018-65.png"
+                ],
+                "pagetitle": "Success Initiative Group",
+                "longtitle": "логотип | 17 января, 2018",
+                "description": "Success Initiative Group - управляющая компания группы компаний. Логотип выполнен с стиле Lineart и сочетает в себе следующие образы: взлетающая птица, написание аббревиатуры \"SIG\".",
+                "image": "assets/img/portfolio/SUCC/LOGO-PORTFOLIO-2018-65.png"
+            },
+            {
+                "images": [
+                    "assets/img/portfolio/TAC/7.PNG"
+                ],
+                "pagetitle": "Technical Assitance Center",
+                "longtitle": "логотипы | 25 декабря, 2017",
+                "description": "TAC - центр технической поддержки продуктов группы компаний. Образ логотипа - буквы аббревиатуры \"TAC\" собранные в пазл в форме пирамиды из меньших элементов. ",
+                "image": "assets/img/portfolio/TAC/7.PNG"
+            },
+            {
+                "images": [
+                    "assets/img/portfolio/SUNA/LOGO-PORTFOLIO-2018-66.png"
+                ],
+                "pagetitle": "Sunna Press",
+                "longtitle": "логотипы и фирменный стиль | 11 июля, 2017",
+                "description": "Sunna Press - первый Исламский новостной портал в Казахстане. В образы логотипа заложены: книга как источник просветления в виде восходящего солнца и национальный узор.",
+                "image": "assets/img/portfolio/SUNA/LOGO-PORTFOLIO-2018-66.png"
+            },
+            {
+                "images": [
+                    "assets/img/portfolio/CONS/LOGO-PORTFOLIO-2018-67.png"
+                ],
+                "pagetitle": "ICORE Consulting",
+                "longtitle": "логотипы | 25 декабря, 2017",
+                "description": "ICORE Consulting - консалтинговая компания по вопросам эксплуатации ПО. Логотип содержит в себе следующие смыслы: совокупность проблем с одной решённой, изображённой в виде диалогового окна.",
+                "image": "assets/img/portfolio/CONS/LOGO-PORTFOLIO-2018-67.png"
+            },
+            {
+                "images": [
+                    "assets/img/portfolio/BUTT/LOGO-PORTFOLIO-2018-68.png"
+                ],
+                "pagetitle": "Butterfly Outdoor Kazakhstan",
+                "longtitle": "79 м2 | квартиры | 15 июня, 2017",
+                "description": "Butterfly Outdoor Kazakhstan - рекламное агенство специализирующееся на установке наружной рекламы. Образ логотипа - стилизованная бабочка + цветок + узор, как символы яркости и красочности",
+                "image": "assets/img/portfolio/BUTT/LOGO-PORTFOLIO-2018-68.png"
+            },
+            {
+                "images": [
+                    "assets/img/portfolio/OUTS/LOGO-PORTFOLIO-2018-69.png"
+                ],
+                "pagetitle": "Outsourse KZ",
+                "longtitle": "79 м2 | квартиры | 15 июня, 2017",
+                "description": "Outsource KZ - аутсорсинг юридических услуг. Уникальность продукта - облачный сервер по автоматизации процессов. Логотип отражает облако с динамичными стрелками, символизируя рост.",
+                "image": "assets/img/portfolio/OUTS/LOGO-PORTFOLIO-2018-69.png"
+            },
+            {
+                "images": [
+                    "assets/img/portfolio/QORGAU/QORGAUSHY2.png",
+                    "assets/img/portfolio/QORGAU/QORGAUSHY2w.png"
+                ],
+                "pagetitle": "Qorgaushy",
+                "longtitle": "79 м2 | квартиры | 15 июня, 2017",
+                "description": "Qorgaushy Security System - программное обеспечение, призванное повысить уровень защиты интеллектуальной собственности предприятий. Образы: крепость, щит, двери, замок, защищённое ядро.",
+                "image": "assets/img/portfolio/QORGAU/QORGAUSHY2w.png"
+            },
+            {
+                "images": [
+                    "assets/img/portfolio/KOLS/kolsai-final2.png"
+                ],
+                "pagetitle": "Kolsai",
+                "longtitle": "79 м2 | квартиры | 15 июня, 2017",
+                "description": "Kolsai - спортивно- конный клуб. Логотип выполнен в виде эмблемы. В композиции содержатся атрибуты конного спорта: подкова, шлем, кубок, венок и конечно же спортивная порода лошадей.",
+                "image": "assets/img/portfolio/KOLS/kolsai-final2.png"
+            },
+            {
+                "images": [
+                    "assets/img/portfolio/NEWT/LOGO-PORTFOLIO-2018-611.png"
+                ],
+                "pagetitle": "NewTon Kids",
+                "longtitle": "логотипы | 15 июня, 2017",
+                "description": "NewTon Kids - магазин детской и подростковой одежды в ТРЦ Мега Алматы. Логотип выполнен в стиле Lettering. Текстовый логотип подчеркивает игру слов названия.",
+                "image": "assets/img/portfolio/NEWT/LOGO-PORTFOLIO-2018-611.png"
+            },
+            {
+                "images": [
+                    "assets/img/portfolio/INSA/in-safe-final.png"
+                ],
+                "pagetitle": "InSafe 24/7 Deposit Box",
+                "longtitle": "логотипы | 19 марта, 2018",
+                "description": "InSafe 24/7 Deposit Box - система надежно защищённых депозитных ячеек неограниченного доступа. Логотип отражает надежность и безопасность посредством образа щита в металлическом исполнении.",
+                "image": "assets/img/portfolio/INSA/in-safe-final.png"
+            },
+            {
+                "images": [
+                    "assets/img/portfolio/GGG/LOGO-PORTFOLIO-2018-633.png"
+                ],
+                "pagetitle": "Golden Goals Group",
+                "longtitle": "79 м2 | квартиры | 15 июня, 2017",
+                "description": "Golden Goals Group - информационный портал о Казахстане для туристов. Образы в логотипе: стилизованный флаг РК из солнца с лучами и беркута.",
+                "image": "assets/img/portfolio/GGG/LOGO-PORTFOLIO-2018-633.png"
+            },
+            {
+                "images": [
+                    "assets/img/portfolio/FORK/LOGO-PORTFOLIO-2018-688.png"
+                ],
+                "pagetitle": "Fork & Spoon",
+                "longtitle": "логотипы | 15 июня, 2017",
+                "description": "Fork & Spoon - доставка вкусной еды в г. Алматы. Логотип выполнен в Negative Space. Образы: тарелка, еда, вилка и ложка (fork&spoon).",
+                "image": "assets/img/portfolio/FORK/LOGO-PORTFOLIO-2018-688.png"
+            },
+            {
+                "images": [
+                    "assets/img/portfolio/SOVA/LOGO-PORTFOLIO-2018-655.png"
+                ],
+                "pagetitle": "Sova Night Club",
+                "longtitle": "логотипы | 15 июня, 2017",
+                "description": "Sova Night Club - популярный ночной клуб в г. Алматы. Образ ночного хищника стилизован с раскрытыми крыльями и выполнен в золотых оттенках.",
+                "image": "assets/img/portfolio/SOVA/LOGO-PORTFOLIO-2018-655.png"
+            },
+            {
+                "images": [
+                    "assets/img/portfolio/MOMM/Mommy-Baby-Final.png"
+                ],
+                "pagetitle": "Mommy & Baby",
+                "longtitle": "логотипы | 20 февраля, 2018",
+                "description": "Mommy & Baby - центр консультации будущих мам. В логотипе отражена неразрывная связь матери и ребёнка. Забота и любовь. Композиция исполнена стилем Lineart. ",
+                "image": "assets/img/portfolio/MOMM/Mommy-Baby-Final.png"
+            },
+            {
+                "images": [
+                    "assets/img/portfolio/MZ/merey-z.png",
+                    "assets/img/portfolio/MZ/merey-z0.png",
+                    "assets/img/portfolio/MZ/merey-z1.png"
+                ],
+                "pagetitle": "Merey Zeinesh",
+                "longtitle": "логотип | 20 февраля, 2018",
+                "description": "Именной логотип артиста Мерей Зейнеш. Логотип выполнен в стиле минимал и негативного пространства. Образы - отзеркаленные буквы \"М\" и \"З\" образуют пространство в форме шестиконечной звезды. ",
+                "image": "assets/img/portfolio/MZ/merey-z1.png"
+            },
+            {
+                "images": [
+                    "assets/img/portfolio/BAIT/BaiTAU-final3.jpg"
+                ],
+                "pagetitle": "BaiTAU",
+                "longtitle": "79 м2 | квартиры | 15 июня, 2017",
+                "description": "BaiTAU - управляющая компания группы компаний. Профили предприятий - строительство, проектирование, строительные материалы. Образ величественной горы в национальной стилистике.",
+                "image": "assets/img/portfolio/BAIT/BaiTAU-final3.jpg"
+            },
+            {
+                "images": [
+                    "assets/img/portfolio/BOPE/bope2.png"
+                ],
+                "pagetitle": "Bope Fair",
+                "longtitle": "79 м2 | квартиры | 15 июня, 2017",
+                "description": "Bope Fair - регулярная ярмарка для всей семьи.  Логотип состоит из стилизованного шрифта и иконки любимой детской игрушки.",
+                "image": "assets/img/portfolio/BOPE/bope2.png"
+            },
+            {
+                "images": [
+                    "assets/img/portfolio/ZYP/icons-zyp.png"
+                ],
+                "pagetitle": ":ZYP",
+                "longtitle": "логотипы | 15 июня, 2017",
+                "description": ":ZYP - сеть современных продуктовых магазинов нового поколения. По мимо логотипа для заказчика разрабатывался Naming. ZYP - быстро!",
+                "image": "assets/img/portfolio/ZYP/icons-zyp.png"
+            },
+            {
+                "images": [
+                    "assets/img/portfolio/WAW/WAW.png"
+                ],
+                "pagetitle": "ШАШ",
+                "longtitle": "логотипы | 15 июня, 2017",
+                "description": "ШАШ - сеть 15 минутных экспресс парикмахерских. Логотип исполнен в «олдскульной» манере. Разрез ножниц отмеряет на часах 15 минут.",
+                "image": "assets/img/portfolio/WAW/WAW.png"
+            },
+            {
+                "images": [
+                    "assets/img/portfolio/MOVI/LOGO-PORTFOLIO-2018-677.png"
+                ],
+                "pagetitle": "Movie Mania",
+                "longtitle": "логотипы | 15 июня, 2017",
+                "description": "Movie Mania - кинотеатр в г. Актау. Текстовый логотип содержит в себе основной символ похода в кино - ведро с попкорном.",
+                "image": "assets/img/portfolio/MOVI/LOGO-PORTFOLIO-2018-677.png"
+            }
+        ]
+    },
+    "projects": {
+        "pagetitle": "ПРИМЕР ПРОЕКТА",
+        "longtitle": "#dcdcdc",
+        "list": [
+            {
+                "title": "",
+                "description": "",
+                "image": "assets/img/project/1.png",
+                "image2": "project/1.jpg"
+            },
+            {
+                "title": "",
+                "description": "",
+                "image": "assets/img/project/11.png",
+                "image2": "project/2.jpg"
+            },
+            {
+                "title": "",
+                "description": "",
+                "image": "assets/img/project/12.png",
+                "image2": "project/3.jpg"
+            },
+            {
+                "title": "",
+                "description": "",
+                "image": "assets/img/project/13.png",
+                "image2": "project/4.jpg"
+            },
+            {
+                "title": "",
+                "description": "",
+                "image": "assets/img/project/135.png",
+                "image2": "project/5.jpg"
+            },
+            {
+                "title": "",
+                "description": "",
+                "image": "assets/img/project/14.png",
+                "image2": "project/6.jpg"
+            },
+            {
+                "title": "",
+                "description": "",
+                "image": "assets/img/project/15.png",
+                "image2": "project/7.jpg"
+            },
+            {
+                "title": "",
+                "description": "",
+                "image": "assets/img/project/16.png",
+                "image2": "project/8.jpg"
+            },
+            {
+                "title": "",
+                "description": "",
+                "image": "assets/img/project/17.png",
+                "image2": "project/9.jpg"
+            },
+            {
+                "title": "",
+                "description": "",
+                "image": "assets/img/project/18.png",
+                "image2": "project/10.jpg"
+            },
+            {
+                "title": "",
+                "description": "",
+                "image": "assets/img/project/21.png",
+                "image2": "project/11.jpg"
+            },
+            {
+                "title": "",
+                "description": "",
+                "image": "assets/img/project/22.png",
+                "image2": "project/12.jpg"
+            },
+            {
+                "title": "",
+                "description": "",
+                "image": "assets/img/project/23.png",
+                "image2": "project/13.jpg"
+            },
+            {
+                "title": "",
+                "description": "",
+                "image": "assets/img/project/24.png",
+                "image2": "project/14.jpg"
+            },
+            {
+                "title": "",
+                "description": "",
+                "image": "assets/img/project/QORGAUSHY2.png",
+                "image2": "project/14.jpg"
+            },
+            {
+                "title": "",
+                "description": "",
+                "image": "assets/img/project/QORGAUSHY21.png",
+                "image2": "project/14.jpg"
+            },
+            {
+                "title": "",
+                "description": "",
+                "image": "assets/img/project/QORGAUSHY23.png",
+                "image2": "project/14.jpg"
+            },
+            {
+                "title": "",
+                "description": "",
+                "image": "assets/img/project/QORGAUSHY24.png",
+                "image2": "project/14.jpg"
+            },
+            {
+                "title": "",
+                "description": "",
+                "image": "assets/img/project/QORGAUSHY25.png",
+                "image2": "project/14.jpg"
+            },
+            {
+                "title": "",
+                "description": "",
+                "image": "assets/img/project/QORGAUSHY29.png",
+                "image2": "project/14.jpg"
+            },
+            {
+                "title": "",
+                "description": "",
+                "image": "assets/img/project/QORGAUSHY3.png",
+                "image2": "project/14.jpg"
+            },
+            {
+                "title": "",
+                "description": "",
+                "image": "assets/img/project/QORGAUSHY26.png",
+                "image2": "project/14.jpg"
+            },
+            {
+                "title": "",
+                "description": "",
+                "image": "assets/img/project/QORGAUSHY27.png",
+                "image2": "project/14.jpg"
+            },
+            {
+                "title": "",
+                "description": "",
+                "image": "assets/img/project/QORGAUSHY28.png",
+                "image2": "project/14.jpg"
+            }
+        ],
+        "images": [
+            "project/1.jpg",
+            "project/2.jpg",
+            "project/3.jpg",
+            "project/4.jpg",
+            "project/5.jpg",
+            "project/6.jpg",
+            "project/7.jpg",
+            "project/8.jpg",
+            "project/9.jpg",
+            "project/10.jpg",
+            "project/11.jpg",
+            "project/12.jpg",
+            "project/13.jpg",
+            "project/14.jpg",
+            "project/14.jpg",
+            "project/14.jpg",
+            "project/14.jpg",
+            "project/14.jpg",
+            "project/14.jpg",
+            "project/14.jpg",
+            "project/14.jpg",
+            "project/14.jpg",
+            "project/14.jpg",
+            "project/14.jpg"
+        ]
+    },
+    "prices": false,
+    "calculate": {
+        "pagetitle": "Воспользоваться Пакетом АКЦИЙ «Январь 2019»",
+        "longtitle": "Вид услуги",
+        "image": "assets/img/./консультация2.jpg"
+    },
+    "proccess": {
+        "pagetitle": "ПРОЦЕСС РАБОТЫ",
+        "list": [
+            {
+                "title": "",
+                "description": "Бесплатный \nэтап",
+                "image": "assets/img/proccess/1.svg"
+            },
+            {
+                "title": "",
+                "description": "Техническое\nзадание",
+                "image": "assets/img/proccess/2.svg",
+                "image2": ""
+            },
+            {
+                "title": "",
+                "description": "Разбор \nаналогов",
+                "image": "assets/img/proccess/3.svg",
+                "image2": ""
+            },
+            {
+                "title": "",
+                "description": "Маркетинговый\nанализ ниши",
+                "image": "assets/img/proccess/4.svg",
+                "image2": ""
+            },
+            {
+                "title": "",
+                "description": "Анализ местных\nи зарубежных \nконкурентов",
+                "image": "assets/img/proccess/8.svg",
+                "image2": ""
+            },
+            {
+                "title": "",
+                "description": "Мозговой штурм",
+                "image": "assets/img/proccess/7.svg",
+                "image2": ""
+            },
+            {
+                "title": "",
+                "description": "Подбор образов",
+                "image": "assets/img/proccess/6.svg",
+                "image2": ""
+            },
+            {
+                "title": "",
+                "description": "Композиция",
+                "image": "assets/img/proccess/9.svg",
+                "image2": ""
+            },
+            {
+                "title": "",
+                "description": "Фильтрация\nобразов",
+                "image": "assets/img/proccess/5.svg",
+                "image2": ""
+            },
+            {
+                "title": "",
+                "description": "Эскизирование",
+                "image": "assets/img/proccess/10.svg",
+                "image2": ""
+            },
+            {
+                "title": "",
+                "description": "Первые\n9 вариантов",
+                "image": "assets/img/proccess/11.svg",
+                "image2": ""
+            },
+            {
+                "title": "",
+                "description": "Презентация\nэскизов",
+                "image": "assets/img/proccess/12.svg",
+                "image2": ""
+            },
+            {
+                "title": "",
+                "description": "Этап \nсогласования",
+                "image": "assets/img/proccess/16.svg",
+                "image2": ""
+            },
+            {
+                "title": "",
+                "description": "Разработка\nфинальных\nвариантов",
+                "image": "assets/img/proccess/15.svg",
+                "image2": ""
+            },
+            {
+                "title": "",
+                "description": "Финальные \nкорректировки",
+                "image": "assets/img/proccess/14.svg"
+            },
+            {
+                "title": "",
+                "description": "Сопровождение\nпроекта",
+                "image": "assets/img/proccess/13.svg",
+                "image2": ""
+            }
+        ]
+    },
+    "bonuses": false,
+    "designer": {
+        "pagetitle": "Назначить встречу в студии с дизайнером",
+        "longtitle": "Вид услуги",
+        "image": "assets/img/./консультация2.jpg"
+    },
+    "partners": false,
+    "thanksLetters": {
+        "id": 59,
+        "pagetitle": "Благодарственные письма",
+        "list": [
+            {
+                "title": "ICORE Consulting",
+                "description": "",
+                "image": "assets/img/thanksLetters/icore-consulting.jpg",
+                "image2": "",
+                "thumbnail": "assets/img/cache/c88029a4941175507913e8e64bf20506.jpeg"
+            },
+            {
+                "title": "ICORE Integration",
+                "description": "",
+                "image": "assets/img/thanksLetters/icore-integration.jpg",
+                "image2": "",
+                "thumbnail": "assets/img/cache/e699a7e155352ae608515c30c1106fbb.jpeg"
+            },
+            {
+                "title": "ICORE ITAC",
+                "description": "",
+                "image": "assets/img/thanksLetters/icore-itac.jpg",
+                "image2": "",
+                "thumbnail": "assets/img/cache/870fa587922ff017542e3808f3af255d.jpeg"
+            },
+            {
+                "title": "ICORE SWD",
+                "description": "",
+                "image": "assets/img/thanksLetters/icore-swd.jpg",
+                "image2": "",
+                "thumbnail": "assets/img/cache/f32cfc163d1cdce0c5f74e6ab11d81b5.jpeg"
+            }
+        ]
+    }
+}
