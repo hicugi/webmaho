@@ -1,7 +1,34 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <base href="/github/butterfly-effect/">
+    <script>
+      const BASE_PATH = (() => {
+        const KEY = 'butterfly-effect';
+        let val = location.pathname;
+        const idx = val.indexOf(KEY);
+
+        if (idx === -1) {
+          return '';
+        }
+
+        return val.substring(0, idx + KEY.length);
+      })();
+
+      const BASE_FULL_PATH = location.origin + BASE_PATH;
+      Object.assign(window, { BASE_PATH, BASE_FULL_PATH });
+
+      (() => {
+        const base = document.createElement('BASE');
+        base.href = BASE_FULL_PATH + '/';
+        document.querySelector('head').appendChild(base);
+      })();
+
+      setTimeout(() => {
+        document.querySelectorAll('a[href="/"]').forEach((elm) => {
+          elm.href = BASE_PATH;
+        });
+      }, 300);
+    </script>
     <meta charset="utf-8">
     <title>Butterfly Effect</title>
     <meta name="description" content="">
