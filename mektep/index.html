@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <script>
+      const BASE_PATH = (() => {
+        const KEY = "mektep";
+        let val = location.pathname;
+        const idx = val.indexOf(KEY);
+
+        if (idx === -1) {
+          return "";
+        }
+
+        return val.substring(0, idx + KEY.length);
+      })();
+
+      const BASE_FULL_PATH = location.origin + BASE_PATH;
+      Object.assign(window, { BASE_PATH, BASE_FULL_PATH });
+
+      (() => {
+        const base = document.createElement("BASE");
+        base.href = BASE_FULL_PATH + "/";
+        document.querySelector("head").appendChild(base);
+      })();
+
+      setTimeout(() => {
+        document.querySelectorAll('a[href="/"]').forEach((elm) => {
+          elm.href = BASE_PATH;
+        });
+      }, 300);
+    </script>
+
+    <title>Магнитная фантазия</title>
+    <meta name="description" content="" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+
+    <link
+      rel="shortcut icon"
+      href="assets/img/favicon.ico"
+      type="image/x-icon"
+    />
+
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#000" />
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#000" />
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#000" />
+
+    <style>
+      body {
+        opacity: 0;
+        overflow-x: hidden;
+      }
+      html {
+        background-color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <a class="nav-btn" onclick="app.nav(this)"><i></i></a>
+    <nav>
+      <ul class="menu-xs">
+        <li><a href="/">Главная</a></li>
+        <li><a href="">Статьи</a></li>
+        <li class="active"><a href="category.html">Новости</a></li>
+        <li><a href="">Контакты</a></li>
+      </ul>
+
+      <ul class="menu-xs2">
+        <li>
+          <a href="+77273944234">+7 (727) <span>394 42 34</span></a>
+        </li>
+      </ul>
+    </nav>
+
+    <main>
+      <header>
+        <!-- location... -->
+        <div class="header-top">
+          <div class="row">
+            <!-- location -->
+            <div class="col-sm-6 hidden-xs">
+              <div class="location">
+                <i class="fa fa-location-arrow"></i>
+                г.Алматы, пр. Абая 143 (угол ул. Гагарина)
+              </div>
+            </div>
+
+            <div class="col-sm-3 hidden-xs">
+              <div class="price">
+                <a href="price.pdf">Скачать прайс-лист</a>
+              </div>
+            </div>
+
+            <div class="col-sm-3">
+              <div class="language">
+                <a class="lg-kz">Казак</a>
+                <a class="lg-ru">Русский</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- logo... -->
+        <div class="row">
+          <!-- logo -->
+          <div class="col-sm-1 hidden-xs">
+            <a class="logo" href="/"></a>
+          </div>
+
+          <!-- menu -->
+          <div class="col-sm-8 hidden-xs">
+            <ul class="menu">
+              <li><a href="">Статьи</a></li>
+              <li class="active"><a href="category.html">Новости</a></li>
+              <li><a href="">Контакты</a></li>
+            </ul>
+          </div>
+
+          <!-- phone & search -->
+          <div class="col-sm-3">
+            <!-- phone -->
+            <div class="phone hidden-xs">
+              <a href="+77273944234">+7 (727) <span>394 42 34</span></a>
+            </div>
+
+            <!-- search -->
+            <form action="search" class="search">
+              <input type="text" name="text" placeholder="Поиск по сайту" />
+              <button type="submit" class="fa fa-search"></button>
+            </form>
+          </div>
+        </div>
+      </header>
+
+      <div id="content">
+        <!-- slider -->
+        <section id="slider">
+          <div plugin="slick">
+            <div><img src="assets/img/slider/1.jpg" /></div>
+            <div><img src="assets/img/slider/1.jpg" /></div>
+            <div><img src="assets/img/slider/1.jpg" /></div>
+          </div>
+        </section>
+
+        <!-- video -->
+        <section class="block-info">
+          <div class="row justify-content-between">
+            <!-- img -->
+            <div class="col">
+              <p><img src="assets/img/video/1.jpg" width="426px" /></p>
+            </div>
+
+            <!-- info -->
+            <div class="col">
+              <h3>Заголовок видео</h3>
+
+              <p>
+                Lorem ipsum Non dolor fugiat Duis irure ess eiusmod ali
+                iplaborum dolor ea cupidatat nostrud do elit esse occaecat Duis
+                nostrud illum consequat eiusmod in do in commodo. Lorem ipsum
+                Adipisicing exercitation qui deserunt voluptate officia lab non
+                dolor laboris anim adipisicing magna tempor ani repr cillum
+                reprehender irur Duis Duis esse mollit incididunt Excepte
+                venddiam laboris sitint magna aliquip.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- articles -->
+        <section class="block-info">
+          <h2>Статьи от наших авторов</h2>
+
+          <div class="row justify-content-between">
+            <!-- img -->
+            <div class="col">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
+                sed augue viverra, tempor urna nec, hendrerit metus.
+              </p>
+              <p><img src="assets/img/articles/1.jpg" width="426px" /></p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
+                sed augue viverra, tempor urna nec, hendrerit metus. Suspendisse
+                tincidunt et mi eget elementum. Morbi in quam arcu. Curabitur ut
+                augue egestas, feugiat massa quis, malesuada mauris. Duis
+                condimentum, neque at commodo tempus, est augue mollis magna, et
+                tristique enim justo vitae velit. Vestibulum rhoncus augue at
+                risus eleifend finibus. Vestibulum ante ipsum primis in faucibus
+                orci luctus.
+              </p>
+            </div>
+
+            <!-- info -->
+            <div class="col">
+              <p>
+                Pellentesque ornare dictum vestibulum. Cras nisi dui, tristique
+                sed ultrices at, mattis quis velit. Duis imperdiet volutpat
+                commodo. Lorem ipsum dolor sit amet, consectetur adipiscing
+                elit. Curabitur nec nunc eget diam aliquet volutpat et in
+                tortor. Aenean id nunc ac metus tristique varius ac nec diam.
+                Mauris a viverra ipsum. Phasellus a lorem feugiat, fringilla
+                risus non, dapibus velit. Cum sociis natoque penatibus et magnis
+                dis parturient montes, nascetur ridiculus mus. Maecenas nec leo
+                sit amet tortor tincidunt volutpat. Suspendisse vitae sapien at
+                felis egestas hendrerit eget a mi. Suspendisse consectetur id
+                leo eu luctus. Maecenas nec tellus euismod arcu ultricies
+                rhoncus vel nec enim. Maecenas et turpis enim. Nulla congue
+                ligula vestibulum semper sagittis. Proin tristique fermentum
+                dignissim. Sed eu dictum sem. Curabitur et erat sed erat
+                elementum suscipit. Maecenas eget lectus ligula. Integer
+                pellentesque pellentesque lacus, vel tincidunt nulla aliquet
+                quis. Cras et metus neque. Fusce at convallis ligula, sit amet
+                iaculis libero.
+              </p>
+              <p>
+                Proin aliquet arcu nec nisl facilisis facilisis a ut mi. Nam in
+                lacinia lectus, at mollis leo. Pellentesque ultrices at quam non
+                varius. Mauris hendrerit est erat, vitae lacinia augue vulputate
+                vitae. Nulla id nunc vel erat vehicula tempor. Cras ut eros
+                Pellentesque ornare dictum vestibulum. Cras nisi dui, tristique
+                sed ultrices at, mattis quis velit. Duis imperdiet volutpat
+                commodo. Lorem ipsum dolor sit amet, consectetur adipiscing
+                elit. Curabitur nec nunc eget diam aliquet volutpat et in
+                tortor. Aenean id nunc ac metus tristique varius ac nec diam.
+                Mauris a viverra ipsum. Phasellus a lorem feugiat, fringilla
+                facilisis.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- news -->
+        <section id="news" class="block-info">
+          <h2>Новости</h2>
+
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="i-img"><img src="assets/img/news/1.jpg" /></div>
+
+              <h3>Заголовок новости</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
+                sed augue viverra, tempor urna nec, hendrerit metus. Suspendisse
+                tincidunt et mi eget elementum. Morbi in quam arcu. Curabitur ut
+                augue egestas, feugiat massa quis, malesuada mauris. Duis
+                condimentum, neque at commodo tempus, est augue mollis magna, et
+                tristique enim justo vitae velit inci. Suspendisse tincidunt et
+                mi eget elementum.
+              </p>
+
+              <a class="more" href="post.html">Подробнее</a>
+            </div>
+
+            <div class="col-sm-4">
+              <div class="i-img"><img src="assets/img/news/2.jpg" /></div>
+
+              <h3>Заголовок новости</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
+                sed augue viverra, tempor urna nec, hendrerit metus. Suspendisse
+                tincidunt et mi eget elementum. Morbi in quam arcu. Curabitur ut
+                augue egestas, feugiat massa quis, malesuada mauris. Duis
+                condimentum, neque at commodo tempus, est augue mollis magna, et
+                tristique enim justo vitae velit inci. Suspendisse tincidunt et
+                mi eget elementum.
+              </p>
+
+              <a class="more" href="post.html">Подробнее</a>
+            </div>
+
+            <div class="col-sm-4">
+              <div class="i-img"><img src="assets/img/news/3.jpg" /></div>
+
+              <h3>Заголовок новости</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
+                sed augue viverra, tempor urna nec, hendrerit metus. Suspendisse
+                tincidunt et mi eget elementum. Morbi in quam arcu. Curabitur ut
+                augue egestas, feugiat massa quis, malesuada mauris. Duis
+                condimentum, neque at commodo tempus, est augue mollis magna, et
+                tristique enim justo vitae velit inci. Suspendisse tincidunt et
+                mi eget elementum.
+              </p>
+
+              <a class="more" href="post.html">Подробнее</a>
+            </div>
+          </div>
+        </section>
+
+        <section id="partners">
+          <h2>С нами уже работают</h2>
+
+          <div plugin="slick" data-cnf='{"slidesToShow":4}'>
+            <div><img src="assets/img/partners/1.jpg" /></div>
+            <div><img src="assets/img/partners/2.jpg" /></div>
+            <div><img src="assets/img/partners/3.jpg" /></div>
+            <div><img src="assets/img/partners/4.jpg" /></div>
+            <div><img src="assets/img/partners/2.jpg" /></div>
+            <div><img src="assets/img/partners/4.jpg" /></div>
+          </div>
+        </section>
+      </div>
+
+      <footer>
+        <div>Copyright 2014, сделано в 4Design</div>
+      </footer>
+    </main>
+
+    <link rel="stylesheet" href="assets/css/main.min.css" />
+    <script src="assets/js/scripts.min.js"></script>
+  </body>
+</html>
