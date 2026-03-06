@@ -90,6 +90,15 @@
     "description": "Backend: Nginx, MySQL 5.6, PHP 5.6, ModX\r\nFrontend: AngularJS"
   },
   {
+    "title": "Parasat",
+    "company": "",
+    "link": "https://hicugi.github.io/webmaho/parasat",
+    "image": "images/parasat.jpg",
+    "imageWebp": "images/parasat.webp",
+    "date": "2019-06-06 00:00:00",
+    "description": "Backend: Nginx, MySQL 5.6, PHP 5.6, ModX\r\nFrontend: React"
+  },
+  {
     "title": "Airplane",
     "company": "",
     "link": "https://hicugi.github.io/webmaho/airplane",
