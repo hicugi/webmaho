@@ -1,0 +1,713 @@
+{
+    "longtitle": "QALI Architects",
+    "description": "[СНАЧАЛА] мы делаем Вам дизайн, \r\nВы платите [ПОСЛЕ!]",
+    "introtext": "Закажите \"Проект под ключ\" со скидкой 20% сейчас и получите дизайн кухни в ПОДАРОК!",
+    "link_attributes": "",
+    "logo": "assets/img/logo.svg",
+    "images": [
+        "assets/img/slider/1.jpg",
+        "assets/img/slider/2.1.jpg",
+        "assets/img/slider/2.jpg"
+    ],
+    "test": "asd",
+    "form_message_error": "Что то пошло не так... Свяжитесь с нами [phone]",
+    "form_message_success": "Спасибо! Ваш запрос прошел успешно. Мы вскоре свяжемся с вами",
+    "contacts": {
+        "longtitle": "https://yandex.kz/map-widget/v1/-/CBB1jXVPOD",
+        "description": "СВЯЗАТЬСЯ \r\nС НАМИ",
+        "introtext": "успейте получить бесплатную консультацию",
+        "address": "г. Алматы, пр. Сатпаева 30/1, офис 86",
+        "phone": "+7 (778) 818-89-19",
+        "worktime": "пон.-пт. 9:00-18:00"
+    },
+    "image": "assets/img/logo.svg",
+    "aboutus": {
+        "pagetitle": "КОРОТКО О НАС",
+        "description": "[Ильяс Калиев], \r\nоснователь Qali Design Group, \r\n@qali.ilyas, +77017717719",
+        "introtext": "«Я гарантирую качественное выполнение \r\nВашего проекта, следование оговоренным срокам \r\nи исполнение пожеланий»",
+        "content": "<p>Вас приветствует Студия дизайна и проектирования Q A L I Design Group.</p>\r\n<p>Мы занимаемся дизайном интерьера с 2012 года, реализовали 115 проектов для квартир, жилых домов и коммерческих объектов.</p>\r\n<p>Каждый проект для нас уникальный, каждый клиент особенный, каждое </p>\r\n<p>дизайн-решение – актуальное и тщательно проработанное.</p>",
+        "image": "assets/img/./IMG_9718.jpg",
+        "list": [
+            {
+                "title": "2012-2018 - 6 ЛЕТ ОПЫТА",
+                "description": "",
+                "image": ""
+            },
+            {
+                "title": "115 ПРОЕКТОВ",
+                "description": "",
+                "image": "",
+                "image2": ""
+            }
+        ]
+    },
+    "services": {
+        "pagetitle": "К ВАШИМ УСЛУГАМ",
+        "image": "assets/img/top-view-of-two-graphic-designers-discussing-work-on-desktop-computer-also-on-the-table-lies-notebook-smartphone-headphones_bmmfulyeil_thumbnail-full01.png",
+        "list": [
+            {
+                "title": "Архитектурное \nпроектирование",
+                "description": "Проектирование общественных и жилых зданий",
+                "image": "assets/img/services/circule.svg",
+                "image2": ""
+            },
+            {
+                "title": "Дизайн \nинтерьера",
+                "description": "Разработка проектов дизайна интерьера: квартир, индивидуальных жилых домов, офисов, магазинов и более.",
+                "image": "assets/img/services/painting.svg",
+                "image2": ""
+            },
+            {
+                "title": "3D \nвизуализация\n",
+                "description": "Реалистичные изображения отображающие финальный результат",
+                "image": "assets/img/services/cube.svg",
+                "image2": ""
+            },
+            {
+                "title": "Подбор материалов \nи мебели",
+                "description": "Индивидуальный подбор материалов и мебели под проект с учетом бюджета заказчика",
+                "image": "assets/img/services/sofa.svg",
+                "image2": ""
+            },
+            {
+                "title": "Дизайн \nэкстерьера",
+                "description": "Разработка дизайн проекта наружных фасадов жилых и коммерческих построек",
+                "image": "assets/img/services/house.svg",
+                "image2": ""
+            },
+            {
+                "title": "Комплектация \nпроекта",
+                "description": "Часть проектно сметной документации содержащая в себе перечень используемых материалов",
+                "image": "assets/img/services/checklist.svg",
+                "image2": ""
+            },
+            {
+                "title": "Изготовление \nмебели",
+                "description": "Изготовление корпусной и мягкой мебели для жилых и коммерческих проектов",
+                "image": "assets/img/services/sofa-solo.svg",
+                "image2": ""
+            },
+            {
+                "title": "Авторский \nнадзор",
+                "description": "Контроль соответствия реализации проекта утвержденным дизайн решениям",
+                "image": "assets/img/services/search.svg",
+                "image2": ""
+            }
+        ]
+    },
+    "benefits": {
+        "description": "ЧТО ВЫ ПОЛУЧАЕТЕ..",
+        "image": "",
+        "list": "",
+        "childs": [
+            {
+                "pagetitle": "БЕСПЛАТНЫЙ ВЫЕЗД ДИЗАЙНЕРА",
+                "description": "Наше сотрудничество с клиентами всегда \r\nначинается с шага навстречу. Мы всегда рады \r\nприйти к Вам на помощь в решении задач.",
+                "image": "assets/img/benefits/DSC02032.jpg"
+            },
+            {
+                "pagetitle": "КУХНЯ В ПОДАРОК",
+                "description": "При заказе дизайна интерьера квартиры \r\nВы получаете дизайн кухни в подарок. \r\nВы можете сразу отнять квадратуру кухни от \r\nобщей квадратуры.",
+                "image": "assets/img/benefits/011 КУХНЯ_.jpg"
+            },
+            {
+                "pagetitle": "ДЕТАЛЬНЫЙ ПРОЕКТ",
+                "description": "Мы учитываем каждый угол и каждый отступ. \r\nМы проводим детальный обмер помещений и \r\nвсегда заботимся о реализации проекта.",
+                "image": "assets/img/benefits/landing-2018-3.jpg"
+            },
+            {
+                "pagetitle": "СМЕТА ПОД ВАШ БЮДЖЕТ",
+                "description": "Учитывая самые разные обстоятельства, мы входим в положение каждого клиента. Соответственно при выборе материалов, мебели и дизайн решений мы учитываем допустимый для заказчика бюджет.",
+                "image": "assets/img/benefits/0992828.jpg"
+            },
+            {
+                "pagetitle": "СКИДКИ НА МАТЕРИАЛЫ И МЕБЕЛЬ",
+                "description": "Отфильтровав не качественные товары и услуги мы предлагаем клиентам самые качественные и выгодные решения от партнеров.",
+                "image": "assets/img/benefits/fe0df31ed95c6bfd03120ac2ea0b96ed.jpg"
+            },
+            {
+                "pagetitle": "СТРОИТЕЛЬНЫЕ БРИГАДЫ",
+                "description": "В Вашем распоряжении только высококвалифицированные строительные бригады с опытом работы от 10 лет и выше.",
+                "image": "assets/img/benefits/shutterstock_462881602.jpg"
+            },
+            {
+                "pagetitle": "ПЛАН РЕМОНТНЫХ РАБОТ",
+                "description": "Данная опция позволяет спланировать и контролировать ход строительства и застраховать себя от лишних расходов и расстройств.",
+                "image": "assets/img/benefits/DSC02759.jpg"
+            },
+            {
+                "pagetitle": "ПОДАРОК КАЖДОМУ КЛИЕНТУ",
+                "description": "Мы стремимся построить прочные и долгосрочные отношения с каждым клиентом. Сейчас каждому заказчику мы дарим предмет интерьера в знак благодарности за доверие.",
+                "image": "assets/img/benefits/68e53dc5-39cf-486c-8bcb-99206859aa3e.JPG"
+            },
+            {
+                "pagetitle": "ДАЛЬНЕЙШЕЕ СОПРОВОЖДЕНИЕ",
+                "description": "Каждый клиент является нашим желанным гостем. После завершения проекта мы хотим поддерживать отношения и готовы помогать и консультировать.",
+                "image": "assets/img/DSC02704.jpg"
+            }
+        ]
+    },
+    "consulting": {
+        "pagetitle": "Получите бесплатную консультацию",
+        "longtitle": "Мы против рассылок, и гарантируем конфиденциальность",
+        "image": "assets/img/consulting.jpg"
+    },
+    "portfolio": {
+        "pagetitle": "ПОРТФОЛИО",
+        "longtitle": "",
+        "image": "portfolio/bg.jpg",
+        "childs": [
+            {
+                "images": [
+                    "assets/img/portfolio/Seendicat/0013.jpg",
+                    "assets/img/portfolio/Seendicat/01.jpg",
+                    "assets/img/portfolio/Seendicat/011.jpg",
+                    "assets/img/portfolio/Seendicat/02.jpg",
+                    "assets/img/portfolio/Seendicat/03.jpg",
+                    "assets/img/portfolio/Seendicat/04.jpg",
+                    "assets/img/portfolio/Seendicat/05.jpg",
+                    "assets/img/portfolio/Seendicat/06.jpg",
+                    "assets/img/portfolio/Seendicat/07.jpg",
+                    "assets/img/portfolio/Seendicat/33.jpg",
+                    "assets/img/portfolio/Seendicat/888.jpg",
+                    "assets/img/portfolio/Seendicat/999.jpg",
+                    "assets/img/portfolio/Seendicat/ВВВВ.jpg",
+                    "assets/img/portfolio/Seendicat/уккккк.jpg"
+                ],
+                "pagetitle": "Seendicat Mans Wear",
+                "longtitle": "130 м2 | магазины | 05 июля, 2018",
+                "description": "Бутик мужской одежды в ТРЦ Мерей г. Алматы. В интерьере мы постарались отразить мужскую брутальность посредством материалов и форм.",
+                "image": "assets/img/portfolio/Seendicat/0013.jpg"
+            },
+            {
+                "images": [
+                    "assets/img/portfolio/Izumrud/0001.jpg",
+                    "assets/img/portfolio/Izumrud/001.jpg",
+                    "assets/img/portfolio/Izumrud/1+.jpg",
+                    "assets/img/portfolio/Izumrud/3+.jpg",
+                    "assets/img/portfolio/Izumrud/4+.jpg",
+                    "assets/img/portfolio/Izumrud/6+.jpg",
+                    "assets/img/portfolio/Izumrud/7+.jpg",
+                    "assets/img/portfolio/Izumrud/8+.jpg",
+                    "assets/img/portfolio/Izumrud/9+.jpg",
+                    "assets/img/portfolio/Izumrud/10+.jpg",
+                    "assets/img/portfolio/Izumrud/11+.jpg",
+                    "assets/img/portfolio/Izumrud/12+.jpg",
+                    "assets/img/portfolio/Izumrud/13+.jpg",
+                    "assets/img/portfolio/Izumrud/14+.jpg",
+                    "assets/img/portfolio/Izumrud/15+.jpg"
+                ],
+                "pagetitle": "ЖК ИЗУМРУД",
+                "longtitle": "91 м2 | квартиры | 17 сентября, 2017",
+                "description": "Квартира, площадью 91 кв, была выбрана \r\nзаказчиками по причине свободной планировки \r\nи широких панорамных окон.",
+                "image": "assets/img/portfolio/Izumrud/0001.jpg"
+            },
+            {
+                "images": [
+                    "assets/img/portfolio/Cowork/001.jpg",
+                    "assets/img/portfolio/Cowork/01.jpg",
+                    "assets/img/portfolio/Cowork/011.jpg",
+                    "assets/img/portfolio/Cowork/013.jpg",
+                    "assets/img/portfolio/Cowork/0132.jpg",
+                    "assets/img/portfolio/Cowork/02.jpg",
+                    "assets/img/portfolio/Cowork/03.jpg",
+                    "assets/img/portfolio/Cowork/04.jpg",
+                    "assets/img/portfolio/Cowork/05.jpg",
+                    "assets/img/portfolio/Cowork/06.jpg",
+                    "assets/img/portfolio/Cowork/07.jpg",
+                    "assets/img/portfolio/Cowork/08.jpg",
+                    "assets/img/portfolio/Cowork/09.jpg",
+                    "assets/img/portfolio/Cowork/10.jpg",
+                    "assets/img/portfolio/Cowork/777.jpg",
+                    "assets/img/portfolio/Cowork/l.l.l..jpg",
+                    "assets/img/portfolio/Cowork/аппрс.jpg",
+                    "assets/img/portfolio/Cowork/гг.jpg",
+                    "assets/img/portfolio/Cowork/дд.jpg",
+                    "assets/img/portfolio/Cowork/дддд (1).jpg",
+                    "assets/img/portfolio/Cowork/ке.jpg",
+                    "assets/img/portfolio/Cowork/лл.jpg",
+                    "assets/img/portfolio/Cowork/н6н.jpg",
+                    "assets/img/portfolio/Cowork/о.jpg",
+                    "assets/img/portfolio/Cowork/оо.jpg",
+                    "assets/img/portfolio/Cowork/сас.jpg",
+                    "assets/img/portfolio/Cowork/укук.jpg",
+                    "assets/img/portfolio/Cowork/уу.jpg",
+                    "assets/img/portfolio/Cowork/шш.jpg",
+                    "assets/img/portfolio/Cowork/щшщщ.jpg",
+                    "assets/img/portfolio/Cowork/ыы.jpg"
+                ],
+                "pagetitle": "Work Space Coworking",
+                "longtitle": "700 м2 | офисы | 10 сентября, 2018",
+                "description": "В дизайне данного объекта важной задачой являлась организация продуманного, функционального и яркого пространства. Дизайн выполнен в стиле современных рабочих пространств.",
+                "image": "assets/img/portfolio/Cowork/001.jpg"
+            },
+            {
+                "pagetitle": "2-х комнатная квартира",
+                "longtitle": "67 м2 | квартиры | 15 июня, 2017",
+                "description": "Перед нами стояла задача, в первую очередь вместить максимальное количество функциональных решений, чтобы семья могла проживать в комфорте и просторе.",
+                "image": "assets/img/portfolio/Konkurs/001.jpg"
+            },
+            {
+                "images": [
+                    "assets/img/portfolio/Zero/001.jpg",
+                    "assets/img/portfolio/Zero/01.jpg",
+                    "assets/img/portfolio/Zero/010.jpg",
+                    "assets/img/portfolio/Zero/011.jpg",
+                    "assets/img/portfolio/Zero/013.jpg",
+                    "assets/img/portfolio/Zero/014.jpg",
+                    "assets/img/portfolio/Zero/015.jpg",
+                    "assets/img/portfolio/Zero/016.jpg",
+                    "assets/img/portfolio/Zero/02.jpg",
+                    "assets/img/portfolio/Zero/03.jpg",
+                    "assets/img/portfolio/Zero/04.jpg",
+                    "assets/img/portfolio/Zero/05.jpg",
+                    "assets/img/portfolio/Zero/07.jpg",
+                    "assets/img/portfolio/Zero/08.jpg",
+                    "assets/img/portfolio/Zero/09.jpg"
+                ],
+                "pagetitle": "ZERO Boutique ТРЦ Mega Park",
+                "longtitle": "700 м2 | дома | 5 октября, 2018",
+                "description": "В дизайне интерьера магазина мы постарались в первую очередь продумать комфортное прибывание покупателя и создать яркий и запоминающийся дизайн!",
+                "image": "assets/img/portfolio/Zero/001.jpg"
+            },
+            {
+                "images": [
+                    "assets/img/portfolio/Shahristan/001.jpg",
+                    "assets/img/portfolio/Shahristan/010.jpg",
+                    "assets/img/portfolio/Shahristan/011.jpg",
+                    "assets/img/portfolio/Shahristan/012.jpg",
+                    "assets/img/portfolio/Shahristan/013.jpg",
+                    "assets/img/portfolio/Shahristan/014.jpg",
+                    "assets/img/portfolio/Shahristan/015.jpg",
+                    "assets/img/portfolio/Shahristan/016.jpg",
+                    "assets/img/portfolio/Shahristan/017.jpg",
+                    "assets/img/portfolio/Shahristan/018.jpg",
+                    "assets/img/portfolio/Shahristan/019.jpg",
+                    "assets/img/portfolio/Shahristan/02.jpg",
+                    "assets/img/portfolio/Shahristan/020.jpg",
+                    "assets/img/portfolio/Shahristan/021.jpg",
+                    "assets/img/portfolio/Shahristan/022.jpg",
+                    "assets/img/portfolio/Shahristan/023.jpg",
+                    "assets/img/portfolio/Shahristan/024.jpg",
+                    "assets/img/portfolio/Shahristan/025.jpg",
+                    "assets/img/portfolio/Shahristan/026.jpg",
+                    "assets/img/portfolio/Shahristan/027.jpg",
+                    "assets/img/portfolio/Shahristan/028.jpg",
+                    "assets/img/portfolio/Shahristan/029.jpg",
+                    "assets/img/portfolio/Shahristan/030.jpg",
+                    "assets/img/portfolio/Shahristan/04.jpg",
+                    "assets/img/portfolio/Shahristan/05.jpg",
+                    "assets/img/portfolio/Shahristan/06.jpg",
+                    "assets/img/portfolio/Shahristan/07.jpg",
+                    "assets/img/portfolio/Shahristan/08.jpg",
+                    "assets/img/portfolio/Shahristan/09.jpg",
+                    "assets/img/portfolio/Shahristan/5.jpg",
+                    "assets/img/portfolio/Shahristan/6.jpg",
+                    "assets/img/portfolio/Shahristan/7.jpg",
+                    "assets/img/portfolio/Shahristan/й.jpg",
+                    "assets/img/portfolio/Shahristan/кк.jpg",
+                    "assets/img/portfolio/Shahristan/уу.jpg",
+                    "assets/img/portfolio/Shahristan/ц.jpg"
+                ],
+                "pagetitle": "ЖК Шахристан",
+                "longtitle": "103 м2 | квартиры | 4 сентября, 2017",
+                "description": "В данном объекте заказчик хотел воплотить утонченный, стильный и сдержанный дизайн. Мы постарались совместить стильность с яркими красками и лаконичность форм и отделки.",
+                "image": "assets/img/portfolio/Shahristan/001.jpg"
+            },
+            {
+                "images": [
+                    "assets/img/portfolio/Dom1/001.jpg",
+                    "assets/img/portfolio/Dom1/01+.jpg",
+                    "assets/img/portfolio/Dom1/010.jpg",
+                    "assets/img/portfolio/Dom1/02+.jpg",
+                    "assets/img/portfolio/Dom1/03+.jpg",
+                    "assets/img/portfolio/Dom1/04+.jpg",
+                    "assets/img/portfolio/Dom1/05+.jpg",
+                    "assets/img/portfolio/Dom1/06+.jpg",
+                    "assets/img/portfolio/Dom1/07.jpg",
+                    "assets/img/portfolio/Dom1/08.jpg",
+                    "assets/img/portfolio/Dom1/08_Interactive LightMix.jpg",
+                    "assets/img/portfolio/Dom1/1.1.jpg",
+                    "assets/img/portfolio/Dom1/1.jpg",
+                    "assets/img/portfolio/Dom1/2.2.jpg",
+                    "assets/img/portfolio/Dom1/2.jpg",
+                    "assets/img/portfolio/Dom1/3.3.jpg",
+                    "assets/img/portfolio/Dom1/3.jpg",
+                    "assets/img/portfolio/Dom1/3_Interactive LightMix.jpg",
+                    "assets/img/portfolio/Dom1/5.jpg",
+                    "assets/img/portfolio/Dom1/6.jpg",
+                    "assets/img/portfolio/Dom1/21.jpg",
+                    "assets/img/portfolio/Dom1/66.jpg",
+                    "assets/img/portfolio/Dom1/ККК.jpg",
+                    "assets/img/portfolio/Dom1/МПММ.jpg",
+                    "assets/img/portfolio/Dom1/РР.jpg",
+                    "assets/img/portfolio/Dom1/РРР.jpg",
+                    "assets/img/portfolio/Dom1/ЫЫ.jpg"
+                ],
+                "pagetitle": "Индивидуальный жилой дом",
+                "longtitle": "240 м2 | дома | 26 мая, 2018",
+                "description": "Натуральные текстуры, светлые тона, много света и открытого пространства. Все это разбавленно умеренным количеством металла благородных оттенков.",
+                "image": "assets/img/portfolio/Dom1/001.jpg"
+            },
+            {
+                "images": [
+                    "assets/img/portfolio/chzhan/0001.jpg",
+                    "assets/img/portfolio/chzhan/001.jpg",
+                    "assets/img/portfolio/chzhan/0010.jpg",
+                    "assets/img/portfolio/chzhan/0011.jpg",
+                    "assets/img/portfolio/chzhan/0012.jpg",
+                    "assets/img/portfolio/chzhan/0013.jpg",
+                    "assets/img/portfolio/chzhan/002.jpg",
+                    "assets/img/portfolio/chzhan/003.jpg",
+                    "assets/img/portfolio/chzhan/004.jpg",
+                    "assets/img/portfolio/chzhan/005.jpg",
+                    "assets/img/portfolio/chzhan/006.jpg",
+                    "assets/img/portfolio/chzhan/007.jpg",
+                    "assets/img/portfolio/chzhan/008.jpg",
+                    "assets/img/portfolio/chzhan/009.jpg",
+                    "assets/img/portfolio/chzhan/015.jpg",
+                    "assets/img/portfolio/chzhan/017.jpg",
+                    "assets/img/portfolio/chzhan/018.jpg",
+                    "assets/img/portfolio/chzhan/019.jpg",
+                    "assets/img/portfolio/chzhan/020.jpg",
+                    "assets/img/portfolio/chzhan/021.jpg",
+                    "assets/img/portfolio/chzhan/9_1.jpg",
+                    "assets/img/portfolio/chzhan/9_3.png"
+                ],
+                "pagetitle": "3-х комнатная квартира",
+                "longtitle": "85 м2 | квартиры | 18 июля, 2017",
+                "description": "Проект содержит в себе минималистичные решения в скандинавском стиле преимущественно. При этом общая гамма создает ощущение уюта и тепла.",
+                "image": "assets/img/portfolio/chzhan/0001.jpg"
+            },
+            {
+                "images": [
+                    "assets/img/portfolio/Aizhan/001.jpg",
+                    "assets/img/portfolio/Aizhan/01.jpg",
+                    "assets/img/portfolio/Aizhan/012 Пприхожая.jpg",
+                    "assets/img/portfolio/Aizhan/1.jpg",
+                    "assets/img/portfolio/Aizhan/2.jpg",
+                    "assets/img/portfolio/Aizhan/3.jpg",
+                    "assets/img/portfolio/Aizhan/4.jpg",
+                    "assets/img/portfolio/Aizhan/5.jpg",
+                    "assets/img/portfolio/Aizhan/6.jpg",
+                    "assets/img/portfolio/Aizhan/7.jpg",
+                    "assets/img/portfolio/Aizhan/8.jpg",
+                    "assets/img/portfolio/Aizhan/9.jpg",
+                    "assets/img/portfolio/Aizhan/10.jpg",
+                    "assets/img/portfolio/Aizhan/12.jpg",
+                    "assets/img/portfolio/Aizhan/14.jpg",
+                    "assets/img/portfolio/Aizhan/15.jpg",
+                    "assets/img/portfolio/Aizhan/16.jpg",
+                    "assets/img/portfolio/Aizhan/17.jpg",
+                    "assets/img/portfolio/Aizhan/19.jpg",
+                    "assets/img/portfolio/Aizhan/20.jpg",
+                    "assets/img/portfolio/Aizhan/21.jpg",
+                    "assets/img/portfolio/Aizhan/22.jpg",
+                    "assets/img/portfolio/Aizhan/23.jpg",
+                    "assets/img/portfolio/Aizhan/25.jpg",
+                    "assets/img/portfolio/Aizhan/27+.jpg",
+                    "assets/img/portfolio/Aizhan/27.jpg",
+                    "assets/img/portfolio/Aizhan/28.jpg",
+                    "assets/img/portfolio/Aizhan/29.jpg",
+                    "assets/img/portfolio/Aizhan/aecfaef_Interactive LightMix.jpg"
+                ],
+                "pagetitle": "Индивидуальный жилой дом",
+                "longtitle": "230 м2 | жилые дома | 11 июня, 2017",
+                "description": "Задачей дизайнеров в данном проекте дома являлось продумать и разработать индивидуальный дизайн для каждой комнаты. При это пространство каждой комнаты гармонирует с соседними.",
+                "image": "assets/img/portfolio/Aizhan/001.jpg"
+            }
+        ]
+    },
+    "projects": {
+        "pagetitle": "ПРИМЕР ПРОЕКТА",
+        "longtitle": "#dcdcdc",
+        "list": [
+            {
+                "title": "",
+                "description": "",
+                "image": "assets/img/project/1.jpg",
+                "image2": "assets/img/project/1.jpg"
+            },
+            {
+                "title": "",
+                "description": "",
+                "image": "assets/img/project/2.jpg",
+                "image2": "assets/img/project/2.jpg"
+            },
+            {
+                "title": "",
+                "description": "",
+                "image": "assets/img/project/3.jpg",
+                "image2": "assets/img/project/3.jpg"
+            },
+            {
+                "title": "",
+                "description": "",
+                "image": "assets/img/project/4.jpg",
+                "image2": "assets/img/project/4.jpg"
+            },
+            {
+                "title": "",
+                "description": "",
+                "image": "assets/img/project/5.jpg",
+                "image2": "assets/img/project/5.jpg"
+            },
+            {
+                "title": "",
+                "description": "",
+                "image": "assets/img/project/6.jpg",
+                "image2": "assets/img/project/6.jpg"
+            },
+            {
+                "title": "",
+                "description": "",
+                "image": "assets/img/project/7.jpg",
+                "image2": "assets/img/project/7.jpg"
+            },
+            {
+                "title": "",
+                "description": "",
+                "image": "assets/img/project/8.jpg",
+                "image2": "assets/img/project/8.jpg"
+            },
+            {
+                "title": "",
+                "description": "",
+                "image": "assets/img/project/9.jpg",
+                "image2": "assets/img/project/9.jpg"
+            },
+            {
+                "title": "",
+                "description": "",
+                "image": "assets/img/project/10.jpg",
+                "image2": "assets/img/project/10.jpg"
+            },
+            {
+                "title": "",
+                "description": "",
+                "image": "assets/img/project/11.jpg",
+                "image2": "assets/img/project/11.jpg"
+            },
+            {
+                "title": "",
+                "description": "",
+                "image": "assets/img/project/12.jpg",
+                "image2": "assets/img/project/12.jpg"
+            },
+            {
+                "title": "",
+                "description": "",
+                "image": "assets/img/project/13.jpg",
+                "image2": "assets/img/project/13.jpg"
+            },
+            {
+                "title": "",
+                "description": "",
+                "image": "assets/img/project/14.jpg",
+                "image2": "assets/img/project/14.jpg"
+            },
+            {
+                "title": "",
+                "description": "",
+                "image": "assets/img/project/15.jpg",
+                "image2": "assets/img/project/15.jpg"
+            },
+            {
+                "title": "",
+                "description": "",
+                "image": "assets/img/project/16.jpg",
+                "image2": "assets/img/project/16.jpg"
+            },
+            {
+                "title": "",
+                "description": "",
+                "image": "assets/img/project/17.jpg",
+                "image2": "assets/img/project/17.jpg"
+            },
+            {
+                "title": "",
+                "description": "",
+                "image": "assets/img/project/18.jpg",
+                "image2": "assets/img/project/18.jpg"
+            },
+            {
+                "title": "",
+                "description": "",
+                "image": "assets/img/project/19.jpg",
+                "image2": "assets/img/project/19.jpg"
+            },
+            {
+                "title": "",
+                "description": "",
+                "image": "assets/img/project/20.jpg",
+                "image2": "assets/img/project/20.jpg"
+            }
+        ],
+        "images": [
+            "assets/img/project/1.jpg",
+            "assets/img/project/2.jpg",
+            "assets/img/project/3.jpg",
+            "assets/img/project/4.jpg",
+            "assets/img/project/5.jpg",
+            "assets/img/project/6.jpg",
+            "assets/img/project/7.jpg",
+            "assets/img/project/8.jpg",
+            "assets/img/project/9.jpg",
+            "assets/img/project/10.jpg",
+            "assets/img/project/11.jpg",
+            "assets/img/project/12.jpg",
+            "assets/img/project/13.jpg",
+            "assets/img/project/14.jpg",
+            "assets/img/project/15.jpg",
+            "assets/img/project/16.jpg",
+            "assets/img/project/17.jpg",
+            "assets/img/project/18.jpg",
+            "assets/img/project/19.jpg",
+            "assets/img/project/20.jpg"
+        ]
+    },
+    "prices": false,
+    "calculate": {
+        "pagetitle": "Рассчитайте стоимость и сроки проекта",
+        "longtitle": "",
+        "image": "assets/img/calculate.jpg"
+    },
+    "proccess": {
+        "pagetitle": "ПРОЦЕСС РАБОТЫ",
+        "list": [
+            {
+                "title": "",
+                "description": "Бесплатный \nэтап",
+                "image": "assets/img/proccess/1.svg"
+            },
+            {
+                "title": "",
+                "description": "Заключение \nдоговора",
+                "image": "assets/img/proccess/2.svg"
+            },
+            {
+                "title": "",
+                "description": "Интервью",
+                "image": "assets/img/proccess/3.svg"
+            },
+            {
+                "title": "",
+                "description": "Выезд на замер",
+                "image": "assets/img/proccess/4.svg"
+            },
+            {
+                "title": "",
+                "description": "Соглосование проектных \nрешений",
+                "image": "assets/img/proccess/8.svg",
+                "image2": ""
+            },
+            {
+                "title": "",
+                "description": "Разработка эскизного \nпроекта",
+                "image": "assets/img/proccess/7.svg"
+            },
+            {
+                "title": "",
+                "description": "Составление плана \nпроекта",
+                "image": "assets/img/proccess/6.svg"
+            },
+            {
+                "title": "",
+                "description": "Детальный анализ \nпомещений",
+                "image": "assets/img/proccess/5.svg"
+            },
+            {
+                "title": "",
+                "description": "Внесение корректировок \nи дополнений",
+                "image": "assets/img/proccess/9.svg"
+            },
+            {
+                "title": "",
+                "description": "Разработка рабочего \nпроекта",
+                "image": "assets/img/proccess/10.svg"
+            },
+            {
+                "title": "",
+                "description": "Контроль качества",
+                "image": "assets/img/proccess/11.svg"
+            },
+            {
+                "title": "",
+                "description": "Презентация финального \nпроекта",
+                "image": "assets/img/proccess/12.svg"
+            },
+            {
+                "title": "",
+                "description": "Авторский надзор",
+                "image": "assets/img/proccess/16.svg"
+            },
+            {
+                "title": "",
+                "description": "Сдача проекта \nв альбоме",
+                "image": "assets/img/proccess/15.svg"
+            },
+            {
+                "title": "",
+                "description": "Финальные \nкорректировки",
+                "image": "assets/img/proccess/14.svg"
+            },
+            {
+                "title": "",
+                "description": "Утверждение проекта",
+                "image": "assets/img/proccess/13.svg"
+            }
+        ]
+    },
+    "bonuses": false,
+    "designer": {
+        "pagetitle": "Вызовите дизайнера на объект",
+        "longtitle": "",
+        "image": "assets/img/calculate.jpg"
+    },
+    "partners": {
+        "pagetitle": "Партнеры",
+        "image": "assets/img/partners/bg.png",
+        "list": [
+            {
+                "title": "Alina",
+                "description": "http://alina.kz",
+                "image": "assets/img/partners/alina.png"
+            },
+            {
+                "title": "Desiderio",
+                "description": "http://desiderio.kz",
+                "image": "assets/img/partners/desiderio.png"
+            },
+            {
+                "title": "Eglo",
+                "description": "http://eglo.kz",
+                "image": "assets/img/partners/eglo.png"
+            },
+            {
+                "title": "Happy home",
+                "description": "http://happy-home.kz",
+                "image": "assets/img/partners/happy-home.png"
+            },
+            {
+                "title": "Kerama",
+                "description": "http://kerama.kz",
+                "image": "assets/img/partners/kerama.png"
+            },
+            {
+                "title": "Okna",
+                "description": "http://okna.kz",
+                "image": "assets/img/partners/okna.png"
+            },
+            {
+                "title": "Palatin",
+                "description": "http://palatin.kz",
+                "image": "assets/img/partners/palatin.png"
+            },
+            {
+                "title": "Villa nova",
+                "description": "http://villa-nova.kz",
+                "image": "assets/img/partners/villa-nova.png"
+            }
+        ]
+    }
+}
