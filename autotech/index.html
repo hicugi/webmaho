@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <script>
+    const BASE_PATH = (() => {
+      const KEY = 'autotech';
+      let val = location.pathname;
+      const idx = val.indexOf(KEY);
+
+      if (idx === -1) {
+        return '';
+      }
+
+      return val.substring(0, idx + KEY.length);
+    })();
+
+    const BASE_FULL_PATH = location.origin + BASE_PATH;
+    Object.assign(window, { BASE_PATH, BASE_FULL_PATH });
+
+    (() => {
+      const base = document.createElement('BASE');
+      base.href = BASE_FULL_PATH + '/';
+      document.querySelector('head').appendChild(base);
+    })();
+
+    setTimeout(() => {
+      document.querySelectorAll('a[href="/"]').forEach((elm) => {
+        elm.href = BASE_PATH;
+      });
+    }, 300);
+  </script>
+  <meta charset="utf-8">
+
+  <title>Autotech</title>
+  <meta name="description" content="">
+  <!-- <meta property="og:image" content="path/to/image.jpg"> -->
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon"> -->
+
+  <!-- Chrome, Firefox OS and Opera -->
+  <meta name="theme-color" content="#000">
+  <!-- Windows Phone -->
+  <meta name="msapplication-navbutton-color" content="#000">
+  <!-- iOS Safari -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="#000">
+
+  <style>body { opacity: 0; overflow-x: hidden; } html { background-color: #fff; }</style>
+</head>
+<body>
+
+  <!-- mobile -->
+  <div class="hidden-lg-up">
+
+    <div class="container">
+      <a class="nav-btn static ico" onclick="app.nav(this)"><i></i></a>
+    </div>
+
+    <nav class="nav">
+
+      <div class="container">
+        <a class="nav-btn static active" onclick="app.nav( $('.nav-btn:first')[0] )"><i></i></a>
+      </div>
+      <ul>
+        <li><a href="aboutus.html">О компании</a></li>
+        <li><a href="catalog.html">Продукция</a></li>
+        <li><a href="suppliers.html">Поставщики</a></li>
+        <li><a href="contacts.html">Контакты</a></li>
+      </ul>
+
+      <ul>
+        <li><a href="tel:+77021111187">8 702 111 11-87</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- header -->
+  <header>
+    <div class="container">
+
+      <!-- mobile search -->
+      <div class="hidden-lg-up">
+
+        <a class="ico ico-search" onclick="app.class(this)" style="background-image:url(assets/css/imgs/search.png)"></a>
+
+        <form action="search" class="search">
+          <input type="text" name="s" placeholder="Поиск по сайту"/>
+          <button type="submit"></button>
+        </form>
+      </div>
+
+      <div class="row">
+
+        <!-- logo -->
+        <div class="col-lg-4 col-xl-3">
+          <a href="/" class="logo">
+            <i class="img-bg" style="background-image:url(assets/img/logo.png)"></i>
+          </a>
+        </div>
+
+        <!-- phone -->
+        <div class="col-4 col-lg-3 hidden-md-down">
+          <div class="block-ico">
+
+            <i class="ico" style="background-image:url(assets/css/imgs/phone.png)"></i>
+
+            <div>
+              <a href="tel:+71234567890">+7 123 456 78 90</a>
+              <br><a href="tel:+71234567890">+7 123 456 78 90<span class="hidden-lg-down"> (WhatsApp)</span></a>
+              <br><a class="link" onclick="app.modal('modal-callback' ,'Заказать звонок')">Заказать звонок</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- location -->
+        <div class="col-sm-3 hidden-md-down">
+          <div class="block-ico">
+
+            <i class="ico" style="background-image:url(assets/css/imgs/location.png)"></i>
+
+            <div>
+              <a>Алматы, ул. Республики, 123</a>
+              <br><a class="link" onclick="app.modal('modal-map')">Схема проезда</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- skype & socn -->
+        <div class="col-3 col-lg-2 col-xl-3">
+
+          <a class="ico hidden-md-down" href="http://facebook.com" style="background-image:url(assets/css/imgs/facebook.png)"></a>
+          <a class="ico hidden-md-down" href="http://instagram.com" style="background-image:url(assets/css/imgs/instagram.png)"></a>
+
+          <div class="block-ico hidden-lg-down">
+            <i class="ico" style="background-image:url(assets/css/imgs/skype.png)"></i>
+            <a href="tel:autotech_kz">autotech_kz</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu hidden-md-down">
+        <div class="row">
+
+          <div class="col-9">
+            <ul>
+              <li><a href="aboutus.html">О компании</a></li>
+              <li><a href="catalog.html">Продукция</a></li>
+              <li><a href="suppliers.html">Поставщики</a></li>
+              <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+          </div>
+
+          <div class="col-3">
+            <form action="search" class="search">
+              <input type="text" name="s" placeholder="Поиск по сайту"/>
+              <button type="submit"></button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- main -->
+  <main>
+
+    <!-- slider -->
+    <section id="slider" class="slider1" slider>
+      <div class="container">
+
+        <a class="arrow arrow-prev" onclick="app.slider.slide(this ,'prev')"></a>
+        <a class="arrow arrow-next" onclick="app.slider.slide(this ,'next')"></a>
+
+        <ul class="slider1-images">
+
+          <li>
+            <i class="img-bg" style="background-image:url(assets/img/slider/1.jpg)"></i>
+            <div class="d-info">
+              <h3>лидер отрасли <br>5 лет подряд</h3>
+              <p>Мы - самый крупный поставщик <br>автомобильных масел, спецжидкостей и <br>фильтров в Казахстане!</p>
+              <div class="d-btn"><a href="">узнать подробнее</a></div>
+            </div>
+          </li>
+
+          <li>
+            <i class="img-bg" style="background-image:url(assets/img/slider/1.jpg)"></i>
+            <div class="d-info">
+              <h3>лидер отрасли <br>5 лет подряд</h3>
+              <p>Мы - самый крупный поставщик <br>автомобильных масел, спецжидкостей и <br>фильтров в Казахстане!</p>
+              <div class="d-btn"><a href="">узнать подробнее</a></div>
+            </div>
+          </li>
+
+          <li>
+            <i class="img-bg" style="background-image:url(assets/img/slider/1.jpg)"></i>
+            <div class="d-info">
+              <h3>лидер отрасли <br>5 лет подряд</h3>
+              <p>Мы - самый крупный поставщик <br>автомобильных масел, спецжидкостей и <br>фильтров в Казахстане!</p>
+              <div class="d-btn"><a href="">узнать подробнее</a></div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- banner -->
+    <section id="banner">
+      <div class="container">
+        <div class="banner">
+          <i class="img-bg" style="background-image:url(assets/img/banner/kixx.jpg)"></i>
+          <h2 class="d-title" style="background-image:url(assets/img/banner/title.png)">Супер-скидки</h2>
+          <h3 class="d-subtitle">На всю линейку масел KIXX</h3>
+          <p class="d-date">Торопитесь, только до 12 декабря</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- category -->
+    <section id="category">
+
+      <!-- title -->
+      <div class="container">
+        <h2 class="secn-title">Категории товаров</h2>
+        <h3 class="secn-subtitle">Широкий ассортимент от известных производителей</h3>
+      </div>
+
+      <div class="category">
+
+        <i class="img-bg" style="background-image:url(assets/img/category/home.jpg)"></i>
+
+        <div class="container">
+          <ul>
+
+            <li>
+              <a href="catalog_category.html"></a>
+              <i style="background-image:url(assets/img/category/1.png)"></i>
+              <p>масла для бензиновых <br>двигателей</p>
+            </li>
+
+            <li>
+              <a href="catalog_category.html"></a>
+              <i style="background-image:url(assets/img/category/2.png)"></i>
+              <p>масла для дизельных <br>двигателей <br>и спецтехники</p>
+            </li>
+
+            <li>
+              <a href="catalog_category.html"></a>
+              <i style="background-image:url(assets/img/category/3.png)"></i>
+              <p>масла <br>для мотоциклов</p>
+            </li>
+
+            <li>
+              <a href="catalog_category.html"></a>
+              <i style="background-image:url(assets/img/category/4.png)"></i>
+              <p>трансмиссионные <br>масла для АКПП</p>
+            </li>
+
+            <li>
+              <a href="catalog_category.html"></a>
+              <i style="background-image:url(assets/img/category/5.png)"></i>
+              <p>трансмиссионные <br>масла для МКПП</p>
+            </li>
+
+            <li>
+              <a href="catalog_category.html"></a>
+              <i style="background-image:url(assets/img/category/6.png)"></i>
+              <p>индустриальные масла <br>и спецжидкости</p>
+            </li>
+
+            <li>
+              <a href="catalog_category.html"></a>
+              <i style="background-image:url(assets/img/category/7.png)"></i>
+              <p>пластичные смазки</p>
+            </li>
+
+            <li>
+              <a href="catalog_category.html"></a>
+              <i style="background-image:url(assets/img/category/8.png)"></i>
+              <p>охлаждающие <br>жидкости</p>
+            </li>
+
+            <li>
+              <a href="catalog_category.html"></a>
+              <i style="background-image:url(assets/img/category/9.png)"></i>
+              <p>фильтры</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- partners -->
+    <section id="partners">
+      <div class="container">
+
+        <h2 class="secn-title">Наши партнеры</h2>
+        <h3 class="secn-subtitle">Лучшие бренды мирового масштаба</h3>
+
+        <ul class="partners">
+
+          <li>
+            <div class="d-block">
+
+              <!-- header -->
+              <div class="d-header">
+                <img src="assets/img/partners/gs-oil.png"/>
+              </div>
+
+              <!-- body -->
+              <div class="d-body">
+
+                <!-- video -->
+                <div class="video" style="background-image:url(assets/img/partners/1.jpg)" onclick="app.video(this,'https://www.youtube.com/embed/GigOIMeKohg')"></div>
+
+                <!-- info -->
+                <div class="d-info">
+                  <p>Моторное масло Kixx производства GS Caltex является одним из мировых лидеров рынка масел и смазок, а также лидером по объемам продаж смазочных материалов в Южной Корее.</p>
+                </div>
+
+                <!-- link -->
+                <div class="d-link">
+                  <a href="http://www.gsgcorp.com">www.gsgcorp.com</a>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="d-block">
+
+              <!-- header -->
+              <div class="d-header">
+                <img src="assets/img/partners/millard.png"/>
+              </div>
+
+              <!-- body -->
+              <div class="d-body">
+
+                <!-- video -->
+                <div class="video" style="background-image:url(assets/img/partners/2.jpg)" onclick="app.video(this,'https://www.youtube.com/embed/GigOIMeKohg')"></div>
+
+                <!-- info -->
+                <div class="d-info">
+                  <p>Millard is the European brand for vehicle and machinery filters. More than 20 years of experience in filters and a young spirit make it possible to bring remarkable changes to the</p>
+                </div>
+
+                <!-- link -->
+                <div class="d-link">
+                  <a href="http://millardfilters.com">millardfilters.com</a>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="d-block">
+
+              <!-- header -->
+              <div class="d-header">
+                <img src="assets/img/partners/yeedol.png"/>
+              </div>
+
+              <!-- body -->
+              <div class="d-body">
+
+                <!-- video -->
+                <div class="video" style="background-image:url(assets/img/partners/3.jpg)" onclick="app.video(this,'https://www.youtube.com/embed/GigOIMeKohg')"></div>
+
+                <!-- info -->
+                <div class="d-info">
+                  <p>From a humble beginning, the Veedol brand was chosen in 1914 by professionals for the world’s first mass produced car, the Model T-Ford. As years passed by, acceptance and applications grew which lead to it being chosen for automobile, aviation and industrial</p>
+                </div>
+
+                <!-- link -->
+                <div class="d-link">
+                  <a href="http://veedolcom.uk">veedolcom.uk</a>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- reviews -->
+    <section id="reviews">
+
+      <div class="row1">
+        <div class="container">
+
+          <h2 class="secn-title">Наши клиенты и отзывы</h2>
+          <h3 class="secn-subtitle">Нам доверяют более 30 компаний</h3>
+
+          <div class="slider2" plugin="slick" data-dots="false" data-slidesToShow="3" data-slidesToScroll="3" data-responsive='[[992,{"slidesToShow":2,"slidesToScroll":2}],[768,{"slidesToShow":1,"slidesToScroll":1}]]'>
+
+            <div class="slider2-item">
+              <h4>Виталий георгиев</h4>
+              <p class="d-subtitle">Компания “Oil Service”</p>
+              <p class="d-desc">Моторные масла — масла, применяемые для смазывания поршневых и роторных двигателей внутреннего сгорания. <br>Все современные моторные масла состоят из базовых масел и улучшающих</p>
+            </div>
+
+            <div class="slider2-item">
+              <h4>Вероника кудайбергенова</h4>
+              <p class="d-subtitle">Компания “Замена масла”</p>
+              <p class="d-desc">В качестве базовых масел обычно используют дистиллятные и остаточные компоненты различной вязкости (углеводороды), их смеси, углеводородные</p>
+            </div>
+
+            <div class="slider2-item">
+              <h4>Станислав</h4>
+              <p class="d-subtitle">Компания “Oil Service”</p>
+              <p class="d-desc">Моторные масла — масла, применяемые для смазывания поршневых и роторных двигателей внутреннего сгорания.</p>
+            </div>
+
+            <div class="slider2-item">
+              <h4>Станислав</h4>
+              <p class="d-subtitle">Компания “Oil Service”</p>
+              <p class="d-desc">Моторные масла — масла, применяемые для смазывания поршневых и роторных двигателей внутреннего сгорания.</p>
+            </div>
+
+            <div class="slider2-item">
+              <h4>Станислав</h4>
+              <p class="d-subtitle">Компания “Oil Service”</p>
+              <p class="d-desc">Моторные масла — масла, применяемые для смазывания поршневых и роторных двигателей внутреннего сгорания.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="clients" plugin="slick" data-cnf='{"arrows":false,"autoplay":true,"autoplaySpeed":0,"centerMode":true,"infinite":true,"initialSlide":1,"dots":false,"slidesToScroll":1,"cssEase":"linear","speed":3000,"variableWidth":true}'>
+        <div class="d-item"><img src="assets/img/clients/1.jpg"/></div>
+        <div class="d-item"><img src="assets/img/clients/2.jpg"/></div>
+        <div class="d-item"><img src="assets/img/clients/3.jpg"/></div>
+        <div class="d-item"><img src="assets/img/clients/4.jpg"/></div>
+        <div class="d-item"><img src="assets/img/clients/5.jpg"/></div>
+        <div class="d-item"><img src="assets/img/clients/6.jpg"/></div>
+        <div class="d-item"><img src="assets/img/clients/7.jpg"/></div>
+        <div class="d-item"><img src="assets/img/clients/8.jpg"/></div>
+        <div class="d-item"><img src="assets/img/clients/9.jpg"/></div>
+        <div class="d-item"><img src="assets/img/clients/10.jpg"/></div>
+      </div>
+    </section>
+
+    <!-- certificate -->
+    <section id="certificate">
+
+      <i class="img-bg" style="background-image:url(assets/img/certificate/bg.jpg)"></i>
+
+      <div class="container">
+
+        <h2 class="secn-title">Сертификаты</h2>
+
+        <div class="slider3" plugin="slick" data-dots="false" data-slidesToShow="5" data-slidesToScroll="5" data-responsive='[[1200,{"slidesToShow":3,"slidesToScroll":3}],[768,{"slidesToShow":1,"slidesToScroll":1}]]'>
+          <div class="d-item" onclick="app.sliderTo(this)"><img src="assets/img/certificate/1.jpg" alt=""></div>
+          <div class="d-item" onclick="app.sliderTo(this)"><img src="assets/img/certificate/2.jpg" alt=""></div>
+          <div class="d-item" onclick="app.sliderTo(this)"><img src="assets/img/certificate/3.jpg" alt=""></div>
+          <div class="d-item" onclick="app.sliderTo(this)"><img src="assets/img/certificate/4.jpg" alt=""></div>
+          <div class="d-item" onclick="app.sliderTo(this)"><img src="assets/img/certificate/5.jpg" alt=""></div>
+          <div class="d-item" onclick="app.sliderTo(this)"><img src="assets/img/certificate/6.jpg" alt=""></div>
+          <div class="d-item" onclick="app.sliderTo(this)"><img src="assets/img/certificate/7.jpg" alt=""></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- dealer -->
+    <section id="dealer">
+
+      <div class="map"><iframe></iframe></div>
+
+      <div class="container">
+        <div class="row">
+
+          <!-- title & city -->
+          <div class="col-sm-5 col-md-6 col-xl-7">
+
+            <!-- title -->
+            <h2 class="secn-title">Где купить?</h2>
+
+            <!-- city -->
+            <div class="select-city">
+              <ul onclick="app.class('#dealer .select-city ul')">
+                <li onclick="app.selectCity(this)" data-value='[ 43.228293 ,76.899614 ,[ [ "Маркер 1" ,43.228225 ,76.898933 ] ,[ "Маркер 2" ,43.229 ,76.899 ] ,[ "Маркер 3" ,43.227 ,76.897 ]] ]'>Алматы</option>
+                <li onclick="app.selectCity(this)" data-value='[ 43.229 ,76.899 ,[ [ "Маркер 1" ,43.228225 ,76.898933 ] ,[ "Маркер 2" ,43.229 ,76.899 ]] ]'>Астана</option>
+                <li onclick="app.selectCity(this)" data-value='[ 43.229 ,76.899 ,[ [ "Маркер 1" ,43.228225 ,76.898933 ] ,[ "Маркер 2" ,43.229 ,76.899 ]] ]'>Караганды</option>
+                <li onclick="app.selectCity(this)" data-value='[ 43.229 ,76.899 ,[ [ "Маркер 1" ,43.228225 ,76.898933 ] ,[ "Маркер 2" ,43.229 ,76.899 ]] ]'>Кызылорда</option>
+                <li onclick="app.selectCity(this)" data-value='[ 43.229 ,76.899 ,[ [ "Маркер 1" ,43.228225 ,76.898933 ] ,[ "Маркер 2" ,43.229 ,76.899 ]] ]'>Шымкент</option>
+                <li onclick="app.selectCity(this)" data-value='[ 43.229 ,76.899 ,[ [ "Маркер 1" ,43.228225 ,76.898933 ] ,[ "Маркер 2" ,43.229 ,76.899 ]] ]'>Тараз</option>
+                <li onclick="app.selectCity(this)" data-value='[ 43.229 ,76.899 ,[ [ "Маркер 1" ,43.228225 ,76.898933 ] ,[ "Маркер 2" ,43.229 ,76.899 ]] ]'>Актобе</option>
+                <li onclick="app.selectCity(this)" data-value='[ 43.229 ,76.899 ,[ [ "Маркер 1" ,43.228225 ,76.898933 ] ,[ "Маркер 2" ,43.229 ,76.899 ]] ]'>Актау</option>
+                <li onclick="app.selectCity(this)" data-value='[ 43.229 ,76.899 ,[ [ "Маркер 1" ,43.228225 ,76.898933 ] ,[ "Маркер 2" ,43.229 ,76.899 ]] ]'>Талдыкорган</option>
+                <li onclick="app.selectCity(this)" data-value='[ 43.229 ,76.899 ,[ [ "Маркер 1" ,43.228225 ,76.898933 ] ,[ "Маркер 2" ,43.229 ,76.899 ]] ]'>Боом</option>
+              </ul>
+            </div>
+          </div>
+
+          <!-- form -->
+          <div class="col-sm-7 col-md-6 col-xl-5">
+            <form action="callback" class="dealer-form">
+
+              <div class="d-header">
+                <h3>Как стать дилером?</h3>
+                <p>Укажите ваши данные, и мы вам перезвоним <br>для обсуждения деталей</p>
+              </div>
+
+              <div class="d-body">
+
+                <!-- name -->
+                <div class="form-group">
+                  <input type="text" class="form-control" name="name" placeholder="Ваше имя"/>
+                </div>
+
+                <!-- phone -->
+                <div class="form-group">
+                  <input type="text" class="form-control" name="phone" placeholder="Телефон" plugin="maskPhone"/>
+                </div>
+
+                <!-- email -->
+                <div class="form-group">
+                  <input type="text" class="form-control" name="email" placeholder="E-mail"/>
+                </div>
+
+                <!-- btn -->
+                <div class="d-btn">
+                  <button class="btn btn-block" type="button" onclick="app.submit(this)">Отправить</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- footer -->
+  <footer>
+
+    <!-- mobile contacts -->
+    <div class="row1 hidden-sm-up">
+      <div class="container">
+
+        <div class="block-ico">
+
+          <i class="ico" style="background-image:url(assets/css/imgs/phone.png)"></i>
+
+          <div>
+            <a href="tel:+71234567890">+7 123 456 78 90</a>
+            <br><a href="tel:+71234567890">+7 123 456 78 90 (WhatsApp)</a>
+            <br><a class="link" onclick="app.modal('modal-callback' ,'Заказать звонок')">Заказать звонок</a>
+          </div>
+        </div>
+
+        <!-- location -->
+        <div class="block-ico">
+
+          <i class="ico" style="background-image:url(assets/css/imgs/location.png)"></i>
+
+          <div>
+            <a>Алматы, ул. Республики, 123</a>
+            <br><a class="link" onclick="app.modal('modal-map')">Схема проезда</a>
+          </div>
+        </div>
+
+        <!-- skype -->
+        <div class="block-ico">
+          <i class="ico" style="background-image:url(assets/css/imgs/skype.png)"></i>
+          <a href="tel:autotech_kz">autotech_kz</a>
+        </div>
+
+        <!-- socn -->
+        <div class="d-socn">
+          <a class="ico" href="http://facebook.com" style="background-image:url(assets/css/imgs/footer-facebook.png)"></a>
+          <a class="ico" href="http://instagram.com" style="background-image:url(assets/css/imgs/footer-instagram.png)"></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="row2">
+      <div class="container">
+        <div class="row">
+
+          <!-- copyright -->
+          <div class="col-sm-3 col-md-4 col-lg-3 col-xl-2">
+            <div class="copyright">
+              <p>© 2017 Autotech</p>
+              <p>Сделано в <a>4DClick IA</a></p>
+            </div>
+          </div>
+
+          <!-- menu -->
+          <div class="col-sm-9 col-lg-7 col-xl-8 hidden-md-down">
+            <ul>
+              <li><a href="aboutus.html">О компании</a></li>
+              <li><a href="catalog.html">Продукция</a></li>
+              <li><a href="suppliers.html">Поставщики</a></li>
+              <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+          </div>
+
+          <!-- socn -->
+          <div class="col-12 col-md-8 col-lg-2 hidden-sm-down">
+            <div class="d-socn">
+              <a class="ico" href="http://facebook.com" style="background-image:url(assets/css/imgs/footer-facebook.png)"></a>
+              <a class="ico" href="http://instagram.com" style="background-image:url(assets/css/imgs/footer-instagram.png)"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- modals -->
+  <div id="modals">
+
+    <!-- slider -->
+    <div id="modal-slider" class="modal fade in">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="slider3" plugin="slick" data-imgsFrom="#certificate .slider3"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal-portfolio -->
+    <div id="modal-portfolio" class="modal modal-slider fade in">
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <!-- close btn -->
+          <div class="modal-header">
+            <button type="button" class="modal-close" data-dismiss="modal" aria-hidden="true"></button>
+          </div>
+
+          <!-- body -->
+          <div class="modal-body">
+            <div class="slider9" slider>
+
+              <a class="slider-arrow slider-prev" onclick="app.slider.slide(this ,'prev')"></a>
+              <a class="slider-arrow slider-next" onclick="app.slider.slide(this ,'next')"></a>
+
+              <ul class="slider-images slider9-images"></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal-map -->
+    <div id="modal-map" class="modal fade in">
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <!-- close btn -->
+          <div class="modal-header">
+            <button type="button" class="modal-close" data-dismiss="modal" aria-hidden="true"></button>
+          </div>
+
+          <!-- body -->
+          <div class="modal-body">
+            <div class="d-map">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d186087.8966149916!2d76.8037387864255!3d43.2173880370678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38836e7d16c5cbab%3A0x3d44668fad986d76!2sAlmaty!5e0!3m2!1sen!2skz!4v1516601513219"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal-map -->
+    <div id="modal-map" class="modal fade in">
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <!-- close btn -->
+          <div class="modal-header">
+            <button type="button" class="modal-close" data-dismiss="modal" aria-hidden="true"></button>
+          </div>
+
+          <!-- body -->
+          <div class="modal-body">
+            <div class="d-map">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d186087.8966149916!2d76.8037387864255!3d43.2173880370678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38836e7d16c5cbab%3A0x3d44668fad986d76!2sAlmaty!5e0!3m2!1sen!2skz!4v1516601513219"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- callback -->
+    <div id="modal-callback" class="modal fade in">
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <!-- close btn -->
+          <div class="modal-header">
+            <button type="button" class="modal-close" data-dismiss="modal" aria-hidden="true"></button>
+          </div>
+
+          <!-- body -->
+          <div class="modal-body">
+
+            <!-- title -->
+            <div class="modal-title">
+              <h5 name="title">Заголовок формы захвата</h5>
+              <p>Заполните форму, <br>и мы обязательно свяжемся с вами!</p>
+            </div>
+
+            <!-- form -->
+            <form action="callback" method="POST">
+
+              <input type="hidden" name="title">
+
+              <!-- forms -->
+              <div class="row">
+
+                <!-- name -->
+                <div class="col-sm-6">
+                  <div class="form-group form-input">
+                    <input id="modalCallbackName" type="text" name="nmae">
+                    <label for="modalCallbackName">Введите Ваше имя:</label>
+                  </div>
+                </div>
+
+                <!-- phone -->
+                <div class="col-sm-6">
+                  <div class="form-group form-input">
+                    <input id="modalCallbackPhone" type="text" name="phone" plugin="maskPhone" required>
+                    <label for="modalCallbackPhone">Введите Ваш телефон: <span class="text-danger">*</span></label>
+                  </div>
+                </div>
+              </div>
+
+              <!-- btn -->
+              <div class="form-btn text-center">
+                <button class="btn btn-blue btn-primary btn-sm" type="button" onclick="app.submit(this)">Отправить</button>
+              </div>
+            </form>
+
+            <p class="modal-phone text-center">или позвоните по номеру <strong><a href="tel:+77021111187" class="text-color">8 702 111 11-87</a></strong></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- success -->
+    <div id="modal-success" class="modal fade in">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-8">
+            <div class="modal-dialog">
+              <div class="modal-content">
+
+                <!-- close btn -->
+                <div class="modal-header">
+                  <button type="button" class="modal-close" data-dismiss="modal" aria-hidden="true"></button>
+                </div>
+
+                <!-- body -->
+                <div class="modal-body">
+                  <div class="row justify-content-center">
+                    <div class="col-md-9">
+                      <h4 class="v2 text-center">Ваш запрос прошел успешно</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <link rel="stylesheet" href="assets/css/main.min.css?filemtime">
+  <script src="assets/js/scripts.min.js?filemtime"></script>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBiF2BQwQ65szvY-hxRwLZ33utfzRoFZmI"></script>
+</body>
+</html>

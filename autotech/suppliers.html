@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <script>
+    const BASE_PATH = (() => {
+      const KEY = 'autotech';
+      let val = location.pathname;
+      const idx = val.indexOf(KEY);
+
+      if (idx === -1) {
+        return '';
+      }
+
+      return val.substring(0, idx + KEY.length);
+    })();
+
+    const BASE_FULL_PATH = location.origin + BASE_PATH;
+    Object.assign(window, { BASE_PATH, BASE_FULL_PATH });
+
+    (() => {
+      const base = document.createElement('BASE');
+      base.href = BASE_FULL_PATH + '/';
+      document.querySelector('head').appendChild(base);
+    })();
+
+    setTimeout(() => {
+      document.querySelectorAll('a[href="/"]').forEach((elm) => {
+        elm.href = BASE_PATH;
+      });
+    }, 300);
+  </script>
+  <meta charset="utf-8">
+
+  <title>Autotech</title>
+  <meta name="description" content="">
+  <!-- <meta property="og:image" content="path/to/image.jpg"> -->
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon"> -->
+
+  <!-- Chrome, Firefox OS and Opera -->
+  <meta name="theme-color" content="#000">
+  <!-- Windows Phone -->
+  <meta name="msapplication-navbutton-color" content="#000">
+  <!-- iOS Safari -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="#000">
+
+  <style>body { opacity: 0; overflow-x: hidden; } html { background-color: #fff; }</style>
+</head>
+<body>
+
+  <!-- mobile -->
+  <div class="hidden-lg-up">
+
+    <div class="container">
+      <a class="nav-btn static ico" onclick="app.nav(this)"><i></i></a>
+    </div>
+
+    <nav class="nav">
+
+      <div class="container">
+        <a class="nav-btn static active" onclick="app.nav( $('.nav-btn:first')[0] )"><i></i></a>
+      </div>
+      <ul>
+        <li><a href="aboutus.html">О компании</a></li>
+        <li><a href="catalog.html">Продукция</a></li>
+        <li><a href="suppliers.html">Поставщики</a></li>
+        <li><a href="contacts.html">Контакты</a></li>
+      </ul>
+
+      <ul>
+        <li><a href="tel:+77021111187">8 702 111 11-87</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- header -->
+  <header>
+    <div class="container">
+
+      <!-- mobile search -->
+      <div class="hidden-lg-up">
+
+        <a class="ico ico-search" onclick="app.class(this)" style="background-image:url(assets/css/imgs/search.png)"></a>
+
+        <form action="search" class="search">
+          <input type="text" name="s" placeholder="Поиск по сайту"/>
+          <button type="submit"></button>
+        </form>
+      </div>
+
+      <div class="row">
+
+        <!-- logo -->
+        <div class="col-lg-4 col-xl-3">
+          <a href="/" class="logo">
+            <i class="img-bg" style="background-image:url(assets/img/logo.png)"></i>
+          </a>
+        </div>
+
+        <!-- phone -->
+        <div class="col-4 col-lg-3 hidden-md-down">
+          <div class="block-ico">
+
+            <i class="ico" style="background-image:url(assets/css/imgs/phone.png)"></i>
+
+            <div>
+              <a href="tel:+71234567890">+7 123 456 78 90</a>
+              <br><a href="tel:+71234567890">+7 123 456 78 90<span class="hidden-lg-down"> (WhatsApp)</span></a>
+              <br><a class="link" onclick="app.modal('modal-callback' ,'Заказать звонок')">Заказать звонок</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- location -->
+        <div class="col-sm-3 hidden-md-down">
+          <div class="block-ico">
+
+            <i class="ico" style="background-image:url(assets/css/imgs/location.png)"></i>
+
+            <div>
+              <a>Алматы, ул. Республики, 123</a>
+              <br><a class="link" onclick="app.modal('modal-map')">Схема проезда</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- skype & socn -->
+        <div class="col-3 col-lg-2 col-xl-3">
+
+          <a class="ico hidden-md-down" href="http://facebook.com" style="background-image:url(assets/css/imgs/facebook.png)"></a>
+          <a class="ico hidden-md-down" href="http://instagram.com" style="background-image:url(assets/css/imgs/instagram.png)"></a>
+
+          <div class="block-ico hidden-lg-down">
+            <i class="ico" style="background-image:url(assets/css/imgs/skype.png)"></i>
+            <a href="tel:autotech_kz">autotech_kz</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu hidden-md-down">
+        <div class="row">
+
+          <div class="col-9">
+            <ul>
+              <li><a href="aboutus.html">О компании</a></li>
+              <li><a href="catalog.html">Продукция</a></li>
+              <li class="active"><a href="suppliers.html">Поставщики</a></li>
+              <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+          </div>
+
+          <div class="col-3">
+            <form action="search" class="search">
+              <input type="text" name="s" placeholder="Поиск по сайту"/>
+              <button type="submit"></button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- main -->
+  <main>
+
+    <!-- breadcrumbs -->
+    <section id="breadcrumbs">
+      <div class="container">
+
+        <ul class="breadcrumbs">
+          <li><a href="/">Главная</a></li>
+        </ul>
+
+        <h1 class="page-ttile">Поставщики</h1>
+      </div>
+    </section>
+
+    <!-- list -->
+    <section id="suppliers">
+      <div class="container">
+
+        <!-- supplier -->
+        <div class="supplier">
+
+          <!-- logo & link -->
+          <div>
+            <div class="d-logo"><img src="assets/img/partners/gs-oil.png"></div>
+            <div class="d-link"><a href="http://www.gsgcorp.com">www.gsgcorp.com</a></div>
+          </div>
+
+          <!-- title & info & btn -->
+          <div>
+
+            <h3>KIXX</h3>
+            <div class="d-desc">
+              <p>Моторное масло Kixx производства GS Caltex является одним из мировых лидеров рынка масел и смазок, а также лидером по объемам продаж смазочных материалов в Южной Корее. <br>Масла KIXX отличаются универсальными смазочными свойствами, широким интервалом рабочей температуры, имеют высокий индекс вязкости и стабильности на протяжении всего срока эксплуатации, что отрицательно влияет на образование коррозии, нагара и отложений. Не оказывает разрушающего воздействия на материалы прокладок и уплотнителей. Также масла Kixx отлично смешивается с минеральными маслами. Для них характерен очень незначительный расход масла на угар.</p>
+            </div>
+
+            <div class="d-btn">
+              <button class="btn btn-sm v2">Смотреть продукцию</button>
+              <button class="btn btn-sm v3">Скачать прайс-лист</button>
+            </div>
+          </div>
+
+          <!-- video -->
+          <div>
+            <div class="video" style="background-image:url(assets/img/partners/1.jpg)" onclick="app.video(this,'https://www.youtube.com/embed/GigOIMeKohg')"></div>
+          </div>
+        </div>
+
+        <div class="supplier">
+
+          <!-- logo & link -->
+          <div>
+            <div class="d-logo"><img src="assets/img/partners/millard.png"></div>
+            <div class="d-link"><a href="http://millardfilters.com">millardfilters.com</a></div>
+          </div>
+
+          <!-- title & info & btn -->
+          <div>
+
+            <h3>Millard filters</h3>
+            <div class="d-desc">
+              <p>Millard is the European brand for vehicle and machinery filters. More than 20 years of experience in filters and a young spirit make it possible to bring remarkable changes to the market.</p>
+            </div>
+
+            <div class="d-btn">
+              <button class="btn btn-sm v2">Смотреть продукцию</button>
+              <button class="btn btn-sm v3">Скачать прайс-лист</button>
+            </div>
+          </div>
+
+          <!-- video -->
+          <div>
+            <div class="video" style="background-image:url(assets/img/partners/2.jpg)" onclick="app.video(this,'https://www.youtube.com/embed/GigOIMeKohg')"></div>
+          </div>
+        </div>
+
+        <div class="supplier">
+
+          <!-- logo & link -->
+          <div>
+            <div class="d-logo"><img src="assets/img/partners/yeedol.png"></div>
+            <div class="d-link"><a href="http://veedolcom.uk">veedolcom.uk</a></div>
+          </div>
+
+          <!-- title & info & btn -->
+          <div>
+
+            <h3>KIXX</h3>
+            <div class="d-desc">
+              <p>From a humble beginning, the Veedol brand was chosen in 1914 by professionals for the world’s first mass produced car, the Model T-Ford. As years passed by, acceptance and applications grew which lead to it being chosen for automobile, aviation and industrial applications. <br>premium quality, professionalism and evolution are some of the features that describe the Veedol brand. Throughout the last century the brand was chosen by major OEM manufacturers due to the quality Veedol offered.</p>
+            </div>
+
+            <div class="d-btn">
+              <button class="btn btn-sm v2">Смотреть продукцию</button>
+              <button class="btn btn-sm v3">Скачать прайс-лист</button>
+            </div>
+          </div>
+
+          <!-- video -->
+          <div>
+            <div class="video" style="background-image:url(assets/img/partners/3.jpg)" onclick="app.video(this,'https://www.youtube.com/embed/GigOIMeKohg')"></div>
+          </div>
+        </div>
+
+        <div class="supplier">
+
+          <!-- logo & link -->
+          <div>
+            <div class="d-logo"><img src="assets/img/partners/yeedol.png"></div>
+            <div class="d-link"><a href="http://veedolcom.uk">veedolcom.uk</a></div>
+          </div>
+
+          <!-- title & info & btn -->
+          <div>
+
+            <h3>KIXX</h3>
+            <div class="d-desc">
+              <p>From a humble beginning, the Veedol brand was chosen in 1914 by professionals for the world’s first mass produced car, the Model T-Ford. As years passed by, acceptance and applications grew which lead to it being chosen for automobile, aviation and industrial applications. <br>premium quality, professionalism and evolution are some of the features that describe the Veedol brand. Throughout the last century the brand was chosen by major OEM manufacturers due to the quality Veedol offered.</p>
+            </div>
+
+            <div class="d-btn">
+              <button class="btn btn-sm v2">Смотреть продукцию</button>
+              <button class="btn btn-sm v3">Скачать прайс-лист</button>
+            </div>
+          </div>
+
+          <!-- video -->
+          <!-- <div> -->
+            <!-- <div class="video" style="background-image:url(assets/img/partners/3.jpg)" onclick="app.video(this,'https://www.youtube.com/embed/GigOIMeKohg')"></div> -->
+          <!-- </div> -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- footer -->
+  <footer>
+
+    <!-- mobile contacts -->
+    <div class="row1 hidden-sm-up">
+      <div class="container">
+
+        <div class="block-ico">
+
+          <i class="ico" style="background-image:url(assets/css/imgs/phone.png)"></i>
+
+          <div>
+            <a href="tel:+71234567890">+7 123 456 78 90</a>
+            <br><a href="tel:+71234567890">+7 123 456 78 90 (WhatsApp)</a>
+            <br><a class="link" onclick="app.modal('modal-callback' ,'Заказать звонок')">Заказать звонок</a>
+          </div>
+        </div>
+
+        <!-- location -->
+        <div class="block-ico">
+
+          <i class="ico" style="background-image:url(assets/css/imgs/location.png)"></i>
+
+          <div>
+            <a>Алматы, ул. Республики, 123</a>
+            <br><a class="link" onclick="app.modal('modal-map')">Схема проезда</a>
+          </div>
+        </div>
+
+        <!-- skype -->
+        <div class="block-ico">
+          <i class="ico" style="background-image:url(assets/css/imgs/skype.png)"></i>
+          <a href="tel:autotech_kz">autotech_kz</a>
+        </div>
+
+        <!-- socn -->
+        <div class="d-socn">
+          <a class="ico" href="http://facebook.com" style="background-image:url(assets/css/imgs/footer-facebook.png)"></a>
+          <a class="ico" href="http://instagram.com" style="background-image:url(assets/css/imgs/footer-instagram.png)"></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="row2">
+      <div class="container">
+        <div class="row">
+
+          <!-- copyright -->
+          <div class="col-sm-3 col-md-4 col-lg-3 col-xl-2">
+            <div class="copyright">
+              <p>© 2017 Autotech</p>
+              <p>Сделано в <a>4DClick IA</a></p>
+            </div>
+          </div>
+
+          <!-- menu -->
+          <div class="col-sm-9 col-lg-7 col-xl-8 hidden-md-down">
+            <ul>
+              <li><a href="aboutus.html">О компании</a></li>
+              <li><a href="catalog.html">Продукция</a></li>
+              <li><a href="suppliers.html">Поставщики</a></li>
+              <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+          </div>
+
+          <!-- socn -->
+          <div class="col-12 col-md-8 col-lg-2 hidden-sm-down">
+            <div class="d-socn">
+              <a class="ico" href="http://facebook.com" style="background-image:url(assets/css/imgs/footer-facebook.png)"></a>
+              <a class="ico" href="http://instagram.com" style="background-image:url(assets/css/imgs/footer-instagram.png)"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- modals -->
+  <div id="modals">
+
+    <!-- modal-portfolio -->
+    <div id="modal-portfolio" class="modal modal-slider fade in">
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <!-- close btn -->
+          <div class="modal-header">
+            <button type="button" class="modal-close" data-dismiss="modal" aria-hidden="true"></button>
+          </div>
+
+          <!-- body -->
+          <div class="modal-body">
+            <div class="slider9" slider>
+
+              <a class="slider-arrow slider-prev" onclick="app.slider.slide(this ,'prev')"></a>
+              <a class="slider-arrow slider-next" onclick="app.slider.slide(this ,'next')"></a>
+
+              <ul class="slider-images slider9-images"></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal-map -->
+    <div id="modal-map" class="modal fade in">
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <!-- close btn -->
+          <div class="modal-header">
+            <button type="button" class="modal-close" data-dismiss="modal" aria-hidden="true"></button>
+          </div>
+
+          <!-- body -->
+          <div class="modal-body">
+            <div class="d-map">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d186087.8966149916!2d76.8037387864255!3d43.2173880370678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38836e7d16c5cbab%3A0x3d44668fad986d76!2sAlmaty!5e0!3m2!1sen!2skz!4v1516601513219"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- callback -->
+    <div id="modal-callback" class="modal fade in">
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <!-- close btn -->
+          <div class="modal-header">
+            <button type="button" class="modal-close" data-dismiss="modal" aria-hidden="true"></button>
+          </div>
+
+          <!-- body -->
+          <div class="modal-body">
+
+            <!-- title -->
+            <div class="modal-title">
+              <h5 name="title">Заголовок формы захвата</h5>
+              <p>Заполните форму, <br>и мы обязательно свяжемся с вами!</p>
+            </div>
+
+            <!-- form -->
+            <form action="callback" method="POST">
+
+              <input type="hidden" name="title">
+
+              <!-- forms -->
+              <div class="row">
+
+                <!-- name -->
+                <div class="col-sm-6">
+                  <div class="form-group form-input">
+                    <input id="modalCallbackName" type="text" name="nmae">
+                    <label for="modalCallbackName">Введите Ваше имя:</label>
+                  </div>
+                </div>
+
+                <!-- phone -->
+                <div class="col-sm-6">
+                  <div class="form-group form-input">
+                    <input id="modalCallbackPhone" type="text" name="phone" plugin="maskPhone" required>
+                    <label for="modalCallbackPhone">Введите Ваш телефон: <span class="text-danger">*</span></label>
+                  </div>
+                </div>
+              </div>
+
+              <!-- btn -->
+              <div class="form-btn text-center">
+                <button class="btn btn-blue btn-primary btn-sm" type="button" onclick="app.submit(this)">Отправить</button>
+              </div>
+            </form>
+
+            <p class="modal-phone text-center">или позвоните по номеру <strong><a href="tel:+77021111187" class="text-color">8 702 111 11-87</a></strong></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- success -->
+    <div id="modal-success" class="modal fade in">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-8">
+            <div class="modal-dialog">
+              <div class="modal-content">
+
+                <!-- close btn -->
+                <div class="modal-header">
+                  <button type="button" class="modal-close" data-dismiss="modal" aria-hidden="true"></button>
+                </div>
+
+                <!-- body -->
+                <div class="modal-body">
+                  <div class="row justify-content-center">
+                    <div class="col-md-9">
+                      <h4 class="v2 text-center">Ваш запрос прошел успешно</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <link rel="stylesheet" href="assets/css/main.min.css?filemtime">
+  <script src="assets/js/scripts.min.js?filemtime"></script>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBiF2BQwQ65szvY-hxRwLZ33utfzRoFZmI"></script>
+  <script type="text/javascript">
+    // if( location.host.indexOf('localhost') < 0 )
+    //   $('#contacts iframe').attr('src' ,'https://yandex.kz/map-widget/v1/-/CBUdvPWnwA');
+  </script>
+</body>
+</html>
