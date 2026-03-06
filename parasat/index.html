@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script>
+      const BASE_PATH = (() => {
+        const KEY = 'parasat';
+        let val = location.pathname;
+        const idx = val.indexOf(KEY);
+
+        if (idx === -1) {
+          return '';
+        }
+
+        return val.substring(0, idx + KEY.length);
+      })();
+
+      const BASE_FULL_PATH = location.origin + BASE_PATH;
+      Object.assign(window, { BASE_PATH, BASE_FULL_PATH });
+
+      (() => {
+        const base = document.createElement('BASE');
+        base.href = BASE_FULL_PATH + '/';
+        document.querySelector('head').appendChild(base);
+      })();
+
+      setTimeout(() => {
+        document.querySelectorAll('a[href="/"]').forEach((elm) => {
+          elm.href = BASE_PATH;
+        });
+      }, 300);
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Parasat</title>
+    <script>
+      Object.assign(window, {
+        planImage: "assets/image/plan/full.jpg",
+        planItems: [
+          // 1
+          {
+            MIGX_id: 1,
+            title: "1-комнатная квартира",
+            room: 1,
+            square: 38.35,
+            side: 2,
+            description:
+              "Жилищный комплекс состоит из 9-этажных одноподъездных жилых секций с красивыми застекленными фасадами с панорамным видом, удобными и практичными планировками квартир",
+            image: ["assets/image/plan/preview.png", "assets/image/plan/1-1.jpg"]
+          },
+          {
+            MIGX_id: 2,
+            title: "1-комнатная квартира",
+            room: 1,
+            square: 39.42,
+            side: 3,
+            description:
+              "Жилищный комплекс состоит из 9-этажных одноподъездных жилых секций с красивыми застекленными фасадами с панорамным видом, удобными и практичными планировками квартир",
+            image: ["assets/image/plan/preview.png", "assets/image/plan/1-2.jpg"]
+          },
+          {
+            MIGX_id: 3,
+            title: "1-комнатная квартира",
+            room: 1,
+            square: 39.62,
+            side: 7,
+            description:
+              "Жилищный комплекс состоит из 9-этажных одноподъездных жилых секций с красивыми застекленными фасадами с панорамным видом, удобными и практичными планировками квартир",
+            image: ["assets/image/plan/preview.png", "assets/image/plan/1-3.jpg"]
+          },
+          {
+            MIGX_id: 4,
+            title: "1-комнатная квартира",
+            room: 1,
+            square: 39.61,
+            side: 6,
+            description:
+              "Жилищный комплекс состоит из 9-этажных одноподъездных жилых секций с красивыми застекленными фасадами с панорамным видом, удобными и практичными планировками квартир",
+            image: ["assets/image/plan/preview.png", "assets/image/plan/1-4.jpg"]
+          },
+          // 2
+          {
+            MIGX_id: 5,
+            title: "2-комнатная квартира",
+            room: 2,
+            square: 55.36,
+            side: 4,
+            description:
+              "Жилищный комплекс состоит из 9-этажных одноподъездных жилых секций с красивыми застекленными фасадами с панорамным видом, удобными и практичными планировками квартир",
+            image: ["assets/image/plan/preview.png", "assets/image/plan/2-1.jpg"]
+          },
+          {
+            MIGX_id: 6,
+            title: "2-комнатная квартира",
+            room: 2,
+            square: 55.36,
+            side: 8,
+            description:
+              "Жилищный комплекс состоит из 9-этажных одноподъездных жилых секций с красивыми застекленными фасадами с панорамным видом, удобными и практичными планировками квартир",
+            image: ["assets/image/plan/preview.png", "assets/image/plan/2-2.jpg"]
+          },
+          {
+            MIGX_id: 7,
+            title: "2-комнатная квартира",
+            room: 2,
+            square: 55.36,
+            side: 5,
+            description:
+              "Жилищный комплекс состоит из 9-этажных одноподъездных жилых секций с красивыми застекленными фасадами с панорамным видом, удобными и практичными планировками квартир",
+            image: ["assets/image/plan/preview.png", "assets/image/plan/2-3.jpg"]
+          },
+          // 3
+          {
+            MIGX_id: 8,
+            title: "3-комнатная квартира",
+            room: 3,
+            square: 70.33,
+            side: 1,
+            description:
+              "Жилищный комплекс состоит из 9-этажных одноподъездных жилых секций с красивыми застекленными фасадами с панорамным видом, удобными и практичными планировками квартир",
+            image: ["assets/image/plan/preview.png", "assets/image/plan/3-1.jpg"]
+          }
+        ],
+        galleryItems: [
+          "assets/image/buildings/1.jpg",
+          "assets/image/buildings/2.jpg",
+          "assets/image/buildings/3.jpg",
+          "assets/image/buildings/4.jpg",
+          "assets/image/buildings/5.jpg",
+          "assets/image/buildings/6.jpg",
+          "assets/image/buildings/7.jpg",
+          "assets/image/buildings/8.jpg",
+          "assets/image/buildings/9.jpg"
+        ],
+        stagesItems: [
+          {
+            title: "апрель 2019",
+            images: [
+              { MIGX_id: "1", title: "1", image: "buildings/1.jpg" },
+              { MIGX_id: "2", title: "2", image: "buildings/2.jpg" },
+              { MIGX_id: "3", title: "3", image: "buildings/3.jpg" },
+              { MIGX_id: "4", title: "4", image: "buildings/4.jpg" },
+              { MIGX_id: "5", title: "5", image: "buildings/5.jpg" },
+              { MIGX_id: "6", title: "6", image: "buildings/6.jpg" },
+              { MIGX_id: "7", title: "7", image: "buildings/7.jpg" },
+              { MIGX_id: "8", title: "8", image: "buildings/8.jpg" },
+              { MIGX_id: "9", title: "9", image: "buildings/9.jpg" }
+            ]
+          },
+          {
+            title: "март 2019",
+            images: [
+              { MIGX_id: "1", title: "9", image: "buildings/9.jpg" },
+              { MIGX_id: "2", title: "8", image: "buildings/8.jpg" },
+              { MIGX_id: "4", title: "7", image: "buildings/7.jpg" },
+              { MIGX_id: "3", title: "6", image: "buildings/6.jpg" },
+              { MIGX_id: "5", title: "5", image: "buildings/5.jpg" },
+              { MIGX_id: "6", title: "4", image: "buildings/4.jpg" },
+              { MIGX_id: "7", title: "3", image: "buildings/3.jpg" },
+              { MIGX_id: "8", title: "2", image: "buildings/2.jpg" },
+              { MIGX_id: "9", title: "1", image: "buildings/1.jpg" }
+            ]
+          }
+        ]
+      });
+    </script>
+    <style>
+      body {
+        opacity: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- header -->
+    <header class="app-header">
+      <div class="container">
+        <div class="app-header__container">
+          <!-- logo -->
+          <a class="logo app-header__logo" href="#home">Логотип Parasat</a>
+
+          <!-- nav -->
+          <nav class="app-nav">
+            <div class="app-nav__line"></div>
+
+            <!-- nav btn -->
+            <button class="app-nav__btn" type="button" onClick="app.onToggleMenu()">Открыть меню</button>
+
+            <ul>
+              <li><a href="#aboutus">О комплексе</a></li>
+              <li><a href="#location">Расположение</a></li>
+              <li><a href="#plan">Планировка</a></li>
+              <li><a href="#gallery">Галерея</a></li>
+              <li><a href="#contacts">Контакты</a></li>
+            </ul>
+          </nav>
+
+          <!-- contacts -->
+          <div class="app-header__contacts">
+            <!-- phone -->
+            <a class="app-header__phone phone text-md" href="tel:+77772065656">+7 777 206 56 56</a>
+            <button class="btn btn_default btn_sm" onClick="app.onCallback()">Заказать звонок</button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- header end -->
+
+    <!-- main -->
+    <main>
+      <!-- home -->
+      <section id="home" class="home-section">
+        <!-- slider -->
+        <div id="homeSlider" class="background-slider">
+          <div class="background-slider__item">
+            <div class="background-slider__item__image" style="background-image:url('assets/image/home/background.jpg')"></div>
+          </div>
+          <div class="background-slider__item">
+            <div class="background-slider__item__image" style="background-image:url('assets/image/home/background.jpg')"></div>
+          </div>
+          <div class="background-slider__item">
+            <div class="background-slider__item__image" style="background-image:url('assets/image/home/background.jpg')"></div>
+          </div>
+        </div>
+
+        <!-- container -->
+        <div class="home__container container">
+          <div class="row justify-center">
+            <div class="col-lg-8">
+              <h1 class="home-title text-regular text-hg">Лучшее решение за <br />разумные <br />деньги</h1>
+              <p class="home-description text-bold text-md">Квартиры в чистовой отделке</p>
+              <p class="home-price text-bold text-hg">от <span class="text-black text-ehg">220 000</span> Tг/м²</p>
+
+              <div class="home__btn">
+                <button class="btn btn_info">
+                  <i class="ico2 ico_pdf"></i>
+                  <span>скачать презентацию</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- home end -->
+
+      <!-- aboutus -->
+      <section id="aboutus" class="aboutus-section">
+        <div class="sharp sharp_gradient sharp_left sharp_right"></div>
+
+        <div class="aboutus-container container">
+          <!-- row 1 -->
+          <div class="aboutus-row1 row">
+            <!-- image -->
+            <div class="col-sm-5 col-md-4">
+              <div class="image-box">
+                <img src="assets/image/aboutus/1.jpg" alt="В ЖК Parasat" />
+                <div class="image-box__info">
+                  <p class="image-box__title text-hg text-black">Чистовая отделка</p>
+                  <p class="image-box__description text-md text-bold">Стоимость квартир от 220 000 т/м2</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- info -->
+            <div class="col-sm-7 col-md-8">
+              <h2 class="aboutus-title text-hg text-bold">В ЖК Parasat</h2>
+              <p class="aboutus-subtitle text-hg">Хочется жить</p>
+
+              <ul class="list-info">
+                <li>
+                  <!-- ico -->
+                  <div class="list-info__ico">
+                    <span class="ico">
+                      <svg width="38" height="32" viewBox="0 0 38 32">
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M34.9684 13.9164H35.8724C37.0414 13.9164 37.9922 14.8492 38 15.9962V20.6375C38 21.7845 37.0492 22.7173 35.8802 22.7173H34.9762V28.0545C34.9762 30.226 33.176 32 30.9549 32H2.71206C1.21575 32 0 30.8072 0 29.3391V3.23441V3.18853C0.0233798 1.42222 1.49631 0 3.29655 0H27.4089C28.9053 0 30.121 1.19283 30.121 2.66093L30.1132 4.64134H30.9471C33.1604 4.64134 34.9684 6.40765 34.9684 8.58686V13.9164ZM27.4089 1.83513H3.29655C2.50943 1.83513 1.87039 2.46977 1.87039 3.24205C1.87039 4.01434 2.50943 4.64134 3.29655 4.64134H28.2428L28.2506 2.65329C28.2506 2.20215 27.8687 1.83513 27.4089 1.83513ZM33.098 28.0468C33.098 29.2091 32.1317 30.1572 30.9471 30.1572H2.70427C2.24446 30.1572 1.86259 29.7902 1.86259 29.3314V6.15532C2.29902 6.36177 2.7822 6.47646 3.29655 6.47646H30.9471C32.1317 6.47646 33.098 7.42461 33.098 8.58686V13.9164H26.7153C25.5464 13.9164 24.5956 14.8492 24.5956 15.9962V20.6375C24.5956 21.7845 25.5464 22.7173 26.7153 22.7173H33.098V28.0468ZM35.8724 20.8822C36.0127 20.8822 36.1218 20.7752 36.1218 20.6375V15.9962C36.1218 15.8585 36.0049 15.7515 35.8724 15.7515H26.7231C26.5829 15.7515 26.4737 15.8662 26.4737 15.9962V20.6375C26.4737 20.7752 26.5829 20.8822 26.7231 20.8822H35.8724Z"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+
+                  <!-- title -->
+                  <h3 class="list-info__title text-md">Доступная цена и рассрочка</h3>
+                  <p class="list-info__description">
+                    Стоимость квартир от 220 000 т/м2. Рассрочка от застройщика без % с первоначальным взносом от 50 % сроком до 1 года
+                  </p>
+                </li>
+                <li>
+                  <!-- ico -->
+                  <div class="list-info__ico">
+                    <span class="ico">
+                      <svg width="38" height="36" viewBox="0 0 38 36">
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M36.1172 13.2588C35.1573 12.4546 33.9555 12.018 32.738 12.018H31.505H27.0645H24.536V6.20441C24.536 3.76102 23.8102 1.99933 22.3742 0.96529C20.1033 -0.67385 16.9738 0.260613 16.8412 0.30657C16.451 0.429123 16.1856 0.781462 16.1856 1.17976V7.6827C16.1856 9.80439 15.1555 11.6044 13.1186 13.0367C11.6664 14.0601 10.1857 14.5323 9.91097 14.6199L9.87994 14.6299L9.65362 14.6835C9.31805 14.1244 8.70153 13.7491 7.99136 13.7491H1.9276C0.866251 13.7491 0 14.5993 0 15.641V33.1353C0 34.177 0.866251 35.0272 1.9276 35.0272H8.00697C8.60007 35.0272 9.13856 34.7592 9.48974 34.3455C10.4652 35.3643 11.8466 36 13.3449 36H18.4878H19.0185H29.5618C33.1438 36 35.4304 34.1617 35.8362 30.9447L37.9355 18.1609C38.2243 16.3227 37.5297 14.4384 36.1172 13.2588ZM8.05379 33.1353C8.05379 33.166 8.03038 33.1889 7.99916 33.1889H1.9276C1.89639 33.1889 1.87297 33.166 1.87297 33.1353V15.641C1.87297 15.6103 1.89639 15.5873 1.9276 15.5873H8.00697C8.03818 15.5873 8.06159 15.6103 8.06159 15.641V33.1353H8.05379ZM33.9789 30.6766L36.0704 17.8699C36.2733 16.6597 35.8206 15.4265 34.8998 14.6529C34.2832 14.132 33.5106 13.8486 32.738 13.8486H31.505H27.0645H23.5995C23.0844 13.8486 22.663 13.435 22.663 12.9295V6.20441C22.663 4.38144 22.1947 3.11762 21.2739 2.45124C20.2671 1.71592 18.878 1.78486 18.0664 1.91507V7.6827C18.0664 10.4095 16.7241 12.7916 14.1722 14.5686C12.3535 15.8383 10.5497 16.3578 10.3885 16.4043C10.3844 16.4055 10.3813 16.4063 10.3794 16.4069C10.3716 16.4069 10.3657 16.4088 10.3599 16.4107C10.354 16.4127 10.3482 16.4146 10.3404 16.4146L9.93457 16.5065V31.1822L9.93458 31.1822C9.95018 31.2358 9.96579 31.2894 9.97359 31.343C10.2311 32.9515 11.6749 34.1694 13.3371 34.1694H18.48H19.0107H29.554C32.1996 34.1694 33.6823 33.0051 33.9711 30.7149C33.9789 30.6996 33.9789 30.6843 33.9789 30.6766Z"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+
+                  <!-- title -->
+                  <h3 class="list-info__title text-md">Качественное строительство</h3>
+                  <p class="list-info__description">
+                    Применение энергоэффективных строительных и отделочных материалов. Предусмотрено отопление на газе, что значительно сократит расходы на
+                    отопление
+                  </p>
+                </li>
+                <li>
+                  <!-- ico -->
+                  <div class="list-info__ico">
+                    <span class="ico">
+                      <svg width="38" height="33" viewBox="0 0 38 33">
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M26.3347 12.2224L23.8175 0.483607C23.7571 0.201416 23.5074 0 23.2185 0H18.9998H14.7815C14.4926 0 14.2429 0.201416 14.1825 0.483607L11.6655 12.2224H0.613033C0.274252 12.2224 0 12.4958 0 12.8336V17.1112C0 17.4487 0.274252 17.7225 0.613033 17.7225H2.52298L2.98661 21.4637C3.02448 21.77 3.28541 22.0001 3.59473 22.0001H6.82438C7.13405 22.0001 7.39498 21.77 7.4325 21.4637L7.89649 17.7225H10.4862L7.36867 32.2611C7.32975 32.4416 7.37464 32.63 7.49142 32.7734C7.60751 32.9168 7.78286 33 7.96768 33H30.0323C30.2171 33 30.3925 32.9168 30.5086 32.7734C30.6254 32.6297 30.6703 32.4416 30.6313 32.2611L27.5135 17.7225H30.1035L30.5671 21.4637C30.605 21.77 30.8659 22.0001 31.1753 22.0001H34.4053C34.7146 22.0001 34.9755 21.77 35.0134 21.4637L35.477 17.7225H37.387C37.7257 17.7225 38 17.4487 38 17.1112V12.8336C38 12.4958 37.7257 12.2224 37.387 12.2224H26.3347ZM26.2603 17.7225H19.6129V31.6142C19.6129 31.6709 19.6051 31.7258 19.5906 31.7779H29.2744L26.2603 17.7225ZM18.9998 16.5H30.645C30.9547 16.5 31.2156 16.7301 31.2531 17.0364L31.7171 20.778H33.8634L34.3274 17.0364C34.3649 16.7301 34.6259 16.5 34.9355 16.5H36.7743V13.4445H1.22572V16.5H3.06447C3.37414 16.5 3.63506 16.7301 3.67259 17.0364L4.13657 20.778H6.28289L6.74652 17.0364C6.7844 16.7301 7.04532 16.5 7.355 16.5H18.9998ZM18.3871 17.7225V31.6142C18.3871 31.6709 18.3949 31.7258 18.4093 31.7779H8.72555L11.7393 17.7225H18.3871ZM12.9186 12.2224H18.3871V1.22248H15.2771L12.9186 12.2224ZM19.6129 12.2224H25.0816L22.7229 1.22248H19.6129V12.2224Z"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+
+                  <!-- title -->
+                  <h3 class="list-info__title text-md">Новый мост</h3>
+                  <p class="list-info__description">
+                    Для удобства жителей будет построен мост через Большой Алматинский канал. Его ширина составляет 12,5 метров, что позволит без труда
+                    проезжать любым крупногабаритным транспортным средствам
+                  </p>
+                </li>
+                <li>
+                  <!-- ico -->
+                  <div class="list-info__ico">
+                    <span class="ico">
+                      <svg x="0px" y="0px" viewBox="0 0 37.999999 37.999999" width="38" height="38">
+                        <path
+                          d="m 19.00031,13.585548 c -2.985655,0 -5.414319,2.428663 -5.414319,5.414319 0,2.985655 2.428664,5.414319 5.414319,5.414319 2.985656,0 5.414319,-2.428664 5.414319,-5.414319 0,-2.985656 -2.428663,-5.414319 -5.414319,-5.414319 z m 0,9.385518 c -2.1898,0 -3.971287,-1.781399 -3.971287,-3.971288 0,-2.189889 1.781398,-3.971287 3.971287,-3.971287 2.189889,0 3.971288,1.781398 3.971288,3.971287 0,2.189889 -1.781488,3.971288 -3.971288,3.971288 z"
+                        />
+                        <path
+                          d="m 19.00031,9.1395524 c -0.398993,0 -0.72156,0.3224784 -0.72156,0.72156 0,0.3989926 0.322479,0.7215596 0.72156,0.7215596 4.641542,0 8.417283,3.775742 8.417283,8.417284 0,0.398992 0.322479,0.72156 0.72156,0.72156 0.399082,0 0.72156,-0.322479 0.72156,-0.72156 -8.8e-5,-5.436776 -4.423716,-9.8604036 -9.860403,-9.8604036 z"
+                        />
+                        <path
+                          d="m 19.00031,27.41715 c -4.641542,0 -8.417283,-3.775741 -8.417283,-8.417283 0,-0.398993 -0.322478,-0.72156 -0.72156,-0.72156 -0.3989928,0 -0.72156,0.322478 -0.72156,0.72156 0,5.436687 4.423627,9.860314 9.860314,9.860314 0.398993,0 0.72156,-0.322478 0.72156,-0.72156 0,-0.398992 -0.322478,-0.721471 -0.721471,-0.721471 z"
+                        />
+                        <path
+                          d="m 37.278618,14.943455 h -1.814596 c -0.529564,0 -1.410544,-0.784316 -1.969045,-2.095267 -0.556992,-1.31175 -0.508705,-2.491419 -0.13998,-2.873103 L 34.61553,8.6691048 C 34.891851,8.3826644 34.883951,7.9259752 34.597511,7.6488549 L 29.800721,3.0167218 C 29.662871,2.8832212 29.468123,2.8067957 29.286957,2.8146956 29.09505,2.8183349 28.913173,2.8969796 28.780471,3.0354509 L 27.521447,4.3399221 C 27.108696,4.7677631 25.895119,4.7995405 24.900166,4.3983286 23.866247,3.9820269 23.056722,3.1645133 23.056722,2.5367765 V 0.72155905 C 23.056722,0.32256626 22.734244,-9.90035e-7 22.335162,-9.90035e-7 H 15.66537 c -0.398993,0 -0.72156,0.322478490035 -0.72156,0.721560040035 V 2.5361552 c 0,0.6263166 -0.809525,1.4473807 -1.842025,1.8687419 -0.989182,0.401922 -2.202049,0.3701446 -2.616931,-0.061336 L 9.2214808,3.0354509 C 9.0879802,2.8976009 8.9054821,2.8182462 8.7149952,2.8146956 8.5396869,2.8349337 8.3390809,2.8846414 8.2012309,3.0167218 L 3.4046187,7.6488549 C 3.1174681,7.9258864 3.1102783,8.3826644 3.3865996,8.6691048 L 4.6471328,9.975085 c 0.3687244,0.381684 0.4163017,1.561353 -0.1406905,2.873103 -0.5585011,1.31175 -1.4394807,2.096066 -1.9690449,2.096066 H 0.72200242 c -0.39899279,0 -0.72156003966,0.322478 -0.72156003966,0.72156 v 6.669792 c 0,0.398993 0.32247848966,0.72156 0.72156003966,0.72156 H 2.5365985 c 0.5288541,0 1.4105438,0.785026 1.969045,2.097486 0.5577022,1.31246 0.5094148,2.490709 0.1414005,2.871683 l -1.2605331,1.304471 c -0.1335006,0.13785 -0.2063756,0.322479 -0.2027363,0.514475 0.00364,0.191197 0.082284,0.373784 0.2207553,0.506485 l 4.796701,4.633643 c 0.1370512,0.13279 0.3254077,0.187557 0.5137643,0.202026 0.1919071,-0.0036 0.3737839,-0.08228 0.5064856,-0.220756 l 1.2590242,-1.304471 c 0.411952,-0.427841 1.625618,-0.460328 2.61986,-0.05991 1.03392,0.416301 1.843533,1.233815 1.843533,1.861552 v 1.814596 c 0,0.398993 0.322479,0.72156 0.72156,0.72156 h 6.669793 c 0.398993,0 0.72156,-0.322478 0.72156,-0.72156 V 35.46385 c 0,-0.626317 0.808104,-1.447381 1.841314,-1.868032 0.988472,-0.403342 2.201339,-0.369434 2.61844,0.06134 l 1.264794,1.30882 c 0.276321,0.287151 0.734519,0.29585 1.019539,0.01802 L 34.5976,30.350346 c 0.28644,-0.277031 0.29434,-0.733809 0.01802,-1.02025 l -1.261244,-1.30598 c -0.369434,-0.381684 -0.417012,-1.560643 0.139981,-2.872393 0.558501,-1.31175 1.439392,-2.095977 1.969045,-2.095977 h 1.814596 c 0.398992,0 0.72156,-0.322478 0.72156,-0.72156 v -6.669792 c 6.21e-4,-0.398461 -0.321946,-0.720939 -0.72094,-0.720939 z m -0.72156,6.669704 h -1.093125 c -1.499307,0 -2.713683,1.602539 -3.296595,2.974116 -0.58442,1.372375 -0.894649,3.358729 0.14939,4.440226 l 0.759728,0.786446 -3.759142,3.630701 -0.763368,-0.790085 c -0.497165,-0.515185 -1.279972,-0.797986 -2.204269,-0.797986 -0.660224,0 -1.351427,0.13927 -1.997183,0.403342 -1.319649,0.537553 -2.739602,1.76915 -2.739602,3.204281 v 1.093125 H 16.38622 V 35.4642 c 0,-1.438682 -1.424303,-2.666728 -2.746793,-3.200641 -0.647886,-0.260433 -1.337669,-0.398993 -1.997183,-0.398993 -0.924296,0 -1.7056829,0.282801 -2.2013394,0.795145 L 8.6833065,33.444737 4.9241643,29.814036 5.6838927,29.0283 C 6.726511,27.948933 6.415483,25.962579 5.831773,24.589494 5.248063,23.217119 4.0344858,21.613247 2.5351783,21.613247 H 1.4434737 v -5.226672 h 1.0931248 c 1.4993075,0 2.7136836,-1.60254 3.2965947,-2.974116 0.58371,-1.372376 0.8946492,-3.358729 -0.1478803,-4.4395161 L 4.9255845,8.1857865 8.6847268,4.5565055 9.4466743,5.345881 c 0.4963665,0.5144744 1.2785517,0.7979856 2.2028487,0.7979856 0.660224,0 1.350717,-0.1385601 1.997893,-0.4026321 1.31965,-0.538263 2.740313,-1.7706581 2.740313,-3.2042805 V 1.4430303 h 5.226672 v 1.0931249 c 0,1.4386818 1.424302,2.6674376 2.747591,3.2006411 0.648685,0.2612315 1.339888,0.3989928 1.999314,0.3989928 0.922787,0 1.704262,-0.282091 2.199209,-0.794435 l 0.757598,-0.7850261 3.759142,3.629281 -0.759728,0.7871564 c -1.042619,1.0808756 -0.73239,3.0672296 -0.148591,4.4395156 0.58371,1.371577 1.796577,2.974117 3.295885,2.974117 h 1.093125 v 5.226672 h -8.88e-4 z"
+                        />
+                      </svg>
+                    </span>
+                  </div>
+
+                  <!-- title -->
+                  <h3 class="list-info__title text-md">Профессиональный сервис</h3>
+                  <p class="list-info__description">
+                    В комплексе предусмотрена собственная сервисная служба, обеспечивающая качественное и эффективное техническое обслуживание комплекса и
+                    каждой квартиры
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- row 1 end -->
+
+          <!-- row 2 -->
+          <div class="aboutus-row2 row">
+            <div class="col-sm-5 col-md-4">
+              <div class="image-box">
+                <img src="assets/image/aboutus/2.jpg" alt="Благоустройство" />
+              </div>
+            </div>
+
+            <div class="col-sm-7 col-md-8">
+              <h2 class="aboutus-title text-hg text-bold">Благоустройство</h2>
+              <p class="aboutus-subtitle text-hg">во всём</p>
+
+              <ul class="list-info2">
+                <li>Авторский ландшафтный дизайн и постоянный ход за ним</li>
+                <li>Детская площадка и огражденное футбольное мини-поле</li>
+                <li>Торговый центр площадью 2500 кв.м разместит в себе супермаркет, аптеку, химчистку, фитнес зал</li>
+              </ul>
+            </div>
+          </div>
+          <!-- row 2 end -->
+
+          <!-- row 3 -->
+          <div class="aboutus-row3 row">
+            <div class="col-sm-5 col-md-4">
+              <h2 class="aboutus-title text-hg text-bold">Для детей</h2>
+              <p class="aboutus-subtitle text-hg">Детский сад</p>
+              <p class="text-description">
+                Для детей дошкольного возраста на территории располагается Детский сад на 100 мест, отвечающий всем требованиям государственных общеобязательных
+                стандартов дошкольного воспитания и обучения
+              </p>
+            </div>
+
+            <div class="col-sm-7 col-md-8">
+              <div class="image-box image-box_reverse">
+                <img src="assets/image/aboutus/3.jpg" alt="Для детей" />
+              </div>
+            </div>
+          </div>
+          <!-- row 3 end -->
+        </div>
+      </section>
+      <!-- aboutus end -->
+
+      <!-- location -->
+      <section id="location" class="location-section">
+        <iframe class="location-map" src="https://yandex.kz/map-widget/v1/-/CCvm4F80"></iframe>
+        <div class="sharp sharp_default sharp_right"></div>
+
+        <div class="location-container container">
+          <div class="row flex-end">
+            <div class="col-sm-7 col-md-6">
+              <!-- info -->
+              <div class="location-info">
+                <h2 class="location-title text-hg text-black">Расположение</h2>
+                <h3 class="location-subtitle text-hg text-regular">Комплекса</h3>
+                <p class="location-description text-description text-bold">
+                  Удобное расположение комплекса вблизи крупной автомобильной развязки Рыскулова - ВОАД дает преимущества легко и быстро попасть в любую точку
+                  города
+                </p>
+              </div>
+              <!-- info end -->
+
+              <div class="info-box">
+                <div class="info-box__info">
+                  <div class="info-box__ico ico">
+                    <img src="assets/imgs/ico-bus.svg" alt="Автобусные маршруты" />
+                  </div>
+
+                  <h3 class="info-box__title text-md text-bold">Автобусные маршруты</h3>
+                  <p class="info-box__description text-bold">В непосредственной близости находится остановка где проходят маршрут городского транспорта</p>
+                </div>
+
+                <ul class="info-box__list">
+                  <li>38 автобус</li>
+                  <li>137 автобус</li>
+                  <li>50 автобус</li>
+                </ul>
+
+                <ul class="info-box__list2">
+                  <!-- prettier-ignore -->
+                  <li>Международный<br /> аэропорт</li>
+                  <li>Magnum</li>
+                  <!-- prettier-ignore -->
+                  <li>Универсальный<br /> рынок «Бахар»</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- location end -->
+
+      <!-- plan -->
+      <section id="plan" class="plan-section">
+        <div class="container">
+          <!-- header -->
+          <div class="plan-header">
+            <h2 class="plan-sectino__title text-hg">
+              <span class="text-black">Выберите</span>
+              <span>квартиру</span>
+            </h2>
+
+            <p class="plan-section__subtitle">для себя и своей семьи</p>
+          </div>
+          <!-- header end -->
+
+          <!-- controllers -->
+          <div class="plan-controller">
+            <div class="plan-controller__filters">
+              <div class="form-btn">
+                <!-- prettier-ignore -->
+                <label>Количество<br /> комнат</label>
+                <div class="btn-group">
+                  <ul id="planRooms"></ul>
+                </div>
+              </div>
+              <div class="form-btn">
+                <label>Площадь</label>
+                <div class="btn-group">
+                  <ul id="planSquares"></ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="plan-controller__map">
+              <div class="plan-map">
+                <div id="planSides" class="plan-map__rooms">
+                  <svg width="155.407" height="104.999" viewBox="0 0 41.118101 27.780985">
+                    <g transform="translate(0,-269.21902)">
+                      <path
+                        d="m 0.11345747,283.11284 12.09807153,-0.0597 1.4e-5,-4.53439 h 1.399448 v -9.18634 l -12.96724927,0.0106 v 9.1758 H 0.11345747 Z"
+                      />
+                      <path d="m 12.211543,281.27595 h 6.081748 l -1.28e-4,-2.75722 h 4.268343 v -9.18634 h -8.950515 v 9.18634 h -1.399448 z" />
+                      <path d="m 28.906558,278.51873 h 2.664583 l -1e-6,-9.18635 -9.009634,10e-6 4.4e-5,9.18634 h 0.177311 l -4.1e-5,2.75722 h 6.167738 z" />
+                      <path d="m 41.004644,283.11282 -12.098072,-0.0597 v -4.53437 h 2.664568 v -9.18635 l 8.90322,0.0106 v 9.1758 h 0.530284 z" />
+                      <path d="m 0.11345747,283.02324 12.09803253,0.0597 v 4.40402 l -2.6600318,-5e-5 v 9.39985 l -8.90776787,1e-5 v -9.39981 H 0.11345747 Z" />
+                      <path
+                        d="m 12.21149,287.48691 -0.0086,-2.5056 6.090401,0 v 2.5056 l 0.209183,4e-5 v 9.39981 c -3.1e-5,1e-5 -8.9510158,0 -8.9510158,0 v -9.39985 z"
+                      />
+                      <path d="M 28.906561,284.98131 H 22.73882 v 2.5056 h -0.17727 v 9.39986 l 9.009588,-1e-5 v -9.39985 h -2.664619 z" />
+                      <path d="m 41.004593,283.02324 -12.098032,0.0597 v 4.40402 l 2.664577,-5e-5 v 9.39985 h 8.903222 v -9.3998 h 0.530233 z" />
+                    </g>
+                  </svg>
+                </div>
+                <button class="plan-map__zoom" onclick="onShowBasePlan()">Увеличить план этажа</button>
+              </div>
+            </div>
+          </div>
+          <!-- controllers end -->
+
+          <!-- info -->
+          <div class="plan-main">
+            <div class="row row_0">
+              <!-- info -->
+              <div class="col-md-6">
+                <div class="plan-main__info">
+                  <h3 class="plan-title text-md text-black"><span id="planTitle"></span> <br /><span id="planSquare"></span> м²</h3>
+                  <p id="planDescription" class="plan-description"></p>
+                </div>
+
+                <form class="plan-main__form" onsubmit="request.submit(event)">
+                  <h3 class="plan-form__title text-md text-black">Понравилась квартира?</h3>
+                  <p class="plan-form__description">Наши менеджеры свяжутся с вами и ответят на все ваши вопросы</p>
+
+                  <!-- name -->
+                  <div class="form-group">
+                    <input type="text" name="name" class="form-control" placeholder="ИМЯ" />
+                  </div>
+
+                  <!-- phone -->
+                  <div class="form-group form-group_phone">
+                    <input type="tel" class="form-control" value="+7" onFocus="onFocus('#planFormPhone')" onClick="onFocus('#planFormPhone')" />
+                    <input id="planFormPhone" type="tel" name="phone" class="form-control" />
+                  </div>
+
+                  <div class="form-submit">
+                    <button class="btn btn_green btn_block" type="submit">перезвонить мне</button>
+                  </div>
+                </form>
+              </div>
+
+              <!-- image -->
+              <div class="col-md-6">
+                <div class="plan-slider">
+                  <button class="plan-slider__loop" onclick="onOpenPlanImage()">Увеличить изображение</button>
+
+                  <div id="planSlider">
+                    <div class="plan-slider__item">
+                      <img src="{image}" alt="{title}" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- info end -->
+        </div>
+      </section>
+      <!-- plan end -->
+
+      <!-- gallery -->
+      <section id="gallery" class="gallery-section">
+        <div class="sharp sharp_gradient sharp_right"></div>
+
+        <div class="container">
+          <header class="gallery-header">
+            <h2 class="section__title text-hg">Галерея</h2>
+            <h3 class="section__subtitle text-hg">ЖК Parasat</h3>
+          </header>
+        </div>
+
+        <div id="gallerySlider" class="inline-slider">
+          <div class="inline-slider__item">
+            <div class="inline-slider__item__container">
+              <div class="inline-slider__item__image" name="image"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- gallery end -->
+
+      <!-- stages -->
+      <section id="stages" class="stages-section">
+        <div class="container">
+          <!-- header -->
+          <div class="stages__header">
+            <h2 class="section__title text-hg">
+              <span class="text-black">Этапы</span>
+              <br /><span class="text-regular">строительства</span>
+            </h2>
+
+            <div class="btn-group">
+              <ul id="stagesNav"></ul>
+            </div>
+
+            <p class="stages__description">
+              Квартиры жилого комплекса находятся в живописном месте, рядом с рекой Малая Алматинка и Большим алматински. Квартиры жилого комплекса находятся в
+              живописном месте, рядом с рекой Малая Алматинка и Большим алматински
+            </p>
+          </div>
+          <!-- header end -->
+
+          <!-- images -->
+          <ul id="stagesImages" class="stages-images"></ul>
+          <template id="stagesTemplate">
+            <li>
+              <img src="{image}" alt="{title}" />
+            </li>
+          </template>
+          <!-- images end -->
+        </div>
+      </section>
+      <!-- stages end -->
+
+      <!-- rebuld -->
+      <section id="rebuild" class="rebuild-section">
+        <div class="sharp sharp_gradient sharp_right_top hidden-xs"></div>
+        <div class="container">
+          <div class="row">
+            <!-- info -->
+            <div class="col-sm-5 col-md-4">
+              <div class="rebuild-info">
+                <h2 class="section__title text-hg text-black">Застройщик</h2>
+                <h3 class="section__subtitle text-hg text-regular">Sheberbuild</h3>
+                <p class="section__description">
+                  ТОО «SHEBERBUILD» образовано в 2007 году. На текущий момент введено в эксплуатацию более 600 000 кв. м жилья. Общая численность работников
+                  составляет более 2500 человек.
+                </p>
+
+                <a class="ico-box" href="http://sheberbuild.kz" target="_blank">
+                  <i class="ico-box__icon ico ico_darkgreen">
+                    <svg width="33.333" height="44.689999" viewBox="0 0 33.333 44.689999" version="1.1">
+                      <path
+                        d="m 28.33315,28.011682 -10.8337,-8.667 c -0.487,-0.3896 -1.1789,-0.3896 -1.6659,0 l -2.0837,1.667 -5,-4 6.459,-5.1672 c 0.8522,-0.6818 2.0631,-0.6818 2.9153,0 l 15.209,12.1672 v 8 l -15.209,12.1672 c -0.8522,0.6818 -2.0631,0.6818 -2.9153,0 l -15.209,-12.1672 v -8 l 15.8337,12.667 c 0.487,0.3895 1.1789,0.3895 1.6659,0 z"
+                      />
+                      <path
+                        d="m -1.5e-4,20.678282 v -8 l 15.209,-12.16720844 c 0.8522,-0.681742 2.0631,-0.681742 2.9153,0 l 15.209,12.16720844 v 8 L 17.49945,8.0113216 c -0.487,-0.38957 -1.1789,-0.38957 -1.6659,0 z"
+                      />
+                      <path
+                        d="m 7.08315,18.344982 8.7504,7.0003 c 0.487,0.3896 1.1789,0.3896 1.6659,0 l 2.0837,-1.667 5,4 -6.459,5.1672 c -0.8522,0.6818 -2.0631,0.6818 -2.9153,0 l -12.1496,-9.7197 c -0.4313,-0.345 -0.5012,-0.9743 -0.1562,-1.4055 0.0462,-0.0577 0.0985,-0.1101 0.1562,-0.1562 z"
+                      />
+                    </svg>
+                  </i>
+                  <span class="ico-box__text text-md text-bold">sheberbuild.kz</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- image -->
+            <div class="col-sm-7 col-md-8">
+              <div class="image-box">
+                <img src="assets/image/rebuild.jpg" alt="Застройщик" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- rebuld end -->
+
+      <!-- contacts -->
+      <section id="contacts" class="contacts-section">
+        <div class="sharp sharp_gray sharp_right_top hidden-xs"></div>
+        <iframe class="location-map" src="https://yandex.kz/map-widget/v1/-/CCvm4F80"></iframe>
+
+        <div class="container">
+          <div class="row flex-end">
+            <div class="col-sm-7 col-md-6">
+              <h2 class="section__title text-hg">Контакты</h2>
+              <ul class="list-contacts">
+                <li>
+                  <h3>Жилой комплекс</h3>
+                  <p>Рыскулова ВОАД</p>
+                </li>
+                <li>
+                  <h3>Наш офис</h3>
+                  <p>Жибек жолы 135/10, 1 блок, 8 этаж, офис 1051</p>
+                </li>
+                <li>
+                  <h3>Телефон</h3>
+                  <p>
+                    <a href="tel:+77087087085">+7 (708) 708 708 5</a>,
+                    <a href="tel:+77087087085">+7 (708) 708 708 6</a>
+                  </p>
+                </li>
+                <li>
+                  <h3>Почта</h3>
+                  <p><a href="mailto:info@parasatdom.kz">info@parasatdom.kz</a></p>
+                </li>
+              </ul>
+
+              <a href="#" class="btn btn_info">
+                <i class="ico2 ico_pdf"></i>
+                <span>Скачать презентацию</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- contacts end -->
+    </main>
+    <!-- main end -->
+
+    <!-- slider modal -->
+    <div id="sliderModal" class="modal modal_slider">
+      <div class="modal__bg" onclick="modal.onHide()"></div>
+      <button class="modal__close" onclick="modal.onHide()"></button>
+
+      <div class="modal-slider__wrap">
+        <div id="sliderModalItems">
+          <div class="modal-slider__item">
+            <img src="{image}" alt="{title}" />
+          </div>
+        </div>
+      </div>
+    </div>
+  <script type="text/javascript" src="assets/js/main.js"></script></body>
+</html>
