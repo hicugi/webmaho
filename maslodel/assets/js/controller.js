@@ -84,7 +84,7 @@ appNg.controller('bodyCtrl' ,['$scope','$http','$sce','$routeParams' ,'$location
     prm = prm != undefined ? prm : {};
 
     if( prm.method == undefined )
-      prm.method = 'POST';
+      prm.method = 'GET';
 
     prm.url = url;
     prm.dataType = 'JSON';
@@ -316,7 +316,7 @@ appNg.controller('bodyCtrl' ,['$scope','$http','$sce','$routeParams' ,'$location
 
       var self = this;
 
-      sr.query( 'j/base.json' ,{ method: 'JSON' } ).then(function(r){
+      sr.query( 'j/base.json' ).then(function(r){
 
         if( !r.data ) return 0;
 
@@ -347,13 +347,7 @@ appNg.controller('bodyCtrl' ,['$scope','$http','$sce','$routeParams' ,'$location
       sr.page = {};
       sr.pageLoading = 1;
 
-      sr.query(
-        'j/page'+path
-        ,{
-          method: 'JSON'
-          ,data: v
-        }).then(function(r){
-
+      sr.query('j/page'+path, { data: v }).then(function(r){
         r = r.data;
 
         sr.page = r;

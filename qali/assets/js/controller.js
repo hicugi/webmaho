@@ -190,7 +190,7 @@ ngApp.controller('bodyCtrl' ,['$scope','$http','$sce','$routeParams' ,'$location
     prm = prm != undefined ? prm : {};
 
     if( prm.method == undefined )
-      prm.method = 'POST';
+      prm.method = 'GET';
 
     prm.url = url + '.json';
     prm.dataType = 'JSON';
@@ -302,7 +302,7 @@ ngApp.controller('bodyCtrl' ,['$scope','$http','$sce','$routeParams' ,'$location
 
       sr.query(
           'j/page'+location.pathname
-          ,{ method: 'JSON' ,data: v }
+          ,{ method: 'GET' ,data: v }
         )
         .then(function(r){
 
