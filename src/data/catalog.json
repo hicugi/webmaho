@@ -81,15 +81,6 @@
     "description": "Backend: Nginx, MySQL 5.7, PHP 7.2, ModX\r\nFrontend: HTML, SASS, Vue.js"
   },
   {
-    "title": "Gravity",
-    "company": "IlyasQali",
-    "link": "https://hicugi.github.io/webmaho/gravity",
-    "image": "images/gravity.jpg?1586187655",
-    "imageWebp": "images/gravity.webp?1586187655",
-    "date": "2017-04-08 15:36:00",
-    "description": "Backend: Nginx, MySQL 5.6, PHP 5.6, ModX\r\nFrontend: AngularJS"
-  },
-  {
     "title": "Parasat",
     "company": "",
     "link": "https://hicugi.github.io/webmaho/parasat",
@@ -99,13 +90,13 @@
     "description": "Backend: Nginx, MySQL 5.6, PHP 5.6, ModX\r\nFrontend: React"
   },
   {
-    "title": "Airplane",
-    "company": "",
-    "link": "https://hicugi.github.io/webmaho/airplane",
-    "image": "images/airplane.jpg?1572877059",
-    "imageWebp": "images/airplane.webp?1572877059",
-    "date": "2019-08-26 14:18:00",
-    "description": "Frontend: HTML, CSS, Vue"
+    "title": "Technical assistance center",
+    "company": "ICORE",
+    "link": "https://hicugi.github.io/webmaho/itac",
+    "image": "images/icore-itac.jpg?1555753817",
+    "imageWebp": "images/icore-itac.webp?1555764587",
+    "date": "2018-11-01 19:59:00",
+    "description": "Backend: Nginx, MySQL 5.7, PHP 7.2, ModX\r\nFrontend: React, SASS"
   },
   {
     "title": "Sheber",
@@ -117,13 +108,22 @@
     "description": "Backend: Nginx, MySQL 5.7, PHP 7.2, ModX\r\nFrontend: HTML, CSS, React"
   },
   {
-    "title": "Technical assistance center",
-    "company": "ICORE",
-    "link": "https://hicugi.github.io/webmaho/itac",
-    "image": "images/icore-itac.jpg?1555753817",
-    "imageWebp": "images/icore-itac.webp?1555764587",
-    "date": "2018-11-01 19:59:00",
-    "description": "Backend: Nginx, MySQL 5.7, PHP 7.2, ModX\r\nFrontend: React, SASS"
+    "title": "XNet",
+    "company": "",
+    "link": "https://hicugi.github.io/webmaho/xnet",
+    "image": "images/xnet.jpg",
+    "imageWebp": "images/xnet.webp",
+    "date": "2019-11-27 00:00:00",
+    "description": "Backend: Nginx, MySQL 5.7, PHP 7.2, ModX\r\nFrontend: HTML, SASS"
+  },
+  {
+    "title": "Airplane",
+    "company": "",
+    "link": "https://hicugi.github.io/webmaho/airplane",
+    "image": "images/airplane.jpg?1572877059",
+    "imageWebp": "images/airplane.webp?1572877059",
+    "date": "2019-08-26 14:18:00",
+    "description": "Frontend: HTML, CSS, Vue"
   },
   {
     "title": "Qali",
@@ -187,5 +187,14 @@
     "imageWebp": "images/school.webp?1555764586",
     "date": "2017-11-10 21:31:00",
     "description": "Frontend: Gulp, HTML, SASS"
+  },
+  {
+    "title": "Gravity",
+    "company": "IlyasQali",
+    "link": "https://hicugi.github.io/webmaho/gravity",
+    "image": "images/gravity.jpg?1586187655",
+    "imageWebp": "images/gravity.webp?1586187655",
+    "date": "2017-04-08 15:36:00",
+    "description": "Backend: Nginx, MySQL 5.6, PHP 5.6, ModX\r\nFrontend: AngularJS"
   }
 ]
