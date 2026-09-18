@@ -1,5 +1,11 @@
 # Portfolio
 
+## Description
+
+List of some public projects that has been created while working as Free Lancer by Webmaho as individual entrepreneur.
+
+[<img src="demo.jpg" />](https://hicugi.github.io/public/)
+
 ## List of projects
 
 ### Magic Test
